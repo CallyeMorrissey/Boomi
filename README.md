@@ -1,2 +1,2 @@
-# Boomi
+# Boomi APIM
 Boomi Docs
