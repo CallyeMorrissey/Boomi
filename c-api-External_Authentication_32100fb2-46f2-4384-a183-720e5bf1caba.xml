@@ -1,0 +1,177 @@
+﻿<?xml version="1.0" encoding="utf-8"?><?Inspire CreateDate="2019-02-20T20:27:33" ModifiedDate="2022-05-20T15:34:18"?><!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+
+<concept xml:lang="en-us" id="GUID-B2969038-6828-426D-BC32-429974E3688E">
+	<title id="GUID-DC52491B-5AA9-40D1-9F31-574B9F9ADAAF">Authentication</title>
+	<shortdesc>The <menucascade>
+		<uicontrol>Configure Server</uicontrol>
+		<uicontrol> Authentication</uicontrol>
+		</menucascade> link in the <keyword conref="lib-Boomi_Keywords_0346af2b-13d7-491e-bec9-18c5d89225bf.xml#GUID-0207C7F1-40FD-4537-BE59-1D6DA46B9A1D/BOOMI_APIMANAGEMENT" /> menu opens the Authentication page. Use this page to add and manage Authentication Brokers and Authentication Sources.</shortdesc>
+	<prolog>
+		<resourceid id="GUID-B2969038-6828-426D-BC32-429974E3688E" />
+	</prolog>
+	<conbody>
+		<fig id="fig_h5n_hpm_vsb">
+			<image href="img-api-authentication_broker_information_properties_657b8e25-275b-4ac0-8ad6-6727bacca71d.jpg" id="image_yw5_3pm_vsb" otherprops="border">
+				<alt>Authentication page.</alt>
+			</image>
+		</fig>
+		<p>The Authentication page provides two tabs to add and manage Authentication Sources and Authentication Brokers. Depending on whether you have an Authentication Broker installed, you will see different tabs and options on the Authentication page.<ul id="ul_rk1_5yz_brb">
+			<li id="li_26f663ae-483d-4f96-87c2-976f1d59fc64"><p>If you have a Broker installed, you will see two tabs: <uicontrol>Authentication Sources</uicontrol> and <uicontrol>Authentication Brokers</uicontrol>, and you will be able to create an OpenID or SAML Authentication Source.</p></li>
+			<li id="li_c50857b1-5a4f-43e2-b398-0aac88b3d61c"><p>If you do not have a Broker installed, you will only see the <uicontrol>Authentication Sources</uicontrol> tab, and you will only be able to create an Authentication Source of type JWT (JSON Web Token) or Basic Authentication (Gateway). This is the recommended way to create an Authentication Source. We are moving away from Broker-based authentication, so if you never installed a Broker before, or you installed a Broker and then deleted it, you will not be able to install it anymore.</p></li>
+			</ul></p>
+		<note id="note_b4f_sxs_crb">Unless you already have a Broker installed, it is no longer possible
+			to install or reinstall a Broker. The Broker will be retired soon and it is recommended
+			that you use JWT. See <xref
+				href="api-broker_deprecation_58f90726-af01-4b0b-bd4d-629e8840162f.xml" scope="peer"
+				>Broker retirement</xref> for more information.</note>
+		<p><b>Authentication Sources tab</b></p>
+		<p>Use the <uicontrol>Authentication Sources</uicontrol> tab to add or delete an Authentication Source, and view the API usage (number of deployments) and the Developer Portals for each Authentication Source.</p>
+		<p>To add a new Authentication Source, click the <uicontrol>New Authentication Source</uicontrol> button and choose JWT or Basic Authentication (Gateway).</p>
+		<p>The following columns are included in the <uicontrol>Authentication Sources</uicontrol> tab:</p>
+		<dl id="dl_vtb_hfk_2qb">
+			<dlhead>
+				<dthd>Column header</dthd>
+				<ddhd>Description</ddhd>
+			</dlhead>
+			<dlentry>
+				<dt>Authentication Source Name</dt>
+				<dd>Name of the authentication source.</dd>
+			</dlentry>
+			<dlentry>
+				<dt>Authentication Type</dt>
+				<dd>The authentication provider. </dd>
+			</dlentry>
+			<dlentry>
+				<dt>API Usage</dt>
+				<dd>Number of deployments using the authentication source.</dd>
+			</dlentry>
+			<dlentry>
+				<dt>Developer Portals</dt>
+				<dd>Developer portals using the authentication source.</dd>
+			</dlentry>
+			<dlentry>
+				<dt>Description</dt>
+				<dd>General description about the authentication source.</dd>
+			</dlentry>
+			<dlentry>
+				<dt>Remove</dt>
+				<dd>Provides the option to delete authentication sources that are not in use.</dd>
+			</dlentry>
+		</dl>
+		<note id="note_z32_chz_nqb">You cannot delete an authentication source if it's in use by any deployments or is specified as sign-in authentication source for any developer portal.</note>
+		<p><b>Authentication Brokers tab</b></p>
+		<p>The <uicontrol>Authentication Brokers </uicontrol> tab is only available for accounts that have a Broker installed. Unless you already have a broker installed, no new Broker installations are possible. This tab allows you to toggle between enabled and deleted Authentication Brokers. The following columns are included in this tab:</p>
+		<dl>
+			<dlhead>
+				<dthd>Column header</dthd>
+				<ddhd>Description</ddhd>
+			</dlhead>
+			<dlentry>
+				<dt>Status</dt>
+				<dd>Authentication Brokers report their status to the platform:<ul id="ul_s3n_qlt_mjb">
+					<li id="li_70d5c32c-29b5-4b59-955e-985858c547f3"> <p>In the Status column:</p> </li>
+					</ul><dl>
+					<dlhead>
+						<dthd>Icon</dthd>
+						<ddhd>Description</ddhd>
+					</dlhead>
+					<dlentry>
+						<dt><image href="img-int-spinner_blue_fc8bb8fe-0dc6-44fb-8d08-db3d5119baa0.jpg" id="image_pv3_gkb_qjb">
+							<alt>Broker is starting.</alt>
+							</image> Starting</dt>
+						<dd>The local Authentication Broker is starting.</dd>
+					</dlentry>
+					<dlentry>
+						<dt><image href="img-api-gateway_online_or_cluster_issues_ea6bcaba-babe-4c5d-89ed-954b77d8ac24.jpg" id="image_qks_pc2_4jb">
+							<alt>Broker is online.</alt>
+							</image> Online</dt>
+						<dd>The local Authentication Broker is online and is communicating with the platform.</dd>
+					</dlentry>
+					<dlentry>
+						<dt><image href="main-ic-dot-blue-error_0949d2fe-4c2c-47e9-884e-9db91617d3b5.jpg" id="image_cbq_3vg_dmb">
+							<alt>Unable to determine the status.</alt>
+							</image></dt>
+						<dd>The local Authentication Broker is new or the platform is unable to determine the status. </dd>
+					</dlentry>
+					<dlentry>
+						<dt><image href="img-int-spinner_blue_fc8bb8fe-0dc6-44fb-8d08-db3d5119baa0.jpg" id="image_kp3_4kb_qjb">
+							<alt>API Gateway is restarting.</alt>
+							</image> Restarting</dt>
+						<dd>The local Authentication Broker is stopping or restarting.</dd>
+					</dlentry>
+					<dlentry>
+						<dt><image href="img-int-spinner_red_4f6c93f9-5412-4d2c-b5b9-82ad342eccdc.jpg" id="image_s4h_tkb_qjb">
+							<alt>Broker is restarting but it has not responded.</alt>
+							</image> Restarting</dt>
+						<dd>The local Authentication Broker is stopping or restarting, but it has not responded within five minutes.</dd>
+					</dlentry>
+					<dlentry>
+						<dt><image href="img-int-spinner_blue_fc8bb8fe-0dc6-44fb-8d08-db3d5119baa0.jpg" id="image_c31_lkb_qjb">
+							<alt>Broker is stopping.</alt>
+							</image> Stopping</dt>
+						<dd>The local Authentication Broker is stopping.</dd>
+					</dlentry>
+					<dlentry>
+						<dt><image href="main-ic-dot-exclamation-red_b382e57c-f062-4a7b-982f-e23faf5f2876.jpg" id="image_fbq_3vg_dmb">
+							<alt>Broker stopped communicating.</alt>
+							</image> Offline</dt>
+						<dd>The local Authentication Broker stopped communicating with the platform and may have terminated unexpectedly.</dd>
+					</dlentry>
+					<dlentry>
+						<dt><image href="img-api-gateway_offline_a299b3eb-e92a-418b-8472-1c3d35a9e8af.jpg" id="image_vmc_gd2_4jb">
+							<alt>Broker is offline.</alt>
+							</image> Offline</dt>
+						<dd>The local Authentication Broker is not running.</dd>
+					</dlentry>
+					<dlentry>
+						<dt><image href="main-ic-dot-exclamation-red_b382e57c-f062-4a7b-982f-e23faf5f2876.jpg" id="image_txv_zlb_qjb">
+							<alt>Broker stopped communicating with the platform and may have terminated unexpectedly.</alt>
+							</image> Offline</dt>
+						<dd>The local Authentication Broker is not running, but it did not shut down cleanly.</dd>
+					</dlentry>
+					<dlentry>
+						<dt><image href="img-api-gateway_deleted_c4489c82-600a-44a1-b874-e87500b5cc41.jpg" alt="img-api-gateway_deleted" id="image_zyr_fgp_zjb">
+							<alt>Broker is deleted.</alt>
+							</image> Deleted</dt>
+						<dd>If you toggle to the Deleted view, you can view the deleted Authentication Brokers.</dd>
+					</dlentry>
+					</dl></dd>
+			</dlentry>
+			<dlentry>
+				<dt>Broker Name</dt>
+				<dd>The Authentication Broker's name. Clicking on the name opens the Authentication Broker settings. The settings allow you to:<ul id="ul_tg2_zvg_dmb">
+					<li id="li_de78d52b-9d1e-4fd5-b374-c87f6895bf04"> <p>Monitor its status.</p> </li>
+					<li id="li_473892b2-d172-4873-a97d-a63d4d4978dd"> <p>Review its startup properties.</p> </li>
+					<li id="li_b3fb4260-0dbd-40f9-92fc-f2ea387db4d8"> <p>Change some of its properties, download logs, and subscribe to notifications.</p> </li>
+					<li id="li_fa7ceb00-1ab5-4612-98bd-22703e5b0919"> <p>Get pending updates prior to the full release. If you change your mind, you can roll back the updates prior to the full release.</p> </li>
+					<li id="li_70c1d29e-94c8-4b47-9224-103d34f996fa"> <p>Set a schedule for receiving <keyword conref="lib-Boomi_Keywords_0346af2b-13d7-491e-bec9-18c5d89225bf.xml#GUID-0207C7F1-40FD-4537-BE59-1D6DA46B9A1D/prerelease" /> updates (if this feature is enabled in the account).</p> </li>
+					</ul></dd>
+			</dlentry>
+			<dlentry>
+				<dt>Broker Type</dt>
+				<dd>Specifies <uicontrol>Authentication Broker</uicontrol> or <uicontrol>Gateway</uicontrol> if the Authentication Broker was added as an API Gateway. If the Broker was added as an API Gateway, it will also appear on the <menucascade>
+					<uicontrol>Configure Server</uicontrol>
+					<uicontrol>Gateways</uicontrol>
+					</menucascade> page.</dd>
+			</dlentry>
+			<dlentry>
+				<dt>Authentication Source</dt>
+				<dd>The Authentication Sources configured for the Authentication Broker. These are set on the Broker Information panel after clicking the Broker's Name in that column. Click on the name of the Authentication Source to modify the source configuration. <note id="note_d9ae88b5-ddc4-4b87-a132-5f385b068c4e"> <ul id="ul_qx5_ssl_4mb">
+					<li id="li_b969f07e-58f1-423d-879b-49fd68711ef2"> <p>Any Authentication Source that is not configured on an Authentication Broker appears in the <uicontrol>Not Attached to a Broker</uicontrol> row of the table. </p> </li>
+					<li id="li_ea52984b-12a4-4e9c-b3bc-e24ba18948d9"> <p>Any Authentication Source of type JWT Authentication appears in the<uicontrol> JWT Authentication</uicontrol> row of the table.</p> </li>
+					<li id="li_0b8167dd-e586-465b-a666-f2f9f4815d8e"><p>Any Authentication Source of type <uicontrol>Basic Authentication (Gateway)</uicontrol> appears in the Basic Authentication (Gateway) row of the table.</p></li>
+					</ul> </note><p> If there are more than three Authentication Sources, only three are visible in the list by default. Clicking <uicontrol>See more</uicontrol> reveals the full list. When the full list is visible, clicking <uicontrol>See less</uicontrol> shortens the list back to three. </p></dd>
+			</dlentry>
+			<dlentry>
+				<dt>Broker ID</dt>
+				<dd>The Authentication Broker's ID.</dd>
+			</dlentry>
+			<dlentry>
+				<dt>Host Name</dt>
+				<dd>The name or IP address of the machine to which this Authentication Broker is installed.</dd>
+			</dlentry>
+		</dl>
+		<p>On the left side of the Authentication Broker page is an alphabetical list of the Authentication Brokers to which your account has access. Clicking an Authentication Broker in the list displays information about it on the right side of the page.</p>
+		<p>The table is sortable by Status, Broker Name, and Broker Type. By default the table is sorted alphabetically by Broker Name. The search field enables you to filter the table by Authentication Broker or Authentication Source.</p>
+	</conbody>
+</concept>

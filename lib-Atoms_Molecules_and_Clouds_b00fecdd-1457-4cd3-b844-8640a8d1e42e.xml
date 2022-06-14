@@ -1,0 +1,393 @@
+﻿<?xml version="1.0" encoding="utf-8"?><?Inspire CreateDate="2019-02-20T20:35:31" ModifiedDate="2022-02-15T15:16:48"?><!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+
+<topic xml:lang="en-us" id="GUID-3297BB21-DD6F-4200-9308-D39451D2A42A">
+	<title id="GUID-72160278-361E-40CE-9A54-C311D84E4D1B">Atoms, Molecules and Atom Clouds</title>
+	<shortdesc>Shared content for Atoms, Molecules, and Atom Clouds.</shortdesc>
+	<body>
+		<draft-comment author="Christi_Guzik">This conref content is for A/M/C. Most of the content is <b>duplicated</b> in the Auth Broker and Gateway topics within APIM. But, because of the way this content is written, instead of using conrefs, it had to be rewritten. When this topic is modified, <b>APIM topics must also be updated to match anything related to Java 8</b>.</draft-comment>
+		<section id="GUID-D84A49F9-B7B3-4B6A-B41F-C90E5E23F92E"> <title id="GUID-3206943A-C6D9-4FBE-BE27-1EA22A0C0CE7">Java version</title> <p><ph id="JAVAVERSION">Java Version 1.8.0_312</ph><ph id="CODESNIPETJAVAVERSION">1.8.0_312</ph><ph id="CODESNIPETJAVAVERSION_NOBUILDVERSION">1.8.0</ph><ph id="JAVAVERSION11.x.x">Java Version 11.0.13</ph><ph id="11.x.x">11.0.13</ph><ph id="JAVA11MAJORMINOR">11.0.13.8.1</ph></p> </section>
+		<section id="GUID-1CC343B5-306E-49F5-A91A-407DC5F089D7"> <title id="GUID-478EFC6E-4708-42C9-80E4-3036505F1285">Gateways &amp; Auth Brokers cannot be installed on a cloud statement</title> <note type="important" id="Gateway_Brokers_no_local"> Because <keyword conref="lib-Boomi_Keywords_0346af2b-13d7-491e-bec9-18c5d89225bf.xml#GUID-0207C7F1-40FD-4537-BE59-1D6DA46B9A1D/BOOMI_APIMANAGEMENT" /> API Gateways and Authentication Brokers can be installed only as a single-tenant, API Gateways and Authentication Brokers can be leveraged only in the account that they are installed in and cannot be shared across accounts.</note> </section>
+		<section id="GUID-B7484027-EAA2-4263-AB1A-A49E3BB557D8"><title id="GUID-284F33DA-96DC-4760-B443-1A6C8E8DA53C">Installation directory</title><ph id="GUID-76BA4A85-6B45-42CE-882E-7455F7BEA41F">If you previously upgraded to a new Java version, copy the full <filepath>&lt;installation_directory&gt;/jre</filepath> directory and the full <filepath>install4j</filepath> folder to different locations before running the upgrader.</ph></section>
+		<section id="GUID-47D0C85D-DD73-4F84-BD1A-2BA833071C6C"> <title id="GUID-A650D64E-9162-4C0B-B508-01191C88C510">Java version rollback</title> <p id="GUID-601DAEFC-F996-4AE3-93A3-F718099EABD7">If a problem occurred during the update and you need to roll back to your prior version of Java, do the following:<ul id="GUID-74EDEBD2-8B57-450F-8A02-4516276C40EB">
+			<li id="LI_049F8FAB38FF43F1AF2A1916EE19DABE">If you previously ran the upgrader, move the new <filepath>&lt;installation_directory&gt;/jre</filepath> folder to another location. Then, replace it with the original <filepath>&lt;installation_directory&gt;/jre</filepath> folder that you copied before starting the upgrade.</li>
+			<li id="LI_2B157889A4264A4DA7E9ADD9574AEF04">Whether or not you previously ran the upgrader, update the <codeph>install4j</codeph> folder to use the prior version of Java as described in the topic <xref href="https://help.boomi.com/csh?context=GUID-58EF2B6A-4CF7-461C-BA67-CC56FCD0E29F" format="html" scope="external">Making an Atom, Molecule, or Atom Cloud use a different Java version</xref>.</li>
+			</ul>After you have resolved the upgrade issues that caused you to roll back to your prior version of Java, upgrade the Atom or Molecule again.</p> </section>
+		<section id="GUID-8CA4D7B8-B8B8-4C5E-B1BB-F74C93612439"> <title id="GUID-08CC997E-AF2D-4D00-98BA-B0B9C9FC336E">Installers — task topic prereqs</title> <p><ph id="SUPPORTEDJAVAVERSIONS">Java 8 JRE or the Java 11 JDK.</ph></p> <p id="CLOUDMOLECULES">Cloud Molecules require the Java 8 JRE or the Java 11 JDK. <ph id="RECOMMENDED_VERSION">Java 11 is recommended. </ph><ph id="TESTED_VERSIONS"><keyword conref="lib-Boomi_Keywords_0346af2b-13d7-491e-bec9-18c5d89225bf.xml#GUID-0207C7F1-40FD-4537-BE59-1D6DA46B9A1D/BOOMI_DELL" /> internally tested Oracle Java 1.8.0_302 and Amazon Corretto OpenJDK 11.0.12.7.1. </ph></p> <p id="CLOUDJDKREQS">If you do not have Java 11 installed on your machine, you can download the installer file that includes a <i>private</i> copy of Java 11 (11.0.12.7.1) from <menucascade>
+			<uicontrol>Atom</uicontrol>
+			<uicontrol>Atom Management</uicontrol>
+			</menucascade>. You can alternatively manage your own distribution of the Java 11 JDK by downloading the JDK <xref href="https://docs.aws.amazon.com/corretto/latest/corretto-11-ug/downloads-list.html" format="html" scope="external">here</xref> prior to installing the Cloud Molecule.<note id="GUID-DDD70291-083A-4BFA-A534-FA0ADF491401">Make sure that the Java binary that is used to run the installer comes from the <filepath>&lt;jdk&gt;/jre/bin</filepath> directory and not the <filepath>&lt;jdk&gt;/bin</filepath> directory.</note></p> <p id="ATOMJREREQS">The installer will install a <i>private</i> copy of Java 11 (11.0.12.7.1) for the Atom to use. You can alternatively manage your own distribution of the Java 11 JDK by downloading the JDK <xref href="https://docs.aws.amazon.com/corretto/latest/corretto-11-ug/downloads-list.html" format="html" scope="external">here</xref> prior to installing the Atom.</p> <p id="MOLECULEJREREQS">The installer will install a <i>private</i> copy of Java 11 (11.0.12.7.1) for the Molecule to use. You can alternatively manage your own distribution of the Java 11 JDK by downloading the JDK <xref href="https://docs.aws.amazon.com/corretto/latest/corretto-11-ug/downloads-list.html" format="html" scope="external">here</xref> prior to installing the Molecule.</p> <note id="32BITINSTALLERSNOTPROVIDED">Java 11 does not officially support 32-bit execution, so 32-bit installers are not provided.</note><note id="GUID-24103FF0-2B65-4B73-90DB-F6168CDC64E1">If you are managing your own Java version instead of using the distribution provided by <keyword conref="lib-Boomi_Keywords_0346af2b-13d7-491e-bec9-18c5d89225bf.xml#GUID-0207C7F1-40FD-4537-BE59-1D6DA46B9A1D/BOOMI_DELL" />, Molecules that will use forked execution require the Java 8 JDK rather than the JRE. Since Java 11 is distributed as a JDK by default, no additional consideration should be required if using Java 11.</note> </section>
+		<section id="GUID-32F1AD33-0281-44AF-8A8D-3E16CF78A85C"> <title id="GUID-30DF72C7-66C3-4A85-BDD2-1E1D5D2AAC2C">Atom naming convention</title> <note id="GUID-4B5163EE-3F06-4EE7-8EC8-46481A085F7A">The following characters are reserved and cannot be used in the name: asterisk (*), backslash (\), caret (^), colon (:), dollar sign ($), greater than (&gt;), less than (&lt;), percent (%), pipe (|), question mark (?), quotation mark ("), slash mark (/), Yen sign (¥).</note> </section>
+		<section id="GUID-DC50CCA3-0B38-4D42-891F-E3E7C18195F2"> <note type="restriction" id="ANTI-VIRUSPROGRAMS"> <p>Anti-virus programs that scan the installation folder of your Atoms, Molecules, and Atom Clouds might conflict with their operation. If the anti-virus program attempts to access the files while your Atom, Molecule, or Atom Cloud is running, it can cause conflicts. Also, the anti-virus program could cause permission issues by being seen as a different user. </p> <p>Therefore, disable the anti-virus program from running against the Atom, Molecule, or Atom Cloud installation folder. </p> <p>Or, program the anti-virus program to run on the Atom, Molecule, and Atom Cloud installation folders during planned maintenance windows. Once the anti-virus program has been run, check the anti-virus quarantine folder for any valid files that may have been incorrectly quarantined.</p> </note> </section>
+		<section id="GUID-B910127F-F112-44ED-9423-74859BD49EA8"> <title id="GUID-213054E6-4DAC-4BF1-A16E-19D24B3D7787">Supported operating systems</title> <table id="GUID-F421DAF8-4578-4B2B-AD0F-524D044427CD">
+			<tgroup cols="2">
+				<colspec colnum="1" colname="col1" colwidth="0.67*" />
+				<colspec colnum="2" colname="col2" colwidth="1.34*" />
+				<thead>
+					<row id="row_b9c96cf1-8b88-40fb-93dd-b11053640425">
+						<entry colname="col1">Operating system</entry>
+						<entry colname="col2">Version</entry>
+					</row>
+				</thead>
+				<tbody>
+					<row id="row_5e25c64b-db11-4ee5-a2a3-5201b93d0de9">
+						<entry colname="col1"><uicontrol>Linux 32-bit</uicontrol></entry>
+						<entry colname="col2"> <p>Red Hat Enterprise Linux 5.5 and above</p> <p>Suse Enterprise Linux Server 10 SP2 and above</p> <p>Any other Linux distribution that supports the Java 8 Runtime</p> </entry>
+					</row>
+					<row id="row_55f0f2f0-5c02-4619-b069-13dd2960065f">
+						<entry colname="col1"><uicontrol>Linux 64-bit</uicontrol></entry>
+						<entry colname="col2"><ul id="ul_fvj_k4b_lpb">
+							<li id="li_669b771d-c796-4c48-9988-c040c0191a01"><p>Any Linux distribution that supports the Java 8 or 11 Runtime</p></li>
+							</ul></entry>
+					</row>
+					<row id="row_88482821-cd50-4d15-a33c-b5dcbab8dec4">
+						<entry colname="col1"><uicontrol>Windows 32-bit</uicontrol></entry>
+						<entry colname="col2"> <p>All versions of Windows that support the Java 8 Runtime, from Windows Vista to the most recent version</p> <note type="caution" id="note_7c12cf8c-db31-4eae-9e05-8cdb3a66a31e">The stability of private Molecules and Atom Clouds has been found to be unpredictable in Windows environments. This is typically due to a communication disruption between Molecule Node(s) and the File System through the network file path due to the following:<ul id="ul_ary_xbl_mkb">
+							<li id="li_31927697-ed96-4a22-a5e0-6c217ee6ee30"> <p>File system backups</p> </li>
+							<li id="li_f798540e-1c65-4902-bf22-1dc194acc160"> <p>Virus scanning utilities</p> </li>
+							<li id="li_b7506a46-e7ef-4272-a0d9-b7eb4f974d00"> <p>Automated patching of the file system</p> </li>
+							</ul><p>As such, Linux is the recommended operating system in support of Production environments.</p></note> </entry>
+					</row>
+					<row id="row_9bc63706-bb4b-492e-8a7e-34d73bb2b9eb">
+						<entry><uicontrol>Windows 64-bit</uicontrol></entry>
+						<entry colname="col2"><ul id="ul_p1n_54b_lpb">
+							<li id="li_43a21047-c327-4aee-ae7d-f19dda62ec3c"><p dir="ltr">All versions of Windows that support the Java Java 8 or Java 11 Runtime, from Windows Vista to the most recent version</p><note type="caution" id="note_7c12cf8c-db31-4eae-9e05-8cdb3a66a31e">The stability of private Molecules and Atom Clouds has been found to be unpredictable in Windows environments. This is typically due to a communication disruption between Molecule Node(s) and the File System through the network file path due to the following:<ul id="ul_ary_xbl_mkb">
+								<li id="li_31927697-ed96-4a22-a5e0-6c217ee6ee30"> <p>File system backups</p> </li>
+								<li id="li_f798540e-1c65-4902-bf22-1dc194acc160"> <p>Virus scanning utilities</p> </li>
+								<li id="li_b7506a46-e7ef-4272-a0d9-b7eb4f974d00"> <p>Automated patching of the file system</p> </li>
+								</ul><p>As such, Linux is the recommended operating system in support of Production environments.</p></note></li>
+							</ul></entry>
+					</row>
+				</tbody>
+			</tgroup>
+			</table> </section>
+		<section id="GUID-6028EA8A-8819-440D-A7B2-DFA8D68E0261"> <title id="GUID-844DA66C-D305-4A60-AF66-0399C185A31C">Unsupported operating systems</title> <p><keyword conref="lib-Boomi_Keywords_0346af2b-13d7-491e-bec9-18c5d89225bf.xml#GUID-0207C7F1-40FD-4537-BE59-1D6DA46B9A1D/BOOMI_DELL" /> does not officially support installations on Unix operating systems. Because Unix is not officially tested or supported by <keyword conref="lib-Boomi_Keywords_0346af2b-13d7-491e-bec9-18c5d89225bf.xml#GUID-0207C7F1-40FD-4537-BE59-1D6DA46B9A1D/BOOMI_DELL" />, the <keyword conref="lib-Boomi_Keywords_0346af2b-13d7-491e-bec9-18c5d89225bf.xml#GUID-0207C7F1-40FD-4537-BE59-1D6DA46B9A1D/BOOMI_DELL" /> Support team will be unable to troubleshoot or support any Unix-related issues.</p> </section>
+		<section id="GUID-FE9BC0A1-3F6E-4A41-A6B7-52939CB6608C"> <title id="GUID-29D10DDD-183A-4569-901F-8E82089DC5DF">Minimum hardware requirements</title> <p>A single Atom, Molecule node, or Cloud Molecule within an Atom Cloud can run on hardware ranging from business-class workstations to dedicated servers.</p> <table id="GUID-5E488BB3-7599-4B18-B472-4B516CB5A0EF">
+			<tgroup cols="2">
+				<colspec colnum="1" colname="col1" colwidth="0.67*" />
+				<colspec colnum="2" colname="col2" colwidth="1.33*" />
+				<tbody>
+					<row id="row_44105ed9-6741-44eb-bbe3-58a01e4b2e50">
+						<entry colname="col1"><uicontrol>Processor</uicontrol></entry>
+						<entry colname="col2">1.8 GHz or higher Pentium 4 (or equivalent)</entry>
+					</row>
+					<row id="row_4493ac11-d09f-4fff-a05b-d60ba2b0f886">
+						<entry colname="col1"><uicontrol>Memory</uicontrol></entry>
+						<entry colname="col2">2 GB RAM (minimum 1 GB dedicated to Atom, Molecule node, or Cloud Molecule)</entry>
+					</row>
+					<row id="row_87ebae37-525d-45bc-9032-d0901d1fa800">
+						<entry colname="col1"><uicontrol>Hard disk</uicontrol></entry>
+						<entry colname="col2">50 MB for run-time and configuration, 10 GB for data archiving</entry>
+					</row>
+				</tbody>
+			</tgroup>
+			</table> </section>
+		<section id="GUID-560FB62A-1CDF-4F29-8E16-5C4ADDD7493F"> <title id="GUID-991A18A6-02A7-4083-9E2A-D513CE585BD3">Minimum hardware requirements for high volumes of data</title> <p>A single Atom, Molecule node, or Cloud Molecule within an Atom Cloud that must process high volumes of data has these requirements.</p> <table id="GUID-C0575A64-4354-4329-B03A-C05B8F38ABBF">
+			<tgroup cols="2">
+				<colspec colnum="1" colname="col1" colwidth="0.67*" />
+				<colspec colnum="2" colname="col2" colwidth="1.33*" />
+				<tbody>
+					<row id="row_64045e52-08b7-4eee-93fe-e3b3d35d53bf">
+						<entry colname="col1"><uicontrol>Processor</uicontrol></entry>
+						<entry colname="col2">Dual 64-bit processors or higher<p> More processors allow for increased, simultaneous process executions </p></entry>
+					</row>
+					<row id="row_46237bcb-e122-4897-a5d6-0124f576d49f">
+						<entry colname="col1"><uicontrol>Memory</uicontrol></entry>
+						<entry colname="col2">4 GB of RAM (minimum 2 GB dedicated to Atom, Molecule node or Cloud Molecule)<p> More RAM allows for increased, simultaneous process executions </p></entry>
+					</row>
+					<row id="row_008be5ff-6e05-400c-bf5f-f170bcb60e6e">
+						<entry colname="col1"><uicontrol>Hard disk</uicontrol></entry>
+						<entry colname="col2">100–200 GB of hard disk space<p> Increase purging levels to minimize Atom, Molecule node, or Cloud Molecule disk space </p></entry>
+					</row>
+				</tbody>
+			</tgroup>
+			</table> </section>
+		<section id="GUID-EC2D5FB2-4056-44F1-B7C9-9977930E4442"> <title id="GUID-BB736D99-9AB0-4093-A080-2F67297608DC">Minimum software requirements for Windows and Linux</title> <table id="GUID-869AC89B-0442-4891-8F07-2206610609B0">
+			<tgroup cols="2">
+				<colspec colnum="1" colname="col1" colwidth="0.67*" />
+				<colspec colnum="2" colname="col2" colwidth="1.33*" />
+				<tbody>
+					<row id="row_8b96de09-1bd7-4370-8fe1-4c355c8dfbea">
+						<entry colname="col1"><uicontrol>Java</uicontrol> (for Windows and Linux)</entry>
+						<entry colname="col2">Java 8 or 11 is required. Java 11 is recommended. <p><keyword conref="lib-Boomi_Keywords_0346af2b-13d7-491e-bec9-18c5d89225bf.xml#GUID-0207C7F1-40FD-4537-BE59-1D6DA46B9A1D/BOOMI_DELL" /> internally tested Java versions 1.8.0_302 and 11.0.12.7.1.</p></entry>
+					</row>
+					<row id="row_e0adcd2c-c421-4ab2-8536-34d30b9bb908">
+						<entry colname="col1"><uicontrol>Java runtime</uicontrol> (for Windows and Linux)</entry>
+						<entry colname="col2">The Atom, Molecule, or Atom Cloud is a Java application and requires Java 8 or 11 to run. <ul id="ul_nwz_j45_rqb">
+							<li id="li_80804505-daef-41b7-ae23-95d4dedc303a"><p><uicontrol>For Java 8,</uicontrol> <keyword conref="lib-Boomi_Keywords_0346af2b-13d7-491e-bec9-18c5d89225bf.xml#GUID-0207C7F1-40FD-4537-BE59-1D6DA46B9A1D/BOOMI_DELL" /> supports <i>only</i> the Oracle (formerly Sun) Java Runtime. The installer automatically downloads a <i>private</i> copy of the Java 8 JDK for the Atom, Molecule, or Atom Cloud's use.</p></li>
+							<li id="li_ed8deeec-9b70-44e9-860a-7e8b35069950"><p><uicontrol>For Java 11,</uicontrol> <keyword conref="lib-Boomi_Keywords_0346af2b-13d7-491e-bec9-18c5d89225bf.xml#GUID-0207C7F1-40FD-4537-BE59-1D6DA46B9A1D/BOOMI_DELL" /> supports <i>only</i> the Amazon Corretto Java Runtime. The Java 11 runtime is automatically provided in the JDK that is downloaded when you install a new runtime container.</p><note id="note_qwz_j45_rqb">The Java 11 installer downloads a private copy of the JDK. You can continue to use Java 8 installer files previously downloaded on your local drive to install runtime containers on Java 8. Depending on which version you install, the Java 8 JRE or the Java 11 JDK are placed in your Atom’s or Molecule’s <filepath>jre</filepath> directory. The private JRE or JDK will not interfere with a shared JRE or JDK (one that you, not the installer, installed). It is not integrated into browsers and does not write registry entries.</note></li>
+							</ul></entry>
+					</row>
+				</tbody>
+			</tgroup>
+			</table> </section>
+		<section id="GUID-238B308F-8338-48A9-9263-8EC0E88F46A1"> <title id="GUID-AFCC0587-D6D5-4DBE-BC9A-7D527C442FC3">Numbers of machines required</title> <p>The minimum number of machines required for operation is two:</p> <ul id="GUID-FC646F1C-1E9F-4933-AB57-7A7BB711A668">
+			<li id="LI_121E32B819434B49B6FAFA98231C84CA"> <p>One shared file server</p> </li>
+			<li id="LI_2C5A4D1F82B44AF696455CC5806A8373"> <p>One Molecule node or Cloud Molecule</p> </li>
+			</ul> <p>The minimum number of machines required for full failover is four:</p> <ul id="GUID-99322E83-A979-4D55-844F-F97B506A933F">
+			<li id="LI_51C472EDDC4D49238A870FE91B8D3F90"> <p>One shared file server</p> </li>
+			<li id="LI_3F90788A51D245DB82E669C8C06025CA"> <p>One backup shared file server</p> </li>
+			<li id="LI_D123AFE90A524DF7AF9E2BEA348567DA"> <p>Two Molecule nodes or Cloud Molecules</p> </li>
+			</ul> <note id="GUID-FAC44BE4-B29F-4A89-A3BE-EB67E50CF2B1">To prepare for failover, you should keep one Molecule offline but mirror the primary Molecule to the secondary one on a regular basis. For more information about backup and disaster recovery best practices, review the following resources in the <keyword conref="lib-Boomi_Keywords_0346af2b-13d7-491e-bec9-18c5d89225bf.xml#GUID-0207C7F1-40FD-4537-BE59-1D6DA46B9A1D/BOOMI_DELL" /> Community: <ul id="ul_yj2_kcn_rlb">
+			<li id="li_db26c7c4-c2b1-425c-81b7-435e5ed8f45a"> <p><xref href="https://community.boomi.com/s/article/bestpracticesforruntimehighavailabilityanddisasterrecovery" format="https" scope="external">Best Practices for Run Time High Availability and Disaster Recovery knowledge article</xref></p> </li>
+			<li id="LI_A543D568BDE14C14988873725B4486D8"> <p><xref href="https://www.youtube.com/watch?v=lHayf1HMLW8&amp;feature=youtu.be" format="https" scope="external"> Backup and Disaster Recovery video</xref></p> </li>
+			</ul></note> </section>
+		<section id="GUID-2F22202E-E60B-47F8-B9C6-06CF2641498C"> <title id="GUID-A10488E8-E667-4A31-9935-8A71BC2E56B6">Operating system requirements</title> <p>All nodes in a Molecule, or Cloud Molecules in an Atom Cloud, must be running on the same operating system. For example, you <i>cannot</i> run one of the Molecule's nodes on Windows and another of its nodes on Linux.</p> <p>It is recommended that all nodes in a Molecule, or Cloud Molecules in an Atom Cloud, use the same operating system architecture, i.e., all should be on Windows 32-bit machines or all should be on Windows 64-bit machines.</p> </section>
+		<section id="GUID-B720B9F1-6173-4E43-92DE-5E2388EE805C"> <title id="GUID-F126D231-2995-4EA6-A77B-61657A936DA4">Hardware requirements</title> <p>All nodes in a Molecule, or Cloud Molecules in an Atom Cloud, do not have to be installed on computers with the same hardware configuration. The machines can have different amounts of RAM, a different type of CPU, etc.</p> </section>
+		<section id="GUID-6B357BE5-FB5B-48D9-B424-0611B729B145"> <title id="GUID-6D0DD88A-BAC1-41CE-87DB-21DEF86F5DAC">File system requirements</title> <p>The primary requirement for running a Molecule or Atom Cloud is that all nodes or Cloud Molecules that are part of it must be using the same installation directory.</p> <p>Because the main use for clustering is to allow multiple machines to work together, this means that there is some form of shared file system in use. Due to the implementation of the Molecule and Atom Cloud support within the Atom, this file system must support file locking. Common examples of this are:</p> <ul id="GUID-2E609F56-B63D-46B4-AB18-0FB1759C0451">
+			<li id="LI_702241A7BC974C59B8832E3854FF83F4"> <p>An NFS file system with NFS locking enabled (NLM support)</p> </li>
+			<li id="LI_69578692144D454BAA6029C2B6894DD8"> <p>A Windows network share or drive</p> </li>
+			</ul> <note id="note_f6f92df3-248e-4611-aed1-3ce7309996c3">The file system is required to have the same OS and architecture as all nodes in a Molecule or Cloud Molecules in an Atom Cloud, otherwise file locking issues may occur. SMB/CIFS is recommended for Windows machines. NFS is recommended for Linux machines.</note> </section>
+		<section id="GUID-66111CD9-83C9-4C77-8F3F-5399578D6BE7"> <title id="GUID-CE9ED040-D2D0-4B6D-AC8A-AF27F8D5FF9C">Network recommendations</title> <p>For best performance, the various machines in a Molecule or Atom Cloud should have multicast (UDP) available between them. However, <i>this is not a requirement</i>, because the clustering protocol can be configured to work in a unicast-only (TCP) environment. See more information about network configuration for Molecules and Atom Clouds.</p> </section>
+		<section id="GUID-3979F9C1-DF75-4E25-ABBE-8B25926A245C"> <title id="GUID-AEEA2611-E44E-407B-9A50-F8CE0C67DDA5">Java requirements</title> <ul id="GUID-CAB7B011-939F-4D2F-A252-A88868184EA9">
+			<li id="LI_BA887F930A7442F7804A0A6E88E9E7C0"> <p>If you are installing a Cloud Molecule or a Molecule node that will use forked execution, you must install a JDK or use the <keyword conref="lib-Boomi_Keywords_0346af2b-13d7-491e-bec9-18c5d89225bf.xml#GUID-0207C7F1-40FD-4537-BE59-1D6DA46B9A1D/BOOMI_DELL" />-provided Java from installation. We currently do not support any other JDK. The current supported versions are:</p> <ul id="GUID-31A682C3-7A29-4975-908B-303173D6CD42">
+				<li id="LI_A586973EB6974B678ED73FC242797743"> <p>Oracle's Java SE Development Kit 8u302, if you are installing on Linux or Windows</p></li>
+				<li id="li_efa7e1a0-d8c2-44dd-af67-088c2fbb7554"><p>Amazon Corretto's Java SE Development Kit 11.0.12, if you are installing on Linux or Windows</p></li>
+				</ul> </li>
+			<li id="LI_D686183FB70C46D5BDC5C0B7DEAB09D3"> <p>It is recommended that all machines in the Molecule or Atom Cloud have the same version of Java installed. Java must be located in the same directory on each machine (i.e., <filepath>C:/Program Files/Java/jre8</filepath> for Windows or <filepath>/usr/local/java</filepath> for Linux).</p> </li>
+			<li id="li_d0e66557-1c1c-45c9-b9c9-41449d537045">Java 11 installations and upgrades automatically provide the full JDK complete with the JRE. If you use Molecules or Clouds with forked executions and manage your own Java 8 version, keep the following in mind:<ul id="ul_ejb_dqc_lpb">
+				<li id="li_e331e841-e5fc-4324-966c-22ba76dfa758">If you do not wish to upgrade to Java 11, you do not need to install a separate JDK to use forked executions as they are already provided in the <keyword conref="lib-Boomi_Keywords_0346af2b-13d7-491e-bec9-18c5d89225bf.xml#GUID-0207C7F1-40FD-4537-BE59-1D6DA46B9A1D/BOOMI_DELL" />-supplied JDK.</li>
+				<li id="li_8bdd750c-1ada-46f1-ae3e-2da56076256d">If you do not wish to upgrade to Java 11 and choose to use a version of Java not provided by <keyword conref="lib-Boomi_Keywords_0346af2b-13d7-491e-bec9-18c5d89225bf.xml#GUID-0207C7F1-40FD-4537-BE59-1D6DA46B9A1D/BOOMI_DELL" />, ensure that you download the JDK and not the JRE.</li>
+				</ul></li>
+			</ul> </section>
+		<section id="GUID-6285D654-260F-4E30-A88D-595E9C713B15"> <title id="GUID-9B6BF764-F095-42AA-8200-7D3B660231D4">Firewall rules</title> <p>The nodes need to communicate with each other in order to cluster successfully.</p> <ul id="GUID-8433CDE0-44D7-475E-B9BD-E6E1048384A9">
+			<li id="LI_3DFB12C6110347C4861BBA573FE0EF10"> <p>If you are using multicast defaults, port 45588 must be open.</p> </li>
+			<li id="LI_90ABAE17DBA54074AD1E5817EA449931"> <p>If you are using unicast defaults, port 7800 must be open.</p> </li>
+			</ul> </section>
+		<section id="GUID-88FAB89F-A3D9-47BD-B083-A265B5C91D75"> <title id="GUID-E56FE8BA-D13D-49DA-96EB-094E904D4733">Host setup</title> <p>Ensure that the host names of the machines resolve to valid IP addresses, not to the localhost adapter, which is 127.0.0.1.</p> </section>
+		<section id="GUID-A5C48856-C27C-446D-8B06-C2D903F23DF7"> <title id="GUID-C2015912-FDFE-48F7-B5E4-0EBB8843893F">Purge data setting</title> <note id="GUID-096C354E-2625-4368-BE51-CA4BFC1BDBCF">If an Atom Cloud owner has set purge data in the Atom Cloud to:<ul id="GUID-5F2421F3-7E41-45EB-BE47-5118A2838FBE">
+			<li id="LI_472A4654E3C2494C8F0D7E17D5F4EBC7">ON — the setting affects all Atoms attached to this Atom Cloud. Accounts that own Atoms attached to this Atom Cloud can turn off their Atom’s setting, but it is overridden by the Atom Cloud’s setting.</li>
+			</ul><ul id="GUID-3E882412-ED8D-40AD-A36F-64792675FE57">
+			<li id="LI_9591D31A60284CB5893AB3858769861F">OFF — accounts with an Atom attached to the Atom Cloud can set purge as needed for their Atom and the Atom’s setting is not overridden by the Atom Cloud’s setting. A change to this setting takes effect immediately — the Atom Cloud does not need to be restarted.</li>
+			</ul></note> </section>
+		<section id="GUID-6EBCA4AD-00D5-490B-BBB8-43D68CC7F6CD"> <title id="GUID-78F78527-8809-43FE-9EC6-C7FC2C10D27A">Extensions</title> </section>
+		<section id="GUID-097F50DB-C284-4D81-B4FA-DE84CC002887"> <dl>
+			<dlhead>
+				<dthd>Name</dthd>
+				<ddhd>Description</ddhd>
+			</dlhead>
+			<dlentry id="GUID-8C11BBE5-1E06-45AD-83B6-35CE0B1C7835">
+				<dt><uicontrol>Process Type</uicontrol></dt>
+				<dd>Sets the type of processes for which to set extension values:<ul id="GUID-36AA1A4B-21B6-4E29-B112-232EC66663EB">
+					<li id="LI_6C18BFC33C3C4D29960CF3A72731907D"> <p>Processes and Standard Integration Packs — standard processes and processes in installed, attached single-install integration packs.</p> </li>
+					<li id="LI_A83DE549405F44C5A1585C211E5654B2"> <p>Multi Installation Integration Packs — a selected process in an installed, attached multi-install integration pack.</p> </li>
+					</ul><note id="GUID-3A050F61-90F0-4B68-B78D-116A36CCFD8C">This control is present only if multi-install integration packs are installed.</note></dd>
+			</dlentry>
+			<dlentry id="GUID-7EB1CD08-4E15-4FBF-832B-FCC04DC9A455">
+				<dt><uicontrol>Process Filter</uicontrol></dt>
+				<dd>Filters the controls below by process. Filtering is off (set to “All”) by default.<ul id="GUID-EF83E024-35E1-4A47-B2C4-5C8A59F3C9F4">
+					<li id="LI_444755936DE246C892A539DF0C1B2B82"> <p>Clicking <uicontrol><image href="main-ic-magnifying-glass-16_cd0f3352-63b0-4d15-af6d-86e11b9d14eb.jpg" id="IMAGE_FEB23E8F4CB3401484728DAAEBF8C1AA" /> Choose the desired component</uicontrol> opens the component chooser for the purpose of selecting the process. Once the process is selected, the only visible controls below are for setting values of the extensions defined for that process.</p> </li>
+					<li id="LI_4D63E574050E4CC8AA27A2BB09F80263"> <p>Clicking <uicontrol>Remove chosen component</uicontrol> turns off filtering.</p> </li>
+					</ul><note id="GUID-89D15875-4DD5-4630-8435-9AD34E55DA8B">This control is not present if <uicontrol>Process Type</uicontrol> is set to Multi Installation Integration Packs.</note></dd>
+			</dlentry>
+			<dlentry id="GUID-50C0BEEF-F91A-454E-AE77-A3F45D836006">
+				<dt><uicontrol>Process</uicontrol></dt>
+				<dd>Sets the process for which to set extension values. Clicking <uicontrol><image href="main-ic-magnifying-glass-16_cd0f3352-63b0-4d15-af6d-86e11b9d14eb.jpg" id="IMAGE_1D40F37A1F584599A09E0FDFCB170DF6" /> Choose the desired component</uicontrol> opens the component chooser for the purpose of selecting the instance of the multi-install integration pack and the process within that integration pack. Once these are selected, the field shows the name of the integration pack and the process. At this point the only visible controls below are for setting values of the extensions defined for that process.<note id="GUID-660F25C9-1589-4047-94F4-4631BC9E7BAB">This control is present only if <uicontrol>Process Type</uicontrol> is set to Multi Installation Integration Packs.</note></dd>
+			</dlentry>
+			<dlentry id="GUID-C4508CEC-7511-4A8C-8042-C931181ACA85">
+				<dt><uicontrol>Show Audit Logs</uicontrol></dt>
+				<dd>Opens the Audit Logs dialog, which displays up to 125 records of extension values that were set or changed within the last 30 days. Any recorded logs that exceed the 125 record limit or 30 day period can be accessed via the <keyword conref="lib-Boomi_Keywords_0346af2b-13d7-491e-bec9-18c5d89225bf.xml#GUID-0207C7F1-40FD-4537-BE59-1D6DA46B9A1D/BOOMI_ATOMSPHERE" /> API. <note id="GUID-6D54E9F1-0A51-443F-A5FA-2C774D664CB2">The Audit Logs dialog is accessible only to administrators and users having the View Audit Logs privilege.</note></dd>
+			</dlentry>
+			<dlentry id="GUID-DE0E53C4-B36F-4909-AA5E-6AFB3D834E8B">
+				<dt><uicontrol>OK</uicontrol></dt>
+				<dd>Applies the extension values set on the tabs and closes the dialog.</dd>
+			</dlentry>
+			<dlentry id="GUID-0E46EF34-5891-456B-AA10-0DB32083F632">
+				<dt><uicontrol>Cancel</uicontrol></dt>
+				<dd>Closes the dialog without applying extension values.</dd>
+			</dlentry>
+			</dl> </section>
+		<section id="GUID-47FF7331-7113-4942-8792-73175BAD2EA9"> <title id="GUID-6FF5DCE6-D29E-4D86-88BA-2BFB4307661C">Connection Settings tab</title> <dl>
+			<dlhead>
+				<dthd>Name</dthd>
+				<ddhd>Description</ddhd>
+			</dlhead>
+			<dlentry id="GUID-0FAAC532-84A6-4189-9EF7-E827971BF1A8">
+				<dt><uicontrol>Connection</uicontrol></dt>
+				<dd>Sets the connection to which extension values specified below apply.</dd>
+			</dlentry>
+			</dl> <p>For each extended connection setting, clearing the adjacent <uicontrol>Use connection component value</uicontrol> check box enables the adjacent field for setting the extension value. If <uicontrol>Use connection component value</uicontrol> is selected, the values configured in the underlying connection component are used at run-time.</p> <note id="note_ce9210f8-ac6c-43f1-a6af-80cc1c15e34a">Extended custom properties key-value pairs (fields) appear for selection in a connection. Any key that has been blocked is automatically removed from the connection when saved. Additionally, a maximum of 50 key-value pairs may be added. </note> <draft-comment author="John_George">The above note was added for CON-435 in May, 2021. </draft-comment> </section>
+		<section id="GUID-2121F9CC-4622-48B9-8EE0-F8D5DDF5047E"> <title id="GUID-FD1B01CE-C7F6-41DE-8EAA-A6B22A44C658">Partner Settings tab</title> <dl>
+			<dlhead>
+				<dthd>Name</dthd>
+				<ddhd>Description</ddhd>
+			</dlhead>
+			<dlentry>
+				<dt><draft-comment author="Jon_Brams">B2B-451 insertion</draft-comment><uicontrol>Component Type</uicontrol></dt>
+				<dd>Selects the type of component — Trading Partner or Communication Channel — for which to set extension values.</dd>
+			</dlentry>
+			<dlentry>
+				<dt> <draft-comment author="Jon_Brams">B2B-451 update</draft-comment> </dt>
+				<dt><uicontrol>Component Name</uicontrol></dt>
+				<dd>Sets the component to which extension values specified below apply.<ul id="ul_agt_xyv_xhb">
+					<li id="li_53e8eb5a-deab-4c5c-b2c4-5393d9010108"> <p>If the selected <uicontrol>Component Type</uicontrol> is Trading Partner, the selection options are Trading Partner components.</p> </li>
+					<li id="li_838224eb-02fe-40b3-8e81-89922417dd2b"> <p>If the selected <uicontrol>Component Type</uicontrol> is Communication Channel, the selection options are Communication Channel components.</p> </li>
+					</ul></dd>
+			</dlentry>
+			<dlentry id="GUID-D43660C5-1666-401F-AC82-362C07ABD152">
+				<dt><uicontrol>Extension Set</uicontrol></dt>
+				<dd>Sets the extension set to which extension values specified below apply.</dd>
+			</dlentry>
+			</dl> <p><draft-comment author="Jon_Brams">B2B-451 update</draft-comment>For each extended setting in the Field column, turning off the adjacent <uicontrol>Use Default?</uicontrol> check box enables the adjacent field for the purpose of setting the extension value. If Use Default? is on, the values configured in the underlying component will be used at run-time.</p> <p>For some extended settings in communications method-based extension sets, to populate the field, click the adjacent magnifying glass icon and browse for a component.</p> </section>
+		<section id="GUID-686EF138-2C4F-4E41-B4F8-E50073ACF492"> <title id="GUID-CA77FD5D-5137-4474-BCC0-11E6FF9D0FAA">Dynamic Process Properties tab</title> <p>For each extended dynamic process property in the Name column, the adjacent field sets the extension value.</p> </section>
+		<section id="GUID-E2D5265D-CB4A-4173-AAEA-132F44614990"> <title id="GUID-060CF624-C07B-41E3-9C2C-3CCFDC3A6E54">Process Properties tab</title> <dl>
+			<dlhead>
+				<dthd>Name</dthd>
+				<ddhd>Description</ddhd>
+			</dlhead>
+			<dlentry id="GUID-0FAAC532-84A6-4189-9EF7-E827971BF1A8">
+				<dt><uicontrol>Process Property</uicontrol></dt>
+				<dd>Sets the process property component to which extension values specified below apply.</dd>
+			</dlentry>
+			</dl> <p>For each extended process property in the Field column, turning off the adjacent <uicontrol>Use Default?</uicontrol> check box enables the adjacent field for the purpose of setting the extension value. If Use Default? is on, the values configured in the underlying process property component will be used at run-time.</p> </section>
+		<section id="GUID-227A6044-5D99-4C4D-B85F-DA1703A23194"> <title id="GUID-1FD71531-AA96-474F-8B52-8C5BA25B53D3">Cross Reference tab</title> <dl>
+			<dlhead>
+				<dthd>Name</dthd>
+				<ddhd>Description</ddhd>
+			</dlhead>
+			<dlentry id="GUID-C548DDD4-1D21-4C8D-960F-BB330B7C3E10">
+				<dt><uicontrol>Cross Reference</uicontrol></dt>
+				<dd>Sets the cross reference table to which the extension value specified below applies.</dd>
+			</dlentry>
+			<dlentry id="GUID-54A9B073-F4A7-401C-AE14-081407D1DBE1">
+				<dt><uicontrol>Override</uicontrol></dt>
+				<dd>If selected, controls are available below for the purpose of defining the cross reference table to be used at run-time. If cleared, the underlying Cross Reference Table component, whose contents are displayed below, will be used.</dd>
+			</dlentry>
+			</dl> <p>The controls for defining the cross reference table to be used at run-time are identical to those used to create and edit a cross reference table component, except that the Update Column Headers icon, the Update Table Definition link, and the Enable Atom-specific values icons are omitted. Refer to the Cross Reference Table Components topic linked below for information about defining cross reference tables.</p> </section>
+		<section id="GUID-6FFD8C66-2B6A-495E-A1EA-E936F57853D9"> <title id="GUID-44D9F0A3-A8D6-4C7E-97B3-3E3B0B93E245">PGP tab</title> <dl>
+			<dlhead>
+				<dthd>Name</dthd>
+				<ddhd>Description</ddhd>
+			</dlhead>
+			<dlentry id="GUID-55052AC5-A612-4B69-BCA6-CAF85B9ED616">
+				<dt><uicontrol>PGP</uicontrol></dt>
+				<dd>Sets the PGP certificate to which the extension value specified below applies.</dd>
+			</dlentry>
+			<dlentry id="GUID-EF2326AA-4CE7-4195-BB4F-F5438587412B">
+				<dt><uicontrol>Certificate</uicontrol></dt>
+				<dd>Sets the PGP certificate to use at run-time. To populate the field, click <image href="main-ic-magnifying-glass-16_cd0f3352-63b0-4d15-af6d-86e11b9d14eb.jpg" id="IMAGE_49B18DEA834C42AF81BAF7A0289573CC">
+					<alt>Search icon</alt>
+					</image> and browse for the PGP certificate.</dd>
+			</dlentry>
+			<dlentry id="GUID-53778B7B-F4FF-49EC-988D-F45F0350CE84">
+				<dt><uicontrol>Use Default?</uicontrol></dt>
+				<dd>If cleared, <uicontrol>Certificate</uicontrol> is enabled. If selected, <uicontrol>Certificate</uicontrol> is disabled, meaning the PGP certificate configured in the underlying Certificate component will be used at run-time.</dd>
+			</dlentry>
+			</dl> </section>
+		<section id="GUID-13AA98EC-F0AF-4D60-8908-3ED1FCA9F72A"> <title id="GUID-695980D8-BB86-4D26-92FB-542F4A793574">Data Maps tab</title> <dl>
+			<dlhead>
+				<dthd>Name</dthd>
+				<ddhd>Description</ddhd>
+			</dlhead>
+			<dlentry id="GUID-62DAD425-F594-4CE0-B4FC-A839BB2A1693">
+				<dt><uicontrol>Data Maps</uicontrol></dt>
+				<dd>Sets the data map to which the extension values specified below apply. In the selection list each data map for which an extension is defined is identified by the source and destination object definition names. The object definition names are specified on the Object Definitions tab in the process Extensions dialog.<note id="GUID-8EBC4F02-BE1F-45BB-A6E9-24FD82B6EE80">If browsing for the source or destination profile specified by connection settings extensions values fails, an error message will be displayed. Clicking the <image href="main-ic-x-white-stylized-in-red-circle-16_9537b018-f13c-414d-a896-94522ff9ece8.jpg" id="IMAGE_01C666B8DB784B8DB7450A530788ED50" /> icon adjacent to the error message exposes the <uicontrol>Edit Credentials</uicontrol> button. Clicking <uicontrol>Edit Credentials</uicontrol> opens the Connection Settings dialog, which enables correction of the connection settings extension values and subsequent re-browsing for the profile.</note></dd>
+			</dlentry>
+			</dl> <p>Data map extension values are field mappings and fields augmenting flat file profile-based object definitions.</p> <ul id="GUID-1B42DC3F-3069-442B-A618-27DF938C6B6E">
+			<li id="LI_A30EF345D5404954AFA70987E17EBBBC"> <p>For field mapping, source fields are in the left column and destination fields are in the right column. The mapping controls are similar to those in the map component creation interface, which is drag-and-drop. You can add functions to data map extensions. For more information, see the Data Map Extensions topic.</p> <fig id="GUID-225685A0-2E53-47DA-A4C5-7E178001C736">
+				<image href="manage-ds-atom-extensions-data-maps_72ef714d-f16c-475a-87bd-27ed16d4ad82.jpg" id="IMAGE_AE736E456A42499FB4F58D0E96796244">
+					<alt>Example of a data map with extensions</alt>
+				</image>
+				</fig> <dl>
+				<dlhead>
+					<dthd>Name</dthd>
+					<ddhd>Description</ddhd>
+				</dlhead>
+				<dlentry id="GUID-73022DB1-D789-4DA8-B442-8C0A3C27BCB5">
+					<dt><uicontrol>Add a function to the map</uicontrol></dt>
+					<dd>Enables the addition of a function. Clicking this button opens the Add a Function dialog.<note id="GUID-1154CAEF-EA1D-4BEC-AB04-616477D6DA17">If you use extensions with integration packs, the Connector Call function is available but cannot be used. This is because no connection or operation components are available in the Connector Call dialog.</note></dd>
+				</dlentry>
+				</dl> </li>
+			<li id="LI_F056C136165044E48DC9D87000EB59CC"> <p>Clicking <uicontrol><image href="main-ic-pencil-yellow-12_12e3e7dc-22a8-42cf-8b3b-705c477344df.jpg" id="IMAGE_2C800758D223429081987E366A1E6166" /> Edit flat file extensions</uicontrol> for a flat file profile-based object definition opens the Flat File Extensions dialog, which is used to add fields to the object for use at run-time.</p> <fig id="GUID-484AA6D4-CDCD-47FF-8ED4-6D343EC90B53">
+				<image href="manage-db-flat-file-profile_788af9f7-af95-4312-93d6-26e10807ccec.jpg" id="IMAGE_65460F60270D44E0B4B40C4D0122E700">
+					<alt>Flat File Extensions dialog</alt>
+				</image>
+				</fig> <p>In the Flat File Extensions dialog, the field list is on the left-hand side. Selecting a field in the list causes the controls used to set its name and options to appear to the right. These controls are identical to those used in the Build page to create and edit a flat file profile component. On the other hand, the controls used here to add, move and delete fields differ from those in the flat file profile component creation interface. The controls here are as follows:</p> <dl id="EXTENSIONSDIALOG">
+				<dlhead>
+					<dthd>Name</dthd>
+					<ddhd>Description</ddhd>
+				</dlhead>
+				<dlentry id="GUID-40058332-ECF9-4007-A976-921C8130808A">
+					<dt><uicontrol><image href="main-ic-plus-sign-white-in-green-circle-16_4dc8c5f3-e893-4aef-ade2-0b7afe9476c1.jpg" id="IMAGE_61912BC36B504CB987516D2595A7FF8F">
+						<alt>Add icon</alt>
+						</image> Add Element</uicontrol></dt>
+					<dd>Adds a field. Once added the field is automatically selected in the field list so that its name and options can be easily set.</dd>
+				</dlentry>
+				<dlentry id="GUID-1AEC92EE-7936-42CC-B46B-F2D8D898BF3F">
+					<dt><uicontrol><image href="main-ic-x-white-stylized-in-red-circle-16_9537b018-f13c-414d-a896-94522ff9ece8.jpg" id="IMAGE_DB423BE265A54D7D8C671F09B19631E1">
+						<alt>Delete icon</alt>
+						</image> Delete Element</uicontrol></dt>
+					<dd>Deletes the selected field.</dd>
+				</dlentry>
+				<dlentry id="GUID-5015B9AD-A6E4-4FF0-8C2D-B5CEFA7BE01B">
+					<dt><uicontrol>Move Element Up</uicontrol></dt>
+					<dd>Moves the selected field up.</dd>
+				</dlentry>
+				<dlentry id="GUID-933D7B5B-3AEE-47C9-A7B2-EC93ABCB4EED">
+					<dt><uicontrol>Move Element Down</uicontrol></dt>
+					<dd>Moves the selected field down.</dd>
+				</dlentry>
+				<dlentry id="GUID-F5B10B37-C2E2-4A24-B9EC-4835A913A99F">
+					<dt><uicontrol>OK</uicontrol></dt>
+					<dd>Confirms the specified field additions and restores focus to the Data Maps tab.</dd>
+				</dlentry>
+				<dlentry id="GUID-90F6C959-4C38-4C80-B0E6-8C1DC38FC10E">
+					<dt><uicontrol>Cancel</uicontrol></dt>
+					<dd>Discards any specified field additions and restores focus to the Data Maps tab.</dd>
+				</dlentry>
+				</dl> </li>
+			</ul> </section>
+		<section id="GUID-EDDB45AE-E2FF-4926-9F96-8A4642B79B73"> <title id="GUID-90EEEF3D-5229-41C0-BC73-30D2F95CF571">Shared Web Server logs</title> <note id="GUID-42386AA1-4435-429F-BEC3-D2538E04343B">If you select a date outside the valid date range, a warning message appears. You can change the date or keep it. In some cases you might need to select a date outside the range. For example, you and your Atom could be located in different time zones. If processes ran early on Thursday morning, but where you are located it is still late Wednesday evening, you could legitimately need to download “tomorrow’s” logs today. If no logs are available for the selected date, a message appears.</note> </section>
+		<section id="GUID-4349C907-1D06-4C5B-9AF1-62B5F04662C9"> <title id="GUID-2410FC02-65D3-40A1-88B7-5487920228A9">ACM ownership</title> <note id="GUID-A12BA7E3-EFB0-4C6D-9070-25DFB3798F0A">If your account does not own the selected Atom, Molecule, or Atom Cloud, or if the selected Atom is attached to an Atom Cloud, the <keyword conref="lib-Boomi_Keywords_0346af2b-13d7-491e-bec9-18c5d89225bf.xml#GUID-0207C7F1-40FD-4537-BE59-1D6DA46B9A1D/prerelease" /> Scheduling panel is not visible to you.</note> </section>
+		<section id="GUID-7129C81B-D608-47D9-A709-FC98D198E1DA"> <title id="GUID-7733D019-3661-4DDD-A933-1F4A1ED3E01F">AS2 messages</title> <note id="GUID-E705E451-93B6-4D5A-9052-050F7355F250">Log file paths contain AS2 message IDs, which can be relatively long. In a Windows environment, be aware of the maximum system path length limit of 260 characters when specifying the path to which to save the .zip file.</note> </section>
+		<section id="GUID-F9136846-F7BB-46A4-BB3D-0BC2507320EA"> <title id="GUID-8AF135FD-9768-4107-B2B1-550270B58FB4">Atom communication</title> <ul id="GUID-93626623-5945-4D22-9B4F-0B1B24054396">
+			<li id="LI_CB290CD0C54748F2B1E7CBD8EBF9D86A"> <p id="ATOM_COMMUNICATION">All communication from the Atom to the data center uses TLS encryption. We support TLS version 1.1 and TLS version 1.2. SSL version 3.0 has been disabled due to the Poodle vulnerability.</p> </li>
+			</ul> </section>
+		<section id="SECTION_E6E87699F0E04D0CBAE437725125C0FF"> <title id="GUID-07398E9A-5B21-4624-85A6-2EFDA1C7AE0E"> Atom Management Read Access</title> <p id="81852871-29C1-4849-AF5A-C8DE77C92FA4"> You must have the Atom Management privilege to perform this task. If you have the Atom Management Read Access privilege, you cannot perform the task.</p> </section>
+		<section id="SECTION_DD9087866B15469DB580F47836D14DF0"> <title id="GUID-7DB2AA53-F319-42B9-979D-DEEB30E2E35A"> TLSv1 support</title> <note id="GUID-8BBD6999-DCFF-46E1-B850-86CAFE8E7923">On March 28, 2018, <keyword conref="lib-Boomi_Keywords_0346af2b-13d7-491e-bec9-18c5d89225bf.xml#GUID-0207C7F1-40FD-4537-BE59-1D6DA46B9A1D/BOOMI_DELL" /> disabled support for TLS v1.0 on the <keyword conref="lib-Boomi_Keywords_0346af2b-13d7-491e-bec9-18c5d89225bf.xml#GUID-0207C7F1-40FD-4537-BE59-1D6DA46B9A1D/BOOMI_DELL" /> EU and ANZ Atom Clouds and all <keyword conref="lib-Boomi_Keywords_0346af2b-13d7-491e-bec9-18c5d89225bf.xml#GUID-0207C7F1-40FD-4537-BE59-1D6DA46B9A1D/BOOMI_DELL" /> Hub Clouds. On May 23, 2018, <keyword conref="lib-Boomi_Keywords_0346af2b-13d7-491e-bec9-18c5d89225bf.xml#GUID-0207C7F1-40FD-4537-BE59-1D6DA46B9A1D/BOOMI_DELL" /> additionally disabled support for TLS v1.0 on the <keyword conref="lib-Boomi_Keywords_0346af2b-13d7-491e-bec9-18c5d89225bf.xml#GUID-0207C7F1-40FD-4537-BE59-1D6DA46B9A1D/PLATFORM" /> and the <keyword conref="lib-Boomi_Keywords_0346af2b-13d7-491e-bec9-18c5d89225bf.xml#GUID-0207C7F1-40FD-4537-BE59-1D6DA46B9A1D/BOOMI_DELL" /> US Atom Cloud. On October 29, 2021, <keyword conref="lib-Boomi_Keywords_0346af2b-13d7-491e-bec9-18c5d89225bf.xml#GUID-0207C7F1-40FD-4537-BE59-1D6DA46B9A1D/BOOMI_DELL" /> disabled support for TLS v1.0 for Atoms and Molecules.</note> </section>
+		<section id="GUID-70BF51C0-1F9E-4530-B53F-2F47CCD9F2F0"> <title id="GUID-0999CA2F-F676-43FF-942F-A4BE830B6383">Installation checklist — Linux</title> </section>
+		<section id="GUID-BC2337A7-A826-4C80-92E3-512E9460626B"> <title id="GUID-C8709987-B170-4ADF-B504-A5ED70FE6579">Configure NFS storage</title> <ul id="GUID-7EAE4A56-3B67-496E-80B8-5F3C53B664C1">
+			<li id="LI_5BA701BDB5DA494FBF87EEBA6061858A"> <p>Make sure the nfslock daemon is enabled at startup and is running on the NFS client nodes.</p> </li>
+			<li id="LI_4D27A1D620784073BCBC1450787AFEE5"> <p>Make sure this central storage is mounted in the same path on all nodes and that the Molecule or Atom Cloud service account has write access to the path.</p> </li>
+			<li id="LI_2B6D94668D1444E99FBCF2E241849ACF"> <p>Make sure users and groups are correctly identified across mounts. Viewing file details in NFS mounted directories should display valid user and group names.</p> <ul id="GUID-162CC133-A0B7-4D2E-A3E5-0CCC4C26950D">
+				<li id="LI_14FA61D7671D4ED6BAD838F3A56DD1CE"> <p>In NFSv4, this is often controlled by the idmapd daemon. Ensure this is enabled and running on each node and NFS server.</p> </li>
+				</ul> </li>
+			<li id="LI_FA84EBE71DC343BD98DEED0058CB2EF3"> <p>Leverage mount options that support binary execution via the share. </p> <ul id="GUID-415467DC-D013-4162-83B6-BB9C85FDBA73">
+				<li id="LI_0D3D175F7C294F7B8657538EFFCA0BA4"> <p>NFS client /etc/fstab example: <codeph>vers=3,noatime,nodiratime,rw,hard,intr,bg,addr=nfsserver.domain.com</codeph></p> <ul id="GUID-30C28066-1D76-4601-ABB7-87CBF5D17947">
+					<li id="LI_0DD0EB991B124B978956F2472ECFF32D"> <p><codeph>vers=</codeph> — Specifies the NFS version the server must support. This option may not be necessary, depending on the client/server setup.</p> </li>
+					<li id="LI_5C1AEE5874A5407684876AF89D1E6BEC"> <p><codeph>noatime</codeph> — Disables “access time” tracking on files. This information is generally unnecessary to maintain and can waste nontrivial IO bandwidth.</p> </li>
+					<li id="LI_BA9CD3AA36AC4696BA5C76851AA8B906"> <p><codeph>nodiratime</codeph> — This is the same as <codeph>noatime</codeph> except for directories.</p> </li>
+					<li id="LI_9E4B5C01419A4082AF0188101CB6F567"> <p><codeph>rw</codeph> — Read and write access is required by the Atom.</p> </li>
+					<li id="LI_CB5A4C783035428DAF37E7A4B202E1B8"> <p><codeph>hard</codeph> — Requires NFS client operations to complete. Not using this option may cause silent data corruption.</p> </li>
+					<li id="LI_79B4D29E50494956A1B9A11DAFB83459"> <p><codeph>intr</codeph> — Allows signals to interrupt NFS operations. This will prevent the system from hanging if the NFS server stops responding.</p> </li>
+					<li id="LI_10CFB9C9E6C246AE8BF5DDE84C77E3D9"> <p><codeph>bg</codeph> — Allows the system to start up even if the initial NFS mount fails. This will prevent the system from hanging on startup if the NFS server is not yet available.</p> </li>
+					<li id="LI_379B736FB2D540BD945CEA5DC95CAFCB"> <p><codeph>addr=</codeph> — The address used for servers with multiple IP subnets on the same interface. Usually this setting is not needed.</p> </li>
+					</ul> </li>
+				</ul> </li>
+			<li id="LI_9D85C71B328748C69FEF276FA534A510"> <p>If you are using NFSv4, bind mounts are required in order to function. </p> <ul id="GUID-12EB58AF-96A6-494E-ACCA-9530634FCA8C">
+				<li id="LI_78ABC308491E4CB78D1F5D8E698E4DAD"> <p>NFS server /etc/fstab example: <codeph>/data/boomi/exports/data/boomi none bind 0 0</codeph></p> </li>
+				<li id="LI_3CABBF80B18B4CE4AC80DFF66D43EAB0"> <p>NFS Server /etc/exports example: <codeph>/exports &lt;ipaddr/32&gt;(rw,insecure,no_subtree_check,nohide,fsid=0,sync,no_root_squash)</codeph></p> </li>
+				</ul> </li>
+			</ul> </section>
+		<section id="GUID-184DFCF0-AF0C-42D5-B3D4-F9040AB2DD6E"> <title id="GUID-1B8E3FB7-4786-4168-A3E6-5A514ACB1093">Installation checklist — Windows and Linux</title> </section>
+		<section id="GUID-12FD372E-5C32-44E2-A281-A9616BE69A10"> <title id="GUID-97A03535-898C-4F17-859C-E8B858876C82">Synchronize clocks and time zones</title> <p>Ensure that the clock on all Molecule nodes, including central storage services (e.g., NFS), are synchronized regularly using something like NTP. If the clocks on the machines are not closely synchronized, you are likely to encounter problems with: the clustering protocol, accurate time recording for cross-node actions, and accurate handling of files on the shared file system.</p> <p>Ensure that all machines are set to use the same time zone. This includes the machines on which the Molecule nodes run, as well as file servers being used. See your operating system’s documentation for instructions on how to set your machines’ time zone.</p> </section>
+		<section id="GUID-4EC257B5-5BA0-4ABA-AA75-1386BE0EE911"> <title id="GUID-446ED5A2-A74F-497F-B806-4AE7614D61C5">Consider failover and disaster recovery needs</title> <p> For information about backup and disaster recovery best practices for Molecules and Atom Clouds, review the following resources in the <keyword conref="lib-Boomi_Keywords_0346af2b-13d7-491e-bec9-18c5d89225bf.xml#GUID-0207C7F1-40FD-4537-BE59-1D6DA46B9A1D/BOOMI_DELL" /> Community: </p> <ul id="UL_EA74E8EF44C345D7A36D3344B0354AED">
+			<li id="li_b95124c7-1c7d-45a0-b4d2-1dbdc3a2a862"> <p><xref href="https://community.boomi.com/s/article/bestpracticesforruntimehighavailabilityanddisasterrecovery" format="https" scope="external">Best Practices for Run Time High Availability and Disaster Recovery knowledge article</xref></p> </li>
+			<li id="LI_3D9DCD5499A5478E9CBCFFD49752EF46"> <p><xref href="https://www.youtube.com/watch?v=lHayf1HMLW8&amp;feature=youtu.be" format="https" scope="external"> Backup and Disaster Recovery video</xref></p> </li>
+			</ul> <p>If you usually take point-in-time snapshots of your systems with a tool such as VMware, there is no need to take snapshots of the nodes in a Molecule or Atom Cloud. The nodes do not contain any valuable information beyond operating system settings. However, if you want to take a snapshot of a Molecule or Atom Cloud node, do so only once at setup time and <i>before</i> starting the node. </p> <note id="GUID-AB99896F-6C00-49ED-AEC8-5D49B2333AE9"><keyword conref="lib-Boomi_Keywords_0346af2b-13d7-491e-bec9-18c5d89225bf.xml#GUID-0207C7F1-40FD-4537-BE59-1D6DA46B9A1D/BOOMI_DELL" /> does not recommend taking snapshots of Molecule or Atom Cloud nodes on an ongoing basis. Doing so can negatively impact the node's operational stability. </note> </section>
+		<section id="GUID-064EA92A-37A4-424C-8201-0FA2ED0D7666"> <title id="GUID-E4EB3792-F4FE-47B9-88D9-D82CB47CC820">Scripting Engines</title> <note id="GUID-F3A4B1E1-5F41-4755-85E6-5F496F1D8F4B">The scripting engine that is used depends on whether you use Windows or Linux. If you are running: <ul id="UL_5E0A09CB6C3A4BC8A8735C8D825A0ECF">
+			<li id="LI_66B2C97D41B842729213FD66A50BF184"> Windows and an Atom, or if you are running a Molecule that does not use UNC paths or forked execution, then batch scripts (<filepath>.bat</filepath>) are used.</li>
+			<li id="LI_B0CF24D67BCA4B35915C5D941C2F1FB2"> Windows and a Molecule that uses UNC paths or forked execution, or if you are running an Atom Cloud, then Powershell scripts (<filepath>.ps1</filepath>) are used.</li>
+			<li id="LI_9892F0ADF9C944ED80E77B3FF3FAAD00"> Linux, then shell scripts (<filepath>.sh</filepath>) are used in all situations.</li>
+			</ul></note> </section>
+		<section id="GUID-43AB2380-A0CB-4E99-9200-A0D45821E850"> <title id="GUID-0F8DC742-1332-4380-BDA4-DC640CC4585D">Docker</title> <note id="GUID-1566D343-82AC-487A-ACE1-13D60F3C6B12">The use of Docker to install and maintain a local Atom, Molecule, or Atom Cloud is a Tech Preview not intended for production use. Your <xref href="https://community.boomi.com/community/ideas-for-boomi" format="html" scope="external">feedback</xref> is welcome.<p>Docker support is an optional account feature. If you would like to have this feature enabled in your account, contact your <keyword conref="lib-Boomi_Keywords_0346af2b-13d7-491e-bec9-18c5d89225bf.xml#GUID-0207C7F1-40FD-4537-BE59-1D6DA46B9A1D/BOOMI_DELL" /> representative.</p></note> </section>
+		<section id="SECTION_CBD4C314BFAC41B09CFE1D8207C4F4DD"><title id="LEGACY_NON-DEPLOYMENT">Legacy, non-environment</title><keyword id="LEGACY_NONEVIRONMENT">(Legacy, non-environment)</keyword></section>
+		<section id="section_n1d_nx2_hmb"> <title>AWS</title> <p>The Boomi Molecule on AWS Quick Start can reduce hundreds of manual procedures into just a few steps, so customers can build a Boomi Molecule production environment quickly and can start using it immediately. The Boomi Molecule AWS Quick Start includes a reference architecture, as well as a deployment guide, providing easy to understand instructions on how to deploy a fully functioning Boomi Molecule cluster on AWS in less than 30 minutes. To get started, go to the <xref href="https://aws.amazon.com/quickstart/architecture/dell-boomi-molecule/" format="html" scope="external">Boomi Molecule on AWS Quick Start</xref>. There are AWS credits available to cover the cost of initial POC and trial deployments based on approval. Contact <xref href="mailto:Boomi.AWS.Team@dell.com" format="AWS.Team@dell.com.Team@dell.com.com" scope="external">Boomi.AWS.Team@dell.com</xref> to learn more about getting started and also visit the Boomi Community Article <b><xref href="https://community.boomi.com/s/news/aBU1W0000004DlDWAU/deploy-a-boomi-molecule-cluster-on-aws-with-one-click" format="html" scope="external">Deploy a Boomi Molecule Cluster on AWS with One Click</xref></b><b>.</b></p> </section>
+		<section id="section_vhp_b54_3rb"> <title>Questions and answers about <keyword conref="lib-Boomi_Keywords_0346af2b-13d7-491e-bec9-18c5d89225bf.xml#GUID-0207C7F1-40FD-4537-BE59-1D6DA46B9A1D/prerelease" /></title><p dir="ltr"><uicontrol>Is the <keyword conref="lib-Boomi_Keywords_0346af2b-13d7-491e-bec9-18c5d89225bf.xml#GUID-0207C7F1-40FD-4537-BE59-1D6DA46B9A1D/prerelease" /> considered a release candidate or beta release?</uicontrol></p> <p>The <keyword conref="lib-Boomi_Keywords_0346af2b-13d7-491e-bec9-18c5d89225bf.xml#GUID-0207C7F1-40FD-4537-BE59-1D6DA46B9A1D/prerelease" /> is neither a beta release or a release candidate, but rather it is an official release. A release candidate (or beta release) is a version of the release that allows customers to test features and report defects, which are then prioritized and fixed in time for the full release. Any issues related to the <keyword conref="lib-Boomi_Keywords_0346af2b-13d7-491e-bec9-18c5d89225bf.xml#GUID-0207C7F1-40FD-4537-BE59-1D6DA46B9A1D/prerelease" /> should be reported via Support as normal but are fixed as part of the regular development cycle for inclusion in a future release.</p> <p dir="ltr"><uicontrol>How can I know what features and fixes are or are not available in the <keyword conref="lib-Boomi_Keywords_0346af2b-13d7-491e-bec9-18c5d89225bf.xml#GUID-0207C7F1-40FD-4537-BE59-1D6DA46B9A1D/prerelease" />?</uicontrol></p> <p>With each Runtime Release, <keyword conref="lib-Boomi_Keywords_0346af2b-13d7-491e-bec9-18c5d89225bf.xml#GUID-0207C7F1-40FD-4537-BE59-1D6DA46B9A1D/BOOMI_DELL" /> provides release notes which list the features and fixes included in <keyword conref="lib-Boomi_Keywords_0346af2b-13d7-491e-bec9-18c5d89225bf.xml#GUID-0207C7F1-40FD-4537-BE59-1D6DA46B9A1D/BOOMI_DELL" />'s <keyword conref="lib-Boomi_Keywords_0346af2b-13d7-491e-bec9-18c5d89225bf.xml#GUID-0207C7F1-40FD-4537-BE59-1D6DA46B9A1D/prerelease" />.</p> <p><uicontrol>How do I know when updates are available prior to the <keyword conref="lib-Boomi_Keywords_0346af2b-13d7-491e-bec9-18c5d89225bf.xml#GUID-0207C7F1-40FD-4537-BE59-1D6DA46B9A1D/release" />?</uicontrol></p> <p>A system message appears in <keyword conref="lib-Boomi_Keywords_0346af2b-13d7-491e-bec9-18c5d89225bf.xml#GUID-0207C7F1-40FD-4537-BE59-1D6DA46B9A1D/BOOMI_INTEGRATION" /> when <keyword conref="lib-Boomi_Keywords_0346af2b-13d7-491e-bec9-18c5d89225bf.xml#GUID-0207C7F1-40FD-4537-BE59-1D6DA46B9A1D/prerelease" /> updates are available. You also can check the Atom &amp; Connector Versions panel in the <keyword conref="lib-Boomi_Keywords_0346af2b-13d7-491e-bec9-18c5d89225bf.xml#GUID-0207C7F1-40FD-4537-BE59-1D6DA46B9A1D/BOOMI_INTEGRATION" /> service, or the Gateway version and Broker Version panels in the <keyword conref="lib-Boomi_Keywords_0346af2b-13d7-491e-bec9-18c5d89225bf.xml#GUID-0207C7F1-40FD-4537-BE59-1D6DA46B9A1D/BOOMI_APIMANAGEMENT" /> service to see if pending updates are listed for the respective runtime containers. See the <uicontrol>Applying the <keyword conref="lib-Boomi_Keywords_0346af2b-13d7-491e-bec9-18c5d89225bf.xml#GUID-0207C7F1-40FD-4537-BE59-1D6DA46B9A1D/prerelease" /></uicontrol> section of this topic for more information.</p><p>Additionally, the Runtime Release schedule is also posted on the <xref href="https://stats.boomi.com/notifications/" format="html" scope="external">Notifications page</xref>.</p> <p dir="ltr"><uicontrol>Who is able to apply the <keyword conref="lib-Boomi_Keywords_0346af2b-13d7-491e-bec9-18c5d89225bf.xml#GUID-0207C7F1-40FD-4537-BE59-1D6DA46B9A1D/prerelease" /> updates?</uicontrol></p> <p>To apply updates to Atoms, Molecules, or Clouds, users with the Atom Management privilege (typically users with the Administrator role) are able to apply the <keyword conref="lib-Boomi_Keywords_0346af2b-13d7-491e-bec9-18c5d89225bf.xml#GUID-0207C7F1-40FD-4537-BE59-1D6DA46B9A1D/prerelease" />. You also must be authorized to update the selected Atom. You cannot apply updates to an Atom that you do not own, for example, a <keyword conref="lib-Boomi_Keywords_0346af2b-13d7-491e-bec9-18c5d89225bf.xml#GUID-0207C7F1-40FD-4537-BE59-1D6DA46B9A1D/BOOMI_DELL" /> Atom Cloud.</p> <p>To apply updates to API Gateways or Authentication Brokers, users with the <keyword conref="lib-Boomi_Keywords_0346af2b-13d7-491e-bec9-18c5d89225bf.xml#GUID-0207C7F1-40FD-4537-BE59-1D6DA46B9A1D/BOOMI_APIMANAGEMENT" /> privilege (typically users with the Administrator role) are able to apply the <keyword conref="lib-Boomi_Keywords_0346af2b-13d7-491e-bec9-18c5d89225bf.xml#GUID-0207C7F1-40FD-4537-BE59-1D6DA46B9A1D/prerelease" />.</p> <p><uicontrol>If I have multiple Atoms, do I have to update all of them at the same time?</uicontrol></p> <p>No, you do not have to update all of your Atoms at once. You can individually update any Atom, Molecule, Atom Cloud, API Gateway or Authentication broker at your own leisure. Please see the <uicontrol>Applying the <keyword conref="lib-Boomi_Keywords_0346af2b-13d7-491e-bec9-18c5d89225bf.xml#GUID-0207C7F1-40FD-4537-BE59-1D6DA46B9A1D/prerelease" /></uicontrol> section of this topic for more details.</p> <p dir="ltr"><uicontrol>Will the runtime containers be updated or rolled back immediately after I click the button to apply or to rollback updates?</uicontrol></p> <p dir="ltr">The request is sent to the container immediately. Allow time for the updates or rollback to take effect. The container might restart during this process. It waits for a period of inactivity before applying the updates or rollback.</p> <p dir="ltr"><uicontrol>Can people use the <keyword conref="lib-Boomi_Keywords_0346af2b-13d7-491e-bec9-18c5d89225bf.xml#GUID-0207C7F1-40FD-4537-BE59-1D6DA46B9A1D/BOOMI_ATOMSPHERE" /> platform while I apply the updates or a rollback?</uicontrol></p> <p dir="ltr">Yes. Users who are logged into the platform are not affected.</p> <p dir="ltr"><uicontrol>Can updates be applied to or rolled back on a runtime container that is not currently running?</uicontrol></p> <p dir="ltr">No. The updates or rollback will be applied to the container the next time it is started.</p> <p dir="ltr"><uicontrol>What happens if I don’t apply the <keyword conref="lib-Boomi_Keywords_0346af2b-13d7-491e-bec9-18c5d89225bf.xml#GUID-0207C7F1-40FD-4537-BE59-1D6DA46B9A1D/prerelease" /> updates prior to the <keyword conref="lib-Boomi_Keywords_0346af2b-13d7-491e-bec9-18c5d89225bf.xml#GUID-0207C7F1-40FD-4537-BE59-1D6DA46B9A1D/release" />?</uicontrol></p> <p>On the <keyword conref="lib-Boomi_Keywords_0346af2b-13d7-491e-bec9-18c5d89225bf.xml#GUID-0207C7F1-40FD-4537-BE59-1D6DA46B9A1D/release" /> date, both the <keyword conref="lib-Boomi_Keywords_0346af2b-13d7-491e-bec9-18c5d89225bf.xml#GUID-0207C7F1-40FD-4537-BE59-1D6DA46B9A1D/prerelease" /> and <keyword conref="lib-Boomi_Keywords_0346af2b-13d7-491e-bec9-18c5d89225bf.xml#GUID-0207C7F1-40FD-4537-BE59-1D6DA46B9A1D/release" /> updates are automatically applied to accounts.</p> </section>
+		<section id="section_kyl_x2l_jrb"><title>About the <keyword conref="lib-Boomi_Keywords_0346af2b-13d7-491e-bec9-18c5d89225bf.xml#GUID-0207C7F1-40FD-4537-BE59-1D6DA46B9A1D/prerelease" /></title><p>The <keyword conref="lib-Boomi_Keywords_0346af2b-13d7-491e-bec9-18c5d89225bf.xml#GUID-0207C7F1-40FD-4537-BE59-1D6DA46B9A1D/prerelease" /> may include updates for the following runtime containers:<ul id="ul_kyr_gbk_grb">
+			<li id="li_1fe35982-1bac-4854-a2de-f85dfb6c89a8">Atoms, Molecules, and Atom Clouds</li>
+			<li id="li_20e14a56-1d33-47b2-bee6-2f4b1a12e152">API Gateways</li>
+			<li id="li_79278ad4-64db-44f3-a511-5ebbda4a02bc">Authentication Brokers</li>
+			<li id="li_7fc8a7f8-522c-4f01-86e4-e17e39617ce0">Specific Connectors</li>
+			</ul></p><p>The <keyword conref="lib-Boomi_Keywords_0346af2b-13d7-491e-bec9-18c5d89225bf.xml#GUID-0207C7F1-40FD-4537-BE59-1D6DA46B9A1D/prerelease" /> typically occurs two weeks prior to the <keyword conref="lib-Boomi_Keywords_0346af2b-13d7-491e-bec9-18c5d89225bf.xml#GUID-0207C7F1-40FD-4537-BE59-1D6DA46B9A1D/release" /> date. Applying the <keyword conref="lib-Boomi_Keywords_0346af2b-13d7-491e-bec9-18c5d89225bf.xml#GUID-0207C7F1-40FD-4537-BE59-1D6DA46B9A1D/prerelease" /> is an optional action; users can apply available <keyword conref="lib-Boomi_Keywords_0346af2b-13d7-491e-bec9-18c5d89225bf.xml#GUID-0207C7F1-40FD-4537-BE59-1D6DA46B9A1D/prerelease" /> updates at any point between the <keyword conref="lib-Boomi_Keywords_0346af2b-13d7-491e-bec9-18c5d89225bf.xml#GUID-0207C7F1-40FD-4537-BE59-1D6DA46B9A1D/prerelease" /> and until the <keyword conref="lib-Boomi_Keywords_0346af2b-13d7-491e-bec9-18c5d89225bf.xml#GUID-0207C7F1-40FD-4537-BE59-1D6DA46B9A1D/release" />. Users who opt not to apply the <keyword conref="lib-Boomi_Keywords_0346af2b-13d7-491e-bec9-18c5d89225bf.xml#GUID-0207C7F1-40FD-4537-BE59-1D6DA46B9A1D/prerelease" /> automatically receive all runtime updates on the <keyword conref="lib-Boomi_Keywords_0346af2b-13d7-491e-bec9-18c5d89225bf.xml#GUID-0207C7F1-40FD-4537-BE59-1D6DA46B9A1D/release" /> date, which typically occurs on the second Saturday of each month.</p> <p>Once the <keyword conref="lib-Boomi_Keywords_0346af2b-13d7-491e-bec9-18c5d89225bf.xml#GUID-0207C7F1-40FD-4537-BE59-1D6DA46B9A1D/prerelease" /> is applied to accounts automatically, all runtime containers are immediately restarted and may require downtime. To avoid disruption to your processes and configurations, you can apply the <keyword conref="lib-Boomi_Keywords_0346af2b-13d7-491e-bec9-18c5d89225bf.xml#GUID-0207C7F1-40FD-4537-BE59-1D6DA46B9A1D/prerelease" /> up to two weeks sooner and perform the mandatory restart of runtime containers at your own leisure.</p> <note id="note_omn_cy4_3rb">When applying the <keyword conref="lib-Boomi_Keywords_0346af2b-13d7-491e-bec9-18c5d89225bf.xml#GUID-0207C7F1-40FD-4537-BE59-1D6DA46B9A1D/prerelease" />, API Gateways, Authentication Brokers, Atoms, and the nodes in your Molecules and Atom Clouds are restarted on a rolling basis. For more information, see the <xref href="c-atm-Rolling_restart_of_Molecules_and_Atom_Clouds_6a2b6e3c-faa0-4447-93b2-8c7def9fe296.xml" format="xml" scope="peer" type="reference">Rolling restart of Molecules and Atom Clouds</xref> topic.</note> <p>Monthly release notes, published at the start of the <keyword conref="lib-Boomi_Keywords_0346af2b-13d7-491e-bec9-18c5d89225bf.xml#GUID-0207C7F1-40FD-4537-BE59-1D6DA46B9A1D/prerelease" />, indicate which updates are or are not available in the <keyword conref="lib-Boomi_Keywords_0346af2b-13d7-491e-bec9-18c5d89225bf.xml#GUID-0207C7F1-40FD-4537-BE59-1D6DA46B9A1D/prerelease" />. Upcoming <keyword conref="lib-Boomi_Keywords_0346af2b-13d7-491e-bec9-18c5d89225bf.xml#GUID-0207C7F1-40FD-4537-BE59-1D6DA46B9A1D/prerelease" /> dates are listed on the <xref href="https://stats.boomi.com/notifications/" format="html" scope="external">Notifications page</xref>. The <keyword conref="lib-Boomi_Keywords_0346af2b-13d7-491e-bec9-18c5d89225bf.xml#GUID-0207C7F1-40FD-4537-BE59-1D6DA46B9A1D/prerelease" /> does not include any features, enhancements, or fixes pertaining to the user interface, <keyword conref="lib-Boomi_Keywords_0346af2b-13d7-491e-bec9-18c5d89225bf.xml#GUID-0207C7F1-40FD-4537-BE59-1D6DA46B9A1D/PLATFORM" />, or <keyword conref="lib-Boomi_Keywords_0346af2b-13d7-491e-bec9-18c5d89225bf.xml#GUID-0207C7F1-40FD-4537-BE59-1D6DA46B9A1D/BOOMI_ATOMSPHERE" /> API and Partner API updates.</p></section>
+	</body>
+</topic>

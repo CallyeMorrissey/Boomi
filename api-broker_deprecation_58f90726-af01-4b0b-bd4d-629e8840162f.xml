@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8"?><?Inspire CreateDate="2021-11-04T19:39:45" ModifiedDate="2022-05-24T17:55:25"?><!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN" "reference.dtd">
+
+<reference id="reference_1bcb9508-640a-4328-8855-dcbf279ea2bc">
+	<title id="title_42fdb7ba-8a6c-4941-bf09-465d949c7e47">Broker retirement</title>
+	<shortdesc>The Authentication Broker will be retired soon.  It is recommended to migrate all
+		Brokers as soon as possible. After the Broker is retired, it will no longer be available or
+		supported for use on the <keyword
+			conref="lib-Boomi_Keywords_0346af2b-13d7-491e-bec9-18c5d89225bf.xml#GUID-0207C7F1-40FD-4537-BE59-1D6DA46B9A1D/BOOMI_ATOMSPHERE"
+		/> platform.</shortdesc>
+	<prolog>
+		<resourceid id="GUID-58f90726-af01-4b0b-bd4d-629e8840162f" />
+	</prolog>
+	<refbody>
+		<section id="section_8857c155-fb92-4cda-a4ef-c6d338cb69d0"><title>Why is the Broker being retired</title><p>In October 2021, we removed the ability to install a Broker. New users who did not have a Broker installed before October 9, 2021, do not see an option to install a new Broker or Broker-based authentication sources such as OpenID and SAML. For users who already had a broker installed, we provided a notice that the Broker will be deprecated. We have stopped prioritizing enhancement requests for the Broker including not updating it to the latest version of Java. </p><p><keyword conref="lib-Boomi_Keywords_0346af2b-13d7-491e-bec9-18c5d89225bf.xml#GUID-0207C7F1-40FD-4537-BE59-1D6DA46B9A1D/BOOMI_DELL" /> is retiring the Broker because it is complex to install, deploy, maintain, and has resulted in performance issues. The Broker also adds cost, and does not support all the authentication flows of OAuth2.0. <keyword conref="lib-Boomi_Keywords_0346af2b-13d7-491e-bec9-18c5d89225bf.xml#GUID-0207C7F1-40FD-4537-BE59-1D6DA46B9A1D/BOOMI_DELL" /> has released JWT and Basic Authentication on Gateway and this makes the Broker functionality redundant. You no longer need the Broker to talk to a third party identity provider. </p></section>
+		<section id="section_gdx_qmh_mrb"><title>Retirement timeline and what to expect</title><ul id="ul_qsw_pnh_mrb">
+			<li id="li_cefbe0e6-7d87-418a-85f0-7af9ba7abc1c"><p>The Broker will be retired soon. At that time we will stop supporting the Broker and it will not
+						be available for use on the <keyword
+							conref="lib-Boomi_Keywords_0346af2b-13d7-491e-bec9-18c5d89225bf.xml#GUID-0207C7F1-40FD-4537-BE59-1D6DA46B9A1D/BOOMI_ATOMSPHERE"
+						/> platform. </p></li>
+			<li id="li_d4624c34-7a54-430c-bb3e-f7f0fb4846ac"><p>In January 2022, we provided the Basic Authentication Migration feature for you to easily convert
+						existing Broker-based Basic Authentications to Basic Authentication on the
+						Gateway. For more information, see below.</p></li>
+			<li id="li_149fe303-f79d-4972-8211-dbd325681db7"><p>In May 2022, we provided a <xref href="int-multi_mode_authentication_a100ab5f-1859-4abe-a560-b0438796158a.dita" scope="peer">multi-mode authentication</xref> option on the Shared Web
+						Server, that will help in ease of migration onto the Gateway without
+						incurring an extra overhead cost or disruption in service.</p></li>
+				<li id="li_7b99fe66-22ce-40b2-ba0f-4a752800ffb2">
+					<p>Refer to the <xref href="https://community.boomi.com/s/article/Broker-Retirement-Migration-Guide" format="html" scope="external">Broker Retirement Migration Guide</xref>
+						for additional resources.</p>
+				</li>
+			</ul></section>
+		<section id="section_plf_dph_mrb"><title>How to migrate</title><ul id="ul_ncs_mph_mrb">
+			<li id="li_fd8425d4-5c0b-4924-9a96-19e1a03a6288"><p>If you use Basic Authentication, you must use the Basic Authentication on Gateway option for creating an Authentication Source. For more information, see <xref href="r-api-Auth_Source_settings_for_Basic_Authentication_f84a524e-9874-45f4-8a79-c624529d79ba.xml" />. The Basic Authentication migration feature, will help you migrate easily onto the Gateway without causing a disruption to your service.</p></li>
+			<li id="li_0ff3c76b-85f8-419d-8fbc-2a6324873fbd"><p>If you use OpenID, you must now use the JWT option on the Gateway. For more information, see the <xref href="api-Auth_Source_settings_for_JWT_4686dcb6-bcc2-42df-b00a-b26d15904000.dita" /> topic and <xref href="https://community.boomi.com/s/article/apimjwt" format="html" scope="external">this community article</xref>.</p><note id="note_qfb_4th_mrb">Even though the OpenID authentication source is deprecated, you can use the JWT authentication source to implement Open ID with the help of a third party identity provider.</note></li>
+			<li id="li_54e32f88-e931-45f3-9624-392793c39d1a"><p>If you use SAML, you must now use the JWT option on the Gateway. For more information, see the <xref href="api-Auth_Source_settings_for_JWT_4686dcb6-bcc2-42df-b00a-b26d15904000.dita" /> topic and <xref href="https://community.boomi.com/s/article/saml-to-jwt" format="html" scope="external">this community article</xref>. If you are using Shibboleth as an Identity Provider, we recommend you update the version, since the older versions do not support OpenID. If that is not an option, you will need to install a Broker service on your own such as keycloak.</p><note id="note_t2r_b5h_mrb">Even though the SAML authentication source is deprecated, you can use the JWT authentication source to implement SAML with the help of a third party identity provider.</note></li>
+			<li id="li_20b6fc78-e705-4967-957e-0775374d8cc5"><p>If you use an external provider (deprecated functionality), we recommend that you configure <xref href="int-multi_mode_authentication_a100ab5f-1859-4abe-a560-b0438796158a.dita" scope="peer">multi-authentication options</xref> on the Shared Web
+						Server.</p></li>
+			<li id="li_02412680-9e7b-401d-821f-9e12eb28f3f0"><p>If you have a Broker extended as a Gateway, we recommend that you migrate the Broker-based
+						authentication sources to gateway-based authentication sources and then
+						uninstall the broker from the implementation.</p></li>
+			</ul></section>
+		<section id="section_ytq_xn1_ptb">
+			<title>Migrate Broker-based Basic Authentication</title>
+			<p>With the Broker retiring, it is recommended that you migrate your existing
+				Broker-based Basic Authentication to Basic Authentication on the Gateway or OpenID
+				and SAML to JWT. Under the <uicontrol>Authentication Type</uicontrol> column, you
+				will see your Broker-based authentication listed with a
+					<uicontrol>Migrate</uicontrol> button next to it. Click the button to start the
+				migration process. You can also use the <xref href="api-Basic_Authentication_Gateway_category_d504dece-32b0-4f19-8ad5-ab114cc78201.xml"><codeph>authSourceBrokerBasicMigrate(id: ID!): AuthSourceBasic!</codeph>
+					GraphQL mutation</xref> for the migration.</p>
+		</section>
+		<section id="section_zzk_c41_ptb">
+			<title>Remove Broker after Migrating</title>
+			<p>After you migrate Broker-based Basic Authentication to Basic Authentication on the Gateway or
+				OpenID and SAML to JWT, you should remove the Broker. To remove, follow the process
+				based on your situation:<ul id="ul_mdp_f51_ptb">
+					<li id="li_4c75c206-0cc6-452e-b6c0-fb6bcd348be8">
+						<p>Authentication Broker extended as Gateway - After you migrate the
+							Authentication Sources, you can remove Broker functionality by selecting
+								<uicontrol>Remove Broker</uicontrol>. Once this process is completed
+							successfully, the container will function as an API Gateway only.<fig id="fig_wwg_sw1_ptb">
+								<image href="img-authentication_remove_broker_38f22a2b-17ef-4661-8157-b527f2322b52.png" id="image_mml_21b_ptb" />
+							</fig></p>
+					</li>
+					<li id="li_8886282b-3822-4600-8462-9849b9a4aedf">
+						<p>Authentication Broker is functioning as a Broker only - After you migrate
+							the Authentication Sources, you can remove the Broker from the broker
+							panel by selecting <uicontrol>Delete Authentication
+								Broker</uicontrol>.<note id="note_xxf_dx1_ptb" type="caution">Do not
+								uninstall or delete the Broker if you are using the Broker as a
+								Gateway. Uninstalling or deleting the Broker through the <b>Broker
+									Information</b> page or through the uninstall script in the file
+								folder will permanently remove the Broker and the Gateway. Instead,
+								you should remove the Broker from the
+									<uicontrol>Authentication</uicontrol> page as described
+								above.</note></p>
+						<fig id="fig_fy4_n51_ptb">
+							<image href="img-broker_information_51c39db4-7b1c-40ba-9fca-2c780c4b91f2.png" id="image_b5j_k1b_ptb" />
+						</fig>
+					</li>
+				</ul></p>
+		</section>
+	</refbody>
+</reference>

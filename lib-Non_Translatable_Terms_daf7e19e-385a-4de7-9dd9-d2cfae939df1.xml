@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?><?Inspire CreateDate="2022-03-02T23:43:32" ModifiedDate="2022-03-02T23:57:14"?><!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+
+<topic id="topic_bea1b0db-4efe-4dc6-b786-71e676491997">
+	<title>Non Translatable Terms</title>
+	<body>
+		<section id="section_41a89bb1-4faf-4998-b35d-1b876beb1e3a"><title>Miscellaneous</title><p><keyword id="LINUX">Linux</keyword></p><p><keyword id="WINDOWS">Windows</keyword></p><p><keyword>Docker</keyword></p></section>
+		<section id="section_4e2a33b5-9ca1-4f57-9fab-b11e9942b1be"><title>Runtime</title><p><keyword id="ATOM">Atom</keyword></p><p><keyword id="MOLECULE">Molecule</keyword></p><p><keyword id="ATOM_CLOUD">Atom Cloud</keyword></p></section>
+		<section id="section_9b293e14-ca08-4327-9596-d972445e11bc"><title>Boomi</title><p><keyword id="BOOMI_ASSURE">Boomi Assure</keyword></p><p><keyword id="BOOMI_RESOLVE">Boomi Resolve</keyword></p><p><keyword id="BOOMI_SUGGEST">Boomi Suggest</keyword></p></section>
+	</body>
+</topic>

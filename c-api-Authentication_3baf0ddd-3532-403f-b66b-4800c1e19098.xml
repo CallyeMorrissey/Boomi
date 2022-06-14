@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?><?Inspire CreateDate="2019-02-20T20:32:03" ModifiedDate="2022-04-08T13:51:34"?><!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+
+<concept xml:lang="en-us" id="GUID-0502E811-1C17-4420-9FD1-370C5DE3FBF7">
+	<title id="GUID-5CE13834-52B9-4003-AB81-8C874886FC26">Authentication in <keyword conref="lib-Boomi_Keywords_0346af2b-13d7-491e-bec9-18c5d89225bf.xml#GUID-0207C7F1-40FD-4537-BE59-1D6DA46B9A1D/BOOMI_APIMANAGEMENT" /></title>
+	<shortdesc><keyword conref="lib-Boomi_Keywords_0346af2b-13d7-491e-bec9-18c5d89225bf.xml#GUID-0207C7F1-40FD-4537-BE59-1D6DA46B9A1D/BOOMI_APIMANAGEMENT" />supports more than one type of authentication. But, it is recommended you use <xref href="https://oauth.net/2/" format="html" scope="external">OAuth2.0 framework</xref> using OpenID for authentication.</shortdesc>
+	<prolog>
+		<resourceid id="GUID-0502E811-1C17-4420-9FD1-370C5DE3FBF7" />
+	</prolog>
+	<conbody>
+		<p><keyword conref="lib-Boomi_Keywords_0346af2b-13d7-491e-bec9-18c5d89225bf.xml#GUID-0207C7F1-40FD-4537-BE59-1D6DA46B9A1D/BOOMI_APIMANAGEMENT" /> supports the following types of authentication:</p>
+		<ul id="ul_itc_xsy_2qb">
+			<li id="li_e77f9533-4a59-4b06-af29-a1abdde05e5c"><p>Authentication using JWT on the API Gateway and an external Identity provider for both OpenID and SAML.</p></li>
+			<li id="li_4091c5d6-0a43-437d-b386-c3869565dfda">Basic Authentication using Gateway.</li>
+		</ul>
+		<p>It is recommended you use <xref href="https://oauth.net/2/" format="html" scope="external"
+				>OAuth2.0 framework</xref> using OpenID for authentication, leveraging JWT on the
+			API gateway. But, if you are looking for that quick prototyping or internal API
+			use-case, you can use the Basic Authentication (username/password) by using the Gateway.
+			With the Gateway you can authenticate an API execution along with the Developer Portal
+			sign-in.</p>
+		<p>The following types of authentication are soon to be retired and hence not recommended:</p>
+		<ul id="ul_ur5_mty_2qb">
+			<li id="li_b0c96da4-0a12-4601-83ff-45acac270566"><p>Basic Authentication using a Broker.</p></li>
+			<li id="li_80c92a29-fa95-4d1a-8b66-9b027c20639f"><p>Use of an external identity provider with a Broker to implement OpenID and SAML.</p></li>
+		</ul>
+		<note id="note_ut2_k21_crb">Unless you already have a Broker installed, it is no longer possible to install or reinstall a Broker. The Broker is set to be retired in the July 2022 time frame and it is recommended that you use JWT or Basic Authentication (Gateway).</note>
+	</conbody>
+</concept>

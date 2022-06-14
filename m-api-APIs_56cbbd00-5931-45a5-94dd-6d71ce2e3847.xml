@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?><?Inspire CreateDate="2019-02-20T20:32:08" ModifiedDate="2022-03-11T15:58:52"?><!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "map.dtd">
+
+<map id="GUID-520A3C70-3A61-42AB-8C0F-4B26C56ADF45" xml:lang="en-us">
+	<topicref href="c-api-APIs_f52533b3-afeb-4d64-9b30-57a6c5dd2999.xml">
+		<topicmeta>
+			<navtitle>APIs</navtitle>
+		</topicmeta>
+		<topicref href="c-api-Swagger_Visualization_Portal_c9d49b1d-7044-4abb-9a2a-3ba03c256949.xml">
+			<topicref href="t-api-Accessing_the_Swagger_Visualization_Portal_6da4a4ec-7ae1-4e71-9cbf-d28a162f487e.xml" />
+			<topicref href="c-api-Swagger_Visualization_Portal_Usage_59904aca-5ddd-4e59-a801-a4bf62a47ecb.xml" />
+		</topicref>
+		<topicref href="t-api-Adding_an_authentication_source_to_an_API_9e89b1cd-03a3-42ad-8481-9f2a1f778a48.xml">
+			<topicmeta>
+				<navtitle>Adding an external authentication source to an API</navtitle>
+			</topicmeta>
+		</topicref>
+		<topicref href="t-api-Adding_an_internal_auth_source_to_an_API_4e459107-471b-4f66-81fd-1e03ab148b73.xml">
+			<topicmeta>
+				<navtitle>Adding an internal authentication source to an API</navtitle>
+			</topicmeta>
+		</topicref>
+		<topicref href="api-Adding_a_plan_to_an_API_cbb0a60f-eb42-42e2-9dd6-5c7ad946470c.dita">
+			<topicmeta>
+				<navtitle>Adding a plan to an API</navtitle>
+			</topicmeta>
+			<topicref href="api-Creating_a_Plan_056691f3-5640-4389-a29d-d112b7b645c4.dita" />
+			<topicref href="api-Moving_Plans_in_bulk_294ad402-ef95-4947-984e-1c559599bba5.dita" />
+			<topicref href="api-Plans_0e0133b0-c246-4835-b74f-268760a935ab.dita">
+				<topicref href="api-Keyless_Plans_ec6ef4bf-6592-4acb-910a-95776da3bd52.dita" />
+			</topicref>
+		</topicref>
+		<topicref href="api-Configuring_a_custom_URL_on_a_deployed_API_77dc59ac-959e-41c0-9cb6-aa4b21c9a3de.dita">
+			<topicref href="api-Duplicate_API_endpoint_handling_ad746f91-859f-4d43-88b2-2436eec16087.dita" />
+		</topicref>
+	</topicref>
+</map>

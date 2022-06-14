@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?><?Inspire CreateDate="2019-02-20T20:34:21" ModifiedDate="2022-03-11T15:58:52"?><!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "map.dtd">
+
+
+<!--Arbortext, Inc., 1988-2015, v.4002-->
+<?ish ishref="GUID-C7563F19-7029-4C8D-A55B-2FF1EEAE44D4" version="2" lang="en-us"?>
+<map id="GUID-C7563F19-7029-4C8D-A55B-2FF1EEAE44D4" xml:lang="en-us">
+	<topicref href="c-api-Applications_149541bd-601d-4e8b-8566-dead0b13e6eb.xml">
+		<topicmeta>
+			<navtitle>Applications</navtitle>
+		</topicmeta>
+		<topicref href="api-Creating_an_Application_a00f2baf-d48e-4477-9a2a-92d43719ac67.dita" />
+		<topicref href="api-Subscribing_to_an_API_a51f1941-2ede-40f2-b7d8-479f6f24b412.dita" />
+	</topicref>
+</map>

@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8"?><?Inspire CreateDate="2022-03-07T14:29:48" ModifiedDate="2022-04-08T13:51:35"?><!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN" "reference.dtd">
+
+<reference id="reference_29631428-0fff-4a2f-b68c-081fe1fba4d0">
+	<title id="title_63380f18-9e76-43df-91be-3c8deaa713b2">API Policy Adapter</title>
+	<shortdesc>The API Policy Adapter feature allows you to configure custom API Gateway policies
+		using the Gravitee.io policy engine.</shortdesc>
+	<refbody>
+		<section id="section_ffm_qhq_5sb">
+			<p>This feature helps you to configure advanced policies on your gateway to tailor how
+				APIs are executed. The policy provides an extra logic layer that you can use to
+				provide additional routing, validation, or data manipulation before the request is
+				processed by runtime. </p>
+		</section>
+		<section id="section_f650a940-7508-465c-8d9b-5d289cfeac20">
+			<title>Supported Gravitee.io policies </title>
+			<p>With the API Policy Adapter you can add Gravitee.io policies to your APIs deployed on
+				a Gateway. The gravitee.io policies listed below are supported. Click on the links
+				below to learn more about the policies and how to configure them.</p>
+			<ul id="ul_adg_f3q_5sb">
+				<li id="li_4d065f97-9bb9-4d7d-a857-0d9fa5ce7f9f">
+					<p><xref href="https://github.com/gravitee-io/gravitee-policy-cache/tree/1.5.0" format="html" scope="external">cache version 1.5.0</xref></p>
+				</li>
+				<li>
+					<p><xref
+							href="https://github.com/gravitee-io/gravitee-policy-ipfiltering/tree/1.2.0"
+							format="html" scope="external">ip-filtering version 1.2.0</xref></p>
+				</li>
+				<li>
+					<p><xref
+							href="https://github.com/gravitee-io/gravitee-policy-json-validation/tree/1.0.0"
+							format="html" scope="external">json-validation version 1.0.0</xref></p>
+				</li>
+				<li id="li_1adfa149-a441-4947-a33a-db4460576b00">
+					<p><xref href="https://github.com/gravitee-io/gravitee-policy-mock/tree/1.5.0" format="html" scope="external">mock version 1.5.0</xref></p>
+				</li>
+				<li><xref href="https://github.com/gravitee-io/gravitee-policy-request-content-limit"
+						format="html" scope="external">request-content-limit</xref></li>
+				<li>
+					<p><xref
+							href="https://github.com/gravitee-io/gravitee-policy-request-validation/tree/1.0.1"
+							format="html" scope="external">request-validation version
+						1.0.1</xref></p>
+				</li>
+				<li><xref href="https://github.com/gravitee-io/gravitee-policy-role-based-access-control"
+						format="html" scope="external">role-based-access-control</xref></li>
+				<li id="li_22436887-7dd7-41e7-8a0a-f4e24d957160">
+					<p><xref href="https://github.com/gravitee-io/gravitee-policy-transformheaders/tree/1.3.1" format="html" scope="external">transform-headers version
+						1.3.1</xref></p>
+				</li>
+				<li id="li_d9322cf8-d448-4887-8466-74255bd1fe17">
+					<p><xref
+							href="https://docs.gravitee.io/apim/1.x/apim_policies_transform_query_params.html"
+							format="html" scope="external">transform-queryparams version
+							1.2.0</xref></p>
+				</li>
+				<li id="li_c7779652-165a-45eb-bc59-40bd04b9f62e">
+					<p><xref
+							href="https://github.com/gravitee-io/gravitee-policy-url-rewriting/tree/1.0.0"
+							format="html" scope="external">url-rewriting version 1.0.0</xref></p>
+				</li>
+			</ul>
+			<p>For more information on Gravitee.io policies, refer to the <xref href="https://docs.gravitee.io/apim/1.x/apim_policies_overview.html" format="html" scope="external">Gravitee documentation</xref>.</p>
+		</section>
+		<section id="section_wp5_xjq_5sb">
+			<title>Using Gravitee.io policies with Gateway APIs</title>
+			<p>To use a Gravitee.io policy with your API, you must:</p>
+			<ol id="ol_kxr_1kq_5sb">
+				<li id="li_34e404ad-53fe-4846-9a52-659d80a2081e">
+					<p><xref href="api-Creating_deployedapipolicyrule_3c534f30-dba9-4222-8916-ed876716f46a.xml#task_a682b074-10e8-4e77-9b7c-d4975f068cd6/title_cead461d-f099-433d-8cfd-43c0f5d2c635">Create a DeployedApiPolicyRule</xref> that specifies the gravitee.io
+						rule to be used, configuration for the rule, and the HTTP methods of the
+						requests that the rule should be applied to. After you have created a
+						DeployedAPIPolicyRule you can modify, delete, or query it.</p>
+					<note id="note_fmp_gkq_5sb">The DeployedApiPolicyRule is not specific to an API.
+						After it is created, it can be assigned to one or more APIs. Graphql APIs
+						are provided for creating DeployedApiPolicyRule, querying existing
+						DeployedApiPolicyRules, and assigning a DeployedApiPolicyRule to a
+						deployment. Each Graphql request must include a X-Account header, the value
+						of the header is the user’s account identifier.</note>
+				</li>
+				<li id="li_d56d41b6-a7c1-4df1-8bb8-4aecb6f3bfe8">
+					<p><xref href="api-Assigning_deployedapipolicy_e339db7a-4534-441a-9884-6c3b69102273.xml#task_4f001a6a-aac6-40f6-a6f5-f6fd5a30c93b/title_25cf2a90-f245-4bd2-b1e1-5831b08eae0a">Assign the DeployedApiPolicyRule to your API deployed on an API
+							Gateway</xref>.</p>
+				</li>
+			</ol>
+		</section>
+	</refbody>
+</reference>

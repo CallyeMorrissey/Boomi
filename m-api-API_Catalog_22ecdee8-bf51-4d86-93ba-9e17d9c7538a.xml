@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?><?Inspire CreateDate="2019-02-20T20:27:12" ModifiedDate="2021-08-09T17:09:03"?><!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "map.dtd">
+
+<map id="GUID-9069D5BE-A893-4453-8684-E73B5773EB00" xml:lang="en-us">
+	<topicref href="c-api-API_Catalog_784edbe9-5ccf-4e22-a59b-6caa91138cec.xml">
+		<topicmeta>
+			<navtitle>API Catalog</navtitle>
+		</topicmeta>
+		<topicref href="c-api-Swagger_Visualization_Portal_c9d49b1d-7044-4abb-9a2a-3ba03c256949.xml">
+			<topicmeta>
+				<navtitle>Swagger Visualization Portal</navtitle>
+			</topicmeta>
+			<topicref scope="local" format="dita" type="topic" href="t-api-Accessing_the_Swagger_Visualization_Portal_6da4a4ec-7ae1-4e71-9cbf-d28a162f487e.xml" navtitle="Accessing the Swagger Visualization Portal">
+				<topicmeta>
+					<navtitle>Accessing the Swagger Visualization Portal</navtitle>
+				</topicmeta>
+			</topicref>
+			<topicref href="c-api-Swagger_Visualization_Portal_Usage_59904aca-5ddd-4e59-a801-a4bf62a47ecb.xml" navtitle="Using the Swagger Visualization Portal">
+				<topicmeta>
+					<navtitle>Using the Swagger Visualization Portal</navtitle>
+				</topicmeta>
+			</topicref>
+		</topicref>
+	</topicref>
+</map>

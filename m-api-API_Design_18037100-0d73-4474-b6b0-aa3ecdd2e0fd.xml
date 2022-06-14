@@ -1,0 +1,170 @@
+﻿<?xml version="1.0" encoding="utf-8"?><?Inspire CreateDate="2019-02-20T20:34:22" ModifiedDate="2022-03-11T15:58:52"?><!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "map.dtd">
+
+
+<map id="GUID-1F7547CB-C64D-4B8C-B428-691805A04B25" xml:lang="en-us">
+	<topicref href="c-atm-API_design_a5171efe-3ec6-4786-b5ee-99b0dd545e68.xml" navtitle="API design">
+		<topicmeta>
+			<navtitle>Designing APIs</navtitle>
+		</topicmeta>
+		<topicref href="c-atm-API_components_c82f5ad6-e5d3-4cca-ac17-243356132dcf.xml" navtitle="API components">
+			<topicmeta>
+				<navtitle>API components</navtitle>
+			</topicmeta>
+			<topicref href="int-API_Service_components_8f868bda-5099-4e1f-ad16-5648f98b68b2.dita" navtitle="API Service components">
+				<topicmeta>
+					<navtitle>API Service components</navtitle>
+				</topicmeta>
+				<topicref href="r-atm-Import_endpoints_81049eb9-5a9b-4fd8-879d-4e3202692bb5.xml" navtitle="Import endpoints">
+					<topicmeta>
+						<navtitle>Import endpoints</navtitle>
+					</topicmeta>
+				</topicref>
+				<topicref href="r-atm-API_General_tab_4578ae0d-4be1-4dad-bc57-e383542ea897.xml" navtitle="API General tab">
+					<topicmeta>
+						<navtitle>API Service General tab</navtitle>
+					</topicmeta>
+				</topicref>
+				<topicref href="r-atm-API_REST_tab_53469a70-6574-486b-a6cf-58fc147546fc.xml" navtitle="API REST tab">
+					<topicmeta>
+						<navtitle>API Service REST tab</navtitle>
+					</topicmeta>
+				</topicref>
+				<topicref href="r-atm-API_SOAP_tab_2b9d1c7a-a2ed-48e8-ad87-8ca86b3ce247.xml" navtitle="API SOAP tab">
+					<topicmeta>
+						<navtitle>API Service SOAP tab</navtitle>
+					</topicmeta>
+				</topicref>
+				<topicref href="r-atm-API_OData_tab_6c5cddc5-ccbb-4e94-b5c3-54ec44df59e1.xml" navtitle="API OData tab">
+					<topicmeta>
+						<navtitle>API Service OData tab</navtitle>
+					</topicmeta>
+					<topicref href="r-atm-OData_API_endpoint_URIs_eacc86d6-9ceb-4388-9f5e-a47c24fa2412.xml" navtitle="OData API endpoint URIs">
+						<topicmeta>
+							<navtitle>OData API endpoint URIs</navtitle>
+						</topicmeta>
+					</topicref>
+					<topicref href="r-atm-OData_API_query_passthrough_GUID-BDB57996-57D9-4DA8-9EA3-3E938262D295_1_en-us_19dcdfab-ac7e-40aa-98de-4cb188d6225d.xml" navtitle="OData API query passthrough">
+						<topicmeta>
+							<navtitle>OData API query passthrough</navtitle>
+						</topicmeta>
+					</topicref>
+					<topicref href="r-atm-OData_API_support_for_Salesforce_Lightning_Connect_2a66a690-332c-4b21-8624-8787d9158f4a.xml" navtitle="OData API support for Salesforce Lightning Connect">
+						<topicmeta>
+							<navtitle>OData API support for Salesforce Lightning Connect</navtitle>
+						</topicmeta>
+					</topicref>
+				</topicref>
+				<topicref href="r-atm-API_Profiles_tab_10e4aa2f-02d4-4653-8560-01b55bd552b9.xml" navtitle="API Profiles tab">
+					<topicmeta>
+						<navtitle>API Service Profiles tab</navtitle>
+					</topicmeta>
+				</topicref>
+				<topicref href="r-atm-API_Published_Information_tab_8251f104-0daa-45d0-86df-0a871d29d804.xml" navtitle="API Published Information tab">
+					<topicmeta>
+						<navtitle>API Service Documentation tab</navtitle>
+					</topicmeta>
+				</topicref>
+			</topicref>
+			<topicref href="t-atm-Creating_an_API_component_4a5458f4-20c0-4313-be8a-42954587ddf5.xml" navtitle="Creating an API component">
+				<topicmeta>
+					<navtitle>Creating an API Service component</navtitle>
+				</topicmeta>
+			</topicref>
+			<topicref href="t-atm-Configuring_an_API_component_ba573f38-ef4e-4f91-8f45-a7dec39b2b9c.xml" navtitle="Configuring an API component">
+				<topicmeta>
+					<navtitle>Configuring an API Service component</navtitle>
+				</topicmeta>
+				<topicref href="t-atm-Configuring_the_SOAP_API_in_an_API_component_e26f7841-233c-489a-8858-a8afe18ef8d6.xml" navtitle="Configuring the SOAP API in an API component">
+					<topicmeta>
+						<navtitle>Configuring the SOAP API in an API Service component</navtitle>
+					</topicmeta>
+				</topicref>
+				<topicref href="t-atm-Generating_API_endpoints_with_a_new_linked_listener_a2b82e55-51d3-4584-86b0-2b3c5a8f9e8f.xml" navtitle="Generating API endpoints with a new linked listener process in...">
+					<topicmeta>
+						<navtitle>Generating API endpoints with a new linked listener process in an API Service component</navtitle>
+					</topicmeta>
+				</topicref>
+				<topicref href="t-atm-Generating_API_endpoints_as_proxies__9a5c85ad-8ae0-40e8-93a7-902058a913cd.xml" navtitle="Generating API endpoints in an API component as proxies for...">
+					<topicmeta>
+						<navtitle>Generating API endpoints in an API Service component as proxies for external web service operations</navtitle>
+					</topicmeta>
+				</topicref>
+				<topicref href="t-atm-Generating_API_endpoints_from_an_ext_5e2b092d-e11b-4272-8a62-55389f66008e.xml">
+					<topicmeta>
+						<navtitle>Generating API endpoints in an API Service component from an external URL</navtitle>
+					</topicmeta>
+				</topicref>
+				<topicref href="t-atm-Generating_API_endpoints_from_existi_fbaf24bf-1ab7-4c29-9903-bd4411eee202.xml" navtitle="Generating API endpoints in an API component from existing processes...">
+					<topicmeta>
+						<navtitle>Generating API endpoints in an API Service component from existing processes</navtitle>
+					</topicmeta>
+				</topicref>
+				<topicref href="t-atm-Generating_API_endpoints_from_an_env_53ef37b1-a774-4296-b6cc-63b9b2f43082.xml">
+					<topicmeta>
+						<navtitle>Generating API endpoints in an API Service component from an environment or Atom</navtitle>
+					</topicmeta>
+				</topicref>
+				<topicref href="t-atm-Configuring_a_REST_route_in_an_API_component_c61c0d7e-ecc9-47c3-8fc9-452c8ffc62aa.xml" navtitle="Configuring a REST route in an API component">
+					<topicmeta>
+						<navtitle>Configuring a REST route in an API Service component</navtitle>
+					</topicmeta>
+				</topicref>
+				<topicref href="t-atm-Configuring_a_SOAP_operation_in_an_API_component_0ac31d08-f6b6-420b-8db4-d2f28acc64db.xml" navtitle="Configuring a SOAP operation in an API component">
+					<topicmeta>
+						<navtitle>Configuring a SOAP operation in an API Service component</navtitle>
+					</topicmeta>
+				</topicref>
+				<topicref href="t-atm-Copying_a_REST_endpoint_to_the_SOAP_API_in_an_API_fc65a022-1016-4c98-900d-7d0267647cf2.xml" navtitle="Copying a REST endpoint to the SOAP API in an...">
+					<topicmeta>
+						<navtitle>Copying a REST endpoint to the SOAP API in an API Service component</navtitle>
+					</topicmeta>
+				</topicref>
+				<topicref href="t-atm-Copying_a_SOAP_endpoint_to_the_REST_API_in_an_API_765bb75e-8a07-4258-81c6-c6e056413bae.xml" navtitle="Copying a SOAP endpoint to the REST API in an...">
+					<topicmeta>
+						<navtitle>Copying a SOAP endpoint to the REST API in an API Service component</navtitle>
+					</topicmeta>
+				</topicref>
+				<topicref href="t-atm-Adding_a_REST_endpoint_to_an_API_component_ab757f9c-ebf1-4ee2-97d4-8016460378bb.xml" navtitle="Adding a REST endpoint to an API component">
+					<topicmeta>
+						<navtitle>Adding a REST endpoint to an API Service component</navtitle>
+					</topicmeta>
+				</topicref>
+				<topicref href="t-atm-Adding_a_SOAP_operation_to_an_API_component_b470a2f0-5a58-465b-ba0f-745ea1a4cc02.xml" navtitle="Adding a SOAP operation to an API component">
+					<topicmeta>
+						<navtitle>Adding a SOAP Endpoint to a Web Service Component</navtitle>
+					</topicmeta>
+				</topicref>
+				<topicref href="t-atm-Resolving_profile_type_conflicts_in_an_API_component_e2385eb2-c0a8-42b0-a03e-a2d14e543154.xml" navtitle="Resolving profile type conflicts in an API component">
+					<topicmeta>
+						<navtitle>Resolving profile type conflicts in an API Service component</navtitle>
+					</topicmeta>
+				</topicref>
+			</topicref>
+			<topicref href="int-API_Proxy_components_24a9612a-2e4a-4ae9-ba66-88ba1b3f9c97.dita">
+				<topicmeta>
+					<navtitle>API Proxy components</navtitle>
+				</topicmeta>
+				<topicref href="int-API_Proxy_General_tab_b60253f1-9f50-4b46-9bed-33c78c7720de.dita">
+					<topicmeta>
+						<navtitle>API Proxy General tab</navtitle>
+					</topicmeta>
+				</topicref>
+				<topicref href="int-API_Proxy_Server_tab_239f0181-44c6-4786-8252-5d08adfea7d6.dita">
+					<topicmeta>
+						<navtitle>API Proxy Server tab</navtitle>
+					</topicmeta>
+				</topicref>
+				<topicref href="int-API_Proxy_Documentation_tab_12df3948-fb24-4265-81ee-3f10145804fe.dita">
+					<topicmeta>
+						<navtitle>API Proxy Documentation tab</navtitle>
+					</topicmeta>
+				</topicref>
+			</topicref>
+			<topicref href="int-Creating_and_configuring_an_API_Proxy_component_85ede556-d8c1-40c8-9785-e1b2d76b8787.dita">
+				<topicmeta>
+					<navtitle>Creating and configuring an API Proxy component</navtitle>
+				</topicmeta>
+			</topicref>
+		</topicref>
+	</topicref>
+</map>

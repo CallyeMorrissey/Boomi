@@ -1,0 +1,486 @@
+﻿<?xml version="1.0" encoding="utf-8"?><?Inspire CreateDate="2021-05-11T20:58:19" ModifiedDate="2022-05-20T16:21:46"?><!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN" "reference.dtd">
+
+<reference xml:lang="en-us" id="GUID-22C8817C-78D8-4174-90ED-E154A1C70081">
+	<title id="GUID-F4DA3E9A-A693-48E9-824A-422A25DB7EF5">Authentication Source category</title>
+	<shortdesc> The authentication source category of operations is used to set a list of allowed redirect URIs for broker-based authentication sources.</shortdesc>
+	<prolog>
+		<resourceid id="GUID-003edd41-a064-4ef9-9b1a-619c52af1ec3.dita" />
+	</prolog>
+	<refbody>
+		<section id="GUID-2C42D278-0859-498D-A336-AC8983B03BDB"> <title id="GUID-CED41D4B-859C-49C6-958C-14789DB6C28B">Supported operations</title><p>The authentication source category is supported in the following operations: </p><table id="table_w1r_wpq_43b">
+			<tgroup cols="3">
+				<colspec colnum="1" colname="col1" />
+				<colspec colnum="2" colname="col2" />
+				<colspec colnum="3" colname="col3" />
+				<thead>
+					<row id="row_f9c19e5a-3383-4cb3-8f2e-26d63f68e1a1">
+						<entry colname="col1">Operation</entry>
+						<entry colname="col2">QUERY</entry>
+						<entry colname="col3">MUTATION</entry>
+					</row>
+				</thead>
+				<tbody>
+					<row id="row_15f5027e-be53-4de1-8ec9-123320f73707">
+						<entry colname="col1">Authentication source</entry>
+						<entry colname="col2"> <ph conref="lib-AtomSphere_API_9a0b3cc6-0758-45f9-b2cc-04932561d53c.xml#GUID-3B92F5CD-0A69-4191-BF29-297025332DDB/Supported" /> </entry>
+						<entry colname="col3"> <ph conref="lib-AtomSphere_API_9a0b3cc6-0758-45f9-b2cc-04932561d53c.xml#GUID-3B92F5CD-0A69-4191-BF29-297025332DDB/NotSupported" /> </entry>
+					</row>
+					<row id="row_cfdb3011-e65e-46eb-8635-dba0af02fd07">
+						<entry colname="col1">Authentication source with ID</entry>
+						<entry colname="col2"> <ph conref="lib-AtomSphere_API_9a0b3cc6-0758-45f9-b2cc-04932561d53c.xml#GUID-3B92F5CD-0A69-4191-BF29-297025332DDB/Supported" /> </entry>
+						<entry colname="col3"> <ph conref="lib-AtomSphere_API_9a0b3cc6-0758-45f9-b2cc-04932561d53c.xml#GUID-3B92F5CD-0A69-4191-BF29-297025332DDB/NotSupported" /> </entry>
+					</row>
+					<row id="row_4639fdeb-ffa7-44a8-b562-b6c522d6b28c">
+						<entry colname="col1">Update redirect URIs for authentication source</entry>
+						<entry colname="col2"> <ph conref="lib-AtomSphere_API_9a0b3cc6-0758-45f9-b2cc-04932561d53c.xml#GUID-3B92F5CD-0A69-4191-BF29-297025332DDB/NotSupported" /> </entry>
+						<entry colname="col3"> <ph conref="lib-AtomSphere_API_9a0b3cc6-0758-45f9-b2cc-04932561d53c.xml#GUID-3B92F5CD-0A69-4191-BF29-297025332DDB/Supported" /> </entry>
+					</row>
+					<row id="row_3b98a3d5-37eb-4d33-b467-b72400ba948b">
+						<entry>Create JWT authentication source</entry>
+						<entry> <ph conref="lib-AtomSphere_API_9a0b3cc6-0758-45f9-b2cc-04932561d53c.xml#GUID-3B92F5CD-0A69-4191-BF29-297025332DDB/NotSupported" /> </entry>
+						<entry> <ph conref="lib-AtomSphere_API_9a0b3cc6-0758-45f9-b2cc-04932561d53c.xml#GUID-3B92F5CD-0A69-4191-BF29-297025332DDB/Supported" /> </entry>
+					</row>
+					<row id="row_e68515b1-ba2d-46ae-9e20-5b7b4869b6f3">
+						<entry>Update JWT authentication source</entry>
+						<entry> <ph conref="lib-AtomSphere_API_9a0b3cc6-0758-45f9-b2cc-04932561d53c.xml#GUID-3B92F5CD-0A69-4191-BF29-297025332DDB/NotSupported" /> </entry>
+						<entry> <ph conref="lib-AtomSphere_API_9a0b3cc6-0758-45f9-b2cc-04932561d53c.xml#GUID-3B92F5CD-0A69-4191-BF29-297025332DDB/Supported" /> </entry>
+					</row>
+					<row id="row_f4caec7b-be40-4f7c-bf81-eccdb40f426c">
+						<entry>Delete authentication source </entry>
+						<entry> <ph conref="lib-AtomSphere_API_9a0b3cc6-0758-45f9-b2cc-04932561d53c.xml#GUID-3B92F5CD-0A69-4191-BF29-297025332DDB/NotSupported" /> </entry>
+						<entry> <ph conref="lib-AtomSphere_API_9a0b3cc6-0758-45f9-b2cc-04932561d53c.xml#GUID-3B92F5CD-0A69-4191-BF29-297025332DDB/Supported" /> </entry>
+					</row>
+				</tbody>
+			</tgroup>
+			</table> </section>
+		<section id="GUID-1B9CC95C-546A-4FEC-9D05-B87E1C774A27"> <title id="GUID-7242806C-6D22-423E-B03C-E48CD91A684C">Query syntax</title><codeblock xml:space="preserve" id="codeblock_m2x_mm5_4pb">authSources: [AuthSource!]
+authSource(id: ID!) AuthSource!</codeblock> </section>
+		<section id="section_gk4_tjl_qkb"> <title>Mutation syntax</title><codeblock id="codeblock_jtb_br5_4pb">authSourceRedirectUrisUpdate(authSourceId: ID!, redirectUris: [String!]): AuthSource!</codeblock><codeblock id="codeblock_csh_4yd_wqb">authSourceJWTCreate(authSourceJWT: AuthSourceJWTCreateInput!): AuthSourceJWT!</codeblock><codeblock id="codeblock_ujn_2d2_wqb">authSourceJWTUpdate(authSourceJWT: AuthSourceJWTUpdateInput!): AuthSourceJWT! authSourceDelete(id: ID!): ID!</codeblock></section>
+		<section id="section_fdb_sjl_qkb"> <title>Response fields</title><codeblock xml:space="preserve">
+type AuthSource {
+   id: ID!
+   name: String
+   type: AuthSourceType! 
+   redirectUris: [String!]
+}
+
+enum AuthSourceType {
+   OPENID
+   SAML
+   BASIC
+   JWT
+   BASIC_GATEWAY
+}</codeblock><table id="table_dlq_g12_wqb">
+			<tgroup cols="3">
+				<colspec colnum="1" colname="col1" />
+				<colspec colnum="2" colname="col2" />
+				<colspec colnum="3" colname="col3" />
+				<thead>
+					<row id="row_1959c228-2bd1-41e1-b6dc-cb11cdcc6fb3">
+						<entry colname="col1">Field</entry>
+						<entry colname="col2">Type</entry>
+						<entry colname="col3">Description</entry>
+					</row>
+				</thead>
+				<tbody>
+					<row id="row_81106671-6569-4c0e-a09f-11c91f0a1ed3">
+						<entry colname="col1">ID</entry>
+						<entry colname="col2">string</entry>
+						<entry colname="col3">The authentication source ID.</entry>
+					</row>
+					<row id="row_79e37779-8c2c-4fba-9f5e-b8f1360c7287">
+						<entry colname="col1">name</entry>
+						<entry colname="col2">string</entry>
+						<entry colname="col3">The name of the authentication source.</entry>
+					</row>
+					<row id="row_4bfba2e0-d0e1-40f6-b633-e3f892ce95df">
+						<entry colname="col1">type</entry>
+						<entry colname="col2">AuthSourceType</entry>
+						<entry colname="col3">The type of authentication source.</entry>
+					</row>
+					<row id="row_d22951a1-3717-44f5-b567-344feb747a90">
+						<entry colname="col1"> redirectUris</entry>
+						<entry colname="col2">array of strings</entry>
+						<entry colname="col3">A list of strings that filter incoming authorization requests based on the requests declared in the redirectUri query-parameter.</entry>
+					</row>
+					<row id="row_401286d1-95d3-4261-bd6d-b623a5b2c1dc">
+						<entry colname="col1">OPENID</entry>
+						<entry colname="col2">member of AuthSourceType</entry>
+						<entry colname="col3">A broker-based authentication source that delegates to a third-party identity provider using OpenID Connect.</entry>
+					</row>
+					<row id="row_c29153d6-8052-465d-b56f-598975bffd98">
+						<entry colname="col1">SAML</entry>
+						<entry colname="col2">member of AuthSourceType</entry>
+						<entry colname="col3">A broker-based authentication source that delegates to a third-party identity provider using SAML.</entry>
+					</row>
+					<row id="row_2f1f541a-94b3-469e-a7e5-ad03ded27d45">
+						<entry colname="col1">BASIC</entry>
+						<entry colname="col2">member of AuthSourceType</entry>
+						<entry colname="col3">A broker-based authentication source that provides basic auth-like functionality.</entry>
+					</row>
+					<row id="row_406f1f47-95d1-4f0a-a72d-f907bee9991b">
+						<entry colname="col1">JWT</entry>
+						<entry colname="col2">member of AuthSourceType</entry>
+						<entry colname="col3">An authentication source that delegates to a third-party identity provider that uses OpenID Connect. This type relies on access tokens that adhere to the JSON Web Token (JWT) specification.</entry>
+					</row>
+					<row id="row_890c8e01-3694-45d8-97e1-d3a7d4892c31">
+						<entry colname="col1">BASIC_GATEWAY</entry>
+						<entry colname="col2">member of AuthSourceType</entry>
+						<entry colname="col3">A gateway-hosted authentication source that provides basic authentication functionality.</entry>
+					</row>
+				</tbody>
+			</tgroup>
+			</table><p>Schema to create a new JWT authentication source.</p><codeblock id="codeblock_wxm_syd_wqb">interface AuthenticationSource {
+    id: ID!
+    name: String!
+    description: String
+    roles: [AuthSourceRole]
+}
+
+type AuthSourceRole {
+    id: ID!
+    name: String!
+    description: String
+}
+
+type AuthSourceJWT implements AuthenticationSource {
+    id: ID!
+    name: String!
+    description: String
+    roles: [AuthSourceRole]
+    issuer: String!
+    jwksUrl: String
+    groupsAttribute: String
+    audiences: [String!]
+    issuerError: IssuerError
+}
+
+type IssuerError {
+    code: IssuerErrorCode!
+    detail: String!
+}
+
+input AuthSourceJWTCreateInput {
+    name: String!
+    issuer: String!
+    details: AuthSourceJWTDetailsInput
+}
+
+input AuthSourceJWTDetailsInput {
+    description: String
+    groupsAttribute: String
+    roles: [String!]
+    audiences: [String!]
+}
+
+enum IssuerErrorCode {
+    MISSING_JWKS
+    URL_INVALID
+    UNKNOWN_HOST
+    COULD_NOT_PARSE_CONFIG
+    REQUEST_TIMEOUT
+    REMOTE_HOST_RESPONDED_WITH_ERROR
+}</codeblock><p>Schema to update an existing JWT authentication source.</p><codeblock id="codeblock_f52_rd2_wqb">
+input AuthSourceJWTUpdateInput {
+    id: ID!
+    name: String
+    issuer: String
+    details: AuthSourceJWTDetailsInput
+}
+</codeblock><p>For many error scenarios in JWT authentication source create and update GraphQL APIs, you will see messages around valid character length, missing names, duplicate roles, etc.</p><table id="GUID-80FCC96F-0F8B-4E90-90DA-EA5F85E392F1">
+			<tgroup cols="3">
+				<colspec colnum="1" colname="col1" />
+				<colspec colnum="2" colname="col2" />
+				<colspec colnum="3" colname="col3" />
+				<thead>
+					<row id="row_ad63dab0-108b-44a0-be9c-645a765b34db">
+						<entry colname="col1">Field</entry>
+						<entry colname="col2">Type</entry>
+						<entry colname="col3">Description</entry>
+					</row>
+				</thead>
+				<tbody>
+					<row id="row_3f4ee331-4fca-4ff8-a6b5-43ab6ae3a2d8">
+						<entry>id</entry>
+						<entry>string</entry>
+						<entry>The JWT authentication source ID</entry>
+					</row>
+					<row id="row_0742bd58-ab73-4fbb-80fe-6585c1a0f66a">
+						<entry>name</entry>
+						<entry>string</entry>
+						<entry>The JWT authentication source name</entry>
+					</row>
+					<row id="row_9a57935b-f6c3-45fc-b9bd-e5cbfc91ed41">
+						<entry>description</entry>
+						<entry>string</entry>
+						<entry>Description of the authentication source</entry>
+					</row>
+					<row id="row_4103015f-2dc1-4ade-aed7-4af1dad63118">
+						<entry>roles</entry>
+						<entry>List of AuthSourceRole</entry>
+						<entry>The roles associated with the authentication source</entry>
+					</row>
+					<row id="row_e2e3a991-94ec-4326-8ecf-3f55f9925666">
+						<entry>issuer</entry>
+						<entry>string</entry>
+						<entry>The URL of the IDP which issues JWT</entry>
+					</row>
+					<row id="row_10aaa331-fdbd-49c4-a4f7-c4315f458af1">
+						<entry>jwksurl</entry>
+						<entry>string</entry>
+						<entry>The JWK URI which holds the keys to verify JWT</entry>
+					</row>
+					<row id="row_b3230a53-9a40-4a7e-91a7-767ce69da398">
+						<entry>groupsAttribute</entry>
+						<entry>string</entry>
+						<entry>The attribute name in a JWT that holds a list of groups to which the user belongs</entry>
+					</row>
+					<row id="row_bfbecd77-257f-41e5-9f13-9f1239dac340">
+						<entry>audiences</entry>
+						<entry>List of string</entry>
+						<entry>The list of intended audience of a JWT</entry>
+					</row>
+					<row id="row_28a206f4-43f3-4d0a-8c93-c11e1d2f64de">
+						<entry>issuerError</entry>
+						<entry>IssuerError</entry>
+						<entry>The error, if any, received while testing IDP. Contains the error code as defined in the IssuerErrorCode and the Http Response code of the error.</entry>
+					</row>
+				</tbody>
+			</tgroup>
+			</table></section>
+		<section id="GUID-F8AEEF08-C29E-4AF7-A08E-9B20B325FC1F" otherprops="GraphQL" outputclass="tab"> <title id="GUID-EB516763-31FF-4B29-9649-68126B804A39">GraphQL implementation</title><p>To query the currently allowed redirect URIs or to set the allowed redirect URIs, send a request with a mutation and GUID for the authentication source.</p><ul id="ul_cbf_11h_rkb">
+			<li id="li_e178ad27-9034-4eb8-8d50-05a4fd8b88c4"> <p><b>QUERY operation</b></p><p>Request: Example query that takes an ID and retrieves information for that specific authentication source. </p><codeblock xml:space="preserve">query {
+   authSource(id: "&lt;xxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxx&gt;") {
+       name
+       type
+       redirectUris
+   }
+}
+</codeblock><p> Response:</p><codeblock xml:space="preserve">{
+   "data": {
+       "authSource": {
+           "name": "BizCo Authentication Source",
+           "type": "OPENID",
+           "redirectUris": [
+               "https://biz.co:18077/*"
+           ]
+       }
+   }
+}
+</codeblock> <p> Request: Example query that takes no arguments and retrieves all the information on the account.</p><codeblock xml:space="preserve" id="codeblock_awz_xsb_ppb">query {
+    authSources {
+        id
+        name
+        type
+        redirectUris
+    }
+}
+</codeblock><p> Response:</p><codeblock xml:space="preserve" id="codeblock_uxz_2tb_ppb">{
+"data": {
+    "authSources": [
+        {
+            "id": "&lt;xxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxx&gt;",
+            "name": "BizCo Authentication Source",
+            "type": "OPENID",
+            "redirectUris": [
+              "https://biz.co:18077/*"
+              ]
+           },
+           {
+            "id": "&lt;xxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxx&gt;",
+            "name": "Staging auth source",
+            "type": "BASIC",
+            "redirectUris": [
+              "https://staging.biz.co:18077/*"
+            ]
+          }
+        ]
+    }
+}
+</codeblock> </li>
+			<li id="li_cc3ce072-5992-4a77-a7ba-74fcc37e8d5a">
+                    <p><b>Update operation</b></p>When using the update operation, specifying an
+                    empty or null array will remove any redirect URIs that may have been previously
+                    set. If that happens, the authentication source will use the wildcard default
+                    for allowed URIs. The URI inputs must be valid URIs that do not contain any
+                    fragments. The host name in the URI should be in lower case. A single wildcard
+                    character is allowed in the URI, but it must be located at the end. If the
+                    developer portal capability of the Gateway is also being used, additional URIs
+                    should be added to the list for the assigned Authentication Source so that it
+                    accepts login attempts from the developer portal.<p>
+                        Request:</p><codeblock xml:space="preserve">mutation {
+   authSourceRedirectUrisUpdate(authSourceId: "&lt;xxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxx&gt;", redirectUris: [ "https://biz.co:18077/*" ]) {
+       id
+       name
+       redirectUris
+   }
+}
+</codeblock><p>Response:</p><codeblock xml:space="preserve">{
+   "data": {
+       "authSourceRedirectUrisUpdate": {
+           "name": "BizCo Authentication Source",
+           "type": "OPENID",
+           "redirectUris": [
+               "https://biz.co:18077/*"
+           ]
+       }
+   }
+}
+</codeblock></li>
+			<li id="li_65953c77-80ef-455a-a3df-769ad7a32114"><p><b>Delete operation</b></p><note id="note_vd5_gfz_nqb">You cannot delete an authentication source that is in use by any deployments or is specified as a sign-in authentication source for any developer portal.</note><p>Example query to delete an authentication source.</p><p>Request</p><codeblock id="codeblock_w4c_dcy_nqb">mutation {
+   authSourceDelete(id: "&lt;xxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxx&gt;")
+}</codeblock><p>Response</p><codeblock id="codeblock_pxz_2cy_nqb">{
+   "data": {
+       "authSourceDelete": "&lt;xxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxx&gt;"
+   }
+}</codeblock></li>
+			<li id="li_a4cee029-dfec-4d05-9365-552a32bc859a"><p><b>Create JWT authentication source operation</b></p><p>Use the <codeph>authSourceJWTCreate</codeph> mutation to create a new JWT authentication source.</p><p>Request</p><p>Request should have x-account header. Sample request is below.</p><codeblock id="codeblock_ovc_lc2_wqb">mutation authSourceJWTCreate($authSourceJWT:AuthSourceJWTCreateInput!) {
+    authSourceJWTCreate(
+        authSourceJWT:$authSourceJWT
+    )
+    {
+        id
+        name
+        description
+        issuer
+        jwksUrl
+        groupsAttribute
+        roles {
+            id
+            name
+        }
+        audiences
+        issuerError {
+            code
+            detail
+        }
+    }
+}</codeblock><codeblock id="codeblock_hdw_4c2_wqb">{
+    "authSourceJWT": {
+        "name": "Dev JWT",
+        "issuer": "http://localhost:8080/auth/realms/master",
+        "details": {
+            "description": "Dev JWT",
+            "groupsAttribute": "grp",
+            "roles": ["integration", "apim"],
+            "audiences": ["aud1", "aud 2"]
+        }
+    }
+}</codeblock><p>Response</p><p>JSON Response for the mutation would be as below:</p><codeblock id="codeblock_krz_sc2_wqb">
+{
+    "data": {
+        "authSourceJWTCreate": {
+            "id": "&lt;xxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxx&gt;",
+            "name": "Dev JWT",
+            "description": "Dev JWT",
+            "issuer": "http://localhost:8080/auth/realms/master",
+            "jwksUrl": "http://localhost:8080/auth/realms/master/protocol/openid-connect/certs",
+            "groupsAttribute": "grp",
+            "roles": [
+                {
+                    "id": "&lt;xxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxx&gt;",
+                    "name": "apim"
+                },
+                {
+                    "id": "&lt;xxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxx&gt;",
+                    "name": "integration"
+                }
+            ],
+            "audiences": [
+                "aud",
+                "aud 2"
+            ],
+            "issuerError": null
+        }
+    }
+}</codeblock></li>
+			<li id="li_670a22d7-594a-40c4-8362-26e0d13d7a0a"><p><b>Update JWT authentication source operation</b></p><p>Use the <codeph>authSourceJWTUpdate</codeph> mutation to create a new JWT authentication source.</p><p>Request</p><p>Request should have x-account header. Sample request is below.</p><codeblock id="codeblock_ptl_n22_wqb">mutation authSourceJWTUpdate($authSourceJWT:AuthSourceJWTUpdateInput!) {
+    authSourceJWTUpdate(
+        authSourceJWT:$authSourceJWT
+    )
+    {
+        id
+        name
+        description
+        issuer
+        jwksUrl
+        groupsAttribute
+        roles {
+            id
+            name
+        }
+        audiences
+        issuerError {
+            code
+            detail
+        }
+    }
+}</codeblock><codeblock id="codeblock_q2k_r22_wqb">{
+    "authSourceJWT": {
+        "id": "&lt;xxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxx&gt;",
+        "details": {
+            "roles": ["apim", "integration", "flow"],
+            "audiences": ["aud", "aud 2", "aud1"]
+        }
+    }
+}</codeblock><p>Response</p><p>JSON Response for the mutation would be as below:</p><codeblock id="codeblock_cjg_q22_wqb">
+{
+    "data": {
+        "authSourceJWTUpdate": {
+            "id": "&lt;xxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxx&gt;",
+            "name": "Dev JWT",
+            "description": "Dev JWT",
+            "issuer": "http://localhost:8080/auth/realms/master",
+            "jwksUrl": "http://localhost:8080/auth/realms/master/protocol/openid-connect/certs",
+            "groupsAttribute": "grp",
+            "roles": [
+                {
+                    "id": "&lt;xxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxx&gt;",
+                    "name": "apim"
+                },
+                {
+                    "id": "&lt;xxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxx&gt;",
+                    "name": "flow"
+                },
+                {
+                    "id": "&lt;xxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxx&gt;",
+                    "name": "integration"
+                }
+            ],
+            "audiences": [
+                "aud",
+                "aud 2",
+                "aud1"
+            ],
+            "issuerError": null
+        }
+    }
+}</codeblock></li>
+			</ul> </section>
+		<section id="section_cp3_t2p_4qb"><title>Audit log usage</title><p><codeblock id="codeblock_hbk_52p_4qb">{
+  "QueryFilter" :
+    {
+      "expression" : {
+          "operator" : "and",
+          "nestedExpression" : [
+            {
+              "argument" : ["admin@boomi.com"],
+              "operator" : "EQUALS",
+              "property" : "userId"
+            },
+            {
+              "argument" : ["api-authentication_source"],
+              "operator" : "EQUALS",
+              "property" : "type"
+            },          
+            {
+              "argument" : ["2021-03-28T00:00:00Z","2021-03-29T23:59:59Z"],
+              "operator":"BETWEEN",
+              "property":"date"
+            }
+          ]
+        }
+    }
+}</codeblock></p></section>
+	</refbody>
+</reference>

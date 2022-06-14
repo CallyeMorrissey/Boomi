@@ -1,0 +1,160 @@
+﻿<?xml version="1.0" encoding="utf-8"?><?Inspire CreateDate="2019-02-20T20:28:35" ModifiedDate="2022-03-11T15:58:52"?><!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "map.dtd">
+
+<map id="GUID-8BA35B15-573B-420F-9CE7-69AAA8556FFB" xml:lang="en-us">
+	<topicref href="c-api-Authentication_3baf0ddd-3532-403f-b66b-4800c1e19098.xml">
+		<topicmeta>
+			<navtitle>Authentication</navtitle>
+		</topicmeta>
+		<topicref href="c-api-External_Authentication_32100fb2-46f2-4384-a183-720e5bf1caba.xml">
+			<topicmeta>
+				<navtitle>External Authentication</navtitle>
+			</topicmeta>
+			<topicref href="t-api-Adding_an_Authentication_Source_8502fa1e-a21d-4078-88f6-f03a6a7ddc0e.xml">
+				<topicmeta>
+					<navtitle>Adding an Authentication Source</navtitle>
+				</topicmeta>
+			</topicref>
+			<topicref href="r-api-Auth_Source_settings_for_Basic_Authentication_f84a524e-9874-45f4-8a79-c624529d79ba.xml">
+				<topicmeta>
+					<navtitle>Authentication Source settings for Basic Authentication</navtitle>
+				</topicmeta>
+				<topicref href="t-api-Setting_up_Basic_Authentication_04261aa0-7f00-4150-aae4-6408339564f2.xml">
+					<topicmeta>
+						<navtitle>Setting up Basic Authentication</navtitle>
+					</topicmeta>
+				</topicref>
+			</topicref>
+			<topicref href="api-Auth_Source_settings_for_JWT_4686dcb6-bcc2-42df-b00a-b26d15904000.dita" />
+			<topicref href="api-broker_deprecation_58f90726-af01-4b0b-bd4d-629e8840162f.xml">
+				<topicmeta>
+					<navtitle>Broker Deprecation</navtitle>
+				</topicmeta>
+			</topicref>
+			<topicref href="api-authbroker_f5ef931f-fb5d-444d-b1e5-69ea695c0518.xml">
+				<topicmeta>
+					<navtitle>Authentication Broker</navtitle>
+				</topicmeta>
+				<topicref href="c-api-Internal_Roles_62b8bd48-0390-468f-9378-e6559cd276dc.xml">
+					<topicmeta>
+						<navtitle>Internal Roles</navtitle>
+					</topicmeta>
+				</topicref>
+				<topicref href="c-api-Methods_for_installing_Brokers_a73fd9d3-6017-47f8-96e8-2068091b731c.xml">
+					<topicmeta>
+						<navtitle>Methods for installing Brokers</navtitle>
+					</topicmeta>
+				</topicref>
+				<topicref href="c-api-Unattended_installation_of_a_Broker_cff7a61f-b1ee-4d03-b5c4-b502684ea05f.xml">
+					<topicmeta>
+						<navtitle>Unattended installation of a Broker</navtitle>
+					</topicmeta>
+				</topicref>
+				<topicref format="dita" href="r-api-Installation_directories_for_Brokers_0d3b8d84-0302-45f7-9378-bae6658d447f.xml" navtitle="Installation directories for Brokers" scope="local" type="topic">
+					<topicmeta>
+						<navtitle>Installation Directories for Brokers</navtitle>
+					</topicmeta>
+				</topicref>
+				<topicref href="c-api-Broker_setup_bb968155-c7e6-487f-934a-ed9087648a07.xml">
+					<topicmeta>
+						<navtitle>Broker setup</navtitle>
+					</topicmeta>
+					<topicref href="r-api-Broker_system_requirements_bf2f36f0-020d-4a5c-b1e9-1489a0826248.xml">
+						<topicmeta>
+							<navtitle>Broker system requirements</navtitle>
+						</topicmeta>
+					</topicref>
+					<topicref href="t-api-Downloading_the_local_Broker_installer_f552b8b7-f320-41b9-92e3-230920c1241e.xml">
+						<topicmeta>
+							<navtitle>Downloading the local Broker installer</navtitle>
+						</topicmeta>
+					</topicref>
+					<topicref href="api-Broker_installation_checklist_Windows_7fe7300d-0985-4543-92bb-950aa63b1153.dita">
+						<topicmeta>
+							<navtitle>Broker installation checklist (Windows)</navtitle>
+						</topicmeta>
+						<topicref format="dita" href="t-api-Setting_up_a_Windows_shared_directory_for_a_Broker_5795a903-6d98-489f-9fc4-7037665b52b8.xml" scope="local" type="topic">
+							<topicmeta>
+								<navtitle>Setting up a Windows shared directory for a Broker</navtitle>
+							</topicmeta>
+						</topicref>
+						<topicref href="t-api-Installing_a_local_Broker_on_Windows_38a4a39a-5e18-4e41-b311-15d986e2eac1.xml">
+							<topicmeta>
+								<navtitle>Installing a local Broker on Windows</navtitle>
+							</topicmeta>
+						</topicref>
+						<topicref format="dita" href="t-api-Setting_up_the_Brokers_Windows_service_2ba237c4-91f8-421f-a814-7e3c1ca018d8.xml" scope="local" type="topic">
+							<topicmeta>
+								<navtitle>Setting up the Broker's Windows service</navtitle>
+							</topicmeta>
+						</topicref>
+						<topicref format="dita" href="t-api-Installing_additional_Brokers_on_Windows_695043b9-ad43-4fe1-88f4-beeb86d9e4da.xml" scope="local" type="topic">
+							<topicmeta>
+								<navtitle>Installing additional Brokers on Windows</navtitle>
+							</topicmeta>
+						</topicref>
+					</topicref>
+					<topicref href="api-Broker_installation_checklist_Linux_db4fd78d-a00a-468e-be6d-5ad05f06df23.dita">
+						<topicmeta>
+							<navtitle>Broker installation checklist (Linux)</navtitle>
+						</topicmeta>
+						<topicref format="dita" href="t-api-Setting_Up_Linux_shared_directories_ed91254f-0574-405d-8b36-8debaaab901d.xml" scope="local" type="topic">
+							<topicmeta>
+								<navtitle>Setting up Linux shared directories</navtitle>
+							</topicmeta>
+						</topicref>
+						<topicref href="t-api-Installing_a_local_Broker_on_Linux_67073da2-534b-4fe5-9117-f2558164bddc.xml">
+							<topicmeta>
+								<navtitle>Installing a local Broker on Linux</navtitle>
+							</topicmeta>
+						</topicref>
+						<topicref format="dita" href="t-api-Installing_additional_Brokers_on_Linux_a558c30e-501f-443d-9736-4d154fb06517.xml" scope="local" type="topic">
+							<topicmeta>
+								<navtitle>Installing additional Brokers on Linux</navtitle>
+							</topicmeta>
+						</topicref>
+					</topicref>
+				</topicref>
+				<topicref href="c-api-Sources_within_a_Broker_7bc6afb4-e1e9-4b03-b953-03cb622965fc.xml">
+					<topicmeta>
+						<navtitle>Sources within a Broker</navtitle>
+					</topicmeta>
+					<topicref href="t-api-Attaching_an_Auth_Source_to_an_Authentication_5d6dfc52-6865-4774-8541-accc26f54e15.xml">
+						<topicmeta>
+							<navtitle>Attaching an Authentication Source to or detaching a Source from an Authentication Broker</navtitle>
+						</topicmeta>
+					</topicref>
+				</topicref>
+				<topicref href="r-api-Authentication_Broker_1120548d-d8aa-4ccd-8f63-46b26cbc405a.xml">
+					<topicmeta>
+						<navtitle>Authentication Broker</navtitle>
+					</topicmeta>
+					<topicref href="apim-APIM_Runtime_Release_Broker_3320c044-0db1-4b7a-91ca-d22d3a455521.dita">
+						<topicmeta>
+							<navtitle>Runtime Release</navtitle>
+						</topicmeta>
+					</topicref>
+					<topicref href="t-api-Applying_pending_or_rolling_back_Broker_updates_3623f8f4-9729-4c28-84d2-f25f17ad7f11.xml">
+						<topicmeta>
+							<navtitle>Applying pending or rolling back Broker updates</navtitle>
+						</topicmeta>
+					</topicref>
+					<topicref href="t-api-Scheduling_Release_Control_updates_98361343-0b45-4d85-951b-3a3b4bd15b37.xml">
+						<topicmeta>
+							<navtitle>Scheduling Runtime Release updates</navtitle>
+						</topicmeta>
+					</topicref>
+					<topicref href="api-Updating_a_Broker_on_Java_8_to_use_Amazon_Corretto_55bc612b-64a5-4982-95ed-2eccb77c2613.dita">
+						<topicmeta>
+							<navtitle>Updating a Broker on Java 8 to use Amazon Corretto</navtitle>
+						</topicmeta>
+					</topicref>
+				</topicref>
+				<topicref href="r-api-Auth_Source_settings_for_OpenID_and_SAML_26ca9763-ed77-4117-89a1-0c349ade7cd2.xml">
+					<topicmeta>
+						<navtitle>Authentication Source settings</navtitle>
+					</topicmeta>
+				</topicref>
+			</topicref>
+		</topicref>
+	</topicref>
+</map>

@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8"?><?Inspire CreateDate="2019-09-09T18:30:17" ModifiedDate="2022-03-11T15:58:54"?><!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "map.dtd">
+
+<map id="map_8bd86467-c48e-47cb-b50d-d74e91da7a73">
+	<title>Gateway</title>
+	<topicref href="api-API_Gateway_ddddb1bf-f768-4698-b175-2a2ae701d6ae.dita">
+		<topicref href="api-Gateway_setup_62ae35cb-7045-4c9b-84ed-fb920a9fa837.dita">
+			<topicref href="api-Gateway_system_requirements_df241fcb-ef1d-4842-8377-b01dd338b865.dita" />
+			<topicref href="api-Downloading_the_local_Gateway_installer_85f54788-80fc-40c3-bca0-905170046974.dita" />
+			<topicref href="api-Gateway_installation_checklist_Windows_ba84a1c7-7e8a-4eb5-88bd-2b61c123b8ea.dita">
+				<topicref href="api-Setting_up_a_Windows_shared_directory_for_a_Gateway_6ab29760-0a6a-40a6-810e-e09fe6d25383.dita" />
+				<topicref href="api-Installing_a_local_Gateway_on_Windows_b62af207-2a96-4228-826e-ec368860d7f8.dita" />
+				<topicref href="api-Setting_up_the_Gateways_Windows_service_17cf6416-928a-4c4a-905c-e682cf5fd98d.dita" />
+				<topicref href="api-Installing_additional_Gateways_on_Windows_d860c4f4-1c9e-4311-816b-d94977dcc04a.dita" />
+			</topicref>
+			<topicref href="api-Gateway_installation_checklist_Linux_1236d6e8-d9fc-4176-a70d-42e93ab1d486.dita">
+				<topicref href="api-Setting_Up_Linux_shared_directories_for_Gateway_656e8aea-6445-4909-8f8e-ac299196c596.dita" />
+				<topicref href="api-Installing_a_local_Gateway_on_Linux_b368fab8-7ec1-457f-8800-cd9e93086527.dita" />
+				<topicref href="api-Installing_additional_Gateways_on_Linux_06d3b303-4d03-4c37-99b9-59f0b304c752.dita" />
+			</topicref>
+		</topicref>
+		<topicref href="api-Migrating_environments_to_or_from_API_gateways_f4e7a794-f90c-441d-8a74-d558e63d9865.dita" />
+		<topicref href="api-API_Gateway_settings_adc5d3c7-15ef-4c50-8ac8-af36fe0fc5fe.dita">
+			<topicref href="apim-APIM_Runtime_Release_6d89a5e6-6b9c-4e8f-9913-bf550bc9b81c.dita">
+				<topicmeta>
+					<navtitle>Runtime Release</navtitle>
+				</topicmeta>
+			</topicref>
+			<topicref href="api-Applying_pending_or_rolling_back_Gateway_updates_0f8252bf-52ad-4a64-8d7c-768d7efcc868.dita">
+				<topicmeta>
+					<navtitle>Applying pending or rolling back Gateway updates</navtitle>
+				</topicmeta>
+			</topicref>
+			<topicref href="api-Scheduling_Runtime_Release_updates_for_a_Gateway_457ede94-e4f5-40d9-91fb-45615e034ced.dita" />
+			<topicref href="api-Container_properties_7db1ee5a-03b9-4d07-931b-4e863e7cc6de.xml" />
+			<topicref href="api-Updating_an_API_Gateway_on_Java_8_to_use_Amazon_Corretto_119fe117-70c3-45ec-9792-9aca4277e6a5.dita">
+				<topicmeta>
+					<navtitle>Updating an API Gateway on Java 8 to use Amazon Corretto</navtitle>
+				</topicmeta>
+			</topicref>
+			<topicref id="topicref_90b65508-7c38-4216-95b7-9924bf2c3cbb" href="api-Upgrading_an_API_Gateway_to_Java_11_bdcbc1ee-9505-489c-a600-86fdb7b10c2f.dita" type="task" navtitle="Upgrading an API Gateway to Java 11" />
+			<topicref href="api-upgrading_an_api_gateway_to_java_11_directly_from_gateway_settings_8923f3fb-0f65-4f19-ba62-4a4ad15b3a84.dita" navtitle="Upgrading an API Gateway to Java 11 directly from Gateway settings">
+				<topicmeta>
+					<navtitle>Upgrading an API Gateway to Java 11 directly from Gateway settings</navtitle>
+				</topicmeta>
+			</topicref>
+			<topicref href="api-rolling_back_an_api_gateway_to_use_a_previous_version_of_java_5d167021-39e6-41e5-8b6c-d4272628f8d0.dita" navtitle="Rolling back an API Gateway to use a previous version of Java">
+				<topicmeta>
+					<navtitle>Rolling back an API Gateway to use a previous version of Java</navtitle>
+				</topicmeta>
+			</topicref>
+		</topicref>
+		<topicref href="api-Environment_configuration_for_API_Gateway_f06e7034-0595-4ce3-ae68-f226d166585a.dita" />
+		<topicref href="api-API_Gateway_forward_headers_f7a85f62-c605-4256-bdba-b68f646616b5.dita" />
+		<topicref id="topicref_0f3af179-889d-4815-9bd0-3fa7a8167fe5" href="api-Changing_HTTP_forward_proxy_settings_on_a_Gateway_3ad3b223-e376-47e4-a14c-de4145f3b4a0.dita" type="task">
+			<topicref id="topicref_3bb657d5-2ec6-4264-b8d0-4306f88020a8" href="api-Forward_proxy_settings_c56fb78c-3025-44d6-9437-9263939465ab.dita" type="reference" />
+		</topicref>
+		<topicref href="api-api_policy_adapter_5c3a793d-a417-4537-9612-c11e92c0ed19.xml">
+			<topicref href="api-Creating_deployedapipolicyrule_3c534f30-dba9-4222-8916-ed876716f46a.xml" />
+			<topicref href="api-Modifying_deployedapipolicyrule_07b02d8e-2949-4f73-9fb2-e1dd3e82b56c.xml" />
+			<topicref href="api-Deleting_deployedapipolicy_4759855a-782c-4d15-bc7f-5661b7f0e5aa.xml" />
+			<topicref href="api-Querying_deployedapipolicy_a7ff5f87-21ee-45d4-a040-47fd1b3c2793.xml" />
+			<topicref href="api-Assigning_deployedapipolicy_e339db7a-4534-441a-9884-6c3b69102273.xml" />
+		</topicref>
+		<topicref href="api-Extending_a_Broker_as_an_API_Gateway_b2f98673-28c3-4fc9-aa0f-be902d4f4d1d.dita" />
+	</topicref>
+</map>

@@ -1,0 +1,226 @@
+﻿<?xml version="1.0" encoding="utf-8"?><?Inspire CreateDate="2019-02-20T20:22:31" ModifiedDate="2022-02-04T15:45:02"?><!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+
+<topic xml:lang="en-us" id="GUID-B2941CF8-5082-4DAF-AD15-08B0FD05D306">
+	<title id="GUID-B567FF71-F100-44DF-B15E-874441511597">AtomSphere connectors</title>
+	<shortdesc>This library contains sections that appear in AtomSphere connector topics. The first note should be added to the beginning of Connector topics. The second note should be added to the beginning of Connection topics. The third note should be added to the beginning of Operation topics. The Tracked Properties section should be added to Connector topics for connectors that have no tracked properties. The Tab sections should be added to Operation topics for connectors that have these tabs. Update: the “Before working with connector | connections | connector operation notes WERE REMOVED from the connector topics in the June 2015 release. They SHOULD BE INSERTED in the intros to “advanced/next level functionality like Widgets, Integration packs, and process library.” The Test Connection section should be added to the Connection topics for those connectors that have the Test Connection button. </shortdesc>
+	<body>
+		<draft-comment>Do not delete the blank rows below — they are occupied by a conref from AtomSphere Connectors. To see the content, in the View tab, turn on Tables &gt; View Table markup.</draft-comment>
+		<draft-comment>The three cautionary notes below were deprecated for DOC-884, June 2015.</draft-comment>
+		<draft-comment>The three conref Notes about working with process components were removed in the June 2015 release.</draft-comment>
+		<note id="GUID-F767E71A-577B-49AE-9B36-1C650BBA3D90">While the HTTP Authentication protocol handler supports SPNEGO, which includes the NTLM and Kerberos sub-mechanisms, Boomi has not tested Kerberos and does not provide technical support for it. </note>
+		<note id="GUID-D43E8852-F20B-4B17-97B8-A8F22872427B">For OAuth 2.0 authentication, you may need to specify in the external application the Boomi callback or redirect URL. The callback URL is <filepath>https://platform.boomi.com/account/&lt;your_<keyword conref="lib-Boomi_Keywords_0346af2b-13d7-491e-bec9-18c5d89225bf.xml#GUID-0207C7F1-40FD-4537-BE59-1D6DA46B9A1D/BOOMI_INTEGRATION" />_account_ID&gt;/oauth2/callback</filepath>. Your <keyword conref="lib-Boomi_Keywords_0346af2b-13d7-491e-bec9-18c5d89225bf.xml#GUID-0207C7F1-40FD-4537-BE59-1D6DA46B9A1D/BOOMI_INTEGRATION" /> account ID is in <menucascade>
+			<uicontrol>Settings</uicontrol>
+			<uicontrol>Account Information and Setup</uicontrol>
+			<uicontrol>Account Information</uicontrol>
+			</menucascade>.</note>
+		<note id="GUID-E8307912-7D7C-4A22-8B37-D4A46B7C8308">This connector was provided by a <keyword conref="lib-Boomi_Keywords_0346af2b-13d7-491e-bec9-18c5d89225bf.xml#GUID-0207C7F1-40FD-4537-BE59-1D6DA46B9A1D/BOOMI_DELL" /> partner. The connector may have limited functionality, has not been fully tested, and thus has limited support.</note>
+		<note id="GUID-EA0925E8-2DC7-40A7-ABFB-C7805856BFE7">This connector and its documentation were provided by a <keyword conref="lib-Boomi_Keywords_0346af2b-13d7-491e-bec9-18c5d89225bf.xml#GUID-0207C7F1-40FD-4537-BE59-1D6DA46B9A1D/BOOMI_DELL" /> partner. The connector may have limited functionality, has not been fully tested, and thus has limited support.</note>
+		<note id="GUID-41B9DC3C-9453-4813-A529-97C710800C0B">Before working with a connector, you should be familiar with process components. See the topic linked below for more information.</note>
+		<note id="GUID-FE1E5269-4688-409D-9DD5-99D3A9CDA0AA">Before working with a connection, you should be familiar with process components and connector components. See the topics linked below for more information.</note>
+		<note id="GUID-D3DB20B3-C15E-4F85-B0F4-317402CF9325">Before working with a connector operation, you should be familiar with process components, connector components and XML or JSON profiles. See the topics linked below for more information.</note>
+		<note importance="high" type="important" id="note_2f6d7d55-0a23-487d-8f9a-08e4a2da6a42">This connector is a Tech Preview and is not recommended for production use.</note>
+		<note id="GUID-F2AA24FD-A75B-4DE2-8FD6-C0D38284D281">The connector automatically handles the HTTPS certificate. You do not need to manually import a certificate component.</note>
+		<p id="GUID-4452F55D-208F-43F9-B796-BA109095F5B3"> Though a connector is private, you must share it so that it is visible to managed accounts. Sharing means adding the connector as a resource to account groups of which managed accounts are members. Do this in the Setup page on the <uicontrol>Account Groups</uicontrol> tab.</p>
+		<p>You can test your connection settings before you use the connection in a process or even before you save the connection. Test Connection ensures that the connection settings that you specify are correct, valid, and can be accessed. If the test connection is successful, you can save the connection. Otherwise, review and correct any incorrect settings, then test again. </p>
+		<note id="GUID-65C611E4-CA8D-4823-98E8-954774B62AAA">HTTP capture rules are not supported for HTTPS connections because they are encrypted. To debug HTTPS connections you can use Charles Proxy, in which you can configure SSL proxy settings.</note>
+		<note id="GUID-74060DF9-BD37-434D-B9FE-AA954C2BC50A">Employee and Candidate Rolling Entities (employee workhistory, employee education, employee certification, employee reference, employee residence, candidate workhistory, candidate education, candidate certification, candidate reference and candidate residence) — For the Get, Delete and Update actions, the ID format is <codeph>&lt;employeeID&gt;:&lt;rollingEntityID&gt;</codeph> or <codeph>&lt;candidateID&gt;:&lt;rollingEntityID&gt;</codeph>. For example: <codeph>41:2112</codeph>.</note>
+		<note id="GUID-D2EBCCF6-3DD8-4E4B-A9C4-2D372E7A8F21">Entity Link — For the Get and Delete actions, the ID format is <codeph>&lt;entityType1&gt;/&lt;entityID1&gt;/&lt;entityType2&gt;/&lt;entityID2&gt;</codeph>. For example: <codeph>account/2/candidate/468</codeph>.</note>
+		<section id="GUID-36DDA63B-FE31-442D-B827-CA7CDDC8DDC8"> <title id="GUID-5CD23E68-3B89-457D-B819-B0BB93D11922">Tracked properties</title> <p>This connector has no pre-defined tracked properties. See the topic <xref href="t-atm-Adding_tracked_fields_to_a_connector_operation_f71821dd-95ee-4ebd-bfc9-3333262f56f6.xml#GUID-C84D1FEF-BD90-46CE-BFD2-33CE720572EE" type="task" scope="peer">Adding tracked fields to a connector operation</xref> to learn how to add a custom tracked field.</p> </section>
+		<section id="section_xnx_gwv_sjb"> <title>Tracked properties</title> <p>This connector has the following tracked properties that can be set or referenced in various shape parameters. You can define a maximum of 20 tracked fields, and each tracked field's value is limited to 1000 characters. If the tracked field's value is longer than 1000 characters, the value is truncated when it is created and stored. See the topic <xref href="c-atm-Document_Tracking_bf2f68f0-a8b1-4efc-8726-424341acaccc.xml" type="concept" scope="peer">Document Tracking</xref> for more information.</p> </section>
+		<section id="GUID-A07A1EA2-9354-4C2D-B439-FBC6BA13CBC7"> <title id="GUID-D094A332-AF44-4AA5-A7C5-A9F46C2F19E6">Archiving tab</title> <p>See the <xref href="r-atm-Connector_operations_Archiving_tab_061fbf70-1034-4bf3-b795-e952f9338dbe.xml" scope="peer">Connector operation’s Archiving tab</xref> for more information.</p> </section>
+		<section id="GUID-B4F28FAF-E9B1-4BCF-930B-349B8E760B5C"> <title id="GUID-C6AF4996-139F-4891-BE2D-06083607F96A">Tracking tab</title> <p>See the <xref href="r-atm-Connector_operations_Tracking_tab_8a03f547-738a-448c-bb0f-594bad806cfe.xml" scope="peer">Connector operation’s Tracking tab</xref> for more information.</p> </section>
+		<section id="GUID-A1B48FB9-3188-4628-BCEB-66828AA0A58B"> <title id="GUID-F51A6F6E-2B22-496D-809D-80ABB212626C">Caching tab</title> <p>See the <xref href="r-atm-Connector_operations_Caching_tab_f46b49d6-25bc-4337-ade1-9c67817b8d74.xml" scope="peer">Connector operation’s Caching tab</xref> for more information.</p> </section>
+		<section id="GUID-601145BC-A590-4BDF-BD42-1D1AE0F41256"> <title id="GUID-499419E7-E836-48C3-B85A-D5E41073A4DF">Connectors</title> <note id="GUID-BD319437-9DD5-4D93-BB44-91374EAFF86D"> <p>For OAuth 2.0 authentication, you may need to specify in the external application the Boomi callback or redirect URL. That URL is <filepath>https://platform.boomi.com/&lt;your_<keyword conref="lib-Boomi_Keywords_0346af2b-13d7-491e-bec9-18c5d89225bf.xml#GUID-0207C7F1-40FD-4537-BE59-1D6DA46B9A1D/BOOMI_INTEGRATION" />_account_ID&gt;/oauth2/callback</filepath>. Your <keyword conref="lib-Boomi_Keywords_0346af2b-13d7-491e-bec9-18c5d89225bf.xml#GUID-0207C7F1-40FD-4537-BE59-1D6DA46B9A1D/BOOMI_INTEGRATION" /> Account ID is in the <menucascade>
+			<uicontrol>Settings</uicontrol>
+			<uicontrol>Account Information and Setup</uicontrol>
+			<uicontrol>Account Information</uicontrol>
+			</menucascade> tab.</p> </note> <dl>
+			<dlhead>
+				<dthd>Term heading</dthd>
+				<ddhd>Description heading</ddhd>
+			</dlhead>
+			<dlentry id="GUID-16E1FB07-42B1-4BBA-AFAA-BE66D3A1E944">
+				<dt />
+				<dd />
+			</dlentry>
+			</dl> <note id="GUID-B6EC553D-7ACE-42D8-8FC0-53A379790F21">HL7/MLLP support is included in its own <keyword conref="lib-Boomi_Keywords_0346af2b-13d7-491e-bec9-18c5d89225bf.xml#GUID-0207C7F1-40FD-4537-BE59-1D6DA46B9A1D/BOOMI_INTEGRATION" /> edition. To have HL7/MLLP enabled in your account, contact your <keyword conref="lib-Boomi_Keywords_0346af2b-13d7-491e-bec9-18c5d89225bf.xml#GUID-0207C7F1-40FD-4537-BE59-1D6DA46B9A1D/BOOMI_DELL" /> representative.</note> <note id="GUID-4B67E0B4-20AE-4A13-8A9E-17B452E08412">The EDI and B2B Solutions topic describes different options and scenarios for using this connector with a trading partner.</note> </section>
+		<section id="GUID-C926FA91-DF63-45AA-81E0-D0C6FE80E9D9"> <title id="GUID-FD7AA82C-72F4-4924-9CF1-FD1F146F4A83">Connections</title> <note id="GUID-2A604A4A-EA21-42A8-BCEE-660A3EBA7C05">You do not need to manually import a certificate. The connector automatically handles the HTTPS certificate.</note> <note id="GUID-0EBAEB23-132A-4877-B890-4E0C74CF3F68"> <keyword conref="lib-Boomi_Keywords_0346af2b-13d7-491e-bec9-18c5d89225bf.xml#GUID-0207C7F1-40FD-4537-BE59-1D6DA46B9A1D/BOOMI_INTEGRATION" />’s extensions do not work with OAuth 2.0.</note> <dl>
+			<dlhead>
+				<dthd>Term heading</dthd>
+				<ddhd>Description heading</ddhd>
+			</dlhead>
+			<dlentry id="SFTP-USE-PROXY">
+				<dt><uicontrol>Use Proxy</uicontrol></dt>
+				<dd>When this check box is selected, the <uicontrol>Choose Proxy Type</uicontrol> list is revealed.</dd>
+			</dlentry>
+			<dlentry id="SFTP-PROXY-TYPE">
+				<dt><uicontrol>Choose Proxy Type</uicontrol></dt>
+				<dd>Select the internet protocol to route network packets:<ul id="ul_avv_bfd_snb">
+					<li id="li_f6fec147-2ac3-402a-be2b-f7b56e5778e8"> <p>Atom — If selected, the connector uses the default HTTP proxy host, port, username, and password from the container.properties file.</p> </li>
+					<li id="li_91a3659b-3981-4797-9683-a60fcabeac86"> <p>HTTP — If selected, enter the host, port, user name, and password.</p> </li>
+					<li id="li_fa3c293d-9e05-4028-97f5-8651b06149e4"> <p>SOCKS4 — If selected, enter the host and port.</p> </li>
+					<li id="li_fd00f72f-1b15-44b1-ad17-dca2a5e347f6"> <p>SOCKS5 — If selected, enter the host, port, user name, and password.</p> </li>
+					</ul></dd>
+			</dlentry>
+			<dlentry id="SFTP-PROXY-HOST">
+				<dt><uicontrol>Proxy Host</uicontrol> (HTTP, SOCKS4, SOCKS5)</dt>
+				<dd>The URI to your proxy server, such as http://111.111.111.11.88</dd>
+			</dlentry>
+			<dlentry id="SFTP-PROXY-PORT">
+				<dt><uicontrol>Proxy Port</uicontrol> (HTTP, SOCKS4, SOCKS5)</dt>
+				<dd>The port number of the proxy server, such as 80.</dd>
+			</dlentry>
+			<dlentry id="SFTP-PROXY-USER">
+				<dt><uicontrol>Proxy User</uicontrol> (HTTP, SOCKS5)</dt>
+				<dd>The name of the user who can log in to the proxy server, such as johndoe@mycompany.com.</dd>
+			</dlentry>
+			<dlentry id="SFTP-PROXY-PASSWORD">
+				<dt><uicontrol>Proxy Password</uicontrol> (HTTP, SOCKS5)</dt>
+				<dd>The password for the Proxy User, such as password-to-proxy-host.</dd>
+			</dlentry>
+			</dl> </section>
+		<section id="GUID-14D91AC9-FCD6-4784-81FF-2DAB64B60C82"> <title id="GUID-7819DD21-E246-4825-92CD-21DF4CEF9390">Operations</title> <dl>
+			<dlhead>
+				<dthd>Term heading</dthd>
+				<ddhd>Description heading</ddhd>
+			</dlhead>
+			<dlentry id="GUID-DE14C1D0-2EAC-4FB7-9DD0-8817E19E5331">
+				<dt>Object</dt>
+				<dd>An object defines what you want to integrate or the action to execute, which you select in the Import Wizard.</dd>
+			</dlentry>
+			<dlentry id="GUID-D59C3D93-C1A3-40B3-B273-6B82ACD9EB14">
+				<dt>Request Profile</dt>
+				<dd>Indicates that the incoming data is a raw and unstructured document, and is not limited to a predefined format.</dd>
+			</dlentry>
+			<dlentry id="GUID-B8933C2F-C22E-4932-994B-FB589C94ACED">
+				<dt>Response Profile</dt>
+				<dd>Indicates that the outgoing data is a raw and unstructured document, and is not limited to a predefined format.</dd>
+			</dlentry>
+			<dlentry id="GUID-531D171C-67F5-472E-9D9F-B4459E0C3E4F">
+				<dt>Request Profile</dt>
+				<dd>Select or add an XML profile component that represents the structure that is being sent by the connector.</dd>
+			</dlentry>
+			<dlentry id="GUID-F3963889-1ECF-4AF1-80A8-347FC60F29B3">
+				<dt>Response Profile</dt>
+				<dd>Select or add an XML profile component that represents the structure that is being received by the connector.</dd>
+			</dlentry>
+			<dlentry id="GUID-03B69ED1-99F1-4CA5-BF91-38A16E5F9C22">
+				<dt>Request/Response Profile</dt>
+				<dd>The XML profile definition that represents the structure that is being sent or received by the connector.</dd>
+			</dlentry>
+			<dlentry id="GUID-42BBD17C-CAF7-4AA2-B9FC-A57596FCD3BF">
+				<dt>Request Profile</dt>
+				<dd>Select or add a JSON profile component that represents the structure that is being sent by the connector.</dd>
+			</dlentry>
+			<dlentry id="GUID-C1BA0489-E852-45D0-A421-2FB779AEA451">
+				<dt>Response Profile</dt>
+				<dd>Select or add a JSON profile component that represents the structure that is being received by the connector.</dd>
+			</dlentry>
+			<dlentry id="GUID-CEB18639-5006-4A7A-A35E-DE75392F58C8">
+				<dt>Request/Response Profile</dt>
+				<dd>The JSON profile definition that represents the structure that is being sent or received by the connector.</dd>
+			</dlentry>
+			<dlentry id="GUID-8B8C718B-9C8A-4E63-8667-9541F8896AF9">
+				<dt>Return Application Error Responses</dt>
+				<dd>This setting controls whether an application error prevents an operation from completing:<ul id="GUID-CFA32553-8655-464E-A0DF-669320CCE9C1">
+					<li id="LI_1C95CF971E274B3BA5380FBCDA6A19D1"> <p>If <i>cleared</i>, the process aborts and reports the error on the Process Reporting page.</p> </li>
+					<li id="LI_9B34829DAA4A44008FCC452E660F0667"> <p>If <i>selected</i>, processing continues and passes the error response to the next component to be processed as the connection output.</p> </li>
+					</ul></dd>
+			</dlentry>
+			<dlentry id="dlentry_jbj_mwn_pkb">
+				<dt>Tracking Direction</dt>
+				<dd> <p>Select the document tracking direction for the operation, either Input Documents or Output Documents. This setting enables you to choose which document appears in Process Reporting. Start shapes always track output documents regardless of your selection. </p> <note id="note_a39e572f-0ae1-48b6-9154-b500424089d7">If the tracking direction is read-only, the feature to change the direction is either unavailable or the developer has set the configuration to be read-only. The default value you see shows you which document appears in Process Reporting.</note> <p>To learn more, see the topic <xref href="int-Describing_the_capabilities_of_a_custom_connector_596e92e5-bcf4-4a19-926c-42ffd33799ac.xml">Connector descriptor file</xref>.</p> </dd>
+			</dlentry>
+			</dl> <dl>
+			<dlentry id="GUID-B2A65CDD-F219-47E5-A60F-CE0351683DD0">
+				<dt>Request Profile</dt>
+				<dd>Select or add a JSON profile that represents the structure that is being sent by the connector.</dd>
+			</dlentry>
+			<dlentry id="GUID-02327BBD-25EB-4F8F-A83A-C94C34EB64AB">
+				<dt>Response Profile</dt>
+				<dd>Select or add a JSON profile that represents the structure that is being received by the connector.</dd>
+			</dlentry>
+			<dlentry id="GUID-DAB0C6B2-63B0-403B-A6D4-7473F82C1FC3">
+				<dt>Request/Response Profile</dt>
+				<dd>The JSON profile definition that represents the structure that is being sent or received by the connector.</dd>
+			</dlentry>
+			</dl> </section>
+		<section id="GUID-16B4F043-4632-438B-823A-1D563B931860"> <title id="GUID-54C7BB18-ED80-4890-B168-33D154B96DB3">Get</title> <p>The Get action retrieves a single record from the <keyword conref="lib-Boomi_Keywords_0346af2b-13d7-491e-bec9-18c5d89225bf.xml#GUID-0207C7F1-40FD-4537-BE59-1D6DA46B9A1D/BOOMI_INTEGRATION" /> object that you define in the Get operation.</p> </section>
+		<section id="GUID-271810D9-5F1F-450F-B58D-1EF725A03D7E"> <title id="GUID-83F8652D-EBDD-4DEA-B37E-1F128FC13F19">Query</title> <p>The Query action returns zero-to-many object record documents from a single Query request. The bottom half of the operation component window contains configuration options to filter results.</p> </section>
+		<section id="GUID-BA36C8FA-4CA7-4219-A820-475F89A7A84B"> <title id="GUID-7709880B-40BF-4EE1-8768-6FF53BC203A6">Create</title> <p>The Create action makes new records, which you define, in the <keyword conref="lib-Boomi_Keywords_0346af2b-13d7-491e-bec9-18c5d89225bf.xml#GUID-0207C7F1-40FD-4537-BE59-1D6DA46B9A1D/BOOMI_INTEGRATION" /> object. The connector automatically generates an internal ID value for each document that is sent to the operation.</p> </section>
+		<section id="GUID-644B6856-D7F5-489F-B88A-15CB88B43E87"> <title id="GUID-47AE3A29-703F-4E34-A8E6-F12B22319222">Delete</title> <p>The Delete action removes records from the <keyword conref="lib-Boomi_Keywords_0346af2b-13d7-491e-bec9-18c5d89225bf.xml#GUID-0207C7F1-40FD-4537-BE59-1D6DA46B9A1D/BOOMI_INTEGRATION" /> object based on the record's internal ID that you define. If an ID is not readily available in your source data, you can use a Query operation to retrieve data.</p> </section>
+		<section id="GUID-89782736-B657-4BB8-B4E4-FFDAF23BD363"> <title id="GUID-AAEFA2D6-5822-49AF-BF35-263FC103190C">Execute</title> <p>The Execute action is a catch-all for various ways to manipulate <keyword conref="lib-Boomi_Keywords_0346af2b-13d7-491e-bec9-18c5d89225bf.xml#GUID-0207C7F1-40FD-4537-BE59-1D6DA46B9A1D/BOOMI_INTEGRATION" /> data.</p> </section>
+		<section id="GUID-E9BBFE14-E6BE-4D80-AE25-A3BE29C861D4"> <title id="GUID-F9C000CA-6422-498B-B1F7-F454F9474416">Execute</title> <p>The Execute action results in the execution of a tangible action in addition to the manipulation of <keyword conref="lib-Boomi_Keywords_0346af2b-13d7-491e-bec9-18c5d89225bf.xml#GUID-0207C7F1-40FD-4537-BE59-1D6DA46B9A1D/BOOMI_INTEGRATION" /> data. To select the action, set <uicontrol>Object Type</uicontrol> in the Import Wizard.</p> </section>
+		<section id="GUID-6F809232-496C-41DE-9846-7A0D727B8CA6"> <title id="GUID-F7D9194F-7409-47C5-889C-B0E3A303DB13">Update</title> <p>The Update action updates existing records in the <keyword conref="lib-Boomi_Keywords_0346af2b-13d7-491e-bec9-18c5d89225bf.xml#GUID-0207C7F1-40FD-4537-BE59-1D6DA46B9A1D/BOOMI_INTEGRATION" /> object based on the record's internal ID that you define. If an ID is not readily available in your source data, you can use a Query operation to retrieve data. Update does not work in batches — each update is processed individually.</p> </section>
+		<section id="GUID-D3A9957E-2251-45C2-BB82-EC564E43A27A"> <title id="GUID-13550A10-BBE9-4D88-BEA6-1FB00E45FAAF">Upsert</title> <p>The Upsert action is a convenient way to do common "insert-new-or-update-existing" integrations. Instead of doing a lookup against the destination system to determine if a given record exists and then performing separate insert/update mapped requests accordingly, you can perform one map to the Upsert request and let the connector determine whether to do an Insert or Update.</p> <p>If the record does not exist, add or insert it. If the record already exists, then update it with new information.</p> </section>
+		<section id="GUID-DF9992A0-EE15-446D-97CF-B41449464F62"> <title id="GUID-59C6CD43-E8D2-4BB9-8F0C-66C8C2C2E728">Start Shape Connector</title> </section>
+		<section id="GUID-C44B86F4-96C5-4C05-8220-C5EA889E7B1F"> <dl outputclass="0.78* 3.22*">
+			<dlhead>
+				<dthd>Name</dthd>
+				<ddhd>Description</ddhd>
+			</dlhead>
+			<dlentry id="GUID-1DFEC8C5-652C-4489-9021-BC9A997890CE">
+				<dt> <uicontrol>Display Name</uicontrol> </dt>
+				<dd>(Optional) User-defined name to describe the shape. If one is not entered, the name of the connector that you select appears on the shape.</dd>
+			</dlentry>
+			<dlentry id="GUID-006F8F65-20C6-44E4-876A-E27E9263043B">
+				<dt> <uicontrol>Connector</uicontrol> </dt>
+				<dd>When used within a process, this is used to select the type of data source or destination, depending on where the data is coming from or going to.<p>When used in the Start shape, this is used to select the application or server your would like to connect to, or a listen web server that you would like to enable, to bring documents into the process.</p></dd>
+			</dlentry>
+			<dlentry id="GUID-7EF757B3-BA8E-408E-B81D-235D3FA3F3A2">
+				<dt> <uicontrol>Action</uicontrol> </dt>
+				<dd>The available actions are determined by the type of connector that you select. Examples are: Get, Send, Create, Query, Delete, Update, etc. <p>When used in the Start shape, this is used to select the inbound action for your documents.</p><ul id="GUID-26ACA44B-D862-4612-BE5C-9B1EF74DBBB3">
+					<li id="LI_B272A981EFB248E18FDA696B4B1CED26"> <p>Get — Retrieves documents from application or server.</p> </li>
+					<li id="LI_02607E2EF8EF481E9D81D50691322F67"> <p>Listen — Enables process listening for certain connector scenarios (for example, AS2, Web Services Server). You need to deploy the process to enable the web server for listening. </p> </li>
+					</ul></dd>
+			</dlentry>
+			<dlentry id="GUID-0BE859BA-BD2F-4F79-8DA8-C9D75C384B5F">
+				<dt> <uicontrol>Connection</uicontrol> </dt>
+				<dd>Used to select, edit or create a Connection component for your specific application or server. The list of connections is filtered by the type of connector that you select. Connection components are reusable in other processes and process shapes.</dd>
+			</dlentry>
+			<dlentry id="GUID-9FE67AE8-861B-485B-BCDB-D8D037360F30">
+				<dt> <uicontrol>Operation</uicontrol> </dt>
+				<dd>Used to select, edit or create an Operation component for your specific application or server. The list of operations is filtered by the type of connector and action that you select. Operation components are reusable in other processes and process shapes. </dd>
+			</dlentry>
+			<dlentry>
+				<dt> <uicontrol>Allow dynamic connection properties</uicontrol> </dt>
+				<dd>When selected, any <xref href="int-Dynamic_Process_Connection_properties_9067300c-3df3-40ba-97b3-5a6a03a3a6dc.dita" format="xml" scope="peer" type="reference">Dynamic Process Connection properties</xref> that are defined in the Set Properties shape override connector settings and extension values within subsequent Connector shapes. When cleared, the values set in connection settings and extensions values take precedence, even if Dynamic Process Connection properties are defined within the Set Properties shape.<p>If the same connection is used multiple times within a process, the option needs to be enabled on each of the Connector shapes. If this is not set, the same connections are executed with varying values at different points in the process.</p></dd>
+			</dlentry>
+			</dl> </section>
+		<section id="GUID-08747F66-C660-45CD-8E11-A10FFF9C219E"> <title id="GUID-ED439D0C-DB1D-406C-82EA-856788F2E134">account ID</title> <p> <ph id="TOOBTAINYOURACCOUNTID">To obtain your account ID, navigate to <menucascade>
+			<uicontrol>Settings</uicontrol>
+			<uicontrol>Account Information and Setup</uicontrol>
+			<uicontrol> Account Information</uicontrol>
+			</menucascade> under your account name in the main menu bar.</ph> </p> <draft-comment>WARNING: the blank rows below contain conrefs. To view the conrefs, click View &gt; Tables &gt; Table Markup. To access the conref source (Boomi &gt; Library &gt; Library &gt; Atomsphere Connectors), in ArborText double-click inside the reference. </draft-comment> </section>
+		<section id="SECTION_4FF5EFDA2C6646A3AB0B29DA1C95A21F"> <title id="GUID-A6F46C27-E58F-4E24-B61A-A2A0BBAEB8C4">Test Connection</title> <p>You can test your connection settings before you use the connection in a process or even before you save the connection. Test Connection ensures that the connection settings that you specify are correct, valid, and can be accessed. If the test connection is successful, you can save the connection. Otherwise, review and correct any incorrect settings, then test again. </p> <note id="note_yn3_t3k_grb" type="attention"><uicontrol>Test Connection</uicontrol> may only be
+				performed against containers associated with your account (local Atoms, Molecules,
+				and Atom Clouds).</note> <draft-comment author="John_George">I added this new note in the November 2021 release for CON-3370. Also reference the functionality and acceptance criteria in CON-2873.</draft-comment> </section>
+		<p id="UPLOADTHEJARFILES">Upload the JAR files into your <keyword conref="lib-Boomi_Keywords_0346af2b-13d7-491e-bec9-18c5d89225bf.xml#GUID-0207C7F1-40FD-4537-BE59-1D6DA46B9A1D/BOOMI_INTEGRATION" /> account library (<menucascade>
+			<uicontrol>Settings</uicontrol>
+			<uicontrol>Account Information and Setup</uicontrol>
+			<uicontrol>Account Libraries</uicontrol>
+			</menucascade>), <xref href="t-atm-Creating_a_Custom_Library_Component_8fce64fb-4b85-4977-9876-e0d616526228.xml" scope="peer">create a Custom Library component</xref>, and <xref href="c-atm-Custom_library_deployment_considerations_7fccfe31-e438-4fa6-bab0-7f395eef5fe3.xml" scope="peer">deploy the component</xref> to the appropriate Atom, Molecule, Atom Cloud, or environment. Uploaded or imported files are first passed through a virus scanner. The upload or import results in an error if a virus is detected, and the file is rejected. If an error persists, contact Boomi Support.</p>
+		<dl>
+			<dlentry>
+				<dt>Return Application Error Responses</dt>
+				<dd>This setting controls... test test test</dd>
+			</dlentry>
+		</dl>
+		<p>For more information and best practices when naming connections and operations, review the following resources in the Boomi Community:</p>
+		<p>Return Application Error Responses</p>
+		<p>For more information and best practices when naming connections and operations, review the following resources in Boomi Community:<ul>
+			<li id="li_da97d7b1-edb5-46f4-93b2-aaebd943a6dd"><xref href="https://community.boomi.com/s/article/tipsandtrickscomponentmanagement" format="html" scope="external">Tips and Tricks - Component Management</xref></li>
+			<li id="li_e5e7a3ed-f879-4d44-b39f-c3cad144b23e"><xref href="https://community.boomi.com/s/question/0D51W00006As1TxSAJ/component-naming-best-practice" format="html" scope="external">Component Naming Best Practices</xref></li>
+			<li id="li_a9dac820-8b41-4087-a248-4b7486048d27"><xref href="https://community.boomi.com/s/article/AtomSphereDeveloperBestPracticesChecklist" format="html" scope="external">AtomSphere Developer - Best Practices Checklist</xref></li>
+			</ul></p>
+		<section id="section_tfd_ncd_1jb"> <title>About Boomi certified partner connectors</title> <p>Boomi certified connectors (indicated in the user interface with - Partner in the name) are developed, maintained, and supported by Boomi's partners. These connectors have been reviewed and certified by Boomi. Even though we did not develop the connector, you should still contact the Boomi's support team for any partner-maintained connector issues (bugs and enhancement requests). Boomi cannot prioritize bug fixes and enhancements for our partners, but Boomi Support will facilitate the conversation with the partner to help resolve the connector issue.</p> <p>By installing this connector, you consent to Boomi sharing your contact information with the developer of this connector so that you can receive more information about it directly from the developer.</p> <p>This partner connector does not require an additional fee to use with the Boomi Platform.</p> </section>
+		<section id="section_clp_cj2_fjb"> <title>Note for Connector Licensing</title> <note type="important" id="note_40222902-8297-48cb-9124-7454f8ef59be">All connectors, regardless of who builds them (<keyword conref="lib-Boomi_Keywords_0346af2b-13d7-491e-bec9-18c5d89225bf.xml#GUID-0207C7F1-40FD-4537-BE59-1D6DA46B9A1D/BOOMI_DELL" /> or a partner) count towards your connection licenses when deployed to Atoms. </note> </section>
+		<section id="section_tl5_vdz_vjb"> <title>Connector SDK</title> <note id="note_84ca5ab5-8e7d-4849-9ce9-dd50fee9e336">The maximum size limit for the connector archive file is 20 MB.</note> </section>
+		<section id="section_qtt_csg_plb"> <note type="note" id="note_13ac2efb-1f48-4db1-96b6-a9c62d7f1ec3">The Connector SDK artifacts available from the public repository contain a <codeph>connector-sdk-samples-sources</codeph> JAR file, containing source code for some connector samples you can reference when building a custom connector. You will find sample JSON Operation classes, sample Listener classes, and more. See the <xref href="int-Connector_sdk_artifacts_72c6deee-1376-4f0b-b1db-371077460df2.xml">Connector SDK artifacts</xref> topic for more information. </note> </section>
+		<section id="section_yqz_rxv_wmb"> <note importance="high" type="important" id="note_40e4188d-44cc-4194-b445-2265a9684d42">To ensure that Listen operations work on Atom Clouds, verify that Secure Listen is enabled. To learn more, see the topic <xref href="int-configuring_an_atom_cloud_for_secure_listen_9cb149d8-3522-4f81-8825-f7a09d1c032a.xml" scope="peer">Enabling Secure Listen for an Atom Cloud</xref>. </note> </section>
+		<p>Connector SDK Version<draft-comment>This entry below is for the Connector SDK version as of the October 2021 release, used througout the connectivity documentation.</draft-comment></p>
+		<ol id="GUID-04C0862C-C0C4-4097-81ED-A00BED4230B9">
+			<li id="LI_21595984FF7A4C34BD5B5FA1EF255B9E"><keyword id="BOOMI_CONNECTORSDKVERSION">2.13.1</keyword></li>
+		</ol>
+	</body>
+</topic>

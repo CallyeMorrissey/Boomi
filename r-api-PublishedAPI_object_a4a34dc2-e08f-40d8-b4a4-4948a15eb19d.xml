@@ -1,0 +1,130 @@
+﻿<?xml version="1.0" encoding="utf-8"?><?Inspire CreateDate="2019-02-20T20:23:54" ModifiedDate="2022-04-26T20:39:52"?><!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN" "reference.dtd"><reference xml:lang="en-us" id="GUID-4AE63AC3-34F4-4FC8-9FAA-5B3322B2B26F"><!--BOOMI-11946   https://boomii.atlassian.net/browse/BOOMI-11946--><!--https://docs.google.com/document/d/18PV-Q6DnTVevti4kww6LXSYp4yD7Y0ts3woVLQ7UWes/edit?pli=1--><title id="GUID-8433C6F0-9A99-4031-B166-96B1F46E6F13">Published API
+object</title><shortdesc>Use the Published API object to identify the
+currently deployed Atom’s environment, the API, and the URIs for supported
+metadata objects (REST, SOAP, OData).</shortdesc><prolog><resourceid id="GUID-4AE63AC3-34F4-4FC8-9FAA-5B3322B2B26F" /></prolog><refbody><section id="GUID-A85950E8-6BDA-449C-B902-75C3F6197324">
+         <note id="GUID-6E5FFE52-17AF-4E2B-BBB3-5ABF4225E196">If you do not see a PublishedApi
+            object used in an old deployment, redeploy this API to that environment.</note>
+         <title id="GUID-44F62694-CBC4-4679-B9F8-557CEFC0779E">Structure</title>
+         <p>
+            <note id="note_gp4_3g3_mtb">If you have multiple authentication methods configured for
+               an Atom, then the API endpoint URLs returned in the results will use the default
+               authentication method configured in the Shared Web Server settings.</note>
+         </p>
+         <codeblock xml:space="preserve" outputclass="code-java">&lt;PublishedApi environmentId="" atomId="" componentId="" name="" description=""&gt;
+  &lt;rest swaggerUrl="" swaggerUiLink="" /&gt;
+  &lt;soap11 wsdlUrl="" /&gt;
+  &lt;soap12 wsdlUrl="" /&gt;
+  &lt;odata2 serviceUrl="" /&gt;
+&lt;/PublishedApi&gt;/&gt;</codeblock>
+         <p>The Published API object uses these fields:</p>
+         <table id="table_zgz_py1_x3b"><tgroup cols="2"><colspec colnum="1" colname="col1" colwidth="0.82*" /><colspec colnum="2" colname="col2" colwidth="1.18*" /><thead><row id="row_8d2bd58d-bb26-4058-9fe8-5fc45e44b0e1"><entry colname="col1" valign="top">Field </entry><entry colname="col2" valign="top">Description </entry></row></thead><tbody><row id="row_aca6ab70-27cd-4dbc-a632-3e14a41a200c"><entry colname="col1">environmentID</entry><entry colname="col2">The environment Id of this API (lookup on the platform environment
+                        API).</entry></row><row id="row_3960ab9f-0cc7-42fe-beaa-ff45aec3894e"><entry colname="col1">atomId</entry><entry colname="col2">The container Id where this API exists (lookup via the platform Atom
+                        API).</entry></row><row id="row_0cf51b2f-dc6f-4db9-80ef-6ae60714eeba"><entry colname="col1">componentId</entry><entry colname="col2">The Id of the API Service component.</entry></row><row id="row_6c032ddf-1f3f-46eb-b8e5-18bbe1946de2"><entry colname="col1">name</entry><entry colname="col2">The name of the API Service component.</entry></row><row id="row_7ccb1fc6-a1ad-40d3-8870-50d2c99b2a9a"><entry colname="col1">description</entry><entry colname="col2">The description of the API Service component.</entry></row><row id="row_ff2d81f0-b1ff-4304-b8c8-49cec444bb30"><entry colname="col1">rest</entry><entry colname="col2">The metadata endpoints to use REST for this API.</entry></row><row id="row_b204cfcf-a87b-4856-8b68-6d9497a36f45"><entry colname="col1">soap11</entry><entry colname="col2">The metadata endpoints to use SOAP 1.1 for this API.</entry></row><row id="row_94776665-3b41-430e-b759-ed50c6d27687"><entry colname="col1">soap12</entry><entry colname="col2">The metadata endpoints to use SOAP 1.2 for this API.</entry></row><row id="row_660c3ec4-b598-4ba5-bfc3-7c317b35d868"><entry colname="col1">odata</entry><entry colname="col2">The metadata endpoints to use OData 2 for this API.</entry></row></tbody></tgroup></table>
+      </section><section id="GUID-3B03558F-20CC-407B-9CD5-125FED888AC3">
+         <title id="GUID-A895F696-D211-4D2F-B58D-6E833176265D">Supported operations</title>
+         <p>Query, the only operation, is supported by two calls: </p>
+         <ul id="GUID-DF13ED2E-54A6-439D-8A7C-FABFD35E8105"><li id="LI_0A2BC70E985D48FEA669041B61DE1A65">Query retrieves a limited number of records
+               in a response. When the record limit is reached, a token for more results and
+               numberOfResults is returned.</li><li id="LI_3C37606F8E164893A855DEEBD010A191">
+               <p>QueryMore retrieves subsequent records in chunks from the previous query. To
+                  iterate through records in a result set, call queryMore() repeatedly until all
+                  records in the result set have been processed (the Done flag is true).</p>
+            </li></ul>
+         <table id="table_axt_vzq_43b"><tgroup cols="5"><colspec colnum="1" colname="col1" /><colspec colnum="2" colname="col2" /><colspec colnum="3" colname="col3" /><colspec colnum="4" colname="col4" /><colspec colnum="5" colname="col5" /><thead><row id="row_ff8191b0-154b-4f4e-b8be-79ddd3170420"><entry colname="col1"> GET </entry><entry colname="col2">QUERY </entry><entry colname="col3">CREATE </entry><entry colname="col4">UPDATE </entry><entry colname="col5">DELETE </entry></row></thead><tbody><row id="row_6e37ce9a-9292-444a-83dd-27acd66fd127"><entry colname="col1"><ph conref="lib-AtomSphere_API_9a0b3cc6-0758-45f9-b2cc-04932561d53c.xml#GUID-3B92F5CD-0A69-4191-BF29-297025332DDB/NotSupported" />
+                     </entry><entry colname="col2"><ph conref="lib-AtomSphere_API_9a0b3cc6-0758-45f9-b2cc-04932561d53c.xml#GUID-3B92F5CD-0A69-4191-BF29-297025332DDB/Supported" />
+                     </entry><entry colname="col3"><ph conref="lib-AtomSphere_API_9a0b3cc6-0758-45f9-b2cc-04932561d53c.xml#GUID-3B92F5CD-0A69-4191-BF29-297025332DDB/NotSupported" />
+                     </entry><entry colname="col4"><ph conref="lib-AtomSphere_API_9a0b3cc6-0758-45f9-b2cc-04932561d53c.xml#GUID-3B92F5CD-0A69-4191-BF29-297025332DDB/NotSupported" />
+                     </entry><entry colname="col5"><ph conref="lib-AtomSphere_API_9a0b3cc6-0758-45f9-b2cc-04932561d53c.xml#GUID-3B92F5CD-0A69-4191-BF29-297025332DDB/NotSupported" />
+                     </entry></row></tbody></tgroup></table>
+      </section><section id="section_9ce1cb96-20cd-4a69-860b-e26f9c9797d0" otherprops="RESTish" outputclass="tab">
+         <title>RESTish implementation</title>
+         <ul id="GUID-55F9468A-D8AD-466B-8803-07621358CBDB"><li id="LI_936FB476866F4EC7AC00F448B2A400DA">
+               <p><b>QUERY operation</b></p>
+               <p>This is a query for Published API objects:</p>
+               <codeblock xml:space="preserve">&lt;QueryConfig xmlns="http://api.platform.boomi.com/"&lt;QueryFilter&gt;
+    &lt;expressionoperator="and" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:type="GroupingExpression"
+      &lt;nestedExpression operator="EQUALS" property="environmentId"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="SimpleExpression"&lt;argument&gt;3aef116a-4b97-4cef-8388-16a991765f88&lt;/argument&gt;
+      &lt;/nestedExpression&gt;
+      &lt;nestedExpressionoperator="EQUALS" property="atomId"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="SimpleExpression"&lt;argument&gt;b5cd5a78-6345-4507-a3b9-433884d8c0eb&lt;/argument&gt;
+      &lt;/nestedExpression&gt;
+    &lt;/expression&gt;
+  &lt;/QueryFilter&gt;
+&lt;/QueryConfig&gt;</codeblock>
+               <p>Response:</p>
+               <codeblock xml:space="preserve">{
+     "@type": "ApimQueryResult",
+     "result": [
+        {
+            "@type": "PublishedApi",
+            "description": "",
+            "rest": {
+                 "@type": "RestInfo",
+                 "swaggerUrl": "http://platform1.boomi.com:9093/"
+        },
+            "name": "helloworld",
+            "componentId": "330a6968-11b1-4c6a-95a9-23456a12bd34",
+            "atomId": "b5cd5a78-1234-4507-a3b9-123456a7b8de",
+            "environmentId": "3aef116a-1b11-4cef-8388-12a345678a99"
+        },
+        {
+            "@type": "PublishedApi",
+            "description": "",
+            "rest": {
+                "@type": "RestInfo",
+                "swaggerUrl": "http://platform1.boomi.com:9093/auth"
+        },
+            "name": "Auth1",
+            "componentId": "2d7e9f28-012a-44da-872a-ab12345b6c78",
+            "atomId": "b5cd5a78-1234-4507-a3b9-123456a7b8de",
+            "environmentId": "aef116a-1b11-4cef-8388-12a345678a99"
+        }
+     ],
+     "numberOfResults": 2
+}</codeblock>
+            </li></ul>
+      </section><section id="GUID-6F284AA5-969F-4109-9A83-960656DC5044" otherprops="SOAP" outputclass="tab">
+         <title id="GUID-2AC65A87-8214-4914-842B-9E36A10D38FE">SOAP implementation</title>
+         <ul id="GUID-FB0294F6-AD08-4920-92F9-E6D560E09448"><li id="LI_BA3D1032FB9D4AC49822D5C8AAB1B204">
+               <p><b>QUERY operation</b></p>
+               <p>Request without filters:</p>
+               <codeblock xml:space="preserve">&lt;soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:soap="http://soap.apim.api.platform.boomi.com/" xmlns:apim="http://apim.api.platform.boomi.com/" xmlns:api="http://api.platform.boomi.com/"&gt;
+&lt;soapenv:Header/&gt;
+   &lt;soapenv:Body&gt;
+      &lt;soap:query&gt;
+         &lt;apim:objectType&gt;PublishedApi&lt;/apim:objectType&gt;
+         &lt;!--Optional:--&gt;
+         &lt;api:queryConfig&gt;
+            &lt;api:QueryFilter&gt;
+            &lt;/api:QueryFilter&gt;
+         &lt;/api:queryConfig&gt;
+      &lt;/soap:query&gt;
+   &lt;/soapenv:Body&gt;
+&lt;/soapenv:Envelope&gt;</codeblock>
+               <p>Request with filters:</p>
+               <codeblock xml:space="preserve">&lt;soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:soap="http://soap.apim.api.platform.boomi.com/" xmlns:apim="http://apim.api.platform.boomi.com/" xmlns:api="http://api.platform.boomi.com/"&gt;
+&lt;soapenv:Header/&gt;
+   &lt;soapenv:Body&gt;
+      &lt;soap:query&gt;
+         &lt;apim:objectType&gt;PublishedApi&lt;/apim:objectType&gt;
+         &lt;!--Optional:--&gt;
+         &lt;api:queryConfig&gt;
+            &lt;api:QueryFilter&gt;
+               &lt;api:expression operator="and" xsi:type="api:GroupingExpression" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;
+                  &lt;api:nestedExpression operator="EQUALS" property="httpStatus" xsi:type="api:SimpleExpression"&gt;
+                     &lt;api:argument&gt;200&lt;/api:argument&gt;
+                  &lt;/api:nestedExpression&gt;
+                  &lt;api:nestedExpression operator="BETWEEN" property="timeBlock" xsi:type="api:SimpleExpression"&gt;
+                     &lt;api:argument&gt;2018-01-01T00:00:00Z&lt;/api:argument&gt;
+                     &lt;api:argument&gt;2018-09-01T00:00:00Z&lt;/api:argument&gt;
+                  &lt;/api:nestedExpression&gt;
+               &lt;/api:expression&gt;
+            &lt;/api:QueryFilter&gt;
+         &lt;/api:queryConfig&gt;
+      &lt;/soap:query&gt;
+   &lt;/soapenv:Body&gt;
+&lt;/soapenv:Envelope&gt;</codeblock>
+            </li></ul>
+      </section></refbody></reference>

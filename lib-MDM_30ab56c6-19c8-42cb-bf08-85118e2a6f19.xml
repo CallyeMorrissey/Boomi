@@ -1,0 +1,879 @@
+﻿<?xml version="1.0" encoding="utf-8"?><?Inspire CreateDate="2019-02-20T20:25:44" ModifiedDate="2022-03-30T12:49:01"?><!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+
+<topic xml:lang="en-us" id="GUID-0902C492-A315-497C-BAE2-457BAAA30F69">
+	<title id="GUID-9169E154-7431-4B73-BC69-609AE41CB02B">Master Data Hub</title>
+	<shortdesc>Shared content for Master Data Hub</shortdesc>
+	<body>
+		<section id="GUID-2A7C4763-A79F-4C42-B690-86597D516DE2"> <title id="GUID-58C5C302-7663-434B-BCCF-3480B7908A4C">Business Rule Definition List Entries</title> <dl>
+			<dlentry id="GUID-A23817AA-9CAF-4146-950A-1A467FD50DA1">
+				<dt><uicontrol>Field</uicontrol></dt>
+				<dd>Sets the field to use as the input and output.<p>Deleted fields are shown as “Unknown” in red.</p></dd>
+			</dlentry>
+			<dlentry id="GUID-02A2F934-AE27-471A-A206-9DB892A79998">
+				<dt><uicontrol>OK</uicontrol></dt>
+				<dd>Adds the input/output and closes the dialog.</dd>
+			</dlentry>
+			<dlentry id="GUID-153FC7B6-A681-4954-A3F8-E98F12E385B2">
+				<dt><uicontrol>Cancel</uicontrol></dt>
+				<dd>Closes the dialog without adding an input/output.</dd>
+			</dlentry>
+			</dl> <dl>
+			<dlentry id="GUID-A4608641-2D00-4D62-A8E0-A30278CA5A89">
+				<dt><uicontrol>Category</uicontrol></dt>
+				<dd>Selects the function category of which the function to be applied is a member. Follow the links to <keyword conref="lib-Boomi_Keywords_0346af2b-13d7-491e-bec9-18c5d89225bf.xml#GUID-0207C7F1-40FD-4537-BE59-1D6DA46B9A1D/BOOMI_INTEGRATION" /> topics for information about the functions in each category:<ul id="GUID-A50C9D88-EBA1-4A60-90C9-BA8A4A9F28DA">
+					<li id="LI_C9131201523944D480C5F0B007F24C91"> <p><xref href="r-atm-String_functions_efef3d8f-b053-4cfd-aa5f-aa4e30ead17d.xml" scope="peer" format="dita" type="reference"><draft-comment author="Jon_Brams">DOC-1471 markup correction</draft-comment>String</xref></p> </li>
+					<li id="LI_CC20658AC34E4226B7E54966E92B9F47"> <p><xref href="r-atm-Numeric_functions_9b70e31b-a97d-444e-b638-5a004a66b9ee.xml" scope="peer" format="dita" type="reference"><draft-comment author="Jon_Brams">DOC-1471 markup correction</draft-comment>Numeric</xref></p> </li>
+					<li id="LI_5F43802CF7C748E883B7E260382C27AC"> <p><xref href="r-atm-Date_functions_e35e34c4-45f2-49ac-b1d7-4792114e52dc.xml" scope="peer" format="dita" type="reference"><draft-comment author="Jon_Brams">DOC-1471 markup correction</draft-comment>Date</xref></p> </li>
+					</ul></dd>
+			</dlentry>
+			<dlentry id="GUID-D1D99D56-4526-4047-9EEF-F94BEF28152E">
+				<dt><uicontrol>Functions</uicontrol></dt>
+				<dd>Selects the function to be applied. The available selections are dependent upon the selected <uicontrol>Category</uicontrol>.</dd>
+			</dlentry>
+			<dlentry id="GUID-FF83E52D-3CCE-4E35-8964-97255010E746">
+				<dt><uicontrol>OK</uicontrol></dt>
+				<dd>Opens a second dialog in which you define the function’s input parameters and/or output(s). The controls in the dialog are dependent upon the selected function in the <uicontrol>Functions</uicontrol> list. For some functions, a third dialog opens when you click <uicontrol>OK</uicontrol> in the second.</dd>
+			</dlentry>
+			<dlentry id="GUID-BF503BC0-6767-4971-ABAC-41813F8912A7">
+				<dt><uicontrol>Cancel</uicontrol></dt>
+				<dd>Closes the dialog without adding an input and output(s).</dd>
+			</dlentry>
+			</dl> <dl>
+			<dlentry id="GUID-448F0CE6-0DDE-435D-95D6-806F8D8F999B">
+				<dt>Top Level Operator</dt>
+				<dd>Selects <uicontrol>AND</uicontrol> or <uicontrol>OR</uicontrol> as the Boolean operator defining the relationship between the top-level conditions and condition groups.</dd>
+			</dlentry>
+			</dl> </section>
+		<section id="HUB_SOURCE_FILTER"> <title>Filter Sources</title> <p>Typing in this field filters the sources summary list below to include only sources having matching names. Clicking <image href="main-ic-x-white-in-gray-circle-16_0abafeee-d5e7-4888-9bfb-475b11b6d00f.jpg" id="IMAGE_061109DAF933434EB861660E256F2CB4">
+			<alt />
+			</image> clears the field and stops filtering.</p> </section>
+		<section id="section_hpq_z3m_tlb"> <title>Sources tabs in model and repository pages</title> <dl>
+			<dlentry id="HUB_SOURCE_ENTITY_URL">
+				<dt><uicontrol>Entity ID URL</uicontrol></dt>
+				<dd>Sets the URL template <keyword conref="lib-Boomi_Keywords_0346af2b-13d7-491e-bec9-18c5d89225bf.xml#GUID-0207C7F1-40FD-4537-BE59-1D6DA46B9A1D/BOOMI_MDMCLOUD" /> will use to construct target URLs for links, rendered in the Golden Records page, to entities in this source system. This setting is also in the <xref href="hub-Add_a_Source_dialog_Inbound_tab_8d797fa1-8285-4788-a45e-4b040d8ec493.dita">Add a Source dialog</xref> and the <xref href="hub-Attach_a_Source_dialog_Inbound_tab_c0d51c45-72b9-419e-a617-fbaae458ae89.dita">Attach a Source dialog</xref>.</dd>
+			</dlentry>
+			<dlentry id="HUB_SOURCE_ALLOW_MULTIPLE_LINKS">
+				<dt><uicontrol>Allow Multiple Links</uicontrol></dt>
+				<dd><draft-comment author="Jon_Brams">HUB-1333 insertion</draft-comment>If switched to Yes, multiple links are allowed from individual golden records to entities in the source system, and entities contributed from the source cannot be quarantined as potential duplicates. This switch is set to No by default. This setting is also in the <xref href="hub-Add_a_Source_dialog_6929eb8a-a41e-4cb6-8f59-bbce9774d989.dita">Add a Source dialog</xref> and the <xref href="hub-Attach_a_Source_dialog_37d23b8c-d418-423e-bd8f-8096454f26d1.dita">Attach a Source dialog</xref>.<note conref="#GUID-0902C492-A315-497C-BAE2-457BAAA30F69/HUB_SOURCE_MULTIPLE_LINKS_PERSIST" id="note_k1y_yzq_grb" /></dd>
+			</dlentry>
+			<dlentry id="HUB_SOURCE_CONFIG_INBOUND">
+				<dt><uicontrol>Inbound</uicontrol></dt>
+				<dd>(Present only if this source can contribute data.)<p>This tab is used to configure handling of entity contributions from the source. Its controls are identical to those in the <uicontrol>Inbound</uicontrol> tab in the <xref href="hub-Add_a_Source_dialog_Inbound_tab_8d797fa1-8285-4788-a45e-4b040d8ec493.dita">Add a Source dialog</xref> and the <xref href="hub-Attach_a_Source_dialog_Inbound_tab_c0d51c45-72b9-419e-a617-fbaae458ae89.dita">Attach a Source dialog</xref>.</p></dd>
+			</dlentry>
+			<dlentry id="HUB_SOURCE_CONFIG_OUTBOUND">
+				<dt><uicontrol>Outbound</uicontrol></dt>
+				<dd>(Present only if this source can contribute data.)<p>This tab is used to configure handling of entity contributions from the source. Its controls are identical to those in the <uicontrol>Outbound</uicontrol> tab in the <xref href="hub-Add_a_Source_dialog_Outbound_tab_b98b345f-d29f-4135-b9b0-62ed4d690026.dita">Add a Source dialog</xref> and the <xref href="hub-Attach_a_Source_dialog_Outbound_tab_80a766ec-96e9-49ee-90d4-42dfc91d1d12.dita">Attach a Source dialog</xref>.</p></dd>
+			</dlentry>
+			<dlentry id="HUB_SOURCE_CONFIG_SAVE">
+				<dt><uicontrol>Save</uicontrol></dt>
+				<dd>Changes the source configuration and closes the dialog.</dd>
+			</dlentry>
+			<dlentry id="HUB_SOURCE_CONFIG_CANCEL">
+				<dt><uicontrol>Cancel</uicontrol></dt>
+				<dd>Closes the dialog without changing the source configuration.</dd>
+			</dlentry>
+			</dl> </section>
+		<section id="section_lcl_3vd_tlb"> <title>Add/Attach Source dialog</title> <dl>
+			<dlentry id="HUB_SOURCE_INBOUND_TAB">
+				<dt><uicontrol>Inbound</uicontrol></dt>
+				<dd>This tab is used to configure handling of entity contributions from the source.</dd>
+			</dlentry>
+			<dlentry id="HUB_SOURCE_OUTBOUND_TAB">
+				<dt><uicontrol>Outbound</uicontrol></dt>
+				<dd>This tab is used to configure propagation of update requests on the source’s channel.</dd>
+			</dlentry>
+			</dl> </section>
+		<section id="HUB_SOURCE_INBOUND"> <draft-comment author="Jon_Brams">Section: Add/Attach inbound source</draft-comment> <p>(Present only if this source can contribute data.)</p> <fig id="fig_lbt_tvm_wlb">
+			<image href="img-hub-configure_attached_source_inbound_e3f4ab2d-b9be-4fcc-b9a0-2ef591950695.jpg" id="image_mbt_tvm_wlb" otherprops="border">
+				<alt><draft-comment author="Jon_Brams">HUB-791 insertion, release profiling intentionally omitted</draft-comment><uicontrol>Inbound</uicontrol> tab for configuring the handling of entity contributions from the source</alt>
+			</image>
+			</fig> </section>
+		<section id="HUB_SOURCE_INBOUND_RECORD"> <title>Record-level Options</title> <p>This section is used to configure golden record-level restrictions on entity contributions.</p> <dl>
+			<dlhead>
+				<dthd>Name</dthd>
+				<ddhd>Description</ddhd>
+			</dlhead>
+			<dlentry>
+				<dt><uicontrol>Require approval for new records</uicontrol></dt>
+				<dd>If selected, new entity contributions from the source are automatically quarantined subject to an optionally specified rule. An entity quarantined for this reason cannot not be incorporated into the domain unless manually approved.<ul id="ul_pry_rnn_blb">
+					<li id="li_1a5da29e-d103-4d66-a213-d0160c6bb6d1"> <p>If a rule is not configured, all new entity contributions are quarantined.</p> </li>
+					<li id="li_271315e8-3e73-478b-bf93-b14239934f2f"> <p>If a rule is configured, a contributed entity is quarantined only if it satisfies the specified rule.</p> </li>
+					</ul><p>Selecting this check box reveals the following control:</p><ul id="ul_qry_rnn_blb">
+					<li id="li_f7d56b5a-0040-4d56-a6c4-6fa1181bba5d"> <p><uicontrol>Add a rule</uicontrol> — Reveals the controls for configuring the rule.</p> </li>
+					</ul><p>The following controls are used to configure the rule:</p><ul id="ul_rry_rnn_blb">
+					<li id="li_946ce87b-f885-4420-8b5b-be0e60be63c8"> <p>The field chooser is used to select the field whose value is to be evaluated against the specified static value.</p> </li>
+					<li id="li_4f3a5e92-9870-4b2f-9ef8-09d3c337527d"> <p>The adjacent list is used to select the comparison operator. These operators are available for selection:</p> <ul id="ul_sry_rnn_blb">
+						<li id="li_ec35f9c6-37cf-4bcb-b13f-b90eb950e901"> <p>is equal to</p> </li>
+						<li id="li_602d4429-3210-44df-b15e-76dcf5e8b561"> <p>is not equal to</p> </li>
+						<li id="li_b252baba-1b58-4214-a9f4-5fe066bc174d"> <p>is less than</p> </li>
+						<li id="li_ade87438-5264-4e9f-b769-7b226c97dae7"> <p>is less than or equal to</p> </li>
+						<li id="li_b3691a16-3057-43d3-8c9a-833b09817c60"> <p>is greater than</p> </li>
+						<li id="li_b85714f2-91cf-49f4-858c-c20d44e1640c"> <p>is greater than or equal to</p> </li>
+						<li id="li_4c6552e7-ca91-4e70-bcfe-fb45082b5df7"> <p>contains</p> </li>
+						<li id="li_b39590c1-6f14-42ae-b536-844190affdaf"> <p>does not contain</p> </li>
+						<li id="li_08157397-1f2e-42b8-b2e6-bb66628b906e"> <p>starts with</p> </li>
+						</ul> </li>
+					<li id="li_05e0eef8-41c0-474b-9b8b-5cebb87eee75"> <p>The next field is used to set the static value to be evaluated against the value of the selected field. If a reference field is selected, matching can occur only with an actual value — the ID of a referenced golden record.</p> </li>
+					<li id="li_7dd524ff-f1c7-4348-800c-6d0ea7817306"> <p><uicontrol>OK</uicontrol> — Saves the rule (but not the source configuration).</p> </li>
+					<li id="li_0c58e8b4-b7c5-43ab-97f4-5ea37dd17ccf"> <p><uicontrol>Cancel</uicontrol> — Cancels configuration of the rule.</p> </li>
+					</ul><p>The following controls are applicable to an existing rule:</p><ul id="ul_try_rnn_blb">
+					<li id="li_bb47ea43-bb53-486c-9292-9687aece6955"> <p><uicontrol>Edit</uicontrol> — Reveals the controls for modifying the rule.</p> </li>
+					<li id="li_e925ec08-0f7c-47b2-9194-c83c6c9e22ef"> <p><uicontrol>Remove</uicontrol> — Deletes the rule.</p> </li>
+					</ul><p><draft-comment author="Jon_Brams">HUB-1257 update</draft-comment>The following button is revealed for configuring an individual rule:</p><ul id="ul_ury_rnn_blb">
+					<li id="li_ece66372-8bc0-484f-9d99-660efa2b767f"> <p><uicontrol>Advanced Configuration</uicontrol> — Opens the Configure Business Rule dialog which is used to specify complex rules.</p> <fig id="fig_vry_rnn_blb">
+						<image href="mdm-db-configure-attached-source-advanced-rule_381253e3-895f-4fee-9fb3-641df01a6d0a.jpg" id="image_wry_rnn_blb">
+							<alt>Configure Business Rule dialog</alt>
+						</image>
+						</fig> <dl>
+						<dlhead>
+							<dthd>Name</dthd>
+							<ddhd>Description</ddhd>
+						</dlhead>
+						<dlentry>
+							<dt>Inputs</dt>
+							<dd>This section is used to define the rule’s inputs and their corresponding outputs.<dl>
+								<dlhead>
+									<dthd>Name</dthd>
+									<ddhd>Description</ddhd>
+								</dlhead>
+								<dlentry>
+									<dt><uicontrol>Add</uicontrol></dt>
+									<dd>Selects the type of input to add to the rule.<ul id="ul_xry_rnn_blb">
+										<li id="li_8f23d708-a67a-420c-b6ca-6c759fe758de"> <p><uicontrol>Field</uicontrol> — Opens the Add a Field dialog, which is used to add a single field as both an input and output.</p> <fig id="fig_yry_rnn_blb">
+											<image href="mdm-db-business-rule-add-a-field_9f715839-1761-4aa0-beba-c7ecba157b42.jpg" id="image_zry_rnn_blb">
+												<alt>Add a Field dialog</alt>
+											</image>
+											</fig> <dl>
+											<dlhead>
+												<dthd>Name</dthd>
+												<ddhd>Description</ddhd>
+											</dlhead>
+											<dlentry>
+												<dt>Field</dt>
+												<dd>Sets the field to use as the input and output.<p>Deleted fields are shown as “Unknown” in red.</p><p>Clicking <image href="main-ic-x-white-in-gray-circle-16_0abafeee-d5e7-4888-9bfb-475b11b6d00f.jpg" id="image_asy_rnn_blb">
+													<alt />
+													</image> clears both <uicontrol>Field</uicontrol> and <uicontrol>Alias</uicontrol>.</p></dd>
+											</dlentry>
+											<dlentry>
+												<dt><uicontrol>Alias</uicontrol></dt>
+												<dd>Sets an output alias for the selected <uicontrol>Field</uicontrol>. Outputs are referenced by alias in the Conditions and Error Message sections. <uicontrol>Alias</uicontrol> is automatically populated with the field name upon selection of a <uicontrol>Field</uicontrol> and cleared upon the clearing of <uicontrol>Field</uicontrol>.</dd>
+											</dlentry>
+											<dlentry conref="lib-MDM_30ab56c6-19c8-42cb-bf08-85118e2a6f19.xml#GUID-0902C492-A315-497C-BAE2-457BAAA30F69/GUID-02A2F934-AE27-471A-A206-9DB892A79998">
+												<dt><uicontrol>OK</uicontrol></dt>
+												<dd>Adds the input/output and closes the dialog.</dd>
+											</dlentry>
+											<dlentry conref="lib-MDM_30ab56c6-19c8-42cb-bf08-85118e2a6f19.xml#GUID-0902C492-A315-497C-BAE2-457BAAA30F69/GUID-153FC7B6-A681-4954-A3F8-E98F12E385B2">
+												<dt><uicontrol>Cancel</uicontrol></dt>
+												<dd>Closes the dialog without adding an input/output.</dd>
+											</dlentry>
+											</dl> </li>
+										<li id="li_c9cbfde0-ea68-421e-a2e8-992c3d1e9cb8"> <p><uicontrol>Function</uicontrol> — Opens the Add a Function dialog, the first of a series of two or more dialogs, which are used to add a function input and the corresponding output(s).</p> <fig id="fig_bsy_rnn_blb">
+											<image href="mdm-db-model-data-quality-business-rule-add-function_a11ffd68-eab4-44d6-b2ca-bc6d077d77de.jpg" id="image_csy_rnn_blb">
+												<alt>Add a Function dialog</alt>
+											</image>
+											</fig> <dl>
+											<dlhead>
+												<dthd>Name</dthd>
+												<ddhd>Description</ddhd>
+											</dlhead>
+											<dlentry conref="lib-MDM_30ab56c6-19c8-42cb-bf08-85118e2a6f19.xml#GUID-0902C492-A315-497C-BAE2-457BAAA30F69/GUID-A4608641-2D00-4D62-A8E0-A30278CA5A89">
+												<dt><!--<uicontrol>Category</uicontrol>--></dt>
+												<dd><!--Selects the function category of which the function to be applied is a member. Follow the links to <keyword conref="lib-Boomi_Keywords_0346af2b-13d7-491e-bec9-18c5d89225bf.xml#GUID-0207C7F1-40FD-4537-BE59-1D6DA46B9A1D/BOOMI_ATOMSPHERE" /> help topics for information about the functions in each category:<ul id="ul_dsy_rnn_blb">
+													<li id="li_f3ca76f8-42df-4970-a594-f1d10d22a33c"><p><xref href="https://help.boomi.com/csh?context=GUID-99C00665-E394-496F-B469-A1A37935AAE1" format="html" scope="external">String</xref></p></li>
+													<li id="li_5806a21f-038e-4824-988c-e6837a75005e"><xref href="https://help.boomi.com/csh?context=GUID-1480111E-4FA1-4108-A577-3A07B15AFB3C" format="html" scope="external">Numeric</xref></li>
+													<li id="li_65efc214-5737-468b-b9a0-295032a4da7d"><p><xref href="https://help.boomi.com/csh?context=GUID-B2E8C70B-F51C-494C-B7CD-B3EBC60D3780" format="html" scope="external">Date</xref></p></li>
+													</ul>--></dd>
+											</dlentry>
+											<dlentry conref="lib-MDM_30ab56c6-19c8-42cb-bf08-85118e2a6f19.xml#GUID-0902C492-A315-497C-BAE2-457BAAA30F69/GUID-D1D99D56-4526-4047-9EEF-F94BEF28152E">
+												<dt><!--<uicontrol>Functions</uicontrol>--></dt>
+												<dd><!--Selects the function to be applied. The available selections are dependent upon the selected <uicontrol>Category</uicontrol>.--></dd>
+											</dlentry>
+											<dlentry conref="lib-MDM_30ab56c6-19c8-42cb-bf08-85118e2a6f19.xml#GUID-0902C492-A315-497C-BAE2-457BAAA30F69/GUID-FF83E52D-3CCE-4E35-8964-97255010E746">
+												<dt><!--<uicontrol>OK</uicontrol>--></dt>
+												<dd><!--Opens a second dialog in which you define the function’s input parameters and/or output(s). The controls in the dialog are dependent upon the selected function in the <uicontrol>Functions</uicontrol> list. For some functions, a third dialog opens when you click <uicontrol>OK</uicontrol> in the second.--></dd>
+											</dlentry>
+											<dlentry conref="lib-MDM_30ab56c6-19c8-42cb-bf08-85118e2a6f19.xml#GUID-0902C492-A315-497C-BAE2-457BAAA30F69/GUID-BF503BC0-6767-4971-ABAC-41813F8912A7">
+												<dt><!--<uicontrol>Cancel</uicontrol>--></dt>
+												<dd><!--Closes the dialog without adding an input and output(s).--></dd>
+											</dlentry>
+											</dl> </li>
+										</ul></dd>
+								</dlentry>
+								<dlentry>
+									<dt>Inputs list</dt>
+									<dd>Lists the inputs defined for the rule and provides controls for deleting them. In the list:<ul id="ul_esy_rnn_blb">
+										<li id="li_9b5ab506-d2e9-45cd-b08a-17bf346ba0be"> <p>Clicking the name of an input opens the Add A Field dialog or the Add a Function dialog for the purpose of modifying the output(s).</p> </li>
+										<li id="li_e30ea724-d005-4349-b0f9-0115b3cf087e"> <p>Clicking <image href="main-ic-x-white-in-red-circle-16_0d0c5dc5-1c5e-4117-8a58-92c5e050ec5b.jpg" id="image_fsy_rnn_blb">
+											<alt />
+											</image> for an input initiates a request to delete it. In the confirmation dialog:</p> <ul id="ul_gsy_rnn_blb">
+											<li id="li_d9308185-b004-468d-9864-8798a5fd7dab"> <p>Clicking <uicontrol>OK</uicontrol> executes the request.</p> </li>
+											<li id="li_78b1f5ef-2d60-4ad6-b5e0-9841b0ab4cc0"> <p>Clicking <uicontrol>Cancel</uicontrol> cancels the request.</p> </li>
+											</ul> </li>
+										</ul></dd>
+								</dlentry>
+								</dl></dd>
+						</dlentry>
+						<dlentry>
+							<dt>Conditions</dt>
+							<dd>This section is used to define the conditions for the rule.<dl>
+								<dlhead>
+									<dthd>Name</dthd>
+									<ddhd>Description</ddhd>
+								</dlhead>
+								<dlentry conref="lib-MDM_30ab56c6-19c8-42cb-bf08-85118e2a6f19.xml#GUID-0902C492-A315-497C-BAE2-457BAAA30F69/GUID-448F0CE6-0DDE-435D-95D6-806F8D8F999B">
+									<dt>Top Level Operator</dt>
+									<dd>Selects <uicontrol>AND</uicontrol> or <uicontrol>OR</uicontrol> as the Boolean operator defining the relationship between the top-level conditions and condition groups.</dd>
+								</dlentry>
+								<dlentry>
+									<dt>Conditions list</dt>
+									<dd>Lists the conditions defined for the rule and provides controls for adding, modifying, deleting and reordering conditions and condition groups. Indentation delineates levels in the hierarchy.<p>At each level of the hierarchy the following links are available:</p><fig id="fig_hsy_rnn_blb">
+										<image href="main-ds-business-rule-add-condition-condition-group_6d39ea0e-60ca-49d1-a2b7-31ab6336d226.jpg" id="image_isy_rnn_blb">
+											<alt>Links for adding a condition or condition group</alt>
+										</image>
+										</fig><ul id="ul_jsy_rnn_blb">
+										<li id="li_ed1a89fd-b38e-42f8-989c-df0164d8d945"> <p><uicontrol>Add a Condition</uicontrol> — Add a list entry for a new condition at the current level in the hierarchy.</p> </li>
+										<li id="li_cc54df0f-2003-403a-8c97-e647ba08e835"> <p><uicontrol>Add a Group</uicontrol> — Add a list entry for a new condition group at the current level in the hierarchy.</p> </li>
+										</ul><p>You must save changes to individual conditions and condition groups to add them.</p><p>For each condition and condition group the following links and controls are available:</p><fig id="fig_ksy_rnn_blb">
+										<image href="mdm-ds-add-rule-edit-remove-expression_bdacf420-ee6e-40d6-9252-a32475a3d8d4.jpg" id="image_lsy_rnn_blb">
+											<alt>Links and controls for each condition and condition group</alt>
+										</image>
+										</fig><ul id="ul_msy_rnn_blb">
+										<li id="li_62e61fd7-dc16-4f3b-bab3-1c0336fea8db"> <p><image href="main-ic-dots-16-gray-on-white_404b1c3f-e21a-4b67-ba76-65412d39eb70.jpg" id="image_nsy_rnn_blb" /> reorder icon — Used to change the position of the condition or condition group by dragging and dropping.</p> </li>
+										<li id="li_ac495b25-9a48-4485-9f37-bfaf7a521335"> <p><uicontrol>Edit</uicontrol> — Reveals controls used to edit the condition or condition group.</p> </li>
+										<li id="li_35509107-bc54-4ef7-9a2f-95eff0c6416a"> <p><uicontrol>Remove</uicontrol> — Removes the condition or condition group. Removing a condition group removes all of its member conditions.</p> </li>
+										</ul><p>The following links and controls are revealed when <uicontrol>Edit</uicontrol> is clicked for either a condition or a condition group:</p><ul id="ul_osy_rnn_blb">
+										<li id="li_718f756d-8636-48c3-9f62-79e8a13c7699"> <p><uicontrol>Save</uicontrol> — Saves changes to the condition or condition group and hides the editing controls.</p> </li>
+										<li id="li_f66c38a0-c3da-4397-9f12-7c08f151f9af"> <p><uicontrol>Cancel</uicontrol> — Discards unsaved changes to the condition or condition group and hides the editing controls.</p> </li>
+										</ul><p>The following links and controls are additionally revealed when <uicontrol>Edit</uicontrol> is clicked for a condition:</p><fig id="fig_psy_rnn_blb">
+										<image href="main-ds-business-rule-add-edit-condition_f5c87ea2-b916-4bae-b7ef-67e2909e04a9.jpg" id="image_qsy_rnn_blb">
+											<alt>Links and controls that are additionally revealed when <uicontrol>Edit</uicontrol> is clicked for a condition</alt>
+										</image>
+										</fig><ul id="ul_rsy_rnn_blb">
+										<li id="li_67f85ad7-9e29-4261-8188-f9521f9bc771"> <p>Output selection lists — Select Static or one of the outputs. Outputs are referenced by alias. Multiple outputs for a given input are indented in the list below the input alias. Selecting Static reveals a field to the right for specifying the static value.</p> </li>
+										<li id="li_d5bd1e03-e337-47ff-9f28-a24966d03875"> <p>Static value fields</p> </li>
+										<li id="li_3670e349-cced-41ed-a4cb-7ae710275470"> <p>Operator selection list — Sets the manner in which two specified outputs are compared or a single specified output is evaluated. The operators <userinput>contains</userinput>, <userinput>does not contain</userinput>, <userinput>starts with</userinput>, <userinput>is empty</userinput>, and <userinput>is not empty</userinput> perform string comparisons. They should not be used for numeric comparisons.</p> <table id="table_ssy_rnn_blb">
+											<tgroup cols="2">
+												<colspec colnum="1" colname="col1" />
+												<colspec colnum="2" colname="col2" />
+												<tbody>
+													<row id="row_d237fc6c-5a79-4616-8406-d01778ada6bb">
+														<entry colname="col1"><userinput>=</userinput></entry>
+														<entry colname="col2">Output #1 to the left equals output #2 to the right.</entry>
+													</row>
+													<row id="row_63dd31f0-3ab6-4561-ad9e-1f7f74e8aef2">
+														<entry colname="col1"><userinput>!=</userinput></entry>
+														<entry colname="col2">Output #1 is not equal to output #2.</entry>
+													</row>
+													<row id="row_4ed8e184-152d-4feb-bb67-c6d6740ffa23">
+														<entry colname="col1"><userinput>&lt;</userinput></entry>
+														<entry colname="col2">Output #1 is less than output #2.</entry>
+													</row>
+													<row id="row_9f639893-c429-48ee-a138-d696b2a5e3da">
+														<entry colname="col1"><userinput>&gt;</userinput></entry>
+														<entry colname="col2">Output #1 is greater than output #2.</entry>
+													</row>
+													<row id="row_e23fec6c-9b72-4fc1-8c17-2fd75cd6b46e">
+														<entry colname="col1"><userinput>&lt;=</userinput></entry>
+														<entry colname="col2">Output #1 is less than or equal to output #2.</entry>
+													</row>
+													<row id="row_104a2573-8fad-41f8-8324-5a7d1200ade0">
+														<entry colname="col1"><userinput>&gt;=</userinput></entry>
+														<entry colname="col2">Output #1 is greater than or equal to output #2.</entry>
+													</row>
+													<row id="row_c5457000-d3de-4bcd-8eef-f016431e440a">
+														<entry colname="col1"><userinput>contains</userinput></entry>
+														<entry colname="col2">Output #1 contains output #2.</entry>
+													</row>
+													<row id="row_608e1e0c-13df-4856-89c6-9db193260207">
+														<entry colname="col1"><userinput>does not contain</userinput></entry>
+														<entry colname="col2">Output #1 does not contain output #2.</entry>
+													</row>
+													<row id="row_01721021-64d0-43f5-8f96-e7774819514d">
+														<entry colname="col1"><userinput>starts with</userinput></entry>
+														<entry colname="col2">Output #1 starts with output #2.</entry>
+													</row>
+													<row id="row_f41e7cfd-3f48-4c9f-bb61-873c46b20ada">
+														<entry colname="col1"><userinput>is empty</userinput></entry>
+														<entry colname="col2">Output #1 is null.</entry>
+													</row>
+													<row id="row_7d036046-c5f5-411b-8798-3b6b4acb8d30">
+														<entry colname="col1"><userinput>is not empty</userinput></entry>
+														<entry colname="col2">Output #1 is not null.</entry>
+													</row>
+												</tbody>
+											</tgroup>
+											</table> </li>
+										<li id="li_a4e44b86-9f64-4d5d-b315-bcd06933a0d6">The following control is additionally revealed when <uicontrol>Edit</uicontrol> is clicked for a condition group:<fig id="fig_tsy_rnn_blb">
+											<image href="mdm-ds-add-rule-expression-group_a09509f2-28f8-4eab-9e76-afb145086ac9.jpg" id="image_usy_rnn_blb">
+												<alt>Control that is additionally revealed when <uicontrol>Edit</uicontrol> is clicked for a condition group</alt>
+											</image>
+											</fig><ul id="ul_vsy_rnn_blb">
+											<li id="li_94508d54-0493-46a6-84bc-f023beec3764"> <p><uicontrol>Group Level Operator</uicontrol> — Selects AND or OR as the Boolean operator defining the relationship between the condition group’s member conditions and condition groups.</p> </li>
+											</ul></li>
+										</ul></dd>
+								</dlentry>
+								</dl></dd>
+						</dlentry>
+						<dlentry>
+							<dt><uicontrol>Save</uicontrol></dt>
+							<dd>Closes the dialog and restores focus to the source configuration dialog. At this point clicking <uicontrol>OK</uicontrol> saves the rule (but not the source configuration).</dd>
+						</dlentry>
+						<dlentry>
+							<dt><uicontrol>Cancel</uicontrol></dt>
+							<dd>Closes the dialog and restores focus to the source configuration dialog, effectively discarding the rule definition.</dd>
+						</dlentry>
+						</dl> </li>
+					</ul></dd>
+			</dlentry>
+			<dlentry>
+				<dt><uicontrol>Require approval for updates to any field</uicontrol></dt>
+				<dd>If selected, entity contributions from the source that would update golden records are automatically quarantined subject to an optionally specified rule. An entity quarantined for this reason cannot not be incorporated into the domain unless manually approved.<ul id="ul_wsy_rnn_blb">
+					<li id="li_f5c28f75-388e-4b4c-8586-b783b94d4722"> <p>If a rule is not configured, all entity contributions that would update golden records are quarantined.</p> </li>
+					<li id="li_b0a79569-1087-4767-8ac4-ea7754da9012"> <p>If a rule is configured, a contributed entity is quarantined only if it satisfies the specified rule.</p> </li>
+					</ul><p>Selecting this check box reveals the following control:</p><ul id="ul_xsy_rnn_blb">
+					<li id="li_90ab0d6b-9948-4596-8420-4a32a27d25c4"> <p><uicontrol>Add a rule</uicontrol> — Reveals the controls for configuring the rule.</p> </li>
+					</ul><p>The controls for configuring the rule are identical to those described above for requiring approval for new entity contributions.</p><p>The following controls are applicable to an existing rule:</p><ul id="ul_ysy_rnn_blb">
+					<li id="li_df8097a1-26fd-4de1-8f0e-bd7c7d9bcfe9"> <p><uicontrol>Edit</uicontrol> — Reveals the controls for modifying the rule.</p> </li>
+					<li id="li_fc13cb4b-7664-4f15-999a-8f0a0661050f"> <p><uicontrol>Remove</uicontrol> — Deletes the rule.</p> </li>
+					</ul></dd>
+			</dlentry>
+			<dlentry>
+				<dt><uicontrol>Require approval to end-date records</uicontrol></dt>
+				<dd>If selected, entity contributions from the source that would end-date matching golden records are automatically quarantined. An entity quarantined for this reason cannot be incorporated into the domain unless manually approved.</dd>
+			</dlentry>
+			</dl> </section>
+		<section id="HUB_SOURCE_INBOUND_FIELD"> <title>Field-level Options</title> <p>This section is used to configure field-level restrictions on entity contributions. In this section the model’s fields are listed. Field groups are listed in bold. For each field or field group the radio buttons for selection are as follows except as noted:</p> <ul id="ul_zsy_rnn_blb">
+			<li id="li_e7a4b971-f825-4d7b-b28c-80f9ec08c7f3"> <p>Include (default) — Selects the field or collection for inclusion in create and update operations on golden records resulting from entity contributions.</p> </li>
+			<li id="li_98524fe3-0361-4229-8744-9d55fc8acb19"> <p>Excluded — Selects the field for exclusion from create and update operations on golden records resulting from entity contributions.</p> <p>Excluded fields are evaluated when match rules and data quality steps are applied. On the other hand, excluded fields are not evaluated against golden record content to identify changed fields and are removed from contributed entities prior to field validation.</p> <p>Collection key fields in repeatable field groups are not available for selection.</p> </li>
+			<li id="li_2d2cac07-22f3-4319-a15e-2ec31d2a2c50"> <p>Require approval for updates — Selects the field or collection as requiring manual approval for golden record updates. Collection fields within repeatable field groups are not available for selection, but the owning collections are selectable.</p> </li>
+			<li id="li_5292da49-6579-426e-aad8-b76da72bc5a2"> <p>Custom — Selects the field for rule-based restrictions. One rule of each of type is allowed. One type is for excluding the field from create and update operations resulting from entity contributions from the source. The other type is for requiring manual approval for golden record updates.</p> <p>Selecting Custom or clicking <uicontrol>Show Rules</uicontrol> reveals existing rules and the controls for adding, modifying, and deleting rules. Clicking <uicontrol>Hide Rules</uicontrol> hides existing rules.</p> <p>In the controls for configuring an individual rule, the topmost list is used to select the type of rule to configure:</p> <ul id="ul_aty_rnn_blb">
+				<li id="li_84e67094-a63a-48dd-982a-3b2e190bb642"> <p>Exclude if — excluding the field from create and update operations on golden records resulting from entity contributions from the source.</p> </li>
+				<li id="li_0629e30e-1ed5-4db6-9588-b2c99688f04b"> <p>Require approval if — requiring manual approval for the field or collection in golden record updates.</p> </li>
+				</ul> <p>The remaining controls for configuring a rule are identical to those described above for requiring approval for new entity contributions.</p> <p>The following link is available while a rule of one type (but not both types) exists:</p> <ul id="ul_bty_rnn_blb">
+				<li id="li_c5b67a66-6777-4d56-93d4-5abaac15d843"> <p><uicontrol>Add a rule</uicontrol> — Reveals the controls for configuring a rule of the type not already configured.</p> </li>
+				</ul> <p>The following controls are applicable to an existing rule:</p> <ul id="ul_cty_rnn_blb">
+				<li id="li_00d3e1bb-e54d-42b4-893f-87d4794c391d"> <p><uicontrol>Edit</uicontrol> — Reveals the controls for modifying the rule.</p> </li>
+				<li id="li_0aee8cc8-1a30-495b-9d8a-3bcf6a09a0d2"> <p><uicontrol>Remove</uicontrol> — Deletes the rule.</p> </li>
+				</ul> </li>
+			</ul> </section>
+		<section id="HUB_SOURCE_OUTBOUND"> <draft-comment author="Jon_Brams">Section: Add/Attach outbound source</draft-comment> <p>(Present only if this source can accept channel updates.)</p> <fig id="fig_dty_rnn_blb">
+			<image href="mdm-ds-configure-attached-source-outbound_16183a02-2e89-4cd0-be14-05c7588905b6.jpg" id="image_ety_rnn_blb">
+				<alt><uicontrol>Outbound</uicontrol> tab for configuring propagation of update requests on the source’s channel</alt>
+			</image>
+			</fig> <dl>
+			<dlhead>
+				<dthd>Name</dthd>
+				<ddhd>Description</ddhd>
+			</dlhead>
+			<dlentry>
+				<dt><uicontrol>Channel Updates Contain</uicontrol></dt>
+				<dd>Sets the manner in which record update requests are propagated to the source on its channel:<ul id="ul_fty_rnn_blb">
+					<li id="li_874ac36a-d3e4-445b-9ec3-a752cbf44753"> <p>All Fields — Requests contain all fields in the golden record. This is the default.</p> </li>
+					<li id="li_32873f46-6f21-4cb5-9f2c-05d39cb809f1"> <p>Changed Fields Only — Requests include only the fields whose values were changed.</p> </li>
+					</ul></dd>
+			</dlentry>
+			</dl> </section>
+		<section id="HUB_SOURCE_OUTBOUND_RECORD"> <title>Record-level Options</title> <p>This section is used to configure record-level restrictions on record update request propagation.</p> <dl>
+			<dlhead>
+				<dthd>Name</dthd>
+				<ddhd>Description</ddhd>
+			</dlhead>
+			<dlentry>
+				<dt><uicontrol>Send all records to this source</uicontrol></dt>
+				<dd>If selected (this is the default), propagation of record update requests on the source’s channel is not subject to restriction.</dd>
+			</dlentry>
+			<dlentry>
+				<dt><uicontrol>Apply rules to the sending of records to this source</uicontrol></dt>
+				<dd>If selected, propagation of record update requests on the source’s channel is subject to the restriction configured immediately below. The controls for configuring the restriction are visible only while this option is selected.<dl>
+					<dlhead>
+						<dthd>Name</dthd>
+						<ddhd>Description</ddhd>
+					</dlhead>
+					<dlentry>
+						<dt><uicontrol>Send records to this source if they have any of these tags:</uicontrol></dt>
+						<dd>If selected, record update requests are propagated on the source’s channel only for golden records having any of the selected tags. While this option is selected, check boxes appear below for selecting the tags.</dd>
+					</dlentry>
+					<dlentry>
+						<dt><uicontrol>Send new records to this source if they have any of these tags:</uicontrol></dt>
+						<dd>If selected, record update requests specifying create operations are propagated on the source’s channel only for golden records having any of the selected tags — update requests specifying update and delete operations, on the other hand, are propagated without restriction. While this option is selected, check boxes appear below for selecting the tags.</dd>
+					</dlentry>
+					<dlentry>
+						<dt><uicontrol>Never send new records to this source</uicontrol></dt>
+						<dd>If selected, record update requests specifying create operations are not propagated on the source’s channel.</dd>
+					</dlentry>
+					</dl></dd>
+			</dlentry>
+			</dl> </section>
+		<section id="HUB_SOURCE_OUTBOUND_FIELD"> <title>Field-level Options</title> <p>This section is used to configure field-level restrictions on record update request propagation. In this section the model’s fields are listed. Field groups are listed in bold. For each field or field group the radio buttons for selection are as follows except as noted:</p> <ul id="ul_gty_rnn_blb">
+			<li id="li_ee3dad73-627a-497b-b209-3555601c2115"> <p>Include (default) — Selects the field or collection for inclusion in record update requests.</p> </li>
+			<li id="li_7ca5dedb-8ac5-4d95-b556-ce3dfceb17cf"> <p>Excluded — Selects the field or collection for exclusion from record update requests.</p> <p>Collection key fields in repeatable field groups are not available for selection.</p> </li>
+			</ul> </section>
+		<section id="GUID-B5208801-E7D1-4F06-8A83-A763F40941A4"> <title id="GUID-C6DBF52F-6BFB-4A3B-BCC7-5A2EE5C316B1">Notes</title> <note id="GUID-F82C9595-FC51-4E27-A012-9AB26C972DD6">In the context of the <keyword conref="lib-Boomi_Keywords_0346af2b-13d7-491e-bec9-18c5d89225bf.xml#GUID-0207C7F1-40FD-4537-BE59-1D6DA46B9A1D/BOOMI_MDMCLOUD" /> REST APIs, a domain’s configuration and properties and the underlying model are collectively referred to as a universe.</note> <note id="HUB_LINK_TO_NON_CONTRIBUTING_SOURCE"><draft-comment author="Jon_Brams">HUB-1385 insertion</draft-comment>Each link established from a golden record to a non-contributing source uses the golden record ID.</note> <note id="GUID-A4539876-6152-400E-A6D0-4A9EEAF95BD9"><draft-comment author="Jon_Brams">HUB-714 unrelated update, release profiling omitted</draft-comment>New <keyword conref="lib-Boomi_Keywords_0346af2b-13d7-491e-bec9-18c5d89225bf.xml#GUID-0207C7F1-40FD-4537-BE59-1D6DA46B9A1D/BOOMI_DELL" /> <keyword conref="lib-Boomi_Keywords_0346af2b-13d7-491e-bec9-18c5d89225bf.xml#GUID-0207C7F1-40FD-4537-BE59-1D6DA46B9A1D/BOOMI_MDMCLOUD" /> accounts are limited to two repositories. Contact your <keyword conref="lib-Boomi_Keywords_0346af2b-13d7-491e-bec9-18c5d89225bf.xml#GUID-0207C7F1-40FD-4537-BE59-1D6DA46B9A1D/BOOMI_DELL" /> account representative if you are interested in licensing additional repositories.</note> <note id="GUID-BF80C333-9129-4567-A126-908FE838CFE0">The following steps omit certain details that should be evident to users having experience using <keyword conref="lib-Boomi_Keywords_0346af2b-13d7-491e-bec9-18c5d89225bf.xml#GUID-0207C7F1-40FD-4537-BE59-1D6DA46B9A1D/BOOMI_INTEGRATION" /> to <xref href="c-atm-Process_building_b422a00a-b17b-4ea8-ae01-d04adaf97e16.xml" scope="peer" format="dita" type="concept"><draft-comment author="Jon_Brams">DOC-1471 markup correction</draft-comment>build integration processes</xref>.</note> <note id="GUID-91100537-B262-400F-AE64-4B9A3DB75192">The quarantine entry remains in the list, even if the entity is successfully incorporated, until you close the detail view by clicking <uicontrol> Close</uicontrol> or clicking elsewhere in the Quarantine page. The list is then updated. If the entity was not incorporated, there will be a new quarantine entry for it.<p>Before you close the detail view, though, you can click <uicontrol><image href="main-ic-arrow-gray-up_3394c903-2719-4d4b-82cc-ec8cd74d99d2.jpg" id="IMAGE_A385AAC911E5458AA03EDA5D02CA6750">
+			<alt />
+			</image> Previous</uicontrol> and <uicontrol>Next <image href="main-ic-arrow-gray-down_c4b5bff8-7fde-4200-b305-68bff70fecf0.jpg" id="IMAGE_EB48110F20E5414FA45506B4FB3BF12F">
+			<alt />
+			</image></uicontrol> to navigate to detail for other entries and individually resolve them.</p></note> <note id="GUID-7DFF7E50-588B-46D5-A2E7-151032F46C68">Source rankings is a Tech Preview not intended for production use. Source rankings is an optional account feature. If you would like to have this feature enabled in your account, contact your <keyword conref="lib-Boomi_Keywords_0346af2b-13d7-491e-bec9-18c5d89225bf.xml#GUID-0207C7F1-40FD-4537-BE59-1D6DA46B9A1D/BOOMI_DELL" /> representative.</note> <note id="GUID-50CA53A0-09C2-41C6-8752-CAAD33074D1B"><draft-comment author="Jon_Brams">HUB-714 unrelated update, release profiling omitted</draft-comment>MDM Export Data is an optional account feature. The Export Records entitlement is valid only in accounts for which the feature is available. If you would like to have this feature enabled in your account, contact your <keyword conref="lib-Boomi_Keywords_0346af2b-13d7-491e-bec9-18c5d89225bf.xml#GUID-0207C7F1-40FD-4537-BE59-1D6DA46B9A1D/BOOMI_DELL" /> account representative.</note> <note id="GUID-58CEBE4F-130A-4987-94AB-F9DADC76952E"><draft-comment author="Jon_Brams">UNI-438 update, release profiling intentionally omitted</draft-comment>*MDM* (exactly as shown here in uppercase with leading and trailing asterisks) is not a valid source ID because it is used to distinguish batches submitted manually in the <keyword conref="lib-Boomi_Keywords_0346af2b-13d7-491e-bec9-18c5d89225bf.xml#GUID-0207C7F1-40FD-4537-BE59-1D6DA46B9A1D/BOOMI_MDMCLOUD" /> service. If *MDM* is specified as the source ID, the response is an unknown source error.</note> <note id="GUID-6D35C3E7-9E8C-48F3-A2FA-12F890415D14">Retrieval of the golden record is subject to access restrictions imposed by the authenticating user’s tag-based entitlements.</note> <draft-comment author="Jon_Brams">HUB-243 following note used starting in Jul2019</draft-comment> <note id="note_v2l_jzz_13b">If you need to ensure each delivered batch is successfully routed to the source system before requesting delivery of the next batch, consider using the MDM connector’s manual acknowledgment option. If manual acknowledgment is enabled, the connector sets the dynamic process property mdm-current-delivery-id to the delivery ID of the most recently delivered batch. If you need to ensure no more than one update request is delivered per request, consider using the MDM connector’s option to fetch single update requests.</note> <draft-comment author="Jon_Brams">HUB-243 delete after Jul2019 release</draft-comment> <note id="GUID-C05DC8A3-B3D7-4454-89CE-A93A52A41501">If you need to ensure each delivered batch is successfully routed to the source system before requesting delivery of the next batch, consider using the MDM connector’s manual acknowledgment option. If manual acknowledgment is enabled, the connector sets the dynamic process property mdm-current-delivery-id to the delivery ID of the most recently delivered batch.</note> <note id="DEFAULT_SOURCE_LOOKUP"><draft-comment author="Jon_Brams">HUB-1292 insertion</draft-comment>If the specified source is not attached to the universe but the universe has a designated default source and a golden record is linked to an entity with the specified ID in the default source system, the entity that corresponds to that golden record is retrieved.</note> <note id="MOVE_FIELD_TO_GROUP"><draft-comment author="Jon_Brams">DOC-173 insertion, release profiling intentionally omitted</draft-comment>It is not possible to move a field into a field group that represents a collection.</note> <note id="DELETING_PENDING_UPDATE_REQUESTS"><draft-comment author="Jon_Brams">HUB-371 insertion, release profiling intentionally omitted</draft-comment>Deleting pending update requests can prevent the synchronization of source system data and master data from occurring in certain circumstances, particularly in the case of requests of type Create Record.</note> <note id="HUB_RESUBMIT_CASE_OF_END_DATED_GR"><draft-comment author="Jon_Brams">HUB-1197 insertion</draft-comment>When an entity quarantined with the cause “Update Approval Required” is resubmitted, if a golden record with the ID specified for linking does not exist, the repository performs normal matching, which in a normal case will result in creation of a golden record.</note> <note id="LOCAL_HUB_CLOUD_DESIGNATION"><draft-comment author="Jon_Brams">HUB-1290 insertion, release profiling intentionally omitted</draft-comment>“Local” in this Hub Cloud’s name indicates geographically dispersed disaster recovery is not provided in order to support data sovereignty requirements. Data in this Hub Cloud remains exclusively in the AWS hosting region/country. This Hub Cloud does provide high availability via data replication within the hosting region.</note> <note id="HUB_SOURCE_MULTIPLE_LINKS_PERSIST"><draft-comment author="Jon_Brams">HUB-1333 insertion</draft-comment>Existing multiple links from individual golden records to a source’s entities persist if, after the source is configured to allow multiple links, the source is then reconfigured to disallow multiple links.</note> </section>
+		<section id="GUID-4E901253-B9FA-4687-A179-CBD3CDE1E931"> <title id="GUID-AF5BEB45-A2CF-406C-A404-9F80101DF90B">Sections</title> </section>
+		<section id="SECTION_22190E26C4A94DE7B3FE9A7E70C3F767"> <title id="GUID-54D7558B-0546-4E84-ABC4-2CB91AFD2EE6">Definition list entries</title> <draft-comment author="Jon_Brams">HUB-25 updates to each definition list item below</draft-comment> <dl>
+			<dlentry id="GUID-BAB985C3-10B9-473B-98CF-68B558987DA0">
+				<dt>Records</dt>
+				<dd>Counts of golden records and quarantine entries.<ul id="GUID-A693B5B3-32E6-464B-988E-EA19E59FA027">
+					<li id="li_0072e9ee-5667-4a45-a7cf-205d7e3cb17b"> <p>The golden records count links to the Golden Records page, which is used to view golden records.</p> </li>
+					<li id="li_af701881-25f5-429e-8d44-ee37a61ab999"> <p>The quarantine entries count is highlighted in purple. The count is omitted for a domain for which there are not any quarantine entries. If present the count links to the Quarantine page, which is used to view and resolve quarantine entries.</p> </li>
+					</ul></dd>
+			</dlentry>
+			</dl> </section>
+		<section id="section_y1l_qbm_hpb"> <title>Definitions</title> </section>
+		<dl id="dl_lgt_rbm_hpb">
+			<dlentry>
+				<dt>(varies depending on context)</dt>
+				<dd id="BULK_PROCESSING_TYPES">The type of bulk processing request is one of the following:<ul id="ul_rzm_gxg_m4b">
+					<li id="li_7eee206c-bc36-4c77-b0d7-e93c0fb0e342"> <p>End-date — The request is for the end-dating of golden records.</p> </li>
+					<li id="li_df944588-93f6-4cde-91b7-b4a4e2ba0a36"> <p>Purge — The request is for the purging of end-dated golden records.</p> </li>
+					<li id="li_ca6d8a45-1a7f-4f70-bc6a-11c81e45baa2"> <p>Send Updates — The request is for the propagation of source record update requests for golden records.</p> </li>
+					</ul></dd>
+			</dlentry>
+		</dl>
+		<section id="SECTION_19F93E82D81E47549629BEDF13DAE95C"> <title id="GUID-AEC2D0F2-E7F7-48A4-BB77-E01FABB60750">Paragraphs</title> <p id="HUB_REPOSITORY_DEFINITION_1"><draft-comment author="Jon_Brams">HUB-1676 insertion</draft-comment>A repository is a virtual container for master data storage that hosts an individual <keyword conref="lib-Boomi_Keywords_0346af2b-13d7-491e-bec9-18c5d89225bf.xml#GUID-0207C7F1-40FD-4537-BE59-1D6DA46B9A1D/BOOMI_DELL" /> account’s master data domains — for example, Contact, Employee, Partner, Vendor.</p> <p id="HUB_REPOSITORY_DEFINITION_2"><draft-comment author="Jon_Brams">HUB-1676 insertion</draft-comment>A repository accepts data updates from sources, matches entities from the different sources to one another and propagates source record update requests specifying create, update and delete operations. An individual repository is hosted in a <keyword conref="lib-Boomi_Keywords_0346af2b-13d7-491e-bec9-18c5d89225bf.xml#GUID-0207C7F1-40FD-4537-BE59-1D6DA46B9A1D/BOOMI_DELL" /> Hub Cloud.</p> <p id="GUID-0ACB6C34-7E08-4453-A10C-0C6D2B47B8F8">The offset is applicable to both the range starting and ending times. The default is the offset for the user’s system’s local time zone. This parameter is specified in RFC 822 format, which is five characters: ±HHMM. For example, –0400 is the offset for the US Eastern time zone while daylight saving time is in effect. While this parameter can be omitted from a bookmarked URL specifying a <codeph>range</codeph>, if the bookmark is to be shared with users in different time zones, including this parameter ensures those users will have the same view of the data.</p> <p id="C8F25F4F-262D-4F9B-B2C3-5D6575A469DB">The staged entities list automatically refreshes shortly after the completion of the operation to reflect the result. In the meantime you can request a manual <uicontrol>Refresh</uicontrol>.</p> <p id="HUB_REAPPLYING_TAGS"><draft-comment author="Jon_Brams">HUB-1637 insertion. Note is intentionally embedded in Paragraph because the two go together.</draft-comment>Tags are first applied to a domain’s golden records upon the completion of the initial deployment of a version of the domain model containing tag definitions. Tags are reapplied upon completion of each subsequent deployment of the model in which tag definitions are added, modified, or deleted.<note id="note_otn_kdh_fsb"><draft-comment author="Jon_Brams">HUB-1637 insertion.</draft-comment>If, during tagging of golden records, a different version of the model is deployed, tagging stops and then restarts upon completion of the new deployment.</note></p> <p id="HUB_RESTORE_RECORD_REQUEST"><draft-comment author="JonBrams">HUB-1351/1788 insertion</draft-comment>When the golden record is restored, a Restore Record update request is propagated for each source entity to which the golden record is linked on the source’s channel.</p> </section>
+		<section id="GUID-5D745691-4ECB-4CFC-8D51-65A518AB8D1C"> <title id="GUID-12DB764A-B5D8-4386-9A2A-25333111A1EA">Unordered Lists</title> <ul id="UL_A76D8F9968B948F68E026EA49263DDFF">
+			<li id="LI_960AF8F346B343B5AEBFDF3CB7DD8CFB"> <p>mdm_source_id — ID of the batch’s contributing source.</p> </li>
+			<li id="LI_82630B32C79642BF94BBE9F44E58BE02"> <p>mdm_account_id — ID of the account under which the batch was contributed.</p> </li>
+			<li id="LI_BA9F67A17A9143E08D8B00FC0591771D"> <p>mdm_repository_id — system ID of the repository on which the target domain is hosted.</p> </li>
+			<li id="LI_78EF89A74E64454DA091E1C760E80951"> <p>mdm_universe_id — system ID of the domain.</p> </li>
+			</ul> <draft-comment author="Jon_Brams">HUB-25 update to all list items HUB-141/142 update to list item QUARANTINED. RECORD_ALREADY_ENDDATED</draft-comment> <ul id="GUID-51EA5ACA-B138-4131-B62A-CC2675D54E7B">
+			<li id="LI_BC832E7FEEE54E14BF2B8C86B4EEDF26"> <p>COMPLETED.* — entities which, if actually contributed when staged, would <i>not</i> have been quarantined.</p> </li>
+			<li id="li_4d5dfa9f-88db-4dfd-ad6e-86c26c577542"> <p>COMPLETED.CREATED — entities which, if actually contributed when staged, would have resulted in the creation of a golden record. This token corresponds to the <uicontrol>Entity Result</uicontrol> filter criterion Create Record in the Staged Entities page.</p> </li>
+			<li id="li_c3944aa5-6c6b-4e76-9ebd-8e7d71e38600"> <p>COMPLETED.UPDATED — entities which, if actually contributed when staged, would have resulted in the updating of a golden record. This token corresponds to the <uicontrol>Entity Result</uicontrol> filter criterion Update Record in the Staged Entities page.</p> </li>
+			<li id="li_b2e5ab60-40fa-4792-9e13-c6b6cdc84128"> <p>COMPLETED.DELETED — entities which, if actually contributed when staged, would have resulted in the end-dating of a golden record. This token corresponds to the <uicontrol>Entity Result</uicontrol> filter criterion Delete Record in the Staged Entities page.</p> </li>
+			<li id="li_26adba83-cc80-47d7-a34d-dc75fb9814f8"> <p>COMPLETED.LINKED — entities which, if actually contributed when staged, would have resulted in the linking of a golden record to the source entity. This token corresponds to the <uicontrol>Entity Result</uicontrol> filter criterion Link Record in the Staged Entities page.</p> </li>
+			<li id="li_e9f5de10-177c-448c-85b7-808551951075"> <p>COMPLETED.LINKED_WITH_UPDATE — entities which, if actually contributed when staged, would have resulted in the linking of a golden record to the source entity and the updating of that golden record. This token corresponds to the <uicontrol>Entity Result</uicontrol> filter criterion Link and Update Record in the Staged Entities page.</p> </li>
+			<li id="li_b83d43ce-ba75-4255-adb3-60052a446e8d"> <p>COMPLETED.NOOP — entities which, if actually contributed when staged, would not have resulted in the creation, updating, end-dating, or linking of a golden record. This token corresponds to the <uicontrol>Entity Result</uicontrol> filter criterion No Change to Record in the Staged Entities page.</p> </li>
+			<li id="li_173f39d6-f411-4552-b5dc-1f0586b30dcf"> <p>QUARANTINED.* — entities which, if actually contributed when staged, would have been quarantined. This token corresponds to the <uicontrol>Entity Result</uicontrol> filter criterion Quarantine and the <uicontrol>Quarantine Cause</uicontrol> filter criterion All in the Staged Entities page.</p> </li>
+			<li id="li_d6c644e5-68ce-415e-9661-d18a52265eb8"> <p>QUARANTINED.AMBIGUOUS_MATCH —entities that would have been quarantined due to their matching 10 or more golden records, regardless of links to source records. This token corresponds to the <uicontrol>Entity Result</uicontrol> filter criterion Quarantined and the <uicontrol>Quarantine Cause</uicontrol> filter criterion Ambiguous Match in the Staged Entities page.</p> </li>
+			<li id="li_b2defa09-cdba-4684-9662-55694b1483a8"> <p>QUARANTINED.DUPLICATE_KEY — entities that would have been quarantined because they contain multiple collection items with the same key values. This token corresponds to the <uicontrol>Entity Result</uicontrol> filter criterion Quarantined and the <uicontrol>Quarantine Cause</uicontrol> filter criterion Duplicate Collection Key in the Staged Entities page.</p> </li>
+			<li id="li_8fbe5855-70ed-4d77-8205-c5456626053a"> <p>QUARANTINED.ENRICH_ERROR — entities that would have been quarantined due to data quality step failure. This token corresponds to the <uicontrol>Entity Result</uicontrol> filter criterion Quarantined and the <uicontrol>Quarantine Cause</uicontrol> filter criterion Data Quality Error in the Staged Entities page.</p> </li>
+			<li id="li_b54ccde0-7b3e-403d-a6ac-84735f765bf9"> <p>QUARANTINED.FIELD_FORMAT_ERROR — entities that would have been quarantined because they contain data not in conformance with either their field type, validation options for that field type specified in the domain model, or with the <keyword conref="lib-Boomi_Keywords_0346af2b-13d7-491e-bec9-18c5d89225bf.xml#GUID-0207C7F1-40FD-4537-BE59-1D6DA46B9A1D/BOOMI_MDMCLOUD" /> system 255-character limit for text and Enumeration field values. This token corresponds to the <uicontrol>Entity Result</uicontrol> filter criterion Quarantined and the <uicontrol>Quarantine Cause</uicontrol> filter criterion Field Format Error in the Staged Entities page.</p> </li>
+			<li id="li_292ee1b5-9b12-40eb-bf6e-e7533fcb20ac"> <p>QUARANTINED.INCORPORATE_ERROR — entities causing errors other than unresolvable references during the staging of incorporation. This token corresponds to the <uicontrol>Entity Result</uicontrol> filter criterion Quarantined and the <uicontrol>Quarantine Cause</uicontrol> filter criterion Other Incorporation Error in the Staged Entities page.</p> </li>
+			<li id="li_888c3597-435b-455f-a8a5-92dd5277a031"> <p>QUARANTINED.MATCH_REFERENCE_UNKNOWN — entities that would have been quarantined due to their having a value in a reference field specified for matching in a match rule that does not resolve to a golden record. This token corresponds to the <uicontrol>Entity Result</uicontrol> filter criterion Quarantined and the <uicontrol>Quarantine Cause</uicontrol> filter criterion Reference Matching Error in the Staged Entities page.</p> </li>
+			<li id="li_708287e6-388c-466e-890a-ea998b735205"> <p>QUARANTINED.MULTIPLE_MATCHES — entities that would have been quarantined due to their matching multiple golden records not yet linked to a record in the source. This token corresponds to the <uicontrol>Entity Result</uicontrol> filter criterion Quarantined and the <uicontrol>Quarantine Cause</uicontrol> filter criterion Multiple Matches in the Staged Entities page.</p> </li>
+			<li id="li_a89629e0-4e5a-4ca0-a5b4-b570e127f2ed"> <p>QUARANTINED.PARSE_FAILURE — entities that would have been quarantined due to their failure to structurally conform with the field layout specified in the domain model. This token corresponds to the <uicontrol>Entity Result</uicontrol> filter criterion Quarantined and the <uicontrol>Quarantine Cause</uicontrol> filter criterion Data Integration Error in the Staged Entities page.</p> </li>
+			<li id="li_4548129a-e271-4521-9068-cf44f580d134"> <p>QUARANTINED.POSSIBLE_DUPLICATE — entities that would have been quarantined due to their matching golden records that have already been linked to a record in the source. This token corresponds to the <uicontrol>Entity Result</uicontrol> filter criterion Quarantined and the <uicontrol>Quarantine Cause</uicontrol> filter criterion Potential Duplicate in the Staged Entities page.</p> </li>
+			<li id="li_14ad63be-74ae-455d-aa22-d5734fd6419b"> <p>QUARANTINED.RECORD_ALREADY_ENDDATED — entities that would have been quarantined due to the existence of a link from an end-dated golden record. This token corresponds to the <uicontrol>Entity Result</uicontrol> filter criterion Quarantined and the <uicontrol>Quarantine Cause</uicontrol> filter criterion Record Already End-dated in the Staged Entities page.</p> </li>
+			<li id="li_ac634b49-76b4-444f-ad78-36e84bff260c"> <p>QUARANTINED.REFERENCE UNKNOWN — entities that would have been quarantined due to their having unresolvable references, either collection items or fields for which referential integrity for entity contributions is enforced. This token corresponds to the <uicontrol>Entity Result</uicontrol> filter criterion Quarantined and the <uicontrol>Quarantine Cause</uicontrol> filter criterion Unknown Reference Value in the Staged Entities page.</p> </li>
+			<li id="li_485c20b0-0e61-463c-8bc3-f46cc7f3cb88"> <p>QUARANTINED.REQUIRED_FIELD — entities that would have been quarantined due to their omission of fields specified as required or as key fields for collections in the domain model. This token corresponds to the <uicontrol>Entity Result</uicontrol> filter criterion Quarantined and the <uicontrol>Quarantine Cause</uicontrol> filter criterion Required Field Omitted in the Staged Entities page.</p> </li>
+			<li id="li_eaa6bef4-6b47-41dc-a80c-e697e86f7177"> <p>QUARANTINED.REQUIRES_APPROVAL — entities that would have been quarantined due to their satisfying conditions configured for their source requiring the manual approval of new entity contributions. This token corresponds to the <uicontrol>Entity Result</uicontrol> filter criterion Quarantined and the <uicontrol>Quarantine Cause</uicontrol> filter criterion Create Approval Required in the Staged Entities page.</p> </li>
+			<li id="li_617d20e0-382d-4a4a-ae98-5cdfe5524d61"> <p>QUARANTINED.REQUIRES_END_DATE_APPROVAL — entities that would have been quarantined due to their sources being configured to require manual approval of contributed entities that would end-date matching golden records. This token corresponds to the <uicontrol>Entity Result</uicontrol> filter criterion Quarantined and the <uicontrol>Quarantine Cause</uicontrol> filter criterion End-date Approval Required in the Staged Entities page.</p> </li>
+			<li id="li_8c09b6da-3311-4156-b5a0-8d8f666e72f0"> <p>QUARANTINED.REQUIRES_UPDATE_APPROVAL — entities that would have been quarantined due to their satisfying conditions configured for their source requiring the manual approval of contributed entities that would update matching golden records. This token corresponds to the <uicontrol>Entity Result</uicontrol> filter criterion Quarantined and the <uicontrol>Quarantine Cause</uicontrol> filter criterion Update Approval Required in the Staged Entities page.</p> </li>
+			</ul> <draft-comment author="Jon_Brams">HUB-25 each list item updated</draft-comment> <ul id="GUID-FE5BF3BB-77FF-4720-88E2-BF82B00BA068">
+			<li id="li_67e48912-4bce-45e6-8b27-44f79d741a16"> <p>PAST_HOUR — this token corresponds to the <uicontrol>Created Date</uicontrol> filter criterion <uicontrol>Past Hour</uicontrol> in the Staged Entities page.</p> </li>
+			<li id="li_68e72216-04a8-4b46-9a89-35d6459e8b99"> <p>PAST_24_HOURS — this token corresponds to the <uicontrol>Created Date</uicontrol> filter criterion <uicontrol>Past 24 Hours</uicontrol> in the Staged Entities page.</p> </li>
+			<li id="li_6a96effd-0448-448c-ade6-e2d2d6fc08f7"> <p>PAST_WEEK — this token corresponds to the <uicontrol>Created Date</uicontrol> filter criterion <uicontrol>Past Week</uicontrol> in the Staged Entities page.</p> </li>
+			</ul> <ul id="ul_swc_3y4_3mb">
+			<li id="li_f603f89d-6e40-4747-bbe4-498593f6d1b8"> <draft-comment author="Jon_Brams">HUB-975 update, release profiling intentionally omitted</draft-comment> <p>The aggregate size of the model’s fields, exclusive of the id field, reference fields and repeatable (collection) fields, exceeds 65,331 bytes. The sizes, in bytes, of the field types that affect model size are as follows:</p> <ul id="ul_kzl_nv3_nlb">
+				<li id="li_ee1f1e87-1b53-435d-8fb8-b80feda3fd62">Text — 3 × the field’s <uicontrol>Maximum Text Length</uicontrol></li>
+				<li id="li_0cc8bc8d-ded5-4b87-9d9c-50a66140b968">Integer — 4</li>
+				<li id="li_411f268b-fa70-4b6e-9947-db273db88952">Float — 8</li>
+				<li id="li_0b71403d-2bcc-4738-baf3-5168432f5d8c">Date/Time — 8</li>
+				<li id="li_dc00e245-e0a5-42c4-bb51-c4abf3934019">Date — 3</li>
+				<li id="li_c60b7265-dc3b-4090-9a86-d2a58701ae64">Time — 3</li>
+				<li id="li_e41e9dd1-3f9c-433f-9245-fda4441614a6">Boolean — 1</li>
+				<li id="li_ebc1a2a6-ae3d-4298-af94-945f3a3ef463">Enumeration — 765 </li>
+				<li id="li_3c3bdac8-c9de-49a0-8cfc-398ed14cfa3c">Long Text — 12</li>
+				</ul> <p>For example, consider a model with four Text fields, all with their <uicontrol>Maximum Text Length</uicontrol> set to 100, two Integer fields, a Date field, and a Time field. The aggregate field size would be 1,214 bytes, calculated as the sum of (4 Text fields × (3 × 100)), (2 Integer fields × 4), and 3 each for the Date and Time fields.</p> </li>
+			<li id="li_d231d408-f9eb-4cd6-82df-b1516b0aa85f"> <draft-comment author="Jon_Brams">HUB-975 insertion, release profiling intentionally omitted</draft-comment> <p><draft-comment author="jbrams@boomi.com">HUB-1576 unrelated rewording, release profiling intentionally omitted</draft-comment>The size of the database rows in which <keyword conref="lib-Boomi_Keywords_0346af2b-13d7-491e-bec9-18c5d89225bf.xml#GUID-0207C7F1-40FD-4537-BE59-1D6DA46B9A1D/BOOMI_MDHUBSHORTNAME" /> would internally maintain domain data upon deployment of the model, calculated as the sum of the following, exceeds 8,126 bytes:</p> <ul id="ul_et1_czn_3mb">
+				<li id="li_71e02f53-1424-41d5-ada7-5a150aa19a8f"><draft-comment author="jbrams@boomi.com">HUB-1576 update</draft-comment>237 bytes of database-mandated overhead</li>
+				<li id="li_973550dd-b642-4441-ac36-ee708589b5b8">(7 bytes + <codeph>n</codeph>)/8, rounded up to the next integer, where <codeph>n</codeph> is the number of fields, exclusive of the id field, reference fields, and repeatable (collection) fields</li>
+				<li id="li_d71fac78-03d2-4693-85ff-4980a3517a69"> <p>Field type-specific byte allocations:</p> <ul id="ul_a3c_vzn_3mb">
+					<li id="li_e2a7c9ce-2376-449c-8d69-5b965c3cf6bf">Text — 41</li>
+					<li id="li_2c3e17a1-daf4-443d-9855-f272643f96a7">Integer — 4</li>
+					<li id="li_2659add2-6eda-4449-907e-39efa141eb40">Float — 8</li>
+					<li id="li_d1641029-6a34-461d-89bd-5d8dbe684c57">Date/Time — 8</li>
+					<li id="li_6c37c6f6-998f-4a08-8eaa-bd025c855cf6">Date — 3</li>
+					<li id="li_b8977aa0-67c6-4d3c-b16d-b96a1ab93b56">Time — 3</li>
+					<li id="li_e77de274-c3c9-4c3b-995c-2111faf95583">Boolean — 1</li>
+					<li id="li_4873ca66-13ac-4149-aa01-e1a1336f620e">Enumeration — 1</li>
+					<li id="li_e7fdf766-8160-4de9-8fbb-99a7ec4ba43b">Long Text — 12</li>
+					</ul> </li>
+				</ul> <p><draft-comment author="jbrams@boomi.com">HUB-1576 update</draft-comment>For example, consider a model with four Text fields, two Integer fields, a Date field, and a Time field. The row size would be 417 bytes, calculated as the sum of the following:</p> <ul id="ul_whp_314_3mb">
+				<li id="li_8f14c096-f868-4211-acb8-f7de2eb20723"><draft-comment author="jbrams@boomi.com">HUB-1576 update</draft-comment>237</li>
+				<li id="li_5bd74d2e-6be2-496c-85ab-593fdc914fbb">2, calculated as (7 + 8 fields)/8, rounded up</li>
+				<li id="li_0f5c20be-79ff-4ab4-9208-48076612ca0c">178, calculated as (4 Text fields × 41) + (2 Integer fields × 4) + 3 each for the Date and Time fields</li>
+				</ul> </li>
+			</ul> </section>
+		<section id="GUID-DF8F82EB-9F37-482C-9327-058327371DDD"> <title id="GUID-EFDDEF37-D43B-4AC0-B799-04898E971A67">API endpoints</title> <p id="GUID-C8CD52B3-7C2D-4F27-A434-D36998DF94F1"><parmname>host</parmname> is the host name or IP address of the repository and <parmname>port</parmname> is the port number of the shared HTTP server as configured in the account’s <xref href="c-atm-Atom_Management_b38a3a90-d7f6-4df0-8c00-e75a178dfdfa.xml" format="dita" scope="peer" type="concept">Atom Management settings</xref>.</p> </section>
+		<section id="section_qnm_2qr_j4b"> <title>Filter parameters for golden record querying APIs</title> <p id="HUB_GR_FILTER_PARAMETERS_INTRO">These are the structures of the supported parameter types:</p> <codeblock xml:space="preserve" id="HUB_FILTER_PARAMETERS_ELEMENT">   &lt;filter&gt;
+      &lt;createdDate&gt;
+           &lt;from&gt;&lt;/from&gt;
+           &lt;to&gt;&lt;/to&gt;
+      &lt;/createdDate&gt;
+
+      &lt;updatedDate&gt;
+           &lt;from&gt;&lt;/from&gt;
+           &lt;to&gt;&lt;/to&gt;
+      &lt;/updatedDate&gt;
+
+      &lt;fieldValue&gt;
+           &lt;fieldId&gt;&lt;/fieldId&gt;
+           &lt;operator&gt;&lt;/operator&gt;
+           &lt;value&gt;&lt;/value&gt;
+           ...
+      &lt;/fieldValue&gt;
+
+
+      &lt;tags&gt;
+           &lt;tagName&gt;&lt;/tagName&gt;
+           ...
+      &lt;/tags&gt;
+
+      &lt;creatingSourceId&gt;&lt;/creatingSourceId&gt;
+
+      &lt;sourceLink&gt;
+    	      &lt;sourceId&gt;&lt;/sourceId&gt;
+    	      &lt;linkType&gt;&lt;/linkType&gt;
+      &lt;/sourceLink&gt;
+
+      &lt;unresolvedReference&gt;
+    	      &lt;fieldId&gt;&lt;/fieldId&gt;
+    	      &lt;sourceId&gt;&lt;/sourceId&gt;
+      &lt;/unresolvedReference&gt;
+
+   &lt;/filter&gt;
+</codeblock> <p id="HUB_FILTER_PARAMETER_ORDERING">The order in which filter parameters are specified in <codeph>&lt;filter&gt;</codeph> is insignificant.</p> </section>
+		<ul id="HUB_FILTER_PARAMETERS">
+			<li id="HUB_FILTER_PARAMETER_CREATEDDATE"> <p><codeph>&lt;createdDate&gt;</codeph> sets a filter by the date and time of golden record creation.</p> <ul id="UL_5E596465D5E544358F7A358658516757">
+				<li id="LI_25EE8840044E458FA344AE4B5EADB1A6"> <p><codeph>&lt;from&gt;</codeph> sets the range’s starting date and time.</p> </li>
+				<li id="LI_7E7F85B352D7450CA468AEFE020EAE3F"> <p><codeph>&lt;to&gt;</codeph> sets the range’s ending date and time.</p> </li>
+				</ul> <p> The format for both <codeph>&lt;from&gt;</codeph> and <codeph>&lt;to&gt;</codeph> is yyyy-MM-dd'T'HH:mm:ss'Z', where 'T' separates the date and time — for example, 2013-03-01T15:32:00Z.</p> <p>Omitting <codeph>&lt;from&gt;</codeph> filters golden records created before the <codeph>&lt;to&gt;</codeph> date/time. Omitting <codeph>&lt;to&gt;</codeph> filters golden records created after the <codeph>&lt;from&gt;</codeph> date/time.</p> </li>
+			<li id="HUB_FILTER_PARAMETER_UPDATEDDATE"> <p><codeph>&lt;updatedDate&gt;</codeph> sets a filter by the date and time of last golden record update.</p> <ul id="UL_0FE21B06C636407E91CD2B91A3BFA75C">
+				<li id="LI_0B35A3C9826A4844A587C189352EAB66"> <p><codeph>&lt;from&gt;</codeph> sets the range’s starting date and time.</p> </li>
+				<li id="LI_003B40A9E63241FA9BC5CB6BD72C76AC"> <p><codeph>&lt;to&gt;</codeph> sets the range’s ending date and time.</p> </li>
+				</ul> <p> The format for both <codeph>&lt;from&gt;</codeph> and <codeph>&lt;to&gt;</codeph> is yyyy-MM-dd'T'HH:mm:ss'Z', where 'T' separates the date and time — for example, 2013-03-01T15:32:00Z.</p> <p>Omitting <codeph>&lt;from&gt;</codeph> filters golden records updated before the <codeph>&lt;to&gt;</codeph> date/time. Omitting <codeph>&lt;to&gt;</codeph> filters golden records updated after the <codeph>&lt;from&gt;</codeph> date/time.</p> </li>
+			<li id="HUB_FILTER_PARAMETER_FIELDVALUE"> <p><codeph>&lt;fieldValue&gt;</codeph> sets a filter by golden record field value.</p> <ul id="UL_DF522D1A6A7B41CBB3ECB432496A7C56">
+				<li id="LI_0CB4FDD1CF5F4D24BB4500A2C8CD4B46"> <p>The <codeph><codeph>&lt;fieldId&gt;</codeph></codeph> element specifies the field ID.</p> </li>
+				<li id="LI_A9700E6221D7403B8F3756E4335764A0"> <p>The <codeph>&lt;operator&gt;</codeph> element specifies the operator. The valid operators are dependent upon the field type.</p> <p>This operator is valid for all types:</p> <ul id="UL_D34CECB596D747539C4ED26EC77D70D8">
+					<li id="LI_B664595A2EE648138C93E548E5264014"> <p>EQUALS</p> </li>
+					</ul> <p>These operators are valid for all types <i>except</i> Reference fields and collection (repeatable) or collection item fields of any type:</p> <ul id="UL_862FA7A0F7E246F2A234E59D20662FEE">
+					<li id="LI_049AFD85B27D473EB5351F78DE1A90FD"> <p><draft-comment author="jon.brams@dell.com">DOC-1441 correction </draft-comment>NOT_EQUALS</p> </li>
+					<li id="LI_78718321E1634918AAFB269977EF1FEC"> <p>IS_NOT_NULL</p> </li>
+					<li id="LI_962681C9B6DD4325B83B00FC7563BFD5"> <p>IS_NULL</p> </li>
+					</ul> <p>These operators are valid only for Text and Long Text fields:</p> <ul id="UL_A574EB16F497429AA8E39A49036ED5CC">
+					<li id="LI_C7D3886FB2C1493B92E3121AAEC1E57B"> <p>CONTAINS</p> </li>
+					<li id="LI_2CF48AA2FE4D432E9914C7E3A4187036"> <p>ENDS_WITH</p> </li>
+					<li id="LI_82CC6A3EB73B4983888FA3E55E7FE676"> <p>STARTS_WITH</p> </li>
+					</ul> <p>These operators are valid only for Integer and Float fields:</p> <ul id="UL_16D599BC53A4471DA5176FB12207C3B7">
+					<li id="LI_4545219F21B142D9886CADDC61665DA2"> <p>GREATER_THAN</p> </li>
+					<li id="LI_81E721BA9E3242988DE85A9164CB6473"> <p>GREATER_THAN_EQUAL — greater than or equal to</p> </li>
+					<li id="LI_F78B2F83C5D24CECBAC1D82DD478BF3C"> <p>LESS_THAN</p> </li>
+					<li id="LI_F249014CAA65431190D25B6BAC2AB1C8"> <p>LESS_THAN_EQUAL — less than or equal to</p> </li>
+					</ul> <p>This operator is available only for Date, Date/Time, and Time fields:</p> <ul id="UL_B491B7CF76024655946EFAD0A0701BBC">
+					<li id="LI_7FD284BF06F749B79DEBD5935C5E1569"> <p>BETWEEN</p> </li>
+					</ul> <p>This operator is valid only for Enumeration fields:</p> <ul id="UL_D1666C9286094FF3866AF01084F402F8">
+					<li id="LI_F8A37249B02B43168397B93068BD307E"> <p>IS_INVALID — not in the field’s enumerated value list</p> </li>
+					</ul> </li>
+				<li id="LI_F57199EDFDBD4A28AA6CD37B61D035D8"> <p>A <codeph>&lt;value&gt;</codeph> element specifies a value.</p> <ul id="UL_8D12E5F296BE4A8F853369FD65419A3D">
+					<li id="LI_BBB6CF9FEB3C4A2CA89E088F52B1B373"> <p>One <codeph>&lt;value&gt;</codeph> element is used with each operator with these exceptions:</p> <ul id="UL_798689E7CD8A4C8885E95A1EAEBE0003">
+						<li id="LI_8E220AF54B39482B9A620C8C330932E0"> <p>BETWEEN — requires two <codeph>&lt;value&gt;</codeph> elements for the setting of a range for a Date, Date/Time, or Time field value in the format:</p> <ul id="UL_12A0A98F4A8B42A086A8052BFF2696A9">
+							<li id="LI_6D181754AC414762A378F04184B2EBE0"> <p>Date/Time — yyyy-MM-dd'T'HH:mm:ss'Z' — for example, 2013-03-01T15:32:00Z</p> </li>
+							<li id="LI_45FB6ADBED184BE1A259BB146C4FF1E1"> <p>Date — yyyy-MM-dd — for example, 2013-03-01</p> </li>
+							<li id="LI_0AB5D45899164C408C15CFA41BA479F5"> <p>Time — HH:mm:ss — for example, 15:32:00</p> </li>
+							</ul> </li>
+						<li id="LI_860DFE0E45414B5D862AD0364C1C65D6"> <p>EQUALS with an Enumeration field allows multiple <codeph>&lt;value&gt;</codeph> elements. A golden record having any one of the specified values is considered to meet the criterion. In other words, the values are “OR’ed”.</p> </li>
+						<li id="LI_F52DE0423E95496982C867561CADCF64"> <p>IS_INVALID — <codeph>&lt;value&gt;</codeph> is not used with this operator.</p> </li>
+						<li id="LI_D96F728DF7DF44448BFFE514F54AE4C0"> <p>IS_NOT_NULL — <codeph>&lt;value&gt;</codeph> is not used with this operator.</p> </li>
+						<li id="LI_075FF718419B4D139CC31D291A450F34"> <p>IS_NULL — <codeph>&lt;value&gt;</codeph> is not used with this operator.</p> </li>
+						</ul> </li>
+					<li id="LI_4C1238B93AB14D15812E65144EED8759"> <p>The valid values for filtering Boolean field values are true and false.</p> </li>
+					</ul> </li>
+				</ul> </li>
+			<li id="HUB_FILTER_PARAMETER_TAGS"> <p><codeph>&lt;tags&gt;</codeph> sets a filter by one or more tags, each of which is specified by <codeph>&lt;tagName&gt;</codeph>. This filter is applied such that a golden record having any one of the specified tags is considered to meet the tag criteria. In other words, the tags are “OR’ed”.</p> </li>
+			<li id="HUB_FILTER_PARAMETER_CREATINGSOURCEID"> <p><codeph>&lt;creatingSourceId&gt;</codeph> sets a filter by a creating source specified by its source ID.</p> </li>
+			<li id="HUB_FILTER_PARAMETER_SOURCELINK"> <p><codeph>&lt;sourceLink&gt;</codeph> sets a filter by the presence or absence of links to a source.</p> <ul id="ul_kzv_nrz_j4b">
+				<li id="LI_6C060356886B4B068D806897BA6C40B5"> <p>The <codeph>&lt;sourceId&gt;</codeph> element specifies the source by its ID.</p> </li>
+				<li id="LI_B0ECB77F23D94948A7063FC29FC70660"> <p>The <codeph>&lt;linkType&gt;</codeph> element contains either LINKED, for filtering by the presence of links, or NOT_LINKED, for filtering by the absence of links.</p> </li>
+				</ul> <note id="note_p5t_zps_5sb"><draft-comment author="JonBrams">HUB-1696 insertion</draft-comment>If the universe (domain) has one or more attached sources configured with the option to allow multiple links to golden records, processing time for requests in which the <codeph>&lt;sourceLink&gt;</codeph> filter is set may be significantly longer than other requests.</note> </li>
+			<li id="HUB_FILTER_PARAMETER_UNRESOLVEDREFERENCE"> <p><codeph>&lt;unresolvedReference&gt;</codeph> sets a filter by the presence of unresolved reference field data.</p> <ul id="UL_EAA8210882B2464797C31CBEF0EB902E">
+				<li id="LI_D6E3EB1149F0476BB842B343B43E9666"> <p>The <codeph>&lt;fieldId&gt;</codeph> element specifies a reference field by its ID.</p> </li>
+				<li id="LI_5C648CF74F924CD8874ED8D6DAE9E7BB"> <p>The <codeph>&lt;sourceId&gt;</codeph> element contains either a source by its ID or <codeph>@all</codeph>, which limits results to golden records for which all source contributions are unresolved.</p> </li>
+				</ul> </li>
+		</ul>
+		<note id="HUB_FILTER_PARAMETER_ID_SOURCES">A field’s ID can be found in the model page’s <uicontrol>Fields</uicontrol> tab in <keyword conref="lib-Boomi_Keywords_0346af2b-13d7-491e-bec9-18c5d89225bf.xml#GUID-0207C7F1-40FD-4537-BE59-1D6DA46B9A1D/BOOMI_MDMCLOUD" />. A source’s ID can be found in the Sources page in <keyword conref="lib-Boomi_Keywords_0346af2b-13d7-491e-bec9-18c5d89225bf.xml#GUID-0207C7F1-40FD-4537-BE59-1D6DA46B9A1D/BOOMI_MDMCLOUD" />.</note>
+		<ul id="HUB_FILTER_PARAMETER_EXAMPLES">
+			<li id="LI_B66706AAD4DC4D99BCB88AA786B39C1C"> <p>created as a result of an entity submission from the source NetSuite (ID: NS)</p> </li>
+			<li id="LI_FB4F95A1B09F427993B7547F4D9BB0A1"> <p>linked to the source Salesforce (ID: SFDC)</p> </li>
+			<li id="LI_7B188D4D1532448E9DF959759D738C61"> <p>having either or both of the tags Area Code 311 and Mid-Atlantic</p> </li>
+			<li id="LI_1CD7C5AC1FDC426B91CDC5BC3CE520D6"> <p>having a website field value ending with “.biz”</p> </li>
+			<li id="LI_DB154E37C090423DB99F0B84826ADEE0"> <p>last updated during the period starting August 17, 2016 and ending September 2, 2016</p> </li>
+		</ul>
+		<note id="HUB_FILTER_PARAMTERS_DISREGARDED">If a request includes both <codeph>&lt;recordId&gt;</codeph> elements and <codeph>&lt;filter&gt;</codeph>, <codeph>&lt;filter&gt;</codeph> is disregarded.</note>
+		<section id="GUID-45E95029-867E-46F7-BF9E-07CA9C7D835A"> <title id="GUID-3F2AA443-E27D-403D-94CC-292667622710">API Path Parameters</title> <parml>
+			<plentry id="GUID-079D05AB-9A21-4D35-9394-7433006EC7E8">
+				<pt><parmname>accountID</parmname></pt>
+				<pd>ID of the account</pd>
+			</plentry>
+			<plentry id="GUID-B68B3320-24AC-4F34-A86D-6AD1C30C0D65">
+				<pt><parmname>repositoryID</parmname></pt>
+				<pd>ID of the repository</pd>
+			</plentry>
+			<plentry id="GUID-7D402DCD-AAA6-454E-9331-0A8CCE78CBBD">
+				<pt><parmname>universeID</parmname></pt>
+				<pd>ID of the universe</pd>
+			</plentry>
+			<plentry id="API-PARAM--UNIVERSE-IS-MODEL">
+				<pt><parmname>universeID</parmname></pt>
+				<pd>ID of the model</pd>
+			</plentry>
+			<plentry id="API-PARAM--MODELID">
+				<pt><parmname>modelID</parmname></pt>
+				<pd>ID of the model</pd>
+			</plentry>
+			<plentry id="GUID-B5601AAD-48B2-4C08-816C-3693FC739C5C">
+				<pt><parmname>recordID</parmname></pt>
+				<pd>ID of the golden record</pd>
+			</plentry>
+			<plentry id="GUID-538816A9-DB6D-46E8-9492-C0C9F2D58C52">
+				<pt><parmname>sourceID</parmname></pt>
+				<pd>ID of the source</pd>
+			</plentry>
+			<plentry id="GUID-7AC56D2B-52EA-482F-90EC-6BEF7FB14FEC">
+				<pt><parmname>entityID</parmname></pt>
+				<pd>ID of the source entity</pd>
+			</plentry>
+			<plentry id="GUID-E894739A-DF9C-4AA9-A6C5-C673A643EF46">
+				<pt><parmname>stagingAreaID</parmname></pt>
+				<pd>ID of the staging area</pd>
+			</plentry>
+			<plentry id="GUID-32D7CD56-9095-4CE9-AAFC-CF2035883821">
+				<pt><parmname>channelID</parmname></pt>
+				<pd>(multiple-channel sources only) ID of the channel</pd>
+			</plentry>
+			<plentry id="GUID-0ADEA349-7B55-4DDF-889C-22D87F6DC9F6">
+				<pt><parmname>transactionID</parmname></pt>
+				<pd>ID of the transaction, which can be obtained from a <apiname>Query Quarantine Entries</apiname> operation.</pd>
+			</plentry>
+			<plentry id="API-PARAM--PROPAGATE-REQUEST">
+				<pt><parmname>requestID</parmname></pt>
+				<pd>ID of the <apiname>Propagate Channel Updates</apiname> request. This ID is obtained from the response body for that request.</pd>
+			</plentry>
+			</parml> </section>
+		<section id="GUID-B305D9BB-9E97-4502-BDAF-1EB69948EAB1"> <title id="GUID-00EEB607-6391-4008-A21D-DEB038CB0146">API responses</title> <ul id="GUID-E51C49E3-8DFD-4151-9678-6E350F1B0DBD">
+			<li id="API-ERROR--REPOSITORY-MANAGEMENT"> <p>400 (Bad Request) The authenticating user does not have the API Access and MDM - Repository Management privileges required for this operation. Sample response body:</p> <codeblock xml:space="preserve">&lt;error&gt;
+   &lt;message&gt;The authenticated user does not have access rights to this functionality&lt;/message&gt;
+&lt;/error&gt;</codeblock> </li>
+			<li id="API-ERROR--RIGHTS-VIEW-REPOSITORY-A3E51C65"> <p>400 (Bad Request) The authenticating user does not have the API Access and MDM - View Repositories privileges required for this operation. Sample response body:</p> <codeblock xml:space="preserve">&lt;error&gt;
+   &lt;message&gt;The authenticated user does not have access rights to this functionality&lt;/message&gt;
+&lt;/error&gt;</codeblock> </li>
+			<li id="API-ERROR--RIGHTS-VIEW-MODELS"> <p>400 (Bad Request) The authenticating user does not have the API Access and MDM - View Models privileges required for this operation. Sample response body:</p> <codeblock xml:space="preserve" id="codeblock_ncl_2p1_psb">&lt;error&gt;
+   &lt;message&gt;The authenticated user does not have access rights to this functionality&lt;/message&gt;
+&lt;/error&gt;</codeblock> </li>
+			<li id="API-ERROR--RIGHTS-EDIT-MODELS"> <p>400 (Bad Request) The authenticating user does not have the API Access and MDM - Edit Models privileges required for this operation. Sample response body:</p> <codeblock xml:space="preserve" id="codeblock_ps4_pv4_rrb">&lt;error&gt;
+   &lt;message&gt;The authenticated user does not have access rights to this functionality&lt;/message&gt;
+&lt;/error&gt;</codeblock> </li>
+			<li id="API-ERROR--RIGHTS-VIEW-DATA-RECORDS-A3E729FC"> <p>400 (Bad Request) The authenticating user does not have the API Access privilege and either the MDM - View Data privilege or the View Records entitlement required for this operation. Sample response body:</p> <codeblock xml:space="preserve">&lt;error&gt;
+   &lt;message&gt;The authenticated user does not have access rights to this functionality&lt;/message&gt;
+&lt;/error&gt;</codeblock> </li>
+			<li id="API-ERROR--RIGHTS-SOURCE-MANAGEMENT"> <p>400 (Bad Request) The authenticating user does not have the API Access and MDM - Source Management privileges required for this operation. Sample response body:</p> <codeblock xml:space="preserve">&lt;error&gt;
+   &lt;message&gt;The authenticated user does not have access rights to this functionality&lt;/message&gt;
+&lt;/error&gt;</codeblock> </li>
+			<li id="API-ERROR--RIGHTS-SOURCE-ATTACHMENT"> <p>400 (Bad Request) The authenticating user does not have the API Access and MDM - Source Attachment privileges required for this operation. Sample response body:</p> <codeblock xml:space="preserve">&lt;error&gt;
+   &lt;message&gt;The authenticated user does not have access rights to this functionality&lt;/message&gt;
+&lt;/error&gt;</codeblock> </li>
+			<li id="API-ERROR--MODEL-DEPLOYMENT"> <p>400 (Bad Request) The authenticating user does not have the API Access and MDM - Model Deployment privileges required for this operation. Sample response body:</p> <codeblock xml:space="preserve">&lt;error&gt;
+   &lt;message&gt;The authenticated user does not have access rights to this functionality&lt;/message&gt;
+&lt;/error&gt;</codeblock> </li>
+			<li id="LI_03089055A5E445E7B3BD6A7C941E3184"> <p>400 (Bad Request) The authenticating user does not have the API Access privilege and the Delete Quarantine entitlement required for this operation. Sample response body:</p> <codeblock xml:space="preserve">&lt;error&gt;
+   &lt;message&gt;The authenticated user does not have access rights to this functionality&lt;/message&gt;
+&lt;/error&gt;</codeblock> </li>
+			<li id="LI_EB3C907192C442BA819DB9D28135B431"> <p>400 (Bad Request) The authenticating user does not have the API Access privilege and the Approve Creates and Approve Updates entitlements required for this operation. Sample response body:</p> <codeblock xml:space="preserve">&lt;error&gt;
+   &lt;message&gt;The authenticated user does not have access rights to this functionality&lt;/message&gt;
+&lt;/error&gt;</codeblock> </li>
+			<li id="LI_8CE23F2B3E804F60A41DF91468870C06"> <p>400 (Bad Request) The authenticating user does not have the API Access privilege and the Match Quarantine entitlement required for this operation. Sample response body:</p> <codeblock xml:space="preserve">&lt;error&gt;
+   &lt;message&gt;The authenticated user does not have access rights to this functionality&lt;/message&gt;
+&lt;/error&gt;</codeblock> </li>
+			<li id="API-ERROR--UNKNOWN-REPOSITORY-A3E49089"> <p>400 (Bad Request) <parmname>repositoryID</parmname> does not identify a repository under the specified account. Sample response body:</p> <codeblock xml:space="preserve">&lt;error&gt;
+   &lt;message&gt;Could not find containerAccount for container id 
+     dbe797ff-6d6f-44e9-acd9-d77494a44b15 and account id account-123456&lt;/message&gt;
+&lt;/error&gt;</codeblock> </li>
+			<li id="API-ERROR--BLANK-UNIVERSE-A3E5EA21"> <p>400 (Bad Request) The <parmname>universeID</parmname> parameter value contains only space characters. Sample response body:</p> <codeblock xml:space="preserve">&lt;error&gt;
+   &lt;message&gt;The given universe id is blank.&lt;/message&gt;
+&lt;/error&gt; </codeblock> </li>
+			<li id="API-ERROR--INVALID-UNIVERSE"> <p>400 (Bad Request) <parmname>modelID</parmname> is not a valid GUID and is therefore an invalid component ID. Sample response body:</p> <codeblock id="codeblock_hkn_s5c_gsb">&lt;error&gt;
+   &lt;message&gt;1 is not a valid component ID.&lt;/message&gt;
+&lt;/error&gt;</codeblock> </li>
+			<li id="API-ERROR--NO-SUCH-MODEL"> <p>400 (Bad Request) <parmname>modelID</parmname> does not identify a model in the specified account. Sample response body:</p> <codeblock id="codeblock_i5k_v5c_gsb">&lt;error&gt;
+   &lt;message&gt;A model with ID 851a6a64-6a88-4916-a5b7-d6a974d54318 does not exist.&lt;/message&gt;
+&lt;/error&gt;</codeblock> </li>
+			<li id="API-ERROR--NO-SUCH-VERSION"> <p>400 (Bad Request) The <parmname>modelID</parmname> and <parmname>version</parmname> parameter combination does not identify a model version in the specified account. Sample response body:</p> <codeblock id="codeblock_myy_hz4_tsb">&lt;error&gt;
+   &lt;message&gt;A component with ID 851a6a64-6a88-4916-a5b7-d6a974d54318 and version 100 does not exist.&lt;/message&gt;
+&lt;/error&gt;</codeblock> </li>
+			<li id="API-ERROR--NO-DRAFT"> <p>400 (Bad Request) A draft version of a model with ID <parmname>modelID</parmname> does not exist. Sample response body:</p> <codeblock id="codeblock_wqj_k1p_tsb">&lt;error&gt;
+   &lt;message&gt;The model does not currently have a Draft version&lt;/message&gt;
+&lt;/error&gt;
+</codeblock> </li>
+			<li id="API-ERROR--MODEL-NAME"> <p>400 (Bad Request) The specified model name is invalid due to its length. Sample response body:</p> <codeblock id="codeblock_jnr_hg4_1tb">&lt;error&gt;
+  &lt;message&gt;Model creation failed due to a null or invalid model name. The name must have at least 2 characters and no more than 40.&lt;/message&gt;
+&lt;/error&gt;</codeblock> </li>
+			<li id="API-ERROR--UNIVERSE-NOT-DEPLOYED"> <p>400 (Bad Request) <parmname>universeID</parmname> does not identify a universe deployed to the repository specified by <parmname>repositoryID</parmname> under the specified account. Sample response body:</p> <codeblock xml:space="preserve">&lt;error&gt;
+   &lt;message&gt;universe is not deployed to the repository&lt;/message&gt;
+&lt;/error&gt;</codeblock> </li>
+			<li id="API-ERROR--UNIVERSE-ID-NOT-DEPLOYED"> <p>400 (Bad Request) <parmname>universeID</parmname> does not identify a universe deployed to the repository specified by <parmname>repositoryID</parmname> under the specified account. Sample response body:</p> <codeblock xml:space="preserve">&lt;error&gt;
+   &lt;message&gt;Universe '851a6a64-6a88-4916-a5b7-d6a974d54318' is not deployed to repository 'dbe797ff-6d6f-44e9-acd9-d77494a44b15'.&lt;/message&gt;
+&lt;/error&gt;</codeblock> </li>
+			<li id="API-ERROR--SOURCE-ID-NOT-IN-ACCOUNT"> <p>400 (Bad Request) <parmname>sourceId</parmname> does not identify a source that exists in the specified account. Sample response body:</p> <codeblock id="codeblock_exw_hcr_prb">&lt;error&gt;
+    &lt;message&gt;A source with ID 'WD' does not exist in this account.&lt;/message&gt;
+&lt;/error&gt;</codeblock> </li>
+			<li id="API-ERROR--BLANK-STAGING-AREA-A3F70C72"> <p>400 (Bad Request) The request does not specify a staging area ID. Sample response body:</p> <codeblock xml:space="preserve">&lt;error&gt;
+   &lt;message&gt;The given staging id is blank.&lt;/message&gt;
+&lt;/error&gt;</codeblock> </li>
+			<li id="API-ERROR--NO-SUCH-STAGING-AREA"> <draft-comment author="Jon_Brams">HUB-1171 insertion or replacement</draft-comment> <p>400 (Bad Request) A staging area with the specified ID does not exist for the specified source. This error has additional possible causes: It can signify that <parmname>sourceID</parmname> does not identify a source attached to the specified universe or <parmname>universeID</parmname> does not identify a universe hosted in the specified repository. Sample response body:</p> <codeblock xml:space="preserve" id="codeblock_rjh_ywd_2sb">&lt;error&gt;
+   &lt;message&gt;There is no staging area with staging area ID '456789ab-cdef-0123-4567-89abcdef0123' for the specified source.&lt;/message&gt;
+&lt;/error&gt; </codeblock> </li>
+			<li id="API-ERROR--BAD-STAGING-AREA-A3F71C8F"> <p>400 (Bad Request) The request does not contain a properly-formatted StagingActionRequest object. Sample response body:</p> <codeblock xml:space="preserve">&lt;error&gt;
+   &lt;message&gt;Unable to read message body. Please make sure the
+     XML structure and namespace are correct.&lt;/message&gt;
+&lt;/error&gt;
+</codeblock> </li>
+			<li id="API-ERROR--BATCH-XML-A464A364"> <p>400 (Bad Request) The <codeph>&lt;batch&gt;</codeph> element’s src attribute value specifies a valid contributing source but the XML document contains invalid markup. Sample response body:</p> <codeblock xml:space="preserve">&lt;error&gt;
+   &lt;message&gt;When trying to parse a batch update for universe with id '851a6a64-6a88-4916-a5b7-d6a974d54318'.&lt;/message&gt;
+   &lt;message&gt;Unexpected EOF; was expecting a close tag for element &lt;batch&gt;
+     at [row,col {unknown-source}]: [1,16]&lt;/message&gt;
+&lt;/error&gt; </codeblock> </li>
+			<li id="API-ERROR--EMPTY-POST-A464B401"> <p>400 (Bad Request) The request body is empty. Sample response body:</p> <codeblock xml:space="preserve">&lt;error&gt;
+   &lt;message&gt;When trying to parse a batch update for universe with id '851a6a64-6a88-4916-a5b7-d6a974d54318'.&lt;/message&gt;
+   &lt;message&gt;Unexpected EOF in prolog at [row,col {unknown-source}]: [1,0]&lt;/message&gt;
+&lt;/error&gt; </codeblock> </li>
+			<li id="API-ERROR--START-TAG-A464C372"> <p>400 (Bad Request) The request body does not start with a <codeph>&lt;batch&gt;</codeph> tag. Sample response body:</p> <codeblock xml:space="preserve">&lt;error&gt;
+   &lt;message&gt;An update batch for universe with id '851a6a64-6a88-4916-a5b7-d6a974d54318' could not be processed because it starts with a 'foo' tag instead of with a 'batch' tag.&lt;/message&gt;
+&lt;/error&gt; </codeblock> </li>
+			<li id="API-ERROR--MISSING-SOURCE-A464D118"> <p>400 (Bad Request) The <codeph>&lt;batch&gt;</codeph> element does not have a populated src attribute. Sample response body:</p> <codeblock xml:space="preserve">&lt;error&gt;
+   &lt;message&gt;An update batch for universe with id '851a6a64-6a88-4916-a5b7-d6a974d54318' does not contain a source ('src') attribute.&lt;/message&gt;
+&lt;/error&gt; </codeblock> </li>
+			<li id="API-ERROR--UPDATE-ACKNOWLEDGED-A46A0AA6"> <p>400 (Bad Request) The update identified by <parmname>updateID</parmname> has already been acknowledged. Sample response body:</p> <codeblock xml:space="preserve">&lt;error&gt;
+   &lt;message&gt;The update with id '3' in channel with id '4ff6d6ff-577e-4f64-ae45-3b6450dd53ce' has already been acknowledged.&lt;/message&gt;
+&lt;/error&gt; </codeblock> </li>
+			<li id="API-ERROR--CHANNEL-NOT-LOADED-A46A1E7F"> <p>400 (Bad Request) <parmname>channelID</parmname> does not identify a channel for which Initial Load is complete. Sample response body:</p> <codeblock xml:space="preserve">&lt;error&gt;
+   &lt;message&gt;The channel '4ff6d6ff-577e-4f64-ae45-3b6450dd53ce' for source 'QB' in universe 'a28c2bc9-e6c7-4aa2-8a7e-a2e77ca9b887' is CREATED but needs to be STRAPPED before update requests are allowed.&lt;/message&gt;
+&lt;/error&gt; </codeblock> </li>
+			<li id="LI_BE5159BB86F24F0693D9BCBF13A8367B"> <p>400 (Bad Request) The <parmname>recordID</parmname> parameter value contains only space characters. Sample response body:</p> <codeblock xml:space="preserve">&lt;error&gt;
+   &lt;message&gt;The given record id is blank.&lt;/message&gt;
+&lt;/error&gt; </codeblock> </li>
+			<li id="API-ERROR--INVALID-BULK-REQUEST-ID"> <p>400 (Bad Request) <parmname>requestID</parmname> is not a an integer and is therefore invalid. Sample response body:</p> <codeblock xml:space="preserve">&lt;error&gt;
+   &lt;message&gt;'abc' is not a valid request ID.&lt;/message&gt;
+&lt;/error&gt;</codeblock> </li>
+			<li id="API-ERROR--HUB-FILTER-FIELDID-INVALID"> <p>400 (Bad Request) A <codeph>&lt;fieldId&gt;</codeph> element is specified that is not in the deployed version of the universe’s model. Sample response body:</p> <codeblock xml:space="preserve">&lt;error&gt;
+      &lt;message&gt;This 'fieldId', 'FOUNDER', is not in the model 'VENDOR'.&lt;/message&gt;
+&lt;/error&gt; </codeblock> </li>
+			<li id="API-ERROR--HUB-FILTER-FIELDID-MISSING"> <p>400 (Bad Request) A filter criterion contains a <codeph>&lt;fieldValue&gt;</codeph> element that does not contain a child <codeph>&lt;fieldId&gt;</codeph> element. Sample response body:</p> <codeblock xml:space="preserve">&lt;error&gt;
+      &lt;message&gt;Each 'fieldValue' element must contain one 'fieldId' element.&lt;/message&gt;
+&lt;/error&gt; </codeblock> </li>
+			<li id="API-ERROR--HUB-FILTER-FIELDID-OP-MISSING"> <p>400 (Bad Request) A filter criterion contains a <codeph>&lt;fieldValue&gt;</codeph> element that does not contain a child <codeph>&lt;operator&gt;</codeph> element. Sample response body:</p> <codeblock xml:space="preserve">&lt;error&gt;
+      &lt;message&gt;Each 'fieldValue' element must contain one 'operator' element; fieldId = 'PHONE'.&lt;/message&gt;
+&lt;/error&gt; </codeblock> </li>
+			<li id="API-ERROR--HUB-FILTER-FIELDID-OP-INVALID"> <p>400 (Bad Request) A filter criterion specifies a field of a type for which the specified operation is not supported. Sample response body:</p> <codeblock xml:space="preserve">&lt;error&gt;
+      &lt;message&gt;Field 'AGE' of type 'INTEGER' does not support operation 'BETWEEN'; supported operations: 'EQUALS, NOT_EQUALS, LESS_THAN, LESS_THAN_EQUAL, 
+GREATER_THAN, GREATER_THAN_EQUAL, IS_NOT_NULL, IS_NULL'.&lt;/message&gt;
+&lt;/error&gt; </codeblock> </li>
+			<li id="API-ERROR--HUB-FILTER-FIELDID-NOMULTI"> <p>400 (Bad Request) A filter criterion specifies multiple values for a field type and operator combination for which multiple values are not valid. Sample response body:</p> <codeblock xml:space="preserve">&lt;error&gt;
+      &lt;message&gt;This field-type / operator, 'INTEGER' / 'EQUALS', does not accept multiple values; fieldId = 'AGE'.&lt;/message&gt;
+&lt;/error&gt; </codeblock> </li>
+			<li id="API-ERROR--HUB-FILTER-UPDATEDDATE-NOTRANGE"> <p>400 (Bad Request) A filter criterion incorrectly specifies a time range because less than or more than two <codeph>&lt;value&gt;</codeph> elements are specified. Sample response body:</p> <codeblock xml:space="preserve">&lt;error&gt;
+      &lt;message&gt;The BETWEEN operator takes exactly 2 values; fieldId = 'BIRTH_DATE', operator = 'BETWEEN'.&lt;/message&gt;
+&lt;/error&gt; </codeblock> </li>
+			<li id="API-ERROR--HUB-FILTER-VALUE-MISSING"> <p>400 (Bad Request) A filter criterion specifying an operator for which a <codeph>&lt;value&gt;</codeph> element(s) are required omits that element. Sample response body:</p> <codeblock xml:space="preserve">&lt;error&gt;
+      &lt;message&gt;This operator requires a 'value' element: fieldId = 'AGE'; operator = 'EQUALS'.&lt;/message&gt;
+&lt;/error&gt; </codeblock> </li>
+			<li id="API-ERROR--HUB-FILTER-VALUE-DISALLOWED"> <p>400 (Bad Request) A filter criterion specifying an operator for which the <codeph>&lt;value&gt;</codeph> element is invalid includes that element. Sample response body:</p> <codeblock xml:space="preserve">&lt;error&gt;
+      &lt;message&gt;The operation 'IS_NULL' does not allow any 'value' elements: fieldId = 'AGE'.&lt;/message&gt;
+&lt;/error&gt; </codeblock> </li>
+			<li id="API-ERROR--HUB-FILTER-VALUE-EMPTY"> <p>400 (Bad Request) A filter criterion specifies an empty <codeph>&lt;value&gt;</codeph> element. Sample response body:</p> <codeblock xml:space="preserve">&lt;error&gt;
+      &lt;message&gt;Each value must be non-blank: fieldId = 'AGE'; operation = 'EQUALS'.&lt;/message&gt;
+&lt;/error&gt; </codeblock> </li>
+			<li id="API-ERROR--HUB-FILTER-SOURCELINK-CHILD-MISSING"> <p>400 (Bad Request) A <codeph>&lt;sourceLink&gt;</codeph> filter criterion omits one of the required child elements. Sample response body:</p> <codeblock xml:space="preserve">&lt;error&gt;
+      &lt;message&gt;One of the 'sourceLink' elements is missing: 'linkType'.&lt;/message&gt;
+&lt;/error&gt; </codeblock> </li>
+			<li id="API-ERROR--HUB-FILTER-SOURCELINK-CHILDREN-MISSING"> <p>400 (Bad Request) A <codeph>&lt;sourceLink&gt;</codeph> filter criterion omits both required child elements. Sample response body:</p> <codeblock xml:space="preserve">&lt;error&gt;
+      &lt;message&gt;Both of the 'sourceLink' elements is missing: 'sourceId', 'linkType'.&lt;/message&gt;
+&lt;/error&gt; </codeblock> </li>
+			<li id="API-ERROR--HUB-FILTER-SOURCELINK-INVALID"> <p>400 (Bad Request) The child <codeph>&lt;linkType&gt;</codeph> element in a <codeph>&lt;sourceLink&gt;</codeph> filter criterion does not contain either LINKED or NOT_LINKED. Sample response body:</p> <codeblock xml:space="preserve">&lt;error&gt;
+      &lt;message&gt;Source link type must be one of { 'LINKED, NOT_LINKED' }&lt;/message&gt;
+&lt;/error&gt; </codeblock> </li>
+			<li id="API-ERROR--HUB-FILTER-CREATINGSOURCEID-EMPTY"> <p>400 (Bad Request) The <codeph>&lt;creatingSourceId&gt;</codeph> element, which is used to set a filter by creating source, is present but empty. Sample response body:</p> <codeblock xml:space="preserve">&lt;error&gt;
+      &lt;message&gt;The 'creatingSourceId' cannot be blank when the element is present.&lt;/message&gt;
+&lt;/error&gt; </codeblock> </li>
+			<li id="API-ERROR--HUB-FILTER-UNRESOLVEDREFERENCE-CHILD-MISSING"> <p>400 (Bad Request) An <codeph>&lt;unresolvedReference&gt;</codeph> filter criterion omits one of the required child elements. Sample response body:</p> <codeblock xml:space="preserve">&lt;error&gt;
+      &lt;message&gt;One of the 'unresolvedReference' elements is missing: 'sourceId'.&lt;/message&gt;
+&lt;/error&gt; </codeblock> </li>
+			<li id="API-ERROR--HUB-FILTER-UNRESOLVEDREFERENCE-NOTREF"> <p>400 (Bad Request) The field specified in an <codeph>&lt;unresolvedReference&gt;</codeph> filter criterion is not a Reference field. Sample response body:</p> <codeblock xml:space="preserve">&lt;error&gt;
+      &lt;message&gt;The field type for an 'unresolvedReference' condition must be REFERENCE: fieldId = 'AGE'.&lt;/message&gt;
+&lt;/error&gt; </codeblock> </li>
+			<li id="API-ERROR--HUB-FILTER-UNRESOLVEDREFERENCE-CHILDREN-MISSING"> <p>400 (Bad Request) An <codeph>&lt;unresolvedReference&gt;</codeph> filter criterion omits both required child elements. Sample response body:</p> <codeblock xml:space="preserve">&lt;error&gt;
+      &lt;message&gt;Both of the 'unresolvedReference' elements are required: "fieldId', 'sourceId'.&lt;/message&gt;
+&lt;/error&gt; </codeblock> </li>
+			<li id="API-ERROR--HUB-FILTER-TAGS-NOTTHISTAG"> <p>400 (Bad Request) A <codeph>&lt;tags&gt;</codeph> filter criterion specifies a tag that is not in the deployed version of the universe’s model. Sample response body:</p> <codeblock xml:space="preserve">&lt;error&gt;
+      &lt;message&gt;The tagName 'Area Code 311' is not defined in this universe.&lt;/message&gt;
+&lt;/error&gt; </codeblock> </li>
+			<li id="API-ERROR--HUB-FILTER-TAGS-NONE"> <p>400 (Bad Request) A <codeph>&lt;tags&gt;</codeph> filter criterion is specified but there are no tags in the deployed version of the universe’s model. Sample response body:</p> <codeblock xml:space="preserve">&lt;error&gt;
+      &lt;message&gt;There are no tags defined in this universe.&lt;/message&gt;
+&lt;/error&gt; </codeblock> </li>
+			<li id="API-ERROR--HUB-FILTER-DATETIME-FORMAT"> <p>400 (Bad Request) A Date/Time field value specified in a filter criterion is incorrectly formatted. Sample response body:</p> <codeblock xml:space="preserve">&lt;error&gt;
+      &lt;message&gt;This date-time has a bad value in it or is not formatted correctly (YYYY-MM-DDT00:00:00Z): '02013-03-01T15:32:00Z'; fieldId = 'LAST_CONTACT'.&lt;/message&gt;
+&lt;/error&gt; </codeblock> </li>
+			<li id="API-ERROR--HUB-FILTER-DATE-FORMAT"> <p>400 (Bad Request) A Date field value specified in a filter criterion is incorrectly formatted. Sample response body:</p> <codeblock xml:space="preserve">&lt;error&gt;
+      &lt;message&gt;This date has a bad value in it or is not formatted correctly (YYYY-MM-DD): '2013-3-1'; fieldId = 'BIRTHDATE'.&lt;/message&gt;
+&lt;/error&gt; </codeblock> </li>
+			<li id="API-ERROR--HUB-FILTER-TIME-FORMAT"> <p>400 (Bad Request) A Time field value specified in a filter criterion is incorrectly formatted. Sample response body:</p> <codeblock xml:space="preserve">&lt;error&gt;
+      &lt;message&gt;This time has a bad value in it or is not formatted correctly (00:00:00): '3:32pm'; fieldId = 'ARRIVING'.&lt;/message&gt;
+&lt;/error&gt; </codeblock> </li>
+			<li id="API-ERROR--ENDPOINT-NOACCESS"> <p>403 (Forbidden) Access to this API endpoint is not enabled for this account. The response body is empty.</p> </li>
+			<li id="API-ERROR--AUTHENTICATION-FAILURE-A3E197E4"> <p>403 (Forbidden) Authentication failure. Sample response body:</p> <codeblock xml:space="preserve">&lt;UserMessage id="error.user.login" type="error"&gt;
+   &lt;Data&gt;Incorrect user name and password combination.&lt;/Data&gt;
+&lt;/UserMessage&gt;</codeblock> </li>
+			<li id="API-ERROR--OMITTED-PARAMETERS-A3E75BE2"> <p>403 (Forbidden) One or more path parameter values are omitted. Sample response body:</p> <codeblock xml:space="preserve">&lt;UserMessage id="error.user.login" type="error"&gt;
+   &lt;Data&gt;Incorrect user name and password combination.&lt;/Data&gt;
+&lt;/UserMessage&gt;</codeblock> </li>
+			<li id="API-ERROR--UNKNOWN-ACCOUNT-A3E1BCEC"> <p>403 (Forbidden) <parmname>accountID</parmname> does not identify an account accessible to the authenticating user. Sample response body:</p> <codeblock xml:space="preserve">&lt;UserMessage id="error.user.login" type="error"&gt;
+   &lt;Data&gt;Incorrect user name and password combination.&lt;/Data&gt;
+&lt;/UserMessage&gt;</codeblock> </li>
+			<li id="API-ERROR--UNKNOWN-UNIVERSE--A3E60BAB"> <p>404 (Not Found) <parmname>universeID</parmname> does not identify a universe hosted in the specified repository. Sample response body:</p> <codeblock xml:space="preserve">&lt;error&gt;
+   &lt;message&gt;A universe with id 'ac11cc59-c77a-4afe-8c92-ed86a7daabec' does not exist.&lt;/message&gt;
+&lt;/error&gt; </codeblock> </li>
+			<li id="API-ERROR--REPOSITORY--UNKNOWN-UNIVERSE-A458524D"> <p>404 (Not Found) <parmname>universeID</parmname> does not identify a universe under the authenticated account. Sample response body:</p> <codeblock xml:space="preserve">&lt;error&gt;
+   &lt;message&gt;A universe with id 'ac11cc59-c77a-4afe-8c92-ed86a7daabec' does not exist.&lt;/message&gt;
+   &lt;message&gt;Universe definition with id 'ac11cc59-c77a-4afe-8c92-ed86a7daabec' could not be loaded from plugin component directory 'plugins/mdm/bundles/ac11cc59-c77a-4afe-8c92-ed86a7daabec'.&lt;/message&gt;
+&lt;/error&gt; </codeblock> </li>
+			<li id="API-ERROR--RECORD-NOT-FOUND-A3E773A4"> <p>404 (Not Found) <parmname>recordID</parmname> does not identify an active or end-dated <keyword conref="lib-Boomi_Keywords_0346af2b-13d7-491e-bec9-18c5d89225bf.xml#GUID-0207C7F1-40FD-4537-BE59-1D6DA46B9A1D/BOOMI_MDMMASTERRECORDTYPE_LOWER" /> record in the specified universe that the authenticating user is entitled to view. Sample response body:</p> <codeblock xml:space="preserve">&lt;error&gt;
+   &lt;message&gt;A record with id '1' does not exist.&lt;/message&gt;
+&lt;/error&gt; </codeblock> </li>
+			<li id="LI_D77A2D106824422EBE8FA16689587E97"> <p>404 (Not Found) <parmname>recordID</parmname> does not identify an active or end-dated golden record in the specified universe. Sample response body:</p> <codeblock xml:space="preserve">&lt;errors&gt;
+   &lt;error&gt;A record with id '1' does not exist.&lt;/error&gt;
+&lt;/errors&gt; </codeblock> </li>
+			<li id="API-ERROR--UNKNOWN-SOURCE-A3E9F399"> <p>404 (Not Found) <parmname>sourceID</parmname> does not identify a source attached to the specified universe. Sample response body:</p> <codeblock xml:space="preserve">&lt;error&gt;
+   &lt;message&gt;Source with code 'FOO' does not exist under universe '851a6a64-6a88-4916-a5b7-d6a974d54318'.&lt;/message&gt;
+&lt;/error&gt; </codeblock> </li>
+			<li id="API-ERROR--SOURCE-NOT-ATTACHED-A4828E18"> <p>404 (Not Found) The <codeph>&lt;batch&gt;</codeph> element’s src attribute value does not specify a source attached to the specified universe. Sample response body:</p> <codeblock xml:space="preserve">&lt;error&gt;
+   &lt;message&gt;Source with code 'FOO' does not exist for universe with id '31cb0f62-b239-4d96-b112-bc4fafea362d'.&lt;/message&gt;
+&lt;/error&gt; </codeblock> </li>
+			<li id="API-ERROR--SOURCE-NOT-ATTACHED"> <p>400 (Bad Request) A source with the specified ID is not attached to the specified universe. Sample response body:</p> <codeblock xml:space="preserve">&lt;error&gt;
+   &lt;message&gt;The source with ID 'NS' is not attached to the specified universe.&lt;/message&gt;
+&lt;/error&gt;</codeblock> </li>
+			<li id="LI_463AF98B659642578D25B070DCDB14FB"> <p>404 (Not Found) stagingAreaId does not identify a staging area for a source in the specified universe. Sample response body:</p> <codeblock xml:space="preserve">&lt;error&gt;
+   &lt;message&gt;A staging area with id SFStaging was not found in universe: ac11cc59-c77a-4afe-8c92-ed86a7daabec&lt;/message&gt;
+&lt;/error&gt;</codeblock> </li>
+			<li id="API-ERROR--UNKNOWN-STAGING-AREA-A3F6874C"> <p>404 (Not Found) The staging area ID specified in the request does not identify a staging area for the specified source in the specified universe. Sample response body:</p> <codeblock xml:space="preserve">&lt;error&gt;
+   &lt;message&gt;A staging area with id SFStaging was not found in universe: ac11cc59-c77a-4afe-8c92-ed86a7daabec&lt;/message&gt;
+&lt;/error&gt;</codeblock> </li>
+			<li id="API-ERROR--UNKNOWN-CHANNEL-A46A5E18"> <p>404 (Not Found) <parmname>channelID</parmname> does not identify a channel for the specified source. Sample response body:</p> <codeblock xml:space="preserve">&lt;error&gt;
+   &lt;message&gt;Channel with id '4ff6d6ff-577e-4f64-ae45-3b6450dd53ce' for source 'FOO' does not exist under universe '851a6a64-6a88-4916-a5b7-d6a974d54318'.&lt;/message&gt;
+&lt;/error&gt; </codeblock> </li>
+			<li id="API-ERROR--UNKNOWN-UPDATE-A46A6DBD"> <p>404 (Not Found) <parmname>updateID</parmname> does not identify a batch of source record update requests for the specified channel. Sample response body:</p> <codeblock xml:space="preserve">&lt;error&gt;
+   &lt;message&gt;A batch with id 'foo' does not exist.&lt;/message&gt;
+&lt;/error&gt; </codeblock> </li>
+			<li id="LI_02803D14EC4F44F2AE563AE57CB0919B"> <p>404 (Not Found) <parmname>entityID</parmname> does not identify a quarantine entry for the specified source. Sample response body:</p> <codeblock xml:space="preserve">&lt;error&gt;
+   &lt;message&gt;The entity '1' from source 'NS' for universe 'ac11cc59-c77a-4afe-8c92-ed86a7daabec' is not quarantined.&lt;/message&gt;
+&lt;/error&gt;</codeblock> </li>
+			<li id="LI_39099509C03145399531F7753374BC6C"> <p>404 (Not Found) <parmname>transactionID</parmname> does not identify a quarantine entry in the specified universe. Sample response body:</p> <codeblock xml:space="preserve">&lt;error&gt;
+   &lt;message&gt;A quarantined entity version with id '42dbadd8-d226-4c4d-abe3-1dae8636e77a' does not exist.&lt;/message&gt;
+&lt;/error&gt;</codeblock> </li>
+			</ul> <note id="API-ERROR--UPDATE-MODEL-VALIDATION">This error response is applicable only to the <apiname>Update Model</apiname> operation.</note> <p id="API-ERROR--MODEL-VALIDATION"><draft-comment author="JonBrams">Markup exception: Note is intentionally embedded in paragraph to streamline content referencing</draft-comment>Following are general error responses. Model validation error responses are specific to individual model components: <xref href="hub-mdm_fields_validation_errors_a300c59d-1962-4af0-a29c-ec6380bb54d6.dita">fields</xref>, <xref href="hub-mdm_sources_validation_errors_be0d72cd-4bc0-414d-96a4-9fcaf8432f1d.dita">sources</xref>, <xref href="hub-mdm_dataQualitySteps_validation_errors_e05c8a41-e2cf-4136-b15d-7347b5dbb692.dita">data quality steps</xref>, <xref href="hub-mdm_recordTitle_validation_errors_3399ae58-d8cf-40e1-a52d-13c7fdde0813.dita">record title format</xref>, <xref href="hub-mdm_matchRules_validation_errors_98726746-7683-430f-9469-6e23af054fed.dita">match rules</xref>, and <xref href="hub-mdm_tags_validation_errors_55f5ca76-1f97-4b9a-80e8-0a6956ecba38.dita">tags</xref>, as well as to  <xref href="hub-mdm_businessRule_validation_errors_4514a10a-3b30-4b13-aa0b-84de4f13bd2e.dita">business rules</xref> used in source, data quality step, and tag definitions.<note id="note_btq_134_1tb">Validation continues until the entire XML representation of the model is processed. All validation errors are returned in the response.</note></p> </section>
+		<section id="SECTION_7E983776D4134B878AEDB6C1E2789991"><title id="GUID-77934E09-4089-4AC0-B65C-465BF4054F67">Direct UI links</title><ph><xref href="https://platform.boomi.com/#build;processLibrary=home" format="html" scope="external" id="GUID-9C79060E-2B0D-4D32-B780-E47647E134D8">process library</xref></ph></section>
+	</body>
+</topic>

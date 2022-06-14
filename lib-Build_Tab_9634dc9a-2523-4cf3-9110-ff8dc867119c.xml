@@ -1,0 +1,112 @@
+﻿<?xml version="1.0" encoding="utf-8"?><?Inspire CreateDate="2019-02-20T20:24:25" ModifiedDate="2022-03-29T17:18:46"?><!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+
+<topic xml:lang="en-us" id="GUID-35C16FC0-5802-421A-8D14-D6EFC2DDD0EC">
+	<title id="GUID-8CE5BD89-D9C8-4D0F-A7A7-FFD5FC6D4490">Build Tab</title>
+	<shortdesc>Shared content for the Build Tab</shortdesc>
+	<body>
+		<section id="GUID-50C12544-54C3-4184-BCAD-E30A6595ED08"> <title id="GUID-2DA79C8A-A5E6-49F6-A377-59A4281CA7EB">Constraints</title> <note id="GUID-D4390F03-DDCB-4F6D-AA83-6F3E8A13671E"><draft-comment author="Jon_Brams">INT-2289 correction, release profiling intentionally omitted</draft-comment>If you have a constraint defined on an existing XML profile and then you re-import from an XSD file, the constraint will be deleted when the XML profile is saved. Qualifiers and instance identifiers must be used in the updated XML profile.</note> </section>
+		<section id="GUID-6AA36041-EC09-4EB4-8E8E-FCD7D42C1EE4"> <title id="GUID-EAFE5371-A22A-40EB-947F-4ECDB7E35B14">Data Types</title> <note id="GUID-595BC744-613D-47AB-B2D5-DD69033AD4F0">Database profiles are unique in that you do not need to specify a format for date and numeric values. The database determines the formats; <keyword conref="lib-Boomi_Keywords_0346af2b-13d7-491e-bec9-18c5d89225bf.xml#GUID-0207C7F1-40FD-4537-BE59-1D6DA46B9A1D/BOOMI_INTEGRATION" /> simply communicates with native date or number objects.</note> <note id="DATE_TIME_LENIENT_PARSING"><draft-comment author="Jon_Brams">B2B-1382 insertion</draft-comment>Invalid date/time data element values in documents using EDI profiles cause a process execution error. Invalid date/time data element values in documents using other profile types, on the other hand, are transformed without error using Java default “lenient” date/time parsing. For example, a date value of 20211417 in the format yyyyddMM is transformed to 20221405 — the month value of 05 is calculated by subtracting the number of months in a year (12) from the month value in the input document (17), and the year value of 2022 is calculated by adding one to the year value in the input document (2021).<p>You can optionally apply lenient parsing to documents using EDI profiles by setting the Atom property <varname>com.boomi.container.useLenientEDIDateParsing</varname> to <userinput>true</userinput> in the Properties panel’s <b>Custom</b> tab in Atom Management (<menucascade>
+			<uicontrol>Manage</uicontrol>
+			<uicontrol>Atom Management</uicontrol>
+			</menucascade>).</p></note> <ul id="ul_INT_NUMBER_DATA_IMPLIED_DECIMALS_EXAMPLES">
+			<li id="li_b6827158-0ca4-4724-91e1-07679f192cdf"> <draft-comment author="Jon_Brams">DOC-1497 Implied Decimals setting examples for Number data type</draft-comment> <p>For a profile designated as the source profile for a map used in a Map shape, values for which there are implied decimals are divided by 10 to the power of the number of implied decimals. For example, if Implied Decimals is set to 2, a value of 12399 would be divided by 10<sup>2</sup> (100), yielding 123.99. If Implied Decimals is set to 3, a value of 2345.6 would be divided by 10<sup>3</sup> (1,000), yielding 2.3456.</p> </li>
+			<li id="li_08cae899-862c-416d-b610-193d387baa59"> <p>For a profile designated as the destination profile for a map used in a Map shape, values for which there are implied decimals are multiplied by 10 to the power of the number of implied decimals. For example, if Implied Decimals is set to 2, a value of 993.12 would be multiplied by 10<sup>2</sup> (100), yielding 99312. If Implied Decimals is set to 3, a value of 6.5432 would be multiplied by 10<sup>3</sup> (1,000), yielding 6543.2.</p> </li>
+			</ul> <p id="ul_INT_NUMBER_DATA_IMPLIED_DECIMALS_USAGE"><draft-comment author="Jon_Brams">DOC-1497 Implied Decimals setting usage for Number data type</draft-comment>Typically when data values have implied decimals, a number format is not used. However, if both a number format and the implied decimal are configured, the implied decimal is applied first before the number format.</p> </section>
+		<section id="GUID-A13DD0F1-06A4-491C-9E69-748DF2881D51"> <title id="GUID-D9DB6C94-0816-48FB-9C7B-5FFE47AF1BF9">Java</title> <p> <ph id="JAVAREGULAREXPRESSION-7927340B"> <xref href="https://docs.oracle.com/javase/8/docs/api/java/util/regex/Pattern.html" format="html" scope="external">Java Regular Expression</xref> </ph> </p> </section>
+		<section id="GUID-5B753C11-4441-41EF-BC60-972984C46C05"> <title id="GUID-24228A63-1064-4EA3-A967-E9F2F629B3C7">Mapping</title> <note id="GUID-A948AEAE-702A-49F7-8EC1-FD0F97AD3944">If mapping is required to convert date/time data types, it is important to understand that when the mapping engine parses a value configured as date/time, it converts it to a special internal date format that looks like this: <codeph>yyyyMMdd HHmmss.SSS</codeph>. For more information, refer to the Time Zone Offsets topic linked below.</note> </section>
+		<section id="GUID-A9386BAE-31C4-4A85-B1D9-47B590C63206"> <title id="GUID-68DE052D-1F4C-4821-B7DB-8249CCF500A8">Messages</title> <note id="GUID-92590CC1-6618-4AB4-9D9B-A11EDDEE8970">In messages the single quote (') is a special character. The following points regarding single quotes apply <i>only</i> to the message text that you enter. Single quotes are <i>not</i> stripped if they are coming in as part of the data.<ul id="GUID-5C1C6855-CD10-466A-9D5D-F0B0405F22EA">
+			<li id="LI_8A2049AE0DF54E81B0A847713E447925"> <p>A single quote by itself is stripped from the message. For example, the message text <userinput>today's date</userinput> is rendered as <codeph>todays date</codeph>.</p> </li>
+			<li id="LI_E95274591DCE4CDD8F885C3B7FD78828"> <p>Two consecutive single quotes are rendered as a single quote. For example, the message text <userinput>today''s date</userinput> is rendered as <codeph>today's date</codeph>.</p> </li>
+			<li id="LI_B6AAC1E2D2884C34BEFF353724FFFABB"> <p>An open single quote without a closing single quote escapes the rest of the message. For example, if the variable {1} is the time using a Date Mask of hh, and the variable {2} is the date, an example of the rendering of the message text <userinput>{1} o'clock {2}</userinput> would be <codeph>12 oclock {2}</codeph>.</p> </li>
+			<li id="LI_A753EE614D644C8288B86908B7028990"> <p>JSON content in messages must be escaped by wrapping it with single quotes, thereby distinguishing it from a variable.</p> </li>
+			</ul><p> The Date Mask in a variable of type Date/Time cannot have an open single quote without a closing single quote.</p><ul id="UL_059E609073894BFDBE7F31592DECB5F5">
+			<li id="LI_029D7CD48A0741AEA6EDCB5902927D8B"> <p>If the Date Mask contains a single quote before some text and a single quote after the text, the single quotes are treated as escape characters. They cause the text between the single quotes to appear in the message. Consider a Date/Time variable using a Date Mask of yyyy.MM.dd G 'at' HH:mm:ss z. An example of the rendering of the variable is <codeph>2012.12.18 AD at 15:08:56 PDT</codeph> (with the word <codeph>at</codeph> appearing in the message).</p> </li>
+			<li id="LI_0048A21A00744F8193878525ADEEAE26"> <p>You can use a combination of single quotes and two consecutive single quotes to get the results you need. Consider a Date/Time variable using a Date Mask of hh 'o''clock' a, zzzz. An example of the rendering of the variable is <codeph>12 o'clock PM, Pacific Daylight Time</codeph>.</p> </li>
+			</ul></note> </section>
+		<section id="GUID-BD3188DC-FF26-4D0B-B669-6AFE99E1C27B"> <title id="GUID-FC3260E6-EB08-49AC-9867-5285EC3F7B2F">Program Command Shape</title> <note id="GUID-1B817620-C1CA-45B9-8080-1F90261CB2EE">For security reasons, the Program Command shape cannot be used in processes that are deployed to a <keyword conref="lib-Boomi_Keywords_0346af2b-13d7-491e-bec9-18c5d89225bf.xml#GUID-0207C7F1-40FD-4537-BE59-1D6DA46B9A1D/BOOMI_DELL" /> Atom Cloud.</note> </section>
+		<section id="GUID-14F1D98C-5253-4D78-BE59-4EC906CDBB19"> <title id="GUID-DB6799C6-28B4-457E-8F1A-5B11E95BA998">Start Shape</title> <note id="GUID-1B677EC8-5331-415C-9A9A-F050B244E462">A process that uses the Web Services Server connector in the Start shape and that <i>existed prior to the 9 January 2013 release</i> will continue to run as it did prior to the release date. A process that uses the JMS connector in the Start shape and that <i>existed prior to the July 2014 release</i> will continue to run as it did prior to the release date. A process that uses the MLLP Server Connector in the Start Shape and that <i>existed prior to 3 June 2015</i> will continue to run as it did prior to the release date. You will not see a process mode assigned to this process in the Start Shape dialog. If you open the Process Options dialog and the process mode has never been set, it will default to Low Latency and you will see a notification message. If you want to set a process mode for the process, select a mode and click OK in this dialog. If you want to leave it as is, click Cancel in this dialog. </note> </section>
+		<section id="GUID-6EECDECF-A4C6-415B-9722-C61681C4FC8D"> <dl>
+			<dlhead>
+				<dthd>Name</dthd>
+				<ddhd>Description</ddhd>
+			</dlhead>
+			<dlentry id="GUID-6C5D08DD-C8FE-4A68-99EC-574BF5FE7A5C">
+				<dt> <uicontrol>Display Name</uicontrol> </dt>
+				<dd>(Optional) User-defined name to describe the shape. If a name is not entered, “Trading Partner” appears on the shape. The selected standard, company, and communication method also appear on the label.</dd>
+			</dlentry>
+			<dlentry id="GUID-4E156D1A-8D98-47C9-AFF6-578F41D2246B">
+				<dt> <uicontrol>Communication Method</uicontrol> </dt>
+				<dd>Used to select a communication protocol: AS2, Disk, FTP, MLLP when HL7 is the standard, SFTP, or HTTP.<p>When used in the Start shape, this selects the communication protocol for inbound data. Only one inbound method is configurable per process.</p></dd>
+			</dlentry>
+			<dlentry>
+				<dt><draft-comment author="Jon_Brams">B2B-972 insertion</draft-comment><uicontrol>Archiving</uicontrol></dt>
+				<dd>If this option is selected, shapes attached to the Archive path define the processing performed to archive the raw document data.</dd>
+			</dlentry>
+			<dlentry id="GUID-28BBFECC-8182-476A-B3FD-E74FD82FD28F">
+				<dt> <uicontrol>My Standards</uicontrol> </dt>
+				<dd>This list contains “My Company” trading partners for document standards used in the process for inbound data, when used in the Start shape, or for outbound data, when used in the Trading Partner shape. Click <uicontrol>Add a Standard for My Company</uicontrol> to add the “My Company” trading partners for any document standards that are needed in the process. <p>If the star icon for a “My Company” trading partner is selected (<image href="main-ic-star-yellow-16_07649637-5d3c-4ec5-89fb-09e5bf521492.jpg" alt="selected star icon" id="IMAGE_EDF30A9CA9A545B99091C5904F50185A">
+					<alt />
+					</image>), that trading partner’s settings for the selected <uicontrol>Communication Method</uicontrol> are the defaults for that communication method. Default communication settings are used in the interchange with each trading partner configured to use the default settings. To select a different “My Company” trading partner to provide default communication settings, click its star icon.</p> <note id="note_be47d15d-6c08-4fdf-b93f-7d204fdf59e0">If, in the Start shape, there are multiple Custom-standard trading partners and “My Company” trading partners using the same communication settings, there is no way to determine a Custom-standard document’s intended sending trading partner and receiving “My Company” trading partner. Custom-standard documents are processed, but their From Trading Partner and To Trading Partner metadata values are not reported in Process Reporting. Those values are reported only if one Custom-standard trading partner and “My Company” trading partner are using communication settings that are different than the settings used by the other Custom-standard trading partners and “My Company” trading partners in the shape.</note><note id="MY_COMPANY_UNIQUE_AS2_ID_PER_STD"><draft-comment author="Jon_Brams">DOC-388 insertion</draft-comment>If, in the Start shape, the selected <uicontrol>Communication Method</uicontrol> is AS2, there are multiple “My Company” trading partners using the same standard, and two or more of those trading partners have the same AS2 ID, when the shape is executed a duplicate route error will occur, usually when the listener is starting up.</note></dd>
+			</dlentry>
+			<dlentry id="GUID-C8F336D9-B754-4B88-8AFC-4DCE93A39560">
+				<dt> <uicontrol>Trading Partners</uicontrol> </dt>
+				<dd>Used to select trading partners, either individually or in a Processing Group component, with which your company conducts the interchange.<dl>
+					<dlhead>
+						<dthd>Name</dthd>
+						<ddhd>Description</ddhd>
+					</dlhead>
+					<dlentry id="GUID-7591204B-3936-48FE-ACA6-9ACDF16E2043">
+						<dt><uicontrol>Add an individual trading partners to the list</uicontrol></dt>
+						<dd>If selected, <uicontrol>Trading Partner List</uicontrol> appears below.</dd>
+					</dlentry>
+					<dlentry id="GUID-3F252AB0-C853-48F7-B789-9CF6C538822F">
+						<dt><uicontrol>Use a Processing Group component</uicontrol></dt>
+						<dd>If selected, <uicontrol>Processing Group</uicontrol> appears below.</dd>
+					</dlentry>
+					</dl></dd>
+			</dlentry>
+			<dlentry>
+				<dt> <draft-comment author="Jon_Brams">B2B-509 update</draft-comment> <uicontrol>Trading Partner List</uicontrol> </dt>
+				<dd>Lists the trading partner component(s) with which your company conducts the interchange. Click <uicontrol>Add a Trading Partner</uicontrol> to add trading partner components to the list.</dd>
+			</dlentry>
+			<dlentry id="GUID-22B308D9-20E0-479B-BE38-784E3C88F77A">
+				<dt> <uicontrol>Processing Group</uicontrol> </dt>
+				<dd>Selects the Processing Group component consisting of trading partner components with which your company conducts the interchange.. To create a Processing Group, click <uicontrol><image href="main-ic-plus-sign-white-in-green-circle-16_4dc8c5f3-e893-4aef-ade2-0b7afe9476c1.jpg" id="IMAGE_E5B44E1A58D049C2BBABB2F2E7DFAACE">
+					<alt />
+					</image> Create</uicontrol>.</dd>
+			</dlentry>
+			</dl> </section>
+		<section id="SECTION_CBD5337373B44DB39C6ADC12D59773C5"> <title id="GUID-301735BB-9772-43CA-B0AC-EF6E4C741C4A">Shape icons</title> <note id="GUID-58229714-233E-46D2-99DD-DF1C53EB64E0">For many application connectors, the shape icon is specific to the application. </note> </section>
+		<section id="SECTION_E3D5B234AA3244D5A2AF87E717C94102"> <title id="GUID-99714888-904B-4B87-AE3A-CF69DFD7EE88">Test Mode</title> <note id="GUID-A3355F4B-2700-4ACF-ACEB-02A45291A0A5">Test mode does not support real time triggering and therefore cannot be used with listener processes.</note> </section>
+		<section id="GUID-C8EBC27B-C00F-4842-9AAE-6B00EB452E53"> <title id="GUID-1EBB9A6F-55C8-42BE-9573-6B80D61790FD">XML Profile</title> <note id="GUID-EBC46BA0-BF5A-4CE9-8021-F299CAB61869">This implicit ordering applies to XML profiles and connector operations created as of the July 2014 release or later.<ul id="GUID-715A2B60-1A5F-46FA-BD2D-2679B2D4F33E">
+			<li id="LI_3DE04374152344E2989FCC1A356FFB43"> <p>If you open an XML profile that was created before the July 2014 release and you import an XML document or schema into it, implicit ordering will not take effect.</p> </li>
+			<li id="LI_6F1773997A184F5AA99C78F5D27FF305"> <p>If you open a connector operation that was created before the July 2014 release and that has an XML profile attached to it, and then you browse for an XML profile, implicit ordering will not take effect.</p> </li>
+			<li id="LI_2733927FF02D4E85AF8C1F7A3284D2F5"> <p>However, if you open a connector operation that was created before the July 2014 release and that does not have an XML profile attached to it, and then you browse for an XML profile, implicit ordering will be applied to the new profile.</p> </li>
+			</ul></note> </section>
+		<section id="GUID-8F3FE63B-0254-46AD-BCBE-A93071382239"> <title id="GUID-71465334-53EF-40D9-8EEA-658E9C65023D">Process Routing - Tech Preview</title> <note id="GUID-3181C55C-D73B-420F-94C5-9A36B5E4941C">The ability to route processes dynamically at run time is a “Tech Preview” not intended for production use. Your <xref href="https://community.boomi.com/community/ideas-for-boomi" format="html" scope="external">feedback</xref> is welcome. <p>Process routing is an optional account feature. If you would like to have this feature enabled in your account, contact your <keyword conref="lib-Boomi_Keywords_0346af2b-13d7-491e-bec9-18c5d89225bf.xml#GUID-0207C7F1-40FD-4537-BE59-1D6DA46B9A1D/BOOMI_DELL" /> representative.</p></note> </section>
+		<section id="SECTION_4BAAAA03D6514D53984F81C1D636EE05"> <title id="GUID-4A241F8B-AD97-419D-89C4-575FC879DF11"> Deployment - Early Release</title> <note id="GUID-60AF2825-629C-4501-B291-8E3D3B280A4B">To help you make the transition to the new Packaged Component Deployment workflow at your own pace, <keyword conref="lib-Boomi_Keywords_0346af2b-13d7-491e-bec9-18c5d89225bf.xml#GUID-0207C7F1-40FD-4537-BE59-1D6DA46B9A1D/BOOMI_DELL" /> is releasing this functionality as an optional account feature. If you would like to have this feature enabled in your account, contact your account administrator. Account administrators can upgrade their Legacy Deployment accounts by self-enabling <uicontrol>Packaged Component Deployment</uicontrol> from the <menucascade>
+			<uicontrol>Settings</uicontrol>
+			<uicontrol>Account Information and Setup</uicontrol>
+			<uicontrol>Features</uicontrol>
+			</menucascade> page.</note> </section>
+		<section id="SECTION_EEA95E86F9BB486DB364BA75CD618546"> <title id="GUID-2BEC6167-A4E3-43A6-9148-922F0971ED29"> Process Property Extensions in Process Routes</title> <note id="GUID-14F39069-BDBB-4B77-8974-6A65FBD2A0B1">Process properties are an exception to this behavior because they have execution scope, meaning that once a property is accessed or set it remains in effect for the duration of the current process execution. With a Process Route shape, once a process property value is accessed or set, all default or extended values for that property in any process or subprocess are ignored. The only way to change that process property is with:<ul id="UL_9CA542A80533417DA78A06C5F78A919F">
+			<li id="LI_525DCD0BED5E4DF7B4BEE9D72133D891"> <p> The Set Properties shape</p> </li>
+			<li id="LI_DB87D758C469470587EF4DC7BA4E216A"> <p> The Set Process Property map function</p> </li>
+			<li id="LI_5A1811613C774D15A0057D4B70165652"> <p> A Groovy script within a custom scripting step or custom scripting map function</p> </li>
+			</ul></note> </section>
+		<section id="SECTION_4D5EA20BE31A4BE3A2B9C97C79C031FD"> <title id="GUID-835293CA-F19B-4F5F-9DD6-3922810113BA"> Custom Library Types</title> <ul id="UL_34E7197E7D494F36AB1AADCDF707A9EE">
+			<li id="LI_1CD5E3AE81FD46D88166B092411263E0"> <p> General - For JAR files that support multiple functions. The files are deployed to <filepath>/userlib</filepath>. The Java class loader loads the classes associated with this type of JAR file after the next Atom, Molecule, or Atom Worker restart; for Atom Clouds, classes are loaded on the next forked execution.</p> </li>
+			<li id="LI_A0E30C0E6A924B66A0D06967FFCF50E4"> <p> Scripting - For JAR files that support custom scripting. The files are deployed to <filepath>/userlib/script</filepath> and the classes are loaded immediately; no restart is required.</p> </li>
+			<li id="LI_BA7EE19038E84118BB59016303D4424A"> <p> Connector - For JAR files that support a connector. When you create a Connector custom library, you are prompted to select the connector type. The files are deployed to <filepath>/userlib/&lt;<varname>connType</varname>&gt;</filepath> and the classes are loaded immediately; no restart is required. </p> </li>
+			</ul> </section>
+		<section id="SECTION_34DE7C64DC5442FB8CCC780613E7CCAC"> <title id="GUID-D611C0DF-A7B8-4908-95F0-5BB3AD4885D4"> Test Atom Cloud</title> <note id="GUID-56E546B0-8A96-4CC5-9C07-42F374836BF9">If you have environments and test connections enabled in your account and you have test connection licenses, you can deploy processes to a Test Atom Cloud. In that case, test mode limitations do not apply. For more information, see the Test connection licensing topic.</note> </section>
+		<section id="SECTION_FAC014F29EE14F87AF9BD1F7D52835BE"> <title id="GUID-1B23B69B-1EE7-4CA0-BD85-A40315E45248">Creating a component - next steps</title> <p id="CREATING_COMPONENTT_NEXT_STEPS">If you are creating a process or deployable component and are ready to deploy it, after clicking <uicontrol>Save</uicontrol>, click the <uicontrol>Create Packaged Component</uicontrol> button. The Create Packaged Component wizard opens. Complete the steps in the wizard and click the <uicontrol>Deploy</uicontrol> button on the final confirmation message. Your component now appears in the list of packaged components in the <menucascade>
+			<uicontrol>Deploy</uicontrol>
+			<uicontrol>Packaged Components</uicontrol>
+			</menucascade> page, and in the list of deployed components on the <menucascade>
+			<uicontrol>Deploy</uicontrol>
+			<uicontrol>Deployments</uicontrol>
+			</menucascade> page.</p> </section>
+		<section id="SECTION_C8BB1C2BE3EA4902B4D2DA677B54A420"> <title id="GUID-552494C2-7F3B-433D-8A53-1E61029ED448">Certificate components - Deployment note</title> <note id="GUID-DF2573BA-03AB-4BCB-8497-973DF11B31CB"> Public X.509 certificates are the only type of Certificate components that can be deployed independently. PGP certificates and private X.509 certificates cannot be deployed independently.</note> </section>
+	</body>
+</topic>

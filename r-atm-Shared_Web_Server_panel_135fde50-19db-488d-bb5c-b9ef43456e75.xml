@@ -1,0 +1,267 @@
+﻿<?xml version="1.0" encoding="utf-8"?><?Inspire CreateDate="2019-02-20T20:33:02" ModifiedDate="2022-04-08T13:52:21"?><!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN" "reference.dtd">
+
+<reference xml:lang="en-us" id="GUID-186770BF-0A55-4151-ABA0-C3AC19DA5121">
+	<title id="GUID-62ACB2A8-7025-447E-BA80-24B044579474">Shared Web Server panel</title>
+	<shortdesc>The Shared Web Server panel appears on the Atom Management page (<menucascade>
+		<uicontrol>Manage</uicontrol>
+		<uicontrol> Atom Management</uicontrol>
+		</menucascade>). Use this panel to configure the selected Atom’s web server settings for web service publishing.</shortdesc>
+	<prolog>
+		<resourceid id="GUID-186770BF-0A55-4151-ABA0-C3AC19DA5121" />
+	</prolog>
+	<refbody>
+		<section id="GUID-C9DDC451-C9AC-4205-8EF9-8D022322E28E"> <note id="GUID-5381E8E3-81B8-4288-B2EA-1F2C663E22D9"> You must have the Atom Management privilege to perform actions on the Shared Web Server panel. If you have the Atom Management Read Access privilege, you can view existing settings, but you cannot make any modifications.</note> <p>The number of tabs that you see and the settings on the tabs vary, depending on whether the account that you are using owns the Atom, Molecule, or Atom Cloud that you selected and the features enabled in the account.</p> <fig id="GUID-3EBF4DFF-3922-4190-A9D0-8E6A82A21612">
+			<image href="manage-db-shared-web-server-settings_07d8629d-f3ec-4fb5-af59-8eaee712d43d.jpg" id="IMAGE_66E0DDE77664458CB009CB04593EE31C">
+				<alt>Shared Web Server configuration panel.</alt>
+			</image>
+			</fig> <p>Changes to the web server configuration specified on the General tab are saved for the most part in the <filepath>&lt;installation_directory&gt;/conf/container.properties</filepath> file. Notable exceptions are account authentication and web service user authentication properties, which are saved in the <filepath>&lt;installation_directory&gt;/conf/http-auth.properties</filepath> file.</p> <p> <note type="important" id="note_2a7244b1-a88c-417c-b3dc-c327991285d0">A "Plugin Restart" message appears when Cloud owners save configuration changes on the Shared Web Server panel. Restarting the plugin saves changes to configuration settings, but may cause Shared Web Server downtime for users. Owners may choose to cancel the restart if they do not want to cause downtime for users, or if they want to restart the plugin at a later time.</note> </p> </section>
+		<section id="GUID-BE412EA2-97D6-4E4D-82DD-2398B6174028"> <title id="GUID-8B0CC5AB-3AD1-4DC3-BD48-A95B24925A79">General tab</title> <p>The General tab enables you to set account-level settings and override several default values.</p> <dl>
+			<dlhead>
+				<dthd>Name </dthd>
+				<ddhd> Description </ddhd>
+			</dlhead>
+			<dlentry id="GUID-5400BC6C-3D87-4BAC-990D-4661698A6373">
+				<dt> <uicontrol>Base URL for API Requests</uicontrol> </dt>
+				<dd>By default, the URL is constructed based on the host name or external host name and port/SSL port settings. </dd>
+			</dlentry>
+			<dlentry id="GUID-BEDDADFF-9D6C-489F-9D9D-293A250EE085">
+				<dt> <uicontrol>API Type</uicontrol> </dt>
+				<dd>Sets the level of user management and API management functionality that is applicable to the web server.<dl>
+					<dlhead>
+						<dthd>Name </dthd>
+						<ddhd> Description </ddhd>
+					</dlhead>
+					<dlentry>
+						<dt><draft-comment author="Jon_Brams">BOOMI-37637/38209 update</draft-comment>Basic</dt>
+						<dd>User management is disabled. Client certificates and Custom authentication cannot be used. API Service/Proxy components cannot be used. This is the default for new accounts for which the Services Enablement feature is enabled.</dd>
+					</dlentry>
+					<dlentry>
+						<dt><draft-comment author="Jon_Brams">BOOMI-37637/38209 update</draft-comment>Intermediate</dt>
+						<dd>User management is enabled at the individual process level. API Service/Proxy components cannot be used.<p>This selection is available only in accounts for accounts for which the Services Enablement feature was enabled prior to the June 2014 release.</p></dd>
+					</dlentry>
+					<dlentry>
+						<dt><draft-comment author="Jon_Brams">BOOMI-37637/38209 update</draft-comment>Advanced</dt>
+						<dd>API Service/Proxy components are enabled. User management is enabled at the API Service component level. This is the default for new accounts for which the API Management feature is enabled.</dd>
+					</dlentry>
+					</dl><note id="GUID-B5B7217F-7565-414A-B47A-57CCCD9F0DA2">If this setting is changed from either Intermediate or Advanced and process or API filters are configured in the User Management tab, a confirmation dialog opens. Clicking <uicontrol>OK</uicontrol> in the confirmation dialog immediately applies the change and deletes the filters.</note></dd>
+			</dlentry>
+			<dlentry id="GUID-A212AE14-6738-4335-ACA7-4EA9B3756753">
+				<dt> <uicontrol>Authentication Type</uicontrol> </dt>
+				<dd>The authentication type that the account uses when communicating with the Atom, Molecule, or Atom Cloud. <p>For Atoms and Molecules, the authentication type selected here is used by all ports added to this web services server. The authentication type options are None, Basic, Client Certificate Header, Client Certificate, Custom, External Provider, and Gateway.</p><p>For Clouds, each port that is added can use the None, Basic, Client Certificate, or External Provider authentication types. The Cloud owner’s account can then select any one of the authentication types used by its ports as the Cloud’s authentication type.</p><p>Cloud accounts see only the authentication type(s) that the Cloud owner makes available to them.</p><p>All web service users in the account must use the same authentication type.</p><dl>
+					<dlhead>
+						<dthd>Name </dthd>
+						<ddhd> Description </ddhd>
+					</dlhead>
+					<dlentry id="GUID-0E3AD133-7DAE-442B-9348-4D45C2B1F12D">
+						<dt>None</dt>
+						<dd>No sign in information is required.<note id="GUID-6C2602D1-AD42-453B-B61D-0A2502530519">When <uicontrol>Authentication Type</uicontrol> is set to None, Users can still be added on the User Management tab and are used in the following scenarios:<ul id="GUID-1B0C5906-910D-4979-96E6-91310E4BE94C">
+							<li id="li_c09ba6cf-5420-4a1a-b1be-4fc8f462b343">For Atoms and Molecules, the Username identifies who is making the service call. In this scenario, passwords are ignored.</li>
+							<li id="li_afd39202-68e6-417b-a022-a77bfaaac1e8">For Atom Clouds, one or more Users must be set on the User Management tab. The Username appends the instance ID so that the account being called is identified. Plus, it identifies who is making the service call. </li>
+							</ul></note></dd>
+					</dlentry>
+					<dlentry id="GUID-49C74AC3-EEFF-4B0C-8222-0883631C5B7B">
+						<dt>Basic</dt>
+						<dd>Basic authentication is required for sign in.<p>If <uicontrol>Authentication Type</uicontrol> is set to Basic and <uicontrol>API Type</uicontrol> is set to Basic, then a button for generating a token appears. If the <uicontrol>API Type</uicontrol> is set to Basic, then client certificates and custom authentication cannot be used.</p></dd>
+					</dlentry>
+					<dlentry id="GUID-D7B11DA7-69A1-487B-BC74-7535D4C4B178">
+						<dt>Client Certificate Header</dt>
+						<dd>A client certificate component is included in http or https headers.<p><uicontrol>Client Certificate Header</uicontrol> is available only if <uicontrol>API Type</uicontrol> is set to Intermediate or Advanced. </p></dd>
+					</dlentry>
+					<dlentry id="GUID-22372C42-F3FB-4FB5-9D23-137CA4C85068">
+						<dt>Client Certificate</dt>
+						<dd>A client certificate component is required for authentication.<p><uicontrol>Client Certificate</uicontrol> is available only if <uicontrol>API Type</uicontrol> is set to Intermediate or Advanced. When using Client Certificate authentication with the Shared Web Server, certificates should always be unique. </p></dd>
+					</dlentry>
+					<dlentry id="GUID-031A08A5-18A1-4087-8E2B-91AC16CD2C90">
+						<dt>Custom</dt>
+						<dd>The JAAS LoginModule is used for authentication. This authentication type is available only for Atoms and Molecules. It can be used only by accounts for which the API Management feature is enabled.<p><uicontrol>Custom</uicontrol> is available only if <uicontrol>API Type</uicontrol> is set to Intermediate or Advanced and you have <keyword conref="lib-Boomi_Keywords_0346af2b-13d7-491e-bec9-18c5d89225bf.xml#GUID-0207C7F1-40FD-4537-BE59-1D6DA46B9A1D/BOOMI_APIMANAGEMENT" /> functionality. </p></dd>
+					</dlentry>
+					<dlentry id="GUID-60B62BDC-CEC5-4CDA-91B3-7C34D85B071D">
+						<dt>External Provider</dt>
+						<dd>An external identity provider is used for authentication.<p><uicontrol>External Provider</uicontrol> is available only if <uicontrol>API Type</uicontrol> is set to Advanced and you have <keyword conref="lib-Boomi_Keywords_0346af2b-13d7-491e-bec9-18c5d89225bf.xml#GUID-0207C7F1-40FD-4537-BE59-1D6DA46B9A1D/BOOMI_APIMANAGEMENT" /> functionality. It is available on Atoms, Molecules, and local Atom Clouds only. <uicontrol>External Provider</uicontrol> cannot be set on Atoms or Molecules attached to a <keyword conref="lib-Boomi_Keywords_0346af2b-13d7-491e-bec9-18c5d89225bf.xml#GUID-0207C7F1-40FD-4537-BE59-1D6DA46B9A1D/BOOMI_DELL" /> Atom Cloud.</p><p>Configure your external identity provider details within <keyword conref="lib-Boomi_Keywords_0346af2b-13d7-491e-bec9-18c5d89225bf.xml#GUID-0207C7F1-40FD-4537-BE59-1D6DA46B9A1D/BOOMI_DELL" /><keyword conref="lib-Boomi_Keywords_0346af2b-13d7-491e-bec9-18c5d89225bf.xml#GUID-0207C7F1-40FD-4537-BE59-1D6DA46B9A1D/BOOMI_APIMANAGEMENT" />.</p></dd>
+					</dlentry>
+					<dlentry>
+						<dt>Gateway</dt>
+						<dd>Leverages a validation token accessible to a <keyword conref="lib-Boomi_Keywords_0346af2b-13d7-491e-bec9-18c5d89225bf.xml#GUID-0207C7F1-40FD-4537-BE59-1D6DA46B9A1D/BOOMI_DELL" /> API Gateway that is validated by the Atom, Molecule or Cloud to authenticate.<p><uicontrol>Gateway</uicontrol> is available only if <uicontrol>API Type</uicontrol> is set to Advanced and you have <keyword conref="lib-Boomi_Keywords_0346af2b-13d7-491e-bec9-18c5d89225bf.xml#GUID-0207C7F1-40FD-4537-BE59-1D6DA46B9A1D/BOOMI_APIMANAGEMENT" /> functionality. It is available on Atoms, Molecules, and local Atom Clouds only. <uicontrol>Gateway</uicontrol> cannot be set on Atoms or Molecules attached to a <keyword conref="lib-Boomi_Keywords_0346af2b-13d7-491e-bec9-18c5d89225bf.xml#GUID-0207C7F1-40FD-4537-BE59-1D6DA46B9A1D/BOOMI_DELL" /> Atom Cloud.</p><p>Configure your Gateway authentication details within <keyword conref="lib-Boomi_Keywords_0346af2b-13d7-491e-bec9-18c5d89225bf.xml#GUID-0207C7F1-40FD-4537-BE59-1D6DA46B9A1D/BOOMI_DELL" /><keyword conref="lib-Boomi_Keywords_0346af2b-13d7-491e-bec9-18c5d89225bf.xml#GUID-0207C7F1-40FD-4537-BE59-1D6DA46B9A1D/BOOMI_APIMANAGEMENT" />.</p></dd>
+					</dlentry>
+					</dl></dd>
+			</dlentry>
+			</dl> </section>
+		<section id="GUID-B3FA6FFA-E890-4484-A67F-0BE195F4FC2E"> <title id="GUID-D7855A00-9540-4C6E-BA26-1C54216E25B2">Listening Port Configuration</title> <p>The settings under <uicontrol>Listening Port Configuration</uicontrol> on the General tab are specific to the server environment. In Atom Cloud configurations, these settings are present only for the account that owns the Atom Cloud.</p> <p>You can have only one API Gateway authentication port configured. If you configure more than one port or already have multiple ports configured and you update any settings in the Shared Web Server panel, you will be prompted to delete or disable any additional port configurations.</p> <note type="important" id="GUID-51087A51-2B17-4E4A-883F-1115A121A158"> Internal Port and External Port are independent from Internal Host and External Host. <p>If you want to use the default value for the External Port, type in the default Port number for it to be used. The default Port is not displayed in the Base URL for API Requests field, because the standard is to not include the default Port number in the URL.</p></note> <dl>
+			<dlhead>
+				<dthd>Name </dthd>
+				<ddhd> Description </ddhd>
+			</dlhead>
+				<dlentry>
+					<dt><uicontrol>Default</uicontrol></dt>
+					<dd>The default listening port. The default port is also used for accessing
+						Swagger in a deployed API. </dd>
+				</dlentry>
+			<dlentry id="GUID-5400BC6C-3D87-4BAC-990D-4661698A6373">
+				<dt> <uicontrol>Port</uicontrol> </dt>
+				<dd>The port number of the external port which routes to the shared web server listener.</dd>
+			</dlentry>
+			<dlentry id="GUID-BEDDADFF-9D6C-489F-9D9D-293A250EE085">
+				<dt> <uicontrol>SSL</uicontrol> </dt>
+				<dd>If selected, the port is an SSL (HTTPS) port. The default for SSL ports is 9093.</dd>
+			</dlentry>
+			<dlentry id="GUID-A212AE14-6738-4335-ACA7-4EA9B3756753">
+				<dt> <uicontrol>Authentication Type</uicontrol> </dt>
+				<dd>The ports' authentication type is the same as the accounts authentication type. The authentication type can be changed only for the account, not for individual ports in the account.</dd>
+			</dlentry>
+			<dlentry id="GUID-EE571FF7-739F-46EC-B0B4-84F2579D6B97">
+				<dt> <uicontrol>External SSL</uicontrol> </dt>
+				<dd>If selected, the external port is an SSL (HTTPS) port. External SSL ports can be redirected to an internal non-SSL port.</dd>
+			</dlentry>
+				<dlentry>
+					<dt>Base URL for API Requests</dt>
+					<dd>This URL is constructed per the configured <uicontrol>External
+							Host</uicontrol> and optionally the <uicontrol>External
+						Port</uicontrol>.</dd>
+				</dlentry>
+			</dl> <p>If the <uicontrol>Authentication Type</uicontrol> is set to <uicontrol>Client Certificate</uicontrol>, the SSL Certificate field displays. Select the correct Certificate component for the client.</p>
+			<p>If the <uicontrol>Authentication Type</uicontrol> is set to <uicontrol>Client
+					Certificate Header</uicontrol>, the <uicontrol>Client Certificate Header
+					Name</uicontrol> field displays. Add the name of the header for the certificate
+				to reside in.</p> </section>
+		<section id="GUID-DDD166AF-150D-404A-BFFF-9D335D5E3F36"> <title id="GUID-C9AAAD7C-2834-4CB9-A3B2-D25696A92B17">Advanced Settings</title> <p>The settings under <uicontrol>Advanced Settings</uicontrol> on the General tab are for advanced web service users and may not need to be configured in a majority of cases. In Atom Cloud configurations, this section is present only for the account that owns the Atom Cloud.</p> <dl>
+			<dlhead>
+				<dthd>Name </dthd>
+				<ddhd> Description </ddhd>
+			</dlhead>
+			<dlentry>
+				<dt> <uicontrol>Internal Host</uicontrol> </dt>
+				<dd>For multi-homed boxes, an IP address can be used here for binding to a specific interface.<note type="important" id="note_cc82c0f4-0db1-46c1-9561-a4d0317bd2aa"> Internal Host and External Host are independent from Internal Port and External Port. <p>If you want to use the default value for the External Port, you need to type in the default Port number for it to be used. The default Port is not displayed in the Base URL for API Requests field, because the standard is to not include the default Port number in the URL.</p></note></dd>
+			</dlentry>
+			<dlentry>
+				<dt> <uicontrol>Examine Forwarded Headers</uicontrol> </dt>
+				<dd>Embedded Java technology is capable of examining forwarded headers and extracting external host information for response/callback purposes.<p>Selecting this option substitutes the load balancer’s host name for the node’s host name in the request. This is recommended, particularly for Molecules and Atom Clouds.</p><note type="important" id="note_c833da0b-d72b-4fa3-8407-aadc5f5058e2"> Select this field to use a URL that uses <codeph>https</codeph> rather than <codeph>http</codeph> for your Swagger Visualization Portal URL. <p>When <uicontrol>Examine Forwarded Headers</uicontrol> is selected, the external host, port, and protocol information is extracted from the request headers of the proxy.</p><p>On the proxy, configure the following headers for a secure <codeph>https</codeph> configuration of your Swagger Visualization Portal:</p><dl>
+					<dlhead>
+						<dthd>Header</dthd>
+						<ddhd>Description</ddhd>
+					</dlhead>
+					<dlentry>
+						<dt><codeph>X-Forwarded-Host</codeph></dt>
+						<dd>The External Host name. <p>If you use a port other than the default port of 433, also include <codeph>host:port</codeph>.</p></dd>
+					</dlentry>
+					<dlentry>
+						<dt><codeph>X-Forwarded-Proto</codeph></dt>
+						<dd>Use a value of <codeph>https</codeph> for a secure Swagger Visualization Portal URL.</dd>
+					</dlentry>
+					</dl><p>Your Atom checks these headers, when they are present, and extracts the information from them. </p><p>If the proxy is configured to forward the host name in a different header than <codeph>X-Forward-Host</codeph>, you can configure the custom property <codeph>com.boomi.container.sharedServer.http.forwardedProtoHeader</codeph> on your Atom. For instance, if you configure the proxy to forward the host name in the <codeph>X-Destination-Host</codeph> header, set the <codeph>com.boomi.container.sharedServer.http.forwardedProtoHeader</codeph> on your Atom to <codeph>X-Destination-Host</codeph>. Your Atom will check the request for the <codeph>X-Destination-Host</codeph> header and extract the host name information from it. </p></note></dd>
+			</dlentry>
+			<dlentry>
+				<dt> <uicontrol>External Host</uicontrol> </dt>
+				<dd>The external host name or IP for the listener.<note type="important" id="GUID-51087A51-2B17-4E4A-883F-1115A121A158"> Internal Host and External Host are independent from Internal Port and External Port. <p>If you want to use the default value for the External Port, you need to type in the default Port number for it to be used. The default Port is not displayed in the Base URL for API Requests field, because the standard is to not include the default Port number in the URL.</p></note></dd>
+			</dlentry>
+			<dlentry id="GUID-A9B589B2-3E0B-4CA3-8062-85ECFE318A92">
+				<dt> <uicontrol>Maximum Number of Threads</uicontrol> </dt>
+				<dd>The maximum number of handler threads that the listen process spawns. Other requests are queued. The default is 250.</dd>
+			</dlentry>
+			</dl> </section>
+		<section id="GUID-93A0204E-76C5-4D2F-8158-ABC799D39D3A"> <title id="GUID-88B41CBE-3BEB-404B-9E2E-FFB0DF90CD86">Protected Headers</title> <p>The values of protected headers in web service requests are not passed as dynamic document properties to the shared web server listener process execution.</p> <dl>
+			<dlhead>
+				<dthd>Name</dthd>
+				<ddhd>Description</ddhd>
+			</dlhead>
+			<dlentry id="GUID-DAB2CDDA-7599-4C75-9EB5-051B03B8CC7E">
+				<dt> <uicontrol>Use default</uicontrol> </dt>
+				<dd>If selected (the default), the Header Name list is updated to contain only the following header names. Editing of the list is disabled.<table id="GUID-8F5B457C-C678-49A7-BB12-A54B3521C148" conref="lib-AtomSphere_API_9a0b3cc6-0758-45f9-b2cc-04932561d53c.xml#GUID-3B92F5CD-0A69-4191-BF29-297025332DDB/GUID-C7CF72C9-C6CA-43DF-A310-3E84E3D3BA0D">
+					<tgroup cols="1">
+						<colspec colnum="1" colname="col1" />
+						<tbody>
+							<row id="row_c3f2c9a8-18b0-4501-b458-b60573e70fc4">
+								<entry colname="col1" />
+							</row>
+						</tbody>
+					</tgroup>
+					</table></dd>
+			</dlentry>
+			<dlentry id="GUID-1E578DCC-3A8F-4769-9778-EB572AA7F6CA">
+				<dt> <uicontrol>Define custom headers</uicontrol> </dt>
+				<dd>The Header Name list is editable.<note id="GUID-AFCCB6C2-FA6F-4A56-8B35-A7BCC22E1E32">Defining custom headers does not remove the names of the default protected headers from the list. You must manually delete those headers.</note><p>Each list entry has a field in which the name of a header is specified — either a <xref href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec4.html#sec4.2" format="html" scope="external">standard HTTP header</xref> or a custom header. </p><p>Standard HTTP header field names are case-sensitive. Header names can contain alphanumeric characters and special characters !#$%&amp;'*+.^`~-_. </p><p>Custom header field names must have the prefix <codeph>X-WSS-</codeph>. Custom header fields are case insensitive.</p><p>Clicking <image href="main-ic-x-white-in-red-circle-16_0d0c5dc5-1c5e-4117-8a58-92c5e050ec5b.jpg" id="IMAGE_AE301418094C40C688E7BEA370B34537">
+					<alt>Remove button.</alt>
+					</image> next to a header name removes that header name from the list.</p><note id="GUID-1E83F146-8AF9-4F69-9151-93906BE97EB8">Only the values of the following special standard HTTP headers are eligible to be passed to the shared web server listener process execution:<table id="GUID-D0F4DE9B-EFA6-4AFC-A0AE-5E3A030363FC" conref="lib-AtomSphere_API_9a0b3cc6-0758-45f9-b2cc-04932561d53c.xml#GUID-3B92F5CD-0A69-4191-BF29-297025332DDB/GUID-EC6903CE-6829-4FB3-AEF8-0411906F5716">
+					<tgroup cols="1">
+						<colspec colnum="1" colname="col1" />
+						<tbody>
+							<row id="row_fca269d8-9e85-4442-a65c-2f783f53d208">
+								<entry colname="col1" />
+							</row>
+						</tbody>
+					</tgroup>
+					</table><p>So there is no need to specify any other standard HTTP headers as protected.</p></note></dd>
+			</dlentry>
+			</dl> </section>
+		<section id="GUID-DEA94A5E-64D5-44C2-8A98-EA83C35E06E6"> <title id="GUID-DE13056C-7413-432B-9AF5-81C0C364DE50">User Management tab</title> <p>The User Management tab’s settings apply directly to the account's relationship, or the web service user in an account’s relationship, to the Atom, Molecule or Atom Cloud in question. This tab is present only if <uicontrol>API Type</uicontrol> is set to Intermediate or Advanced on the General tab.</p> <p>On this tab the owner of the Atom, Molecule or Atom Cloud can add and delete web service users. The owner can view and generate a user’s authentication token, select their client certificate, or enter their external user name. The owner can view and edit the IP filtering rules for a user, and view and edit the list of processes that should be accessible to each user.</p> <dl>
+			<dlhead>
+				<dthd>Name</dthd>
+				<ddhd> Description </ddhd>
+			</dlhead>
+			<dlentry id="GUID-B6EC14D2-DF7D-4FED-B416-61E3EA60DCF5">
+				<dt> <uicontrol>Enable <keyword conref="lib-Boomi_Keywords_0346af2b-13d7-491e-bec9-18c5d89225bf.xml#GUID-0207C7F1-40FD-4537-BE59-1D6DA46B9A1D/BOOMI_APIMANAGEMENT" /> Internal Roles</uicontrol> </dt>
+				<dd>Available only if <uicontrol>API Type</uicontrol> is set to Advanced. If you select this check box, the Internal Roles Management tab appears.</dd>
+			</dlentry>
+			<dlentry id="GUID-1D6431A7-3549-4E98-B4BF-D28ECDF53536">
+				<dt> <uicontrol>Users</uicontrol> </dt>
+				<dd>List of web service users with access to the account and the Atom, Molecule or Atom Cloud on which it resides. The first user in the list is always the account, which cannot be deleted. It is identified by its account ID. If the selected Atom is attached to an Atom Cloud, this field displays the Instance ID, which is the account ID followed by a period and a suffix.<p>Any user of an Atom Cloud can add web service users to this list. Use the icons at the top of the list to add or delete web service users. When you select a web service user, the user name, authentication, IP filtering rules, and processes to which the user has access appear on the right side of the panel.</p></dd>
+			</dlentry>
+			<dlentry id="GUID-F4767EAF-E631-4AAC-8BDC-46C63DCA0C9E">
+				<dt> <uicontrol>Username</uicontrol> </dt>
+				<dd>Used to enter the user name of the web service user. You cannot enter spaces or special characters in this field and it cannot be blank. The user name must be unique to the account and the Atom, Molecule, or Atom Cloud. An @ symbol and the account ID are appended to the user name that you enter, in the format <codeph>usernname@accountID</codeph>. The account ID cannot be edited.<p>The user name is <i>not</i> equivalent to a <keyword conref="lib-Boomi_Keywords_0346af2b-13d7-491e-bec9-18c5d89225bf.xml#GUID-0207C7F1-40FD-4537-BE59-1D6DA46B9A1D/BOOMI_DELL" /><keyword conref="lib-Boomi_Keywords_0346af2b-13d7-491e-bec9-18c5d89225bf.xml#GUID-0207C7F1-40FD-4537-BE59-1D6DA46B9A1D/PLATFORM" /> user name or email address.</p></dd>
+			</dlentry>
+			<dlentry id="GUID-EB38DDD8-347F-4B67-AC1B-39D713020720">
+				<dt> <uicontrol>Use IP Filtering</uicontrol> </dt>
+				<dd>Used to enable IP filtering. If you select this check box but do not specify any IP filters, all IP addresses are blocked for the user. If you specify filters, only IP addresses matching those patterns are allowed.</dd>
+			</dlentry>
+			<dlentry>
+				<dt> <draft-comment author="Jon_Brams">BOOMI-38209 update</draft-comment> <uicontrol>Use API Filtering</uicontrol> </dt>
+				<dd>Used to grant access to processes linked to certain API Service components that are deployed to the selected Atom or environment. The user will be able to invoke web service calls only for processes linked to API Service components to which they have access. This section is present only if <uicontrol>API Type</uicontrol> is set to Advanced.</dd>
+			</dlentry>
+			<dlentry id="GUID-1BBEF033-40C1-4D60-B562-29C6605EA4D2">
+				<dt> <uicontrol>Use Process Filtering</uicontrol> </dt>
+				<dd>Used to grant access to certain web service listener processes that are deployed to the selected Atom or environment. The user will be able to invoke web service calls only for processes to which they have access. This section is present only if <uicontrol>API Type</uicontrol> is set to Intermediate.</dd>
+			</dlentry>
+			</dl> </section>
+		<section id="GUID-A7C51257-D886-4A67-A0A9-8784E7F95075"> <title id="GUID-67E3C9A2-A962-4574-9A9B-D2CDDC5B1FD7">Internal Roles Management tab</title> <p>The Internal Roles Management tab allows a <keyword conref="lib-Boomi_Keywords_0346af2b-13d7-491e-bec9-18c5d89225bf.xml#GUID-0207C7F1-40FD-4537-BE59-1D6DA46B9A1D/BOOMI_DELL" /> administrator to associate specific users to each internal role. <xref href="http://help.boomi.com/api-management/GUID-1122C90D-EB04-4322-8A54-40D961881137.html" format="html" scope="external">Internal Roles</xref> are defined in <keyword conref="lib-Boomi_Keywords_0346af2b-13d7-491e-bec9-18c5d89225bf.xml#GUID-0207C7F1-40FD-4537-BE59-1D6DA46B9A1D/BOOMI_APIMANAGEMENT" /> on the <menucascade>
+			<uicontrol>Authentication</uicontrol>
+			<uicontrol> Internal</uicontrol>
+			</menucascade> page.</p> <p>This tab is present only if <uicontrol>API Type</uicontrol> is set to Advanced on the General tab and the check box <uicontrol>Enable <keyword conref="lib-Boomi_Keywords_0346af2b-13d7-491e-bec9-18c5d89225bf.xml#GUID-0207C7F1-40FD-4537-BE59-1D6DA46B9A1D/BOOMI_APIMANAGEMENT" /> Internal Roles</uicontrol> is selected on the User Management tab.</p> <dl>
+			<dlhead>
+				<dthd>Name</dthd>
+				<ddhd>Description</ddhd>
+			</dlhead>
+			<dlentry id="GUID-B85B2495-098C-4D15-97BD-F55C8D233098">
+				<dt> <uicontrol>Internal Role</uicontrol> </dt>
+				<dd>List of internal roles that exist on the Atom, Molecule, or Atom Cloud on which it resides.</dd>
+			</dlentry>
+			</dl> </section>
+		<section id="GUID-D58ABE0B-CF76-413E-AEF9-A00FCAA05AA4"> <title id="GUID-EFFFC9DD-35D7-41FE-94F9-B5622B41C068">CORS Configuration tab</title> <p>The CORS Configuration tab is used to define rules for the handling of incoming CORS requests. This tab is present only if <uicontrol>API Type</uicontrol> is set to Advanced.</p> <dl>
+			<dlhead>
+				<dthd>Name</dthd>
+				<ddhd>Description</ddhd>
+			</dlhead>
+			<dlentry id="GUID-EB9E7DB7-E5D7-4031-981C-9B94B3107A38">
+				<dt> <uicontrol>Origins</uicontrol> </dt>
+				<dd>Lists the origin domains from which the web server allows requests in the order in which the web server applies matching. You should order origins from most specific to least specific. You can reorder origins by dragging their reorder icons <uicontrol><image href="main-ic-dots-16-gray-on-white_404b1c3f-e21a-4b67-ba76-65412d39eb70.jpg" id="IMAGE_86B6AD411727459F8EEE68E56FDDBF69">
+					<alt>Reorder Origins icon.</alt>
+					</image></uicontrol>. <userinput>*</userinput> denotes any domain and, if specified, should be last in the list.</dd>
+			</dlentry>
+			<dlentry id="GUID-CE77ACDF-5214-4A01-B761-DF455057CE34">
+				<dt> <uicontrol>Ports</uicontrol> </dt>
+				<dd>Expands or collapses the controls used to specify ports from which the web server allows requests from the selected origin.<p> If the list is not populated, the web server allows requests from the default ports — 80 for HTTP and 443 for HTTPS.</p></dd>
+			</dlentry>
+			<dlentry id="GUID-31CC885D-27E6-46BD-9227-726D3DE35D6B">
+				<dt> <uicontrol>Allowed Methods</uicontrol> </dt>
+				<dd>Expands or collapses the controls used to specify allowed methods in requests from the selected origin.</dd>
+			</dlentry>
+			<dlentry id="GUID-39F6A171-9C42-449A-BFBD-657CCD07CD65">
+				<dt> <uicontrol>Allowed Request Headers</uicontrol> </dt>
+				<dd>Expands or collapses the controls used to specify allowed headers, in addition to the defaults, in requests from the selected origin.</dd>
+			</dlentry>
+			<dlentry id="GUID-3D1C3BFF-3CF5-4412-86F9-C2D51331C3BD">
+				<dt> <uicontrol>Exposed Response Headers</uicontrol> </dt>
+				<dd>Expands or collapses the controls used to specify headers, in addition to the defaults, included in the web server’s responses to requests from the selected origin.</dd>
+			</dlentry>
+			</dl> </section>
+	</refbody>
+</reference>

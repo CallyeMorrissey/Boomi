@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?><?Inspire CreateDate="2019-02-20T20:23:52" ModifiedDate="2022-03-31T09:27:35"?><!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+
+<topic xml:lang="en-us" id="GUID-0207C7F1-40FD-4537-BE59-1D6DA46B9A1D">
+	<title id="GUID-476889E2-92DD-4825-96E9-5087542795D5">Boomi Keywords</title>
+	<body>
+		<section id="GUID-79772E40-B342-4B82-9573-8B76AB4A269C"> <title id="GUID-1F40FF66-5CBD-413C-9EB8-B65A73CC6FB4">Dell &amp; Boomi</title> <p> <keyword id="BOOMI_DELL">Boomi</keyword> </p> </section>
+		<section id="GUID-C84EDFF6-097B-4BE5-8BA3-2EF247A64EF7"> <title id="GUID-01DCFD27-FDD1-480E-ACB2-522D74E88964">Products</title> <p> <keyword id="BOOMI_ATOMSPHERE">AtomSphere</keyword> <b>NOTE: AtomSphere as a product is being replaced by Integration. Use that conref instead UNLESS you are working with anything that will stay flat AtomSphere, such as APIs that are part of the AtomSphere API.</b></p> <p> <keyword id="BOOMI_INTEGRATION">Boomi Integration</keyword> </p> <p> <keyword id="BOOMI_MDMCLOUD">Master Data Hub</keyword> </p> <p> <keyword id="BOOMI_APIMANAGEMENT">API Management</keyword> </p><p> <keyword id="ATOMSPHERE_GO">AtomSphere Go</keyword> </p> <p> <keyword id="MANY_WHO">Boomi Flow</keyword> </p><p><keyword id="DCP">Data Catalog and Preparation</keyword></p> <p><keyword id="CONNECTOR_MANAGEMENT">Connector Management</keyword></p></section>
+		<section id="GUID-BFAD3C80-5CB0-4ED4-8AA2-CFA16E4725B3"> <title id="GUID-F14E2585-5011-4259-9CF2-BAF2280AF52C">Platform</title> <p> <keyword id="PLATFORM">AtomSphere platform</keyword> </p> </section>
+		<section id="section_xxb_zfg_hpb"> <title>Release names</title> <p><keyword id="prerelease">Runtime Release</keyword></p> <p><keyword id="release">AtomSphere Release</keyword></p> </section>
+		<section id="section_es3_xrc_llb"> <title>Help site</title> <p><keyword id="HELP_SITE">Boomi Documentation</keyword></p> <p><keyword id="HELP_SITE_CAPS">BOOMI DOCUMENTATION</keyword></p> </section>
+		<section id="section_oyx_ntp_gjb"> <title>Community</title> <p><keyword id="COMMUNITY">Boomi Community</keyword></p> </section>
+		<section id="section_b1j_4tp_gjb"> <title>MDM Services</title> <ol id="GUID-178298CB-DDFC-4E36-9C2F-63872F2C0A7F">
+			<li id="LI_4E7B0485C6534B1EAA3DEB53A2A3E478"><keyword id="BOOMI_MDMCLOUDREPOSITORY">MDM Clouds</keyword></li>
+			<li id="LI_211AF6160D714AEB8211A7084CB239B2"><keyword id="BOOMI_MDHUBSHORTNAME">Hub</keyword></li>
+			</ol> </section>
+		<section id="section_e1l_ptp_gjb"> <title>API Management</title> <ol id="OL_78AA0AA6B647464283A0550A8882492C">
+			<li id="LI_D25BF83AB10C461A98DD2A01AF80AB88"><keyword id="BOOMI_SWAGGERVISUALIZATION">Swagger Visualization Portal</keyword></li>
+			</ol> </section>
+		<p>Terminology</p>
+		<ol id="GUID-5C9AAECF-0367-4A19-BB31-8EA0F1D503D4">
+			<li id="LI_51182185ABF94AFFBAEABBABFEFDE91F"><keyword id="BOOMI_MDMMASTERRECORDTYPE_LOWER">golden</keyword></li>
+			<li id="LI_6C07E0DA6FB64011AAB86D0560CEFF4D"><keyword id="BOOMI_MDMMASTERRECORDTYPE_UPPER">Golden</keyword></li>
+			<li id="LI_31BCFC8DE06247D39A5B317DFA9D6747"><keyword id="BOOMI_MDMMODEL_LOWER">model</keyword></li>
+			<li id="LI_0E50418E8F4B47D6B28AA4F0EF1D2080"><keyword id="BOOMI_MDMATOM_LOWER">repository</keyword></li>
+		</ol>
+		<p>Component Versions<draft-comment>This component is for the artifact versions of the Connector SDK as of the Mar 2020 release, as well as the version used in the custom connectors topic.</draft-comment></p>
+		<ol id="GUID-04C0862C-C0C4-4097-81ED-A00BED4230B9">
+			<li id="LI_21595984FF7A4C34BD5B5FA1EF255B9E"><keyword id="BOOMI_CONNECTORSDKVERSION">2.3.0</keyword></li>
+		</ol>
+	</body>
+</topic>

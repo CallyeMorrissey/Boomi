@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8"?><?Inspire CreateDate="2022-04-01T18:52:01" ModifiedDate="2022-05-23T13:20:09"?><!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+
+<concept id="atm-May2022_API_Management">
+	<title> <keyword conref="lib-Boomi_Keywords_0346af2b-13d7-491e-bec9-18c5d89225bf.xml#GUID-0207C7F1-40FD-4537-BE59-1D6DA46B9A1D/BOOMI_APIMANAGEMENT" /> </title>
+	<shortdesc product="Apr2022">
+		<keyword conref="lib-Boomi_Keywords_0346af2b-13d7-491e-bec9-18c5d89225bf.xml#GUID-0207C7F1-40FD-4537-BE59-1D6DA46B9A1D/BOOMI_APIMANAGEMENT" /> features and fixes are not in the <keyword conref="lib-Boomi_Keywords_0346af2b-13d7-491e-bec9-18c5d89225bf.xml#GUID-0207C7F1-40FD-4537-BE59-1D6DA46B9A1D/prerelease" />. </shortdesc>
+	<conbody>
+		<section id="section_ujb_zyr_cjb"> <title>API Gateways and Authentication Brokers</title> <p>Features:<ul id="ul_p5l_cnh_ktb">
+			<li id="li_df2328cf-ef74-48b8-9876-2a1f6481a799"><p>Added multi-mode authentication support to the Shared Web Server connector. This feature allows for multiple authentication methods for Atoms and Molecules, with the ability to specify an authentication method for a specific port. This feature will also help with migration from the Authentication Broker to the API Gateway without incurring an extra overhead cost or disruption in service. (APIM-3897)<note id="note_hzd_kgl_ntb"> <p>If you have Base URLs configured to override the default, since this field no longer exists, the Host name will be extracted and set as the <uicontrol>External Host Name </uicontrol>for the URL.</p> </note></p> <p>To learn more about this feature, see the topic <xref
+								href="int-multi_mode_authentication_a100ab5f-1859-4abe-a560-b0438796158a.dita"
+								scope="peer">Multi-Mode Authentication</xref>.</p></li>
+			<li id="li_d2ec5674-e08c-4301-af05-73f0d8c77475"><p>Added support for <parmname>role-based-access-control</parmname> and <parmname>request-content-limit</parmname> custom policies for the API Policy Adapter. (APIM-4284)</p><p>To learn more about this feature, see the topic <xref
+								href="api-api_policy_adapter_5c3a793d-a417-4537-9612-c11e92c0ed19.xml"
+								scope="peer">API Policy Adapter</xref>.</p></li>
+			<li id="li_50cf05d2-3df2-470a-b2f7-d38d93925295"><p>Added an option to the Authentication Brokers page for removing an Authentication Broker from Brokers that are extended as Gateways. When <b>Remove Broker</b> is selected, Broker functionality is removed and the container will work as API Gateway. (APIM-4122)</p> <p>To learn more about this feature, see the topic <xref
+								href="api-broker_deprecation_58f90726-af01-4b0b-bd4d-629e8840162f.xml"
+								scope="peer">Broker Retirement</xref>.</p></li>
+			</ul></p> <p>Fixes: </p> <p> <ul id="ul_wqf_xgh_ktb">
+			<li id="li_053fcc63-050e-4ea1-9508-d882421ce6d9"><p>When importing a Swagger file for an API Proxy component, the field names were displaying as enums. With this fix, the field names display as defined in the Swagger file. (APIM-2348)</p></li>
+			<li id="li_6100b721-18a7-4868-a928-13908dd5b406"><p>After migrating a Gateway, some API keys without subscriptions stopped working. With this fix, all API keys work after migration. (APIM-4390)</p></li>
+			</ul> </p> </section>
+		<section id="section_iyc_ngf_jtb"> <title>GraphQL APIs</title> <p>Feature:</p> <p> <ul id="ul_zgm_qdq_ktb">
+			<li id="li_c54c220a-ee39-47d6-aff8-4bd13a7990fa"> <p>After a successful limited availability program, the new Metrics API is now generally available. This represents a significant enhancement to the monitoring, observability, and analytics capabilities of API Management. You have the ability to obtain granular details on your API execution, such as calls via the Gateway and quota usage per APIs. These comprehensive metrics also aid in troubleshooting and trend analysis for APIs. (APIM-2042)</p> <p>To learn more about this feature, see the topic <xref href="api-metrics_0e0f3adb-2fcb-4af5-bbd1-aee58d2e713f.dita" scope="peer">Metrics</xref>.</p> <note id="note_vhj_j23_ftb">This feature was released <b>off-cycle</b> into production after the April 2022 release.</note> </li>
+			<li id="li_a24aafb0-b640-48e0-8087-839904532f38"><p>Added the GraphQL API Explorer for exploring the GraphQL portion of the <keyword conref="lib-Boomi_Keywords_0346af2b-13d7-491e-bec9-18c5d89225bf.xml#GUID-0207C7F1-40FD-4537-BE59-1D6DA46B9A1D/BOOMI_ATOMSPHERE" /> API. The API Explorer is generally available as a Beta feature. API Explorer is currently useful for exploring API metrics and is enabled in User Preferences (<menucascade>
+				<uicontrol>Settings</uicontrol>
+				<uicontrol>User Preferences</uicontrol>
+				</menucascade>). To launch API Explorer, select <menucascade>
+				<uicontrol>Resources</uicontrol>
+				<uicontrol>API Explorer</uicontrol>
+				</menucascade> from the <keyword conref="lib-Boomi_Keywords_0346af2b-13d7-491e-bec9-18c5d89225bf.xml#GUID-0207C7F1-40FD-4537-BE59-1D6DA46B9A1D/PLATFORM" /> menu bar. (APIM-4909)</p><p>This feature has companion changes in the <xref href="atm-May2022_Platform_a43fb2b2-49bf-4857-b193-c3f78b6e64b8.dita"><keyword conref="lib-Boomi_Keywords_0346af2b-13d7-491e-bec9-18c5d89225bf.xml#GUID-0207C7F1-40FD-4537-BE59-1D6DA46B9A1D/PLATFORM" /> section</xref> of these release notes under the heading “Global navigation”.</p><p>To learn more about this feature, see the topic <xref
+								href="api-GraphQL_API_Management_APIs_18f1a55a-b3d7-4b9e-ab0a-162fc4a67686.dita"
+								scope="peer">GraphQL API Management APIs</xref>.</p></li>
+			</ul> </p> <p>Fixes:</p> <p> <ul id="ul_xkj_j3f_jtb">
+			<li id="li_fce0cccd-6582-4677-9d72-ef9fcff401a4"><p>The <apiname>deployedApiApplicationCreate</apiname> mutation’s <parmname>ownerUserName</parmname> field was populated with the <parmname>ownerName</parmname> if the <parmname>ownerUserName</parmname> was blank. With this fix, if a request is sent without an <parmname>ownerUserName</parmname>, the application will not have a <parmname>ownerUserName</parmname>. (APIM-4882)</p></li>
+			<li id="li_9aaa2b08-4d75-4ae8-9397-a358ca1ef6eb"><p>API Metrics was not returning the username in a query if a cache policy was enabled. With this fix, the username is returned when a cache policy is enabled. (APIM-4176)</p></li>
+			</ul> </p> </section>
+		<section id="section_hqb_t1h_ktb"> <title>Developer Portal</title> <p>Feature:</p> <p> <ul id="ul_ky3_mnj_ktb">
+			<li id="li_74845bf5-d9ea-4151-8646-47ae43944bca"><p>Added the <uicontrol>User Name Identifier</uicontrol> field for Developer Portal JWT Authentication Sources. This field is optional and identifies the claim in the JWT to use as the Developer Portal user name. (APIM-4381)</p><p>To learn more about this feature, see the topic <xref
+								href="api-Configuring_your_Developer_Portal_9e8dd158-a92c-439d-a89f-41b0cd3f05b3.dita"
+								scope="peer">Configuring your Developer Portal</xref>.</p></li>
+			</ul> </p> <p>Fix:</p> <p> <ul id="ul_db5_3bh_ktb">
+			<li id="li_adb86978-7893-45de-a9fa-d0327fdb6920"> <p>The <uicontrol>Scopes</uicontrol> JWT settings for <uicontrol>email</uicontrol>, <uicontrol>openid</uicontrol>, and <uicontrol>profile</uicontrol> could not be modified. With this fix, these settings can be modified. (APIM-4953)</p> </li>
+			</ul> </p> </section>
+		<section id="section_acv_bnb_ptb">
+			<title>REST/SOAP APIs</title>
+			<p>Feature:</p>
+			<p>
+				<ul id="ul_hwb_fnb_ptb">
+					<li id="li_90490f21-308e-499f-b3a7-e9ae41be874f">
+						<p>Added support for multi-mode authentication to the Published API object.
+							If you have multiple authentication methods configured for an Atom, the
+							API endpoint URLs returned in the query results are derived from the
+							default authentication method configured in the Shared Web Server
+							settings. (APIM-4047)</p>
+						<p>To learn more about this feature, see the topic <xref
+								href="r-api-PublishedAPI_object_a4a34dc2-e08f-40d8-b4a4-4948a15eb19d.xml"
+								scope="peer">Published API object</xref>.</p>
+					</li>
+				</ul>
+			</p>
+		</section>
+	</conbody>
+</concept>

@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8"?><?Inspire CreateDate="2019-02-20T20:36:12" ModifiedDate="2021-04-28T18:02:09"?><!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+
+<topic xml:lang="en-us" id="GUID-F80CF408-1623-49CA-AF7E-4B6C9BFE6426">
+	<title id="GUID-3727B91C-BED6-4469-9F57-BC9F3FC4D231">Miscellaneous Shared</title>
+	<shortdesc>Miscellaneous shared content</shortdesc>
+	<body>
+		<section id="GUID-F1BBFE7C-7BA8-42ED-9B9B-51963602DDC3"> <title id="GUID-B76E5741-C605-4582-84FD-32C9B1922A16">Connector SDK</title> <note id="GUID-E281A26B-4CA8-45AE-A1F4-042DB355C1FF">The JSON implementation in  <keyword conref="lib-Boomi_Keywords_0346af2b-13d7-491e-bec9-18c5d89225bf.xml#GUID-0207C7F1-40FD-4537-BE59-1D6DA46B9A1D/BOOMI_INTEGRATION" /> supports only the <xref href="http://tools.ietf.org/html/draft-zyp-json-schema-04#section-3.5" format="html" scope="external">JSON schema primitive data types</xref> (integer, number, string, boolean, null, object, and array) as field properties. Date and/or time fields are typically defined as strings in supported JSON field definitions.</note> </section>
+		<section id="GUID-9DFC0644-9355-4EF1-A9B0-471036BBFACE"> <title id="GUID-138DEF43-25BE-4D04-A006-B3931FB2C32C">Event Based Integration</title> <note id="GUID-43C1AA49-24E2-4533-ADDD-3C2CDC0D69E9">Atom message queuing is an optional feature. To have this feature enabled in your account, contact your <keyword conref="lib-Boomi_Keywords_0346af2b-13d7-491e-bec9-18c5d89225bf.xml#GUID-0207C7F1-40FD-4537-BE59-1D6DA46B9A1D/BOOMI_DELL" /> sales representative.</note> </section>
+		<section id="SECTION_ACC53EAD24384B52BEC3BD6C3F646EAE"> <title id="GUID-F8290F94-70C3-4896-B98B-7B1EE03A18BC"> Disabling low latency Process Mode for single executions</title> <p> For a process executed with its Process Mode option set to Low Latency, the presence in a web server request of the query parameter <codeph>_boomi_debug=true</codeph> or the HTTP header <codeph>X-Boomi-Debug</codeph> with a value of <codeph>true</codeph>, has the effect of changing the Process Mode to General for the current process execution. This parameter can be useful for debugging purposes.</p> </section>
+		<section id="GUID-932DE959-23EF-4D46-91BB-C7E9247344A2"> <title id="GUID-7AB103E3-89EF-4CA5-A57C-58373A4E04E0">Managing Users</title> <note id="GUID-9D2A4C61-CCDA-4944-BA9E-8F13A898172B">The Production Support and Support roles are part of Advanced User Security, which is available in the Enterprise and Enterprise Plus Editions, and as an add-on to the Professional and Professional Plus Editions. To have this functionality enabled, contact your <keyword conref="lib-Boomi_Keywords_0346af2b-13d7-491e-bec9-18c5d89225bf.xml#GUID-0207C7F1-40FD-4537-BE59-1D6DA46B9A1D/BOOMI_DELL" /> sales representative.</note> </section>
+		<section id="GUID-7523F72C-9209-4F27-89F4-908B8F0BBAC9"> <title id="GUID-1E4E52DC-AD71-45E5-AE77-8BD593D7F781">Release Control</title> <note id="GUID-48DD7151-CA80-4834-936B-1FC419D6578B">Release Control scheduling is an optional <keyword conref="lib-Boomi_Keywords_0346af2b-13d7-491e-bec9-18c5d89225bf.xml#GUID-0207C7F1-40FD-4537-BE59-1D6DA46B9A1D/BOOMI_ATOMSPHERE" /> feature. To have this feature enabled in your account, contact your <keyword conref="lib-Boomi_Keywords_0346af2b-13d7-491e-bec9-18c5d89225bf.xml#GUID-0207C7F1-40FD-4537-BE59-1D6DA46B9A1D/BOOMI_DELL" /> Sales Representative.</note> </section>
+		<section id="GUID-0BA68107-73D0-4C2A-9AE7-7FAFFDC62BB5"> <title id="GUID-13146713-79BC-458E-95E9-D68228FDD53D">Setup</title> <note id="GUID-80EE0094-D957-409D-826B-754AEE53D987">When you use test connections in a test environment, you do not receive email alerts about deployed process executions or about the status of Atoms on which they are executing. You do receive RSS feeds and you can use the Event object in the API to query notifications.</note> </section>
+		<section id="GUID-BDEC8DEE-A5A3-43C4-9263-535FA054EBE8"> <title id="GUID-83E03A99-7546-454D-B0C6-3BCFE9B1F19C">Manage Tab</title> <ul id="GUID-E088369E-AD8C-4D8C-90AC-48EFAC657580">
+			<li id="LI_DE82CD7D8D164C259D7E9BC62F984512"> <p><image href="main-ic-clock-blue-19_9cb26506-f75f-4cb4-996b-acb251c5c195.jpg" id="IMAGE_10CD070AEB0B4FC4ACB48BBC0FA30BBA">
+				<alt>Light blue circle</alt>
+				</image> The process has started. You might see one of the following tooltips:</p> <ul id="GUID-E7FF4FEF-3079-41E1-87C8-87EDF7C0A2AA">
+				<li id="LI_107A8F023FC04A08AAF9A70D54A9E4B0"> <p>Starting — The process is starting. Processes start so quickly that it is unlikely that you will see this tooltip.</p> </li>
+				<li id="LI_A4C38B127D59423880D61606D99AACFD"> <p>Enqueued — If the number of simultaneous process executions per node exceeds the limit, the process is in the queue. This tooltip applies only to non-low latency process executions. You can cancel a queued process execution.</p> </li>
+				<li id="LI_F720241FCB9144CCBD903BDDFA502511"> <p>Pending — The process is pending completion. You can cancel a pending process execution.</p> </li>
+				</ul> </li>
+			<li id="LI_B33FE2A5379548CE8DFF406BBB8B8D63"> <p><image href="main-ic-circle-green-20x22_0a620eac-494b-4d65-9f1f-6b372abe7acd.jpg" id="IMAGE_0AF86C1CB99048FAB517381FCFA4D32F">
+				<alt>Green circle</alt>
+				</image> The process and all documents were processed without errors.</p> </li>
+			<li id="LI_533A0B66D16540E9A78095605AD7EF51"> <p><image href="main-ic-triangle-warning-yellow-16_a265c92a-c628-4a9a-a310-8f3d568c9a25.jpg" id="IMAGE_79CF239BC1464080A92A28C6EDC3EC85">
+				<alt>Yellow warning triangle</alt>
+				</image> There was at least one warning in processing one or more documents. This status applies to low latency processes.</p> </li>
+			<li id="LI_9C1CB5CC8A664207BF8ED0DB1628E625"> <p><image href="main-ic-bar-white-on-red-circle-20_bb816599-0e68-436e-a92a-dafa82affda4.jpg" id="IMAGE_95A4229C9A8941D394199BD744E19BAA">
+				<alt>Red circle with white dash</alt>
+				</image> There was at least one error in processing one or more documents, the process was aborted, or the process was discarded.</p> </li>
+			</ul> <ul id="GUID-2D82825F-A2E9-4FF1-A06D-7556BF5F5C12">
+			<li id="LI_3E6649B15B554E98A8A713C737B485E4"> <p><image href="main-ic-transmitter-radiating-23x22_3badbdf5-76db-4e3a-a475-98e642552b67.jpg" id="IMAGE_B84215A937AD44C6B06E23F4D671D0B7">
+				<alt>Listener</alt>
+				</image> Listener — The process was executed in real-time by using the Web Services Server connector.</p> </li>
+			<li id="LI_309ECE0CD47B49A0B24494EB59F73061"> <p><image href="main-ic-snowman-18x20_ba27d6fa-7222-4ba4-a189-cf3e04ab7db0.jpg" id="IMAGE_D7DB01B338FB4631B0CE08124BA80B50">
+				<alt>Manual</alt>
+				</image> Manual — A user started the process manually.</p> </li>
+			<li id="LI_DCE769346C6E4FA393313222D2BEF0DB"> <p><image href="main-ic-snowman-green-arrow-16_bec211cb-e8b9-4646-bb28-453cff4a8b39.jpg" id="IMAGE_3B030EF12CFA43AA9BEAF538AB857831">
+				<alt>Manual retry</alt>
+				</image> Manual Retry — A user manually retried one or more documents.</p> </li>
+			<li id="LI_996D3EAEDE5D458A97F85A5D6CE1A16C"> <p><image href="main-ic-calendar-16_734e3562-27c0-4754-89e2-cbfcd2960959.jpg" id="IMAGE_6A08DCDD8B3A4ADA8C3373E372D024C3">
+				<alt>Scheduled execution</alt>
+				</image> Scheduled — An execution schedule is enabled for the process and the execution was triggered automatically.</p> </li>
+			<li id="LI_6827CF6542EC4E058A17ACD593BBEE38"> <p><image href="main-ic-calendar-green-arrow-26x22_45218fbf-c61d-4ece-ae53-867aecbdf997.jpg" id="IMAGE_98BCAF37702C4A86A0CEBFE8D97371AD">
+				<alt>Scheduled retry</alt>
+				</image> Scheduled Retry — A retry schedule is enabled and one or more failed documents were retried automatically.</p> </li>
+			<li id="LI_CB4C721EB0A545509FC4F46C486FB004"> <p><image href="main-ic-sub-process-call-22x24_64b78f32-910c-402d-96b9-87198230f0b7.jpg" id="IMAGE_94FB62DA208B45E184CF9D07BD4E41F0">
+				<alt>Sub process</alt>
+				</image> Sub Process — The process was triggered by a parent process with a Process Call or Process Route step.</p> </li>
+			<li id="LI_EA508B96F2E44F6E8029FCA1117A4163"> <p><image href="main-ic-test-mode-22x24_956fb389-26eb-417a-add6-c19c2d834335.jpg" id="IMAGE_4D2986E24A7743E0953EFEC91A54D9D2">
+				<alt>Test mode</alt>
+				</image>Test Mode — The process was executed in test mode. </p> </li>
+			</ul> </section>
+		<section id="SECTION_1084C20A6E884DA1B4CB244780D9B0C6"> <title id="GUID-DCA53403-44FA-4F5F-AF24-E5DD2FEC7ED6">Release notes</title> <p id="GUID-840E7B51-41A0-4C0D-942EFF2F0E9CB4FD6">Subject to the terms and conditions of our existing contract with your firm, and liability provisions and limits therein, we confirm that Boomi has successfully passed all applicable test cases associated with the updates identified in this product release.</p> </section>
+		<section id="SECTION_1D7C3D88EB904D4FA69404C5D9683C30"> <title id="GUID-AB6F7FF4-1827-4E33-A96D-AAB346C36894"> Atom Management Read Access privilege</title> <p id="GUID-645F6967-5D9C-4625-8693-9CFF01B2B6BC"> You must have the Atom Management privilege to perform this task. If you have the Atom Management Read Access privilege, you cannot perform the task.</p> </section>
+		<section id="SECTION_225022FF777F418EAF2DF17D61828E10"> <title id="GUID-5D03F919-ED5C-46C6-BBD9-4CF90B760980"> Process scheduling time zones </title> <note id="GUID-0F351855-B1B1-498B-B863-3DE0754E3BD1">The Process Reporting page displays execution times in the time zone of the machine from which you are accessing the UI. The Atom, Molecule, or Atom Cloud where the process ran might reside in a different time zone.</note> </section>
+		<section id="section_xxp_j21_wmb"> <title>Hostnames and IP addresses</title> <p id="FQDN"><keyword conref="lib-Boomi_Keywords_0346af2b-13d7-491e-bec9-18c5d89225bf.xml#GUID-0207C7F1-40FD-4537-BE59-1D6DA46B9A1D/BOOMI_DELL" /> recommends usage of the URLs shown here in connection configurations, as these URLs contain fully qualified domain names (FQDN). IP addresses are subject to change, so their usage in connection configurations is discouraged.</p> </section>
+		<section id="GUID-7C35605F-E65B-46F5-AA10-40A7944C69AA"><title id="GUID-8C88F5CE-D458-4F5B-9654-D51A2D948D65">Images</title><image href="main-ic-gear-blue-and-arrow-black-16_188e61d7-2204-48ad-b085-15fa4a70615d.jpg" id="IMAGE_0653CE9171E24D4F9AD402F1DBE54997">
+			<alt>Gear or Actions icon with arrow</alt>
+			</image><image href="main-ic-gear-gray_54d864eb-b5de-4ee6-9b31-975dae0a5762.jpg" id="IMAGE_DD555DE2ABE741518B3B8ED6694B223B">
+			<alt />
+			</image><image href="main-ic-information-in-blue-circle_fdc36265-a56b-4d11-bdfe-2183ae92e7b3.jpg" id="IMAGE_D586AED4572848CEB9D3AD9BACB9395F">
+			<alt>View Extended Information</alt>
+			</image></section>
+		<section id="SECTION_A98E6A65A9FE4C36924BED342CD39381"> <title id="GUID-FAADF053-EC15-4B47-B901-8A2C23DF0363">Virus scanning for files</title> <p> <note id="GUID-243643C7-1E25-4964-B9FC-E2C41F09ECED">Uploaded or imported files are first passed through a virus scanner. The upload or import results in an error if a virus is detected, and the file is rejected. If an error persists, contact <keyword conref="lib-Boomi_Keywords_0346af2b-13d7-491e-bec9-18c5d89225bf.xml#GUID-0207C7F1-40FD-4537-BE59-1D6DA46B9A1D/BOOMI_DELL" /> Support.</note> </p> </section>
+		<section id="SECTION_66FD4B2D2F1E49EF9778ACFF814456C7"> <title id="GUID-36CDC53F-36BB-4DA9-9C5F-DF919ECCA1E8">Virus scanning for PGP certificates</title> <p> <note id="GUID-19B0F0AF-0AEC-4E2E-9AF2-C905FE7417B0">Imported certificates are first passed through a virus scanner. The import results in an error if a virus is detected, and the certificate is rejected. If an error persists, contact <keyword conref="lib-Boomi_Keywords_0346af2b-13d7-491e-bec9-18c5d89225bf.xml#GUID-0207C7F1-40FD-4537-BE59-1D6DA46B9A1D/BOOMI_DELL" /> Support.</note> </p> </section>
+		<section id="section_a4w_tfx_bpb"> <title>Included/not included table conrefs</title> <p>Included:<ph id="Included"><image href="img-atm-supported_api_29c27cfa-02f5-4a0f-a314-e9fb250f463c.svg" id="image_y1r_wpq_43b">
+			<alt />
+			</image> Included</ph></p> <p>Not included: <ph id="Excluded"><image href="img-atm-not_supported_api_88d3bc76-0a84-4175-b675-18dda09affba.svg" id="image_z1r_wpq_43b">
+			<alt />
+			</image> Excluded</ph></p> </section>
+	</body>
+</topic>

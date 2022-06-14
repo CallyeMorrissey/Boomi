@@ -1,0 +1,205 @@
+﻿<?xml version="1.0" encoding="utf-8"?><?Inspire CreateDate="2019-07-04T14:20:19" ModifiedDate="2022-02-22T14:40:41"?><!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_6b58b722-bc41-46a9-a5d3-407787960b0e">
+    <title id="title_6bb4a1bc-76eb-4e7c-a014-feaa12b8a9b3">Boomi Flow</title>
+    <shortdesc>Shared content for Boomi Flow, including Keywords</shortdesc>
+    <body>
+        <section id="section_j4h_kz1_j3b">
+            <title>Boomi Flow Keywords</title>
+            <p><keyword id="Flow_Product">Boomi Flow</keyword></p>
+            <p><keyword id="Page_Layout">Page Layout</keyword></p>
+            <p><keyword id="Page_Layout_Builder">Page Layout Builder</keyword></p>
+            <p><keyword id="Flow_Cloud">Boomi Flow cloud</keyword></p>
+            <p><keyword id="Multi_Cloud">Multi-cloud</keyword></p>
+            <p><keyword id="Service">Connector</keyword></p>
+            <p><keyword id="service">connector</keyword></p>
+            <p><keyword id="Services">Connectors</keyword></p>
+            <p><keyword id="services">connectors</keyword></p>
+        </section>
+        <section id="section_yrt_2rj_h3b">
+            <title>List Navigation Icons</title>
+            <ul id="ul_iz3_ptj_h3b">
+                <li id="li_43dcf989-04a1-40b9-ad7f-eb4a55250b94">The list is sorted alphabetically via the <b>Name</b> column and displays 10
+                    items at a time. If there are more than 10 items in your library, the list can
+                    then be navigated via the &lt;<b>Page Navigation</b>&gt; icons.<p>
+                        <image href="img-flo-List_Nav_Beginning_83a3e4d9-109a-4e1a-8727-65549b95c962.png" width="30px" id="image_rcw_pwj_h3b" alt="Back to Beginning button" /><b>Beginning</b>: Navigate to the
+                        beginning of the list.</p>
+                    <p><image href="img-flo-List_Nav_Previous_b20089cf-13ea-4423-bfac-8398adbc921a.png" id="image_aj5_vvj_h3b" alt="Previous Page button" />
+                        <b>Previous</b>: Navigate back to the previous page.</p>
+                    <p><image href="img-flo-List_Nav_Next_6e569d5a-f0dd-40a8-9ad5-fbbd55f96e01.png" id="image_ovg_5wj_h3b" alt="Next Page button" />
+                        <b>Next</b>: Navigate forward to the next page.</p>
+                </li>
+                <li id="li_bf2ce787-3c79-4a5d-943d-b618317df4e9">The &lt;<b>Actions</b>&gt; column allows you to edit or delete an item in the list.<p>
+                    <image href="img-flo-Action_Edit_a0e2bcdc-d94b-42f5-b937-3affc6881fda.png" alt="Edit item button" id="image_jcs_kyj_h3b" /><b>Edit</b>: Edit the item in the list.</p>
+                    <image href="img-flo-Action_Delete_e55ced0f-3cf6-4eb8-b592-03dade0569ee.png" alt="Delete item button" id="image_l2r_pyj_h3b" /><b>Delete</b>: Delete the item in the
+                        list.<note id="note_03957455-fd5a-4ecb-aaac-34a4274ed30b">Deleting an item will permanently delete it from the Tenant and
+                        this operation cannot be undone.</note>
+                </li>
+            </ul>
+        </section>
+        <section id="section_fbm_szj_h3b">
+            <title>Filtering the list</title>
+            <p>The <b>Search</b> field allows you to filter which items are displayed in the list.
+                This is useful if you have a large number of items in the list, or wish to search
+                for a specific item.</p>
+            <p>
+                <ol id="ol_bb3_d1k_h3b">
+                    <li id="li_d0f4ad06-df82-4cc2-b1c8-0e736bdc3147">Enter the text into the <b>Search</b> field that you wish to filter the list
+                        by. Wildcard characters can be used, for example, entering 'Doc%' will
+                        filter the list so that all items containing 'Doc' in their name will be
+                        shown.</li>
+                    <li id="li_158fc4e0-0a8f-4d8a-ac11-ba71c2ea57a9">Select the <b>Search</b> icon to perform the search. Only items that match
+                        the text you have entered will be displayed in the list.</li>
+                </ol>
+            </p>
+        </section>
+        <section id="section_4486c43f-b264-472c-8a0a-f854cd34cb97">
+            <title>Common Notes</title>
+            <p><note id="note_752a5c5f-8bf2-4f26-bb98-1abfe17db200" type="caution">Page layouts are not saved
+                    automatically, so you will need to click the <b>Save</b> icon in the right-hand
+                    menu to commit any changes you have made to a page layout. Only when you click
+                    the <b>Save</b> icon will the tab name then change to reflect the name of the
+                    new page layout.</note></p></section>
+        <section id="section_ww3_l1l_y3b">
+            <title>Refreshing the page</title>
+            <p>
+                <ol id="ol_bfn_cpm_w3b">
+                    <li id="li_02f6f51b-0741-440f-bd5e-008795549d97">Click the <uicontrol>Refresh</uicontrol> icon <image href="img-flo-Refresh_ae3bae57-35a6-4774-a562-7de804e8d4d5.png" width="32px" id="image_vtr_bbs_w3b">
+                        <alt>Refresh</alt>
+                    </image> to refresh the page.</li>
+                </ol>
+            </p>
+        </section>
+        <section id="section_lqz_rfr_xnb">
+            <title>Software</title>
+            <p><keyword id="Azure">Microsoft Azure</keyword></p>
+        </section>
+        <section id="section_wxh_whx_43b">
+            <title>Services - SAML</title>
+            
+            <!--<p><keyword id="SAML_Service_URL">https://services.manywho.com/api/saml/1</keyword></p>-->
+            <p><keyword id="SAML_Service_URL">https://services.manywho.com/api/saml/1</keyword></p>
+            <p><keyword id="SAML_Github_URL">https://github.com/manywho/service-saml</keyword></p>
+            <p id="p_zgv_spx_43b"><xref href="https://github.com/manywho/service-saml" format="html" scope="external">SAML <keyword conref="cmn-Flow_conrefs_0d3f6d65-bf42-4910-a33f-49f3be9c964a.xml#topic_6b58b722-bc41-46a9-a5d3-407787960b0e/service" /> GitHub integration</xref></p>
+            <p><keyword id="SAML_Run_API">https://flow.manywho.com/api/run/1/saml</keyword></p>
+         </section>
+        <section id="section_imz_t23_x3b">
+            <title>Services - SQL</title>
+            <p><keyword id="SQL_Service_URL">https://services.manywho.com/api/sql/2</keyword></p>
+            <p><xref href="https://github.com/manywho/service-sql" format="html" scope="external" id="xref_j2d_1f3_x3b">SQL <keyword conref="cmn-Flow_conrefs_0d3f6d65-bf42-4910-a33f-49f3be9c964a.xml#topic_6b58b722-bc41-46a9-a5d3-407787960b0e/service" /> GitHub integration</xref></p>
+            <p id="p_bhl_tfc_y3b">
+                <note id="note_6d57e96b-751a-4606-b313-05b03938259e">Using SSL and a Server Public Certificate is recommended best practice when
+                    implementing the SQL connector, particularly if the connection between the SQL
+                    database and the SQL <keyword conref="cmn-Flow_conrefs_0d3f6d65-bf42-4910-a33f-49f3be9c964a.xml#topic_6b58b722-bc41-46a9-a5d3-407787960b0e/service" /> is not in your private network.</note>
+            </p>
+        </section>
+        <section id="section_i4s_422_y3b">
+            <title>Services - Amazon Lex</title>
+            <p><keyword id="Lex_Service_URL">https://services.manywho.com/api/aws/lex/1</keyword></p>
+        </section>
+        <section id="section_eyr_hf2_y3b">
+            <title>Services - Amazon Polly</title>
+            <p><keyword id="Polly_Service_URL">https://services-staging.manywho.com/api/aws/polly/1</keyword></p>
+        </section>
+        <section id="section_qv4_5h2_y3b">
+            <title>Services - Amazon Rekognition</title>
+            <p><keyword id="Rekognition_Service_URL">https://services-staging.manywho.com/api/aws/rekognition/1</keyword></p>
+        </section>
+        <section id="section_whw_j32_y3b">
+            <title>Services - Amazon S3</title>
+            <p><keyword id="S3_Service_URL">https://services.manywho.com/api/aws/s3/1</keyword></p>
+        </section>
+        <section id="section_gdz_q32_y3b">
+            <title>Services - Azure AD</title>
+            <p><keyword id="Azure_Service_URL">https://services.manywho.com/api/azure/1</keyword></p>
+            <p><xref href="https://github.com/manywho/service-azure" format="html" scope="external" id="xref_rwp_qnp_xnb">Azure AD <keyword conref="cmn-Flow_conrefs_0d3f6d65-bf42-4910-a33f-49f3be9c964a.xml#topic_6b58b722-bc41-46a9-a5d3-407787960b0e/service" /> GitHub integration</xref></p>
+            <p><keyword id="Azure_Service">Azure AD</keyword></p>
+            <p><keyword id="Azure_App">Boomi Flow - Azure</keyword></p>
+        </section>
+        <section id="section_mt3_bbq_qlb">
+            <title>Services - Boomi Integration Flow</title>
+            <p />
+        </section>
+        <section id="section_2494328d-ace2-4ff1-89f2-0ecccda1b208">
+            <title>Services - Box</title>
+            <p><keyword id="Box_Service_URL">https://services.manywho.com/api/box/3</keyword></p>
+        </section>
+        <section id="section_qv2_l1j_y3b">
+            <title>Services - Email</title>
+            <p><keyword id="Email_Service_URL">https://services.manywho.com/api/email/1</keyword></p>
+            <p id="p_pbf_z4m_wpb"><xref href="https://github.com/manywho/service-email" format="html" scope="external">Email <keyword conref="cmn-Flow_conrefs_0d3f6d65-bf42-4910-a33f-49f3be9c964a.xml#topic_6b58b722-bc41-46a9-a5d3-407787960b0e/service" /> GitHub integration</xref></p>
+        </section>
+        <section id="section_v13_llw_cjb">
+            <title>Services - Hub</title>
+            <p><keyword id="Hub_Service_URL">https://services.manywho.com/api/mdh/1</keyword></p>
+        </section>
+        <section id="section_tf5_m1j_y3b">
+            <title>Services - Okta</title>
+            <p><keyword id="Okta_Service_URL">https://services.manywho.com/api/okta/1</keyword></p>
+            <p><xref href="https://github.com/manywho/service-okta" format="html" scope="external" id="xref_udq_2sj_y3b">Okta <keyword conref="cmn-Flow_conrefs_0d3f6d65-bf42-4910-a33f-49f3be9c964a.xml#topic_6b58b722-bc41-46a9-a5d3-407787960b0e/service" /> GitHub integration</xref></p>
+        </section>
+        <section id="section_vvq_n1j_y3b">
+            <title>Services - Onelogin</title>
+            <p><keyword id="Onelogin_Service_URL">https://services-staging.manywho.com/api/onelogin/1</keyword></p>
+        </section>
+        <section id="section_ifp_41j_y3b">
+            <title>Services - PDF</title>
+            <p><keyword id="PDF_Service_URL">https://services.manywho.com/api/pdf/1</keyword></p>
+        </section>
+        <section id="section_nz3_p1j_y3b">
+            <title>Services - Runtime</title>
+            <p><keyword id="Runtime_Service_URL">https://flow.manywho.com/plugins/manywho/api/run/1</keyword></p>
+        </section>
+        <section id="section_mkg_q1j_y3b">
+            <title>Services - Salesforce</title>
+            <p><keyword id="Salesforce_Service_URL">https://salesforce.manywho.com/plugins/api/salesforce/1</keyword></p>
+        </section>
+        
+        <section id="section_qdf_s1j_y3b">
+            <title>Services - SharePoint</title>
+            <p><keyword id="Sharepoint_Service_URL">https://services.manywho.com/api/sharepoint/1</keyword></p>
+        </section>
+        
+        <section id="section_jfr_51j_y3b">
+            <title>Timer</title>
+            <p><keyword id="Timer_Service_URL">https://services.manywho.com/api/timer/1</keyword></p>
+        </section>
+        <section id="section_nf3_v1j_y3b">
+            <title>Twilio</title>
+            <p><keyword id="Twilio_Service_URL">https://services.manywho.com/api/twilio/2</keyword></p>
+        </section>
+        <section id="section_mzt_ghq_xlb">
+            
+                <note id="note_33f72611-9da8-4c4e-b5b0-3c9897b960f3">A number of generic component CSS classes/selectors may also be applied to
+                    this component, see <xref href="r-flo-CSS_Components_8d354e1d-e69d-4d40-82b0-420e60a5c763.xml" />.</note>
+            
+        </section>
+        <section id="section_gpd_2c3_lpb"><title>Tables</title>
+            <p>Required: <ph id="Required"><image href="img-flo-Icon_Tick_d235399f-31a8-4464-a9c7-984432116e77.png" width="20px" alt="This value is required" id="image_j4z_mvx_43b">
+                <alt>Required</alt>
+            </image> Required</ph></p>
+            <p>Optional: <ph id="Optional"><image href="img-flo-Icon_Cross_b07fedc0-b847-48db-9354-e864a2e4c221.png" width="20px" alt="This value is optional" id="image_hzy_kfg_zkb">
+                <alt>Optional</alt>
+            </image> Optional</ph>
+            </p>
+            <p>Supported: <ph id="Supported"><image href="img-flo-Icon_Tick_d235399f-31a8-4464-a9c7-984432116e77.png" width="20px" alt="This value is required" id="image_f524f8be-92b3-4868-81f1-0b602f6d0887">
+                <alt>Supported</alt>
+            </image> Supported</ph></p>
+            <p>Partially supported: <ph id="PartiallySupported"><image href="img-flo-Icon_Tick_d235399f-31a8-4464-a9c7-984432116e77.png" width="20px" alt="This value is required" id="image_u5s_wh3_lpb">
+                <alt>Partially supported</alt>
+            </image> Partially supported</ph></p>
+            <p>Unsupported: <ph id="Unsupported"><image href="img-flo-Icon_Cross_b07fedc0-b847-48db-9354-e864a2e4c221.png" width="20px" alt="Unsupported" id="image_8e9e6d57-174e-4350-a4a5-abf9ba6f96d6">
+                <alt>Unsupported</alt>
+            </image> Unsupported</ph></p>
+            <p>Included: <ph id="Included"><image href="img-flo-Icon_Tick_d235399f-31a8-4464-a9c7-984432116e77.png" width="20px" alt="This value is required" id="image_sdk_ybj_lpb">
+                <alt>Included</alt>
+            </image> Included</ph></p>
+            <p>Excluded: <ph id="Excluded"><image href="img-flo-Icon_Cross_b07fedc0-b847-48db-9354-e864a2e4c221.png" width="20px" alt="Unsupported" id="image_zyl_1cj_lpb">
+                <alt>Excluded</alt>
+            </image> Excluded</ph></p>
+        </section>
+        <section id="section_ixp_3rh_spb">
+            <title>API Reference</title>
+            <p>API Ref docs: <ph id="API"><xref href="https://manywho.github.io/docs-api/" format="html" scope="external"><keyword conref="lib-Boomi_Keywords_0346af2b-13d7-491e-bec9-18c5d89225bf.xml#GUID-0207C7F1-40FD-4537-BE59-1D6DA46B9A1D/MANY_WHO" /> API Reference</xref></ph></p>
+        </section>
+    </body>
+</topic>

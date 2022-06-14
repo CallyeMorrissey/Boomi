@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?><?Inspire CreateDate="2019-08-23T15:38:40" ModifiedDate="2022-03-11T15:58:53"?><!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "map.dtd">
+
+<map id="map_165e6300-2a1b-42e2-9e25-a1c24f5c0f17">
+	<title>Developer Portal</title>
+	<topicref href="api-Developer_Portal_8d00d936-4358-41f5-94eb-0b950d892e74.dita">
+		<topicref href="api-Configuring_your_Developer_Portal_9e8dd158-a92c-439d-a89f-41b0cd3f05b3.dita" />
+		<topicref href="api-Publish_screen_26762ca7-b103-4f2a-b416-c6ddcba8d2f8.dita" />
+		<topicref href="api-Approval_screen_757d0aba-f2a0-44aa-99df-fd6263f72ce7.dita">
+			<topicref href="api-Approving_API_access_for_Dev_Portal_users_0024915f-020b-426c-888b-62ae26f5fca4.dita" />
+			<topicref href="api-Rejecting_API_subscription_requests_5f0b0598-a6f9-440a-8031-53147a9fb3c8.dita" />
+		</topicref>
+		<topicref href="api-Disabling_a_Dev_Portal_subscription_fe47af88-cb05-4b0f-a0e2-069f08346bf7.dita" />
+		<topicref href="api-Developer_Portal_consumer_information_5ef1d168-cdbf-4f71-b504-f97c93931185.dita">
+			<topicref href="api-Logging_into_the_Developer_Portal_51441abf-cd38-48f3-82fa-e79e77fe3540.xml" />
+			<topicref href="api-Registering_an_Application_862c867b-2368-4747-b79b-40b7be0b865b.dita">
+				<topicref href="api-Applications_page_13851387-387b-41e5-a0fc-61f9bc50d039.dita" />
+			</topicref>
+			<topicref href="api-Requesting_access_to_an_API_8cb13083-dd44-4bdc-b863-099e63a2fe9b.xml">
+				<topicref href="api-API_Catalog_page_fd7fbc0b-51fd-4603-b471-9d6fd1d90e45.dita" />
+				<topicref href="api-Subscriptions_page_4a29133e-8eac-4aaa-a56a-0bc853dd47ad.dita" />
+			</topicref>
+			<topicref href="api-Working_with_an_API_after_being_granted_access_49fd3f32-e3fc-410a-aafe-78479d502c43.dita" />
+			<topicref href="api-Using_the_Swagger_definition_to_test_an_API_432e2ea6-0259-43f2-92dc-89e2323704af.xml">
+				<topicref href="api-Swagger_UI_usage_4d7770b6-e338-4df4-b590-b496e3ca00e7.dita" />
+			</topicref>
+		</topicref>
+	</topicref>
+</map>

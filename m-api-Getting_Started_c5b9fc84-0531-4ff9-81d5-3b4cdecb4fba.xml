@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?><?Inspire CreateDate="2019-02-20T20:33:36" ModifiedDate="2022-05-20T15:34:18"?><!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "map.dtd">
+
+
+<map id="GUID-6A36A24F-8BAF-4F58-A9FD-26551B7C68F6" xml:lang="en-us">
+	<title id="GUID-E7450A1D-07F9-464A-9E4C-F8134A2A0BD1">Getting Started</title>
+	<topicref format="dita" href="c-api-Getting_Started_f06ad982-c0d9-4c67-ab0f-7a19db534868.xml" scope="local" type="concept">
+		<topicmeta>
+			<navtitle>Getting started</navtitle>
+		</topicmeta>
+		<topicref href="t-api-Enabling_API_Management_for_an_AMC_71ad1559-3215-4f96-87ba-e45e219f1c0f.xml">
+			<topicmeta>
+				<navtitle>Enabling API Management for an Atom, Molecule, or Atom Cloud</navtitle>
+			</topicmeta>
+		</topicref>
+		<topicref href="t-api-Setting_up_an_external_client_4dc7e8a5-3115-43f5-9e51-50812b9dc0f6.xml">
+			<topicmeta>
+				<navtitle>Setting up an external client</navtitle>
+			</topicmeta>
+		</topicref>
+	</topicref>
+</map>

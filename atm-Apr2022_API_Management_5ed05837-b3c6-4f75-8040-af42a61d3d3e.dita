@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?><?Inspire CreateDate="2022-03-07T20:31:15" ModifiedDate="2022-04-14T21:22:54"?><!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+
+<concept id="atm-Apr2022_API_Management">
+	<title> <keyword conref="lib-Boomi_Keywords_0346af2b-13d7-491e-bec9-18c5d89225bf.xml#GUID-0207C7F1-40FD-4537-BE59-1D6DA46B9A1D/BOOMI_APIMANAGEMENT" /> </title>
+	<shortdesc product="Mar2022"> <keyword conref="lib-Boomi_Keywords_0346af2b-13d7-491e-bec9-18c5d89225bf.xml#GUID-0207C7F1-40FD-4537-BE59-1D6DA46B9A1D/BOOMI_APIMANAGEMENT" /> features and fixes are not in the <keyword conref="lib-Boomi_Keywords_0346af2b-13d7-491e-bec9-18c5d89225bf.xml#GUID-0207C7F1-40FD-4537-BE59-1D6DA46B9A1D/prerelease" />. </shortdesc>
+	<conbody>
+		<section id="section_ujb_zyr_cjb"> <title>API Gateways and Authentication Brokers</title> <p>Feature:</p><ul id="ul_tnd_2rs_xsb">
+			<li id="li_b406559a-5040-4a6b-8e89-51a5f5263519"><p>Added the <uicontrol>Application Owner User Name</uicontrol> and <uicontrol>Application Owner Email</uicontrol> fields to the API Gateway <uicontrol>Approvals</uicontrol> page. (APIM-4285)</p> <p>To learn more about this feature, see the topic <xref href="api-Approving_API_access_for_Dev_Portal_users_0024915f-020b-426c-888b-62ae26f5fca4.dita" scope="peer">Approving API subscription requests</xref>.</p></li>
+			</ul> <p>Fixes:</p><ul id="ul_ngr_kys_xsb">
+				<li id="li_5de6c28d-56e5-46bb-b204-a67107e561bf">
+					<p>The Jackson library upgrade in the April 2022 Runtime Release did not include
+						a keycloak artifact required by the Authentication Broker. The Broker could
+						not download the artifact. With this fix, the Broker downloads the artifact
+						from the platform. (APIM-4873)</p>
+				</li>
+			<li id="li_7389e32f-4a2e-463d-8c88-f66759650e71"><p>Environment migrations failed if APIs were using an Authentication Source without an associated authentication type. With this fix, in this scenario migration proceeds without error. (APIM-4299)</p><note id="note_kvh_rck_zsb">If you have APIs with an Authentication Source that does not have an associated authentication type, you should configure a new JWT Authentication Source for those APIs.</note></li>
+			<li id="li_21086a38-1900-4859-a419-2a793e53eb6f"><p>In some cases, when an API Gateway or Authentication Broker had the http_proxy and https_proxy parameters set, the Java upgrader script would time out when downloading the JRE files, preventing the container from completing the Java version upgrade. With this fix, the upgrader script runs as expected for containers using proxies. (RUN-583)</p></li>
+			<li id="li_331b05ca-e0e2-4957-b9a5-914874fb48f5"><p>After updating to the latest Java version, when an API Gateway or Authentication Broker was rolled back to the previous version with the Roll back Java operation, the Windows Service backup would not start, leaving the container in restarting status until it timed out. With this fix, Gateways and Brokers start automatically after a Roll back Java operation completes. (RUN-1832)</p></li>
+			</ul> </section>
+		<section id="section_ukt_m5v_1tb"> <title>GraphQL APIs</title> <p>Features:</p> <p> <ul id="ul_pkx_55v_1tb">
+					<li id="li_c54c220a-ee39-47d6-aff8-4bd13a7990fa">
+						<p>After a successful limited availability program, the new Metrics API is now generally
+							available. This represents a significant enhancement to the monitoring,
+							observability, and analytics capabilities of API Management. You have
+							the ability to obtain granular details on your API execution, such as
+							calls via the Gateway and quota usage per APIs. These comprehensive
+							metrics also aid in troubleshooting and trend analysis for APIs.
+							(APIM-2042)</p>
+						<p>To learn more about this feature, see the topic <xref href="api-metrics_0e0f3adb-2fcb-4af5-bbd1-aee58d2e713f.dita" scope="peer">Metrics</xref>.</p>
+						<note id="note_vhj_j23_ftb">This feature was released <b>off-cycle</b> into
+							production after the April 2022 release.</note>
+					</li>
+			<li id="li_8f737ac0-3685-46ff-a294-98038fa00aa1"> <p>The capability to query an application by application ID is added. (APIM-4010)</p> <p>To learn more about this feature, see the topic <xref href="api-deployed_api_application_category_b9419b37-2a96-4cd9-8afa-d020d7b37b58.xml" scope="peer">Deployed API Application category</xref>.</p> </li>
+			</ul> </p> </section>
+	</conbody>
+</concept>

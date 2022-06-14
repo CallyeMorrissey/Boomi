@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?><?Inspire CreateDate="2022-05-02T18:47:28" ModifiedDate="2022-06-10T14:19:39"?><!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+
+<concept id="atm-Jun2022_API_Management">
+	<title> <keyword conref="lib-Boomi_Keywords_0346af2b-13d7-491e-bec9-18c5d89225bf.xml#GUID-0207C7F1-40FD-4537-BE59-1D6DA46B9A1D/BOOMI_APIMANAGEMENT" /> </title>
+	<shortdesc product="May2022"> <keyword conref="lib-Boomi_Keywords_0346af2b-13d7-491e-bec9-18c5d89225bf.xml#GUID-0207C7F1-40FD-4537-BE59-1D6DA46B9A1D/BOOMI_APIMANAGEMENT" /> features and fixes are not in the <keyword conref="lib-Boomi_Keywords_0346af2b-13d7-491e-bec9-18c5d89225bf.xml#GUID-0207C7F1-40FD-4537-BE59-1D6DA46B9A1D/prerelease" />. </shortdesc>
+	<conbody>
+		<section id="section_ujb_zyr_cjb"> <title>API Gateways and Authentication Brokers</title> <note id="note_fjz_s15_qtb">The Authentication Broker will be retired soon. After the Broker is
+				retired, it will no longer be available or supported for use on the AtomSphere
+				platform. For information about migrating Brokers, see the topic <xref
+					href="api-broker_deprecation_58f90726-af01-4b0b-bd4d-629e8840162f.xml"
+					scope="peer">Broker retirement</xref>.</note> <p>Feature:</p> <p> <ul id="ul_xpy_msl_qtb">
+			<li id="li_310b5668-f6aa-4251-bd7c-d1981758f071"> <p>Added the capability to use the same port number for multiple external ports on the Shared Web Server (APIM-5162).</p> <p>To learn more about this feature, see the topic <xref
+								href="int-multi_mode_authentication_a100ab5f-1859-4abe-a560-b0438796158a.dita"
+								scope="peer">Multi-Mode Authentication</xref>.</p> </li>
+			</ul> </p> <p>Fixes:</p> <p> <ul id="ul_fzb_lyk_qtb">
+			<li id="li_e502abc0-c052-45bb-941c-763cb8a0efed"> <p>If the Authentication Type on the Shared Web Server was set to <uicontrol>Basic</uicontrol>, the <uicontrol>Users</uicontrol> and <uicontrol>CORS</uicontrol> tabs were not displaying. With this fix, the <uicontrol>Users</uicontrol> and <uicontrol>CORS</uicontrol> tabs display for Basic Authentication. (APIM-5175)</p> </li>
+			<li id="li_cc8cc174-c38c-4223-b629-d844fded4e36"> <p>If all plans were detached or deleted from a deployed API, a missing endpoint warning displayed even if the API had endpoints. With this fix, the error message is corrected for this situation. (APIM-3942)</p> </li>
+			<li id="li_9298412b-bc37-4c19-b60e-c698114c4697"> <p>Developer Portal user name creation on a Gateway occurred after a case-sensitive validation. Due to this, applications and keys were not displaying in the Developer Portal after changing the Authentication Source from OpenID to JWT using the same identity provider. With this fix, applications and keys display in the Developer Portal after changing Authentication Sources. (APIM-5089)</p> </li>
+			<li id="li_43b9eef0-f291-4f0c-870c-142198d1a23a"> <p>If all ports were deleted from a Shared Web Server, the endpoints were erroneously displayed with the previously selected Authentication type. With this fix, if all ports are deleted, a message displays stating that there are no attached ports. (APIM-5090)</p> </li>
+			</ul> </p> </section>
+		<section id="section_u3h_vwq_2jb"> <title>GraphQL APIs</title> <p>Fix:</p> <p> <ul id="ul_yys_34l_qtb">
+			<li id="li_fa54c346-be6b-43ae-8b09-c1510e3c2860"> <p>Enabling API Metrics caused an increased number of <apiname>OpenFileDescriptorCount</apiname> files, resulting in Atom restarts. With this fix, old and full event files are deleted and Atom restarts do not occur. (APIM-5060)</p> </li>
+			</ul> </p> </section>
+	</conbody>
+</concept>

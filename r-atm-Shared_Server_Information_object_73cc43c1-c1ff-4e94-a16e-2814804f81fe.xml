@@ -1,0 +1,283 @@
+﻿<?xml version="1.0" encoding="utf-8"?><?Inspire CreateDate="2019-02-20T20:22:28" ModifiedDate="2022-04-26T20:39:51"?><!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN" "reference.dtd">
+
+<reference xml:lang="en-us" id="GUID-4EE9B3EC-F64D-4133-B6A2-AEFFBBAAF9B0">
+	<title id="GUID-B61C541C-4A3B-4B00-A0E0-FAA5D487B169">Shared Server Information object</title>
+	<shortdesc> The Shared Server Information object provides information about the configuration of an Atom’s shared web server.</shortdesc>
+	<prolog>
+		<resourceid id="GUID-4EE9B3EC-F64D-4133-B6A2-AEFFBBAAF9B0" />
+	</prolog>
+	<refbody>
+		<section id="section_s5g_mcf_4tb">
+			<title>Structure</title>
+			<codeblock xml:space="preserve" outputclass="code-java" id="codeblock_t5g_mcf_4tb">&lt;SharedServerInformation sslCertificateId="" atomId="" checkForwardedHeaders="" maxThreads="" 
+externalHttpsPort="" externalHttpPort="" externalHost="" internalHost="" minAuth="" auth="" 
+httpsPort="" httpPort="" authToken="" overrideUrl="" url="" apiType=""/&gt;</codeblock>
+			<table id="table_u5g_mcf_4tb">
+				<tgroup cols="3">
+					<colspec colnum="1" colname="col1" colwidth="0.50*"/>
+					<colspec colnum="2" colname="col2" colwidth="0.30*"/>
+					<colspec colnum="3" colname="col3" colwidth="2.21*"/>
+					<thead>
+						<row>
+							<entry colname="col1">Field</entry>
+							<entry colname="col2">Type</entry>
+							<entry colname="col3">Description</entry>
+						</row>
+					</thead>
+					<tbody>
+						<row>
+							<entry colname="col1">sslCertificateId</entry>
+							<entry colname="col2">string</entry>
+							<entry colname="col3">The component ID for the SSL certificate used by
+								the server, if applicable.</entry>
+						</row>
+						<row>
+							<entry colname="col1">atomId</entry>
+							<entry colname="col2">string</entry>
+							<entry colname="col3">The ID of the Atom that is hosting the shared web
+								server.</entry>
+						</row>
+						<row>
+							<entry colname="col1">checkForwardedHeaders</entry>
+							<entry colname="col2">boolean</entry>
+							<entry colname="col3">Information regarding the external host, etc.
+								might be forwarded in headers. The embedded Java technology is
+								capable of examining these headers and extracting external host
+								information for response/callback purposes. Set this to true to
+								enable the server to check for this information. The default is
+								false.</entry>
+						</row>
+						<row>
+							<entry colname="col1">maxThreads</entry>
+							<entry colname="col2">int</entry>
+							<entry colname="col3">The maximum number of handler threads that the
+								listen process spawn. Other requests are queued.</entry>
+						</row>
+						<row>
+							<entry colname="col1">externalHttpsPort</entry>
+							<entry colname="col2">string</entry>
+							<entry colname="col3">The external HTTPS port routes to the shared web
+								server listener.</entry>
+						</row>
+						<row>
+							<entry colname="col1">externalHttpPort</entry>
+							<entry colname="col2">string</entry>
+							<entry colname="col3">The external HTTP port routes to the shared web
+								server listener.</entry>
+						</row>
+						<row>
+							<entry colname="col1">externalHost</entry>
+							<entry colname="col2">string</entry>
+							<entry colname="col3">The external host name or IP for the
+								listener.</entry>
+						</row>
+						<row>
+							<entry colname="col1">internalHost</entry>
+							<entry colname="col2">string</entry>
+							<entry colname="col3">For multi-homed boxes, an IP address to be used
+								for binding to a specific interface.</entry>
+						</row>
+						<row>
+							<entry colname="col1">minAuth</entry>
+							<entry colname="col2">string</entry>
+							<entry colname="col3">The minimum authentication required by the web
+								server. <p>Options are <i>none</i> and <i>basic</i>. The <keyword
+										conref="lib-Boomi_Keywords_0346af2b-13d7-491e-bec9-18c5d89225bf.xml#GUID-0207C7F1-40FD-4537-BE59-1D6DA46B9A1D/BOOMI_DELL"
+									/> Atom Clouds are multi-tenant, so by default they are set to
+									basic. Local Atoms and Molecules by default are set to
+								none.</p></entry>
+						</row>
+						<row>
+							<entry colname="col1">auth</entry>
+							<entry colname="col2">string</entry>
+							<entry colname="col3">The authentication required by the web server.
+									<p>Options are <i>none</i> and <i>basic</i>. If minAuth is set
+									to <i>basic</i>, auth must also be set to
+								<i>basic</i>.</p></entry>
+						</row>
+						<row>
+							<entry colname="col1">httpsPort</entry>
+							<entry colname="col2">string</entry>
+							<entry colname="col3">The SSL (HTTPS) port on which the web server
+								listens, if applicable. The default is 9093.</entry>
+						</row>
+						<row>
+							<entry colname="col1">httpPort</entry>
+							<entry colname="col2">string</entry>
+							<entry colname="col3">The HTTP port on which the web server listens. The
+								default is 9090.</entry>
+						</row>
+						<row>
+							<entry colname="col1">authToken</entry>
+							<entry colname="col2">string</entry>
+							<entry colname="col3">An authentication token for connecting to the
+								shared web server, if it is configured for BASIC authentication.
+								This cannot be updated by the UPDATE operation.</entry>
+						</row>
+						<row>
+							<entry colname="col1">overrideUrl</entry>
+							<entry colname="col2">boolean</entry>
+							<entry colname="col3">Allows manual overriding of the exposed URL used
+								to connect to the shared web server. <p>This value is for
+									informational purposes for any tenant. By default, this is false
+									meaning the URL is constructed based on the host name or
+									external host name and port/SSL port settings. Set this to true
+									to specify a custom URL attribute value.</p></entry>
+						</row>
+						<row>
+							<entry colname="col1">url</entry>
+							<entry colname="col2">string</entry>
+							<entry colname="col3">The URL for connecting to the shared web
+								server.</entry>
+						</row>
+						<row>
+							<entry colname="col1">apiType</entry>
+							<entry colname="col2">string</entry>
+							<entry colname="col3">The level of user management and API management
+								functionality that is applicable to the shared web server.<p>Options
+									are <i>basic</i>, <i>intermediate</i>, and <i>advanced</i>. The
+									default is <i>intermediate</i>.</p></entry>
+						</row>
+					</tbody>
+				</tgroup>
+			</table>
+		</section>
+		<section id="GUID-8B494C99-736E-4A19-973C-4D87F8EB38F4"> <title id="GUID-FB6EC032-E222-483B-AE12-E5782CF50638">Supported operations</title> <table id="GUID-F450691A-47EF-41E3-ABA7-2EEE87C754BE">
+			<tgroup cols="6">
+				<colspec colnum="1" colname="col1" />
+				<colspec colnum="2" colname="col2" />
+				<colspec colnum="3" colname="col3" />
+				<colspec colnum="4" colname="col4" />
+				<colspec colnum="5" colname="col5" />
+				<colspec colnum="6" colname="col6" />
+				<thead>
+					<row id="row_cb9b8ef5-7628-416f-9fa3-4f2c752f90a4">
+						<entry colname="col1">GET</entry>
+						<entry colname="col2">QUERY</entry>
+						<entry colname="col3">CREATE</entry>
+						<entry colname="col4">UPDATE</entry>
+						<entry colname="col5">EXECUTE</entry>
+						<entry colname="col6">DELETE</entry>
+					</row>
+				</thead>
+				<tbody>
+					<row id="row_03fc1cb0-1d74-4896-b25b-28d0caf4d7d2">
+						<entry colname="col1"><ph conref="lib-AtomSphere_API_9a0b3cc6-0758-45f9-b2cc-04932561d53c.xml#GUID-3B92F5CD-0A69-4191-BF29-297025332DDB/Supported" /></entry>
+						<entry colname="col2"><ph conref="lib-AtomSphere_API_9a0b3cc6-0758-45f9-b2cc-04932561d53c.xml#GUID-3B92F5CD-0A69-4191-BF29-297025332DDB/NotSupported" /></entry>
+						<entry colname="col3"><ph conref="lib-AtomSphere_API_9a0b3cc6-0758-45f9-b2cc-04932561d53c.xml#GUID-3B92F5CD-0A69-4191-BF29-297025332DDB/NotSupported" /></entry>
+						<entry colname="col4"><ph conref="lib-AtomSphere_API_9a0b3cc6-0758-45f9-b2cc-04932561d53c.xml#GUID-3B92F5CD-0A69-4191-BF29-297025332DDB/Supported" /></entry>
+						<entry colname="col5"><ph conref="lib-AtomSphere_API_9a0b3cc6-0758-45f9-b2cc-04932561d53c.xml#GUID-3B92F5CD-0A69-4191-BF29-297025332DDB/NotSupported" /></entry>
+						<entry colname="col6"><ph conref="lib-AtomSphere_API_9a0b3cc6-0758-45f9-b2cc-04932561d53c.xml#GUID-3B92F5CD-0A69-4191-BF29-297025332DDB/NotSupported" /></entry>
+					</row>
+				</tbody>
+			</tgroup>
+			</table> <p> <b> Notes:</b> </p> <ul id="UL_E87E99BBB37D4F21B1E5CB30C8BAFB33">
+			<li id="LI_2BC69039CFB940F1932F50096F61D908"> <p>Shared Server Information records are only retrievable by an ordinary GET operation specifying a single Atom ID or a bulk GET operation specifying a maximum of 100 Atom IDs. The Shared Server Information object ID is not available currently (except by requesting the information from services). The Shared Server Information object auth field is not returned by this operation.</p></li>
+			<li id="LI_161DA9BF35E34BB484A8DF5C1C2BA459"> <p>The UPDATE operation updates a Shared Server Information object based on the supplied Atom ID. To clear a field, set the attribute corresponding to that field to an empty string.</p><p> You must have the Atom Management privilege to perform the UPDATE operation. If you have the Atom Management Read Access privilege, you cannot update shared server information.</p><p>It is not possible to set authToken through this operation. If authentication is required but a token does not currently exist, this operation generates a token. The new authToken appears in the response.</p><p>If sslCertificateId is specified, the certificate must be accessible by the account making the request.</p></li>
+			<li id="li_5dcb5d87-b678-4a43-a15e-31b8783573f9"> <p>If the Authentication Type and Ports are not already configured, using the Shared Server Information object to update only the API Type of an Atom fails. If you are the Atom, Molecule, or Atom Cloud owner, you must update the API Type, Authentication Type, and either HTTP Port or HTTPS Port through the Shared Server Information object through the Shared Server Information object for the API to succeed. Atom Cloud attachments can not update the HTTP Port or HTTPS Port.</p><p>If the Authentication Type and Ports are already configured, the Shared Server Information object can be used to update only the API Type of an Atom.</p> </li>
+				<li>
+					<p>The configuration of multiple authentication types on an Atom is not supported in this
+						API.</p>
+				</li>
+			</ul> </section>
+		<section id="SECTION_79125529BCFF4CB899991CDB30AFD1CA" otherprops="RESTish" outputclass="tab"> <title id="GUID-ED967556-0852-4323-A34C-8BD45A813448"> RESTish implementation</title> <ul id="UL_89AC5D9F81E24C078CA6F93C0885163F">
+			<li id="LI_8F630E6BFA704C6A8A4B18293534AC98"> <p><b> GET operation</b></p> <p> Send an HTTP GET to:</p> <p><filepath> https://api.boomi.com/api/rest/v1/<varname>accountId</varname>/SharedServerInformation/<varname>id</varname></filepath></p> <p> where <varname>accountId</varname> is the authenticating account for the request and <varname>id</varname> is the Atom ID. </p> <p> XML response: </p> <codeblock xml:space="preserve" outputclass="code-java">&lt;bns:SharedServerInformation sslCertificateId="6789abcd-ef01-2345-6789-abcdef012345" 
+     atomId="3456789a-bcde-f012-3456-789abcdef012" checkForwardedHeaders="false" maxThreads="250" 
+     externalHttpsPort="0" externalHttpPort="0" externalHost="" internalHost="127.0.0.1" 
+     minAuth="basic" httpsPort="9093" httpPort="9090"
+     authToken="bcdef012-3456-789a-bcde-f0123456789a" overrideUrl="false" 
+     url="http://system.sub.domain.tld:9090" apiType="basic" xmlns:bns="http://api.platform.boomi.com/" 
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/&gt;
+</codeblock> <p>For a JSON response, send the request with the following HTTP header: </p> <p><codeph>Accept: application/json</codeph></p> <p>JSON response:</p> <codeblock xml:space="preserve">{
+  "@type" : "SharedServerInformation",
+  "apiType" : "basic",
+  "url" : "http://system.sub.domain.tld:9090",
+  "overrideUrl" : false,
+  "authToken" : "bcdef012-3456-789a-bcde-f0123456789a",
+  "httpPort" : 9090,
+  "httpsPort" : 9093,
+  "minAuth" : "basic",
+  "internalHost" : "127.0.0.1",
+  "externalHost" : "",
+  "externalHttpPort" : 0,
+  "externalHttpsPort" : 0,
+  "maxThreads" : 250,
+  "checkForwardedHeaders" : false,
+  "atomId" : "3456789a-bcde-f012-3456-789abcdef012",
+  "sslCertificateId" : "6789abcd-ef01-2345-6789-abcdef012345"
+}
+</codeblock> </li>
+			<li id="LI_C078980E92F54842B14DA4976281E53A"> <p><b> UPDATE operation</b></p> <p> Send an HTTP POST to:</p> <p><filepath>https://api.boomi.com/api/rest/v1/<varname>accountId</varname>/SharedServerInformation/<varname>id</varname>/update</filepath></p> <p>where <varname>accountId</varname> is the <keyword conref="lib-Boomi_Keywords_0346af2b-13d7-491e-bec9-18c5d89225bf.xml#GUID-0207C7F1-40FD-4537-BE59-1D6DA46B9A1D/BOOMI_ATOMSPHERE" /> authenticating account for the request and <varname>id</varname> is the Atom ID. </p> <note type="important" id="note_9fb86032-1941-4436-9046-9dedae85d4e8">If the Authentication Type and Ports are not already configured, using the Shared Server Information object to update only the API Type of an Atom fails. If you are the Atom, Molecule, or Atom Cloud owner, you must update the API Type, Authentication Type, and either HTTP Port or HTTPS Port through the Shared Server Information object through the Shared Server Information object for the API to succeed. Atom Cloud attachments can not update the HTTP Port or HTTPS Port.<p>If the Authentication Type and Ports are already configured, the Shared Server Information object can be used to update only the API Type of an Atom.</p></note> <p> This example updates maxThreads, the maximum number of handler threads that the listen process spawns, to 100. </p> <p> XML request:</p> <codeblock xml:space="preserve">&lt;bns:SharedServerInformation atomId="3456789a-bcde-f012-3456-789abcdef012" maxThreads="100" 
+     xmlns:bns="http://api.platform.boomi.com/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/&gt;</codeblock> <p>XML response:</p> <codeblock xml:space="preserve">&lt;bns:SharedServerInformation atomId="3456789a-bcde-f012-3456-789abcdef012" maxThreads="100" 
+ xmlns:bns="http://api.platform.boomi.com/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/&gt;</codeblock> <p>For a JSON request, send the request with the following HTTP header:</p> <p> <codeph>Content-Type: application/json</codeph> </p> <p> JSON request:</p> <codeblock xml:space="preserve">{
+  "maxThreads" : 100,
+  "atomId" : "3456789a-bcde-f012-3456-789abcdef012"
+}</codeblock> <p>For a JSON response, send the request with the following HTTP header:</p> <p> <codeph>Accept: application/json</codeph></p> <p> JSON response:</p> <codeblock xml:space="preserve">{
+  "@type" : "SharedServerInformation",
+  "maxThreads" : 100,
+  "atomId" : "3456789a-bcde-f012-3456-789abcdef012"
+}</codeblock> </li>
+			</ul> </section>
+		<section id="SECTION_15320CE094FB478F9604DE1F3B519F23" otherprops="SOAP" outputclass="tab"> <title id="GUID-8AF8023A-E34C-488C-B073-0CDCE1FF182E"> SOAP implementation</title> <ul id="UL_82ECAC4033224A9688A653D29BC52E61">
+			<li id="LI_C20A9B282AA54E85A8B0C431539626AF"> <p><b> GET operation</b></p> <p> Request:</p> <codeblock xml:space="preserve" outputclass="code-java">&lt;soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"xmlns:api="http://api.platform.boomi.com/"&gt;
+   &lt;soapenv:Header&gt;
+      &lt;wsse:Security
+       xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd"&gt;
+        &lt;wsse:UsernameToken wsu:Id="UsernameToken" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd"&gt;
+          &lt;wsse:Username&gt;ATOMSPHERE_USER_NAME&lt;/wsse:Username&gt;
+          &lt;wsse:Password Type="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-username-token-profile-1.0#PasswordText"&gt;ATOMSPHERE_PASSWORD&lt;/wsse:Password&gt;
+        &lt;/wsse:UsernameToken&gt;
+      &lt;/wsse:Security&gt;
+   &lt;/soapenv:Header&gt;
+   &lt;soapenv:Body&gt;
+      &lt;api:get&gt;
+         &lt;api:objectType&gt;SharedServerInformation&lt;/api:objectType&gt;
+         &lt;api:objectId&gt;3456789a-bcde-f012-3456-789abcdef012&lt;/api:objectId&gt;
+      &lt;/api:get&gt;
+   &lt;/soapenv:Body&gt;
+&lt;/soapenv:Envelope&gt;</codeblock> <p> Response: </p> <codeblock xml:space="preserve" outputclass="code-java">&lt;S:Envelope xmlns:S="http://schemas.xmlsoap.org/soap/envelope/"&gt;
+   &lt;S:Body&gt;
+      &lt;bns:getResponse xmlns:bns="http://api.platform.boomi.com/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;
+         &lt;bns:result xsi:type="bns:SharedServerInformation" sslCertificateId="6789abcd-ef01-2345-6789-abcdef012345" 
+         atomId="3456789a-bcde-f012-3456-789abcdef012" checkForwardedHeaders="false" maxThreads="250" 
+         externalHttpsPort="0" externalHttpPort="0" externalHost="" internalHost="127.0.0.1" 
+         minAuth="basic" httpsPort="9093" httpPort="9090"  
+         authToken="bcdef012-3456-789a-bcde-f0123456789a" overrideUrl="false" 
+         url="http://system.sub.domain.tld:9090" apiType="basic"/&gt;
+      &lt;/bns:getResponse&gt;
+   &lt;/S:Body&gt;
+&lt;/S:Envelope&gt;
+</codeblock> </li>
+			<li id="LI_0BF6E9F6F9B74E1F86C6AF41B91A832F"> <p><b> UPDATE operation</b></p> <note type="important" id="note_795e5d59-f959-4752-8162-2d66da9ea4ef">If the Authentication Type and Ports are not already configured, using the Shared Server Information object to update only the API Type of an Atom fails. If you are the Atom, Molecule, or Atom Cloud owner, you must update the API Type, Authentication Type, and either HTTP Port or HTTPS Port through the Shared Server Information object through the Shared Server Information object for the API to succeed. Atom Cloud attachments can not update the HTTP Port or HTTPS Port.<p>If the Authentication Type and Ports are already configured, the Shared Server Information object can be used to update only the API Type of an Atom.</p></note> <p> This example updates maxThreads, the maximum number of handler threads that the listen process spawns, to 100.</p> <p>Request:</p> <codeblock xml:space="preserve" outputclass="code-java">&lt;soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"xmlns:api="http://api.platform.boomi.com/"&gt;
+   &lt;soapenv:Header&gt;
+      &lt;wsse:Security
+       xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd"&gt;
+        &lt;wsse:UsernameToken wsu:Id="UsernameToken" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd"&gt;
+          &lt;wsse:Username&gt;ATOMSPHERE_USER_NAME&lt;/wsse:Username&gt;
+          &lt;wsse:Password Type="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-username-token-profile-1.0#PasswordText"&gt;ATOMSPHERE_PASSWORD&lt;/wsse:Password&gt;
+        &lt;/wsse:UsernameToken&gt;
+      &lt;/wsse:Security&gt;
+   &lt;/soapenv:Header&gt;
+   &lt;soapenv:Body&gt;
+      &lt;api:update&gt;
+          &lt;object xsi:type="api:SharedServerInformation" atomId="3456789a-bcde-f012-3456-789abcdef012" 
+              maxThreads="100" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt; 
+          &lt;/object&gt;
+      &lt;/api:update&gt;
+   &lt;/soapenv:Body&gt;
+&lt;/soapenv:Envelope&gt;</codeblock> <p> Response:</p> <codeblock xml:space="preserve">&lt;S:Envelope xmlns:S="http://schemas.xmlsoap.org/soap/envelope/"&gt;
+   &lt;S:Body&gt;
+      &lt;bns:updateResponse xmlns:bns="http://api.platform.boomi.com/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;
+         &lt;result xsi:type="bns:SharedServerInformation" sslCertificateId="6789abcd-ef01-2345-6789-abcdef012345" 
+             atomId="f453d1ed-fd7e-4a61-8edf-d61f73a01adb" checkForwardedHeaders="false" maxThreads="100" 
+             externalHttpsPort="0" externalHttpPort="0" externalHost="" internalHost="127.0.0.1" 
+             minAuth="basic" auth="basic" httpsPort="9093" httpPort="9090"
+             authToken="bcdef012-3456-789a-bcde-f0123456789a" overrideUrl="false" 
+             url="http://system.sub.domain.tld:9090" apiType="basic"/&gt;
+      &lt;/bns:updateResponse&gt;
+   &lt;/S:Body&gt;
+&lt;/S:Envelope&gt;
+</codeblock> </li>
+			</ul> </section>
+	</refbody>
+</reference>

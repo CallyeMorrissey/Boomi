@@ -1,0 +1,167 @@
+﻿<?xml version="1.0" encoding="utf-8"?><?Inspire CreateDate="2022-05-17T17:23:20" ModifiedDate="2022-05-26T19:42:13"?><!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="uxw_jjg_4tb">
+    <title id="uxw_jjg_4pb">Multi-Mode Authentication</title>
+    <shortdesc />
+    <prolog>
+        <resourceid id="GUID-a100ab5f-1859-4abe-a560-b0438796158a" />
+    </prolog>
+    <conbody>
+        <section id="section_j2z_5hg_4tb">
+            <p>Multi-mode authentication support is available in the Shared Web Server. This feature
+                allows for multiple authentication methods for Atoms and Molecules, with the ability
+                to specify an authentication method for a specific port. You can also configure
+                multiple credentials for your users if you have multiple authentication methods
+                configured. <note id="note_mx2_33g_4tb">For Atom Clouds and Cloud attachments, the
+                    Shared Web Server configuration is detailed at <xref
+                        href="r-atm-Shared_Web_Server_panel_135fde50-19db-488d-bb5c-b9ef43456e75.xml"
+                        scope="peer">Shared Web Server panel</xref>.</note><note
+                    id="note_z5d_lll_stb">With this feature, Atom security is tightened. The Atom
+                    will only authenticate users with a given authentication method if that method
+                    has been configured for the Atom/attachment. Cloud owners should take care if
+                    you change the authentication method on a configured listener. Currently, the
+                    accounts that have attachments to this cloud are not notified if the listener
+                    authentication method has changed. This creates a situation where the attachment
+                    has a different authentication method configured than what the listener on the
+                    cloud allows and requests to this attachment will fail.</note></p>
+        </section>
+        <section id="section_wnw_hfg_4tb">
+            <fig id="fig_zww_fkh_4tb_a3581ae2-6fbf-4044-bcbf-8d534c3153ac" otherprops="border">
+                <image href="img-shared_web_server_multi_mode_authentication_fig_zww_fkh_4tb_a3581ae2-6fbf-4044-bcbf-8d534c3153ac.png" id="image_eyh_tlm_4tb" />
+            </fig>
+        </section>
+        <section id="section_zv2_fpg_4tb">
+            <title>Configuration</title>
+            <p>
+                <table frame="all" rowsep="1" colsep="0" id="table_tjl_gpg_4tb">
+                    <tgroup cols="2">
+                        <colspec colname="c1" colnum="1" colwidth="1*" />
+                        <colspec colname="c2" colnum="2" colwidth="1*" />
+                        <thead>
+                            <row id="row_22a05076-1f04-4d9d-808e-e9ad9fd1194f">
+                                <entry>Field</entry>
+                                <entry>Description</entry>
+                            </row>
+                        </thead>
+                        <tbody>
+                            <row id="row_78b6c8a4-52d9-4b74-a84c-59d267e1593c">
+                                <entry namest="c1" nameend="c2"><uicontrol>Basic
+                                        Settings</uicontrol></entry>
+                            </row>
+                            <row id="row_98aea7f1-38fb-410b-b53c-56bc8dbd80ad">
+                                <entry><uicontrol>API Type</uicontrol></entry>
+                                <entry>The level of user management and API management functionality
+                                    that is applicable to the web server.<ul id="ul_x31_rdh_4tb">
+                                        <li id="li_4e49d44c-2555-4ba3-9cbe-d9a874144295">Basic - User management is disabled. Client certificates
+                                            and Custom authentication cannot be used. API
+                                            Service/Proxy components cannot be used. </li>
+                                        <li id="li_9a77f8d2-9709-4efc-ac8d-6861fd6baad8">Intermediate - User management is enabled at the
+                                            individual process level. API Service/Proxy components
+                                            cannot be used.</li>
+                                        <li id="li_dbb93a30-e775-4942-9394-1bc1ed525f86">Advanced - API Service/Proxy components are enabled.
+                                            User management is enabled at the API Service component
+                                            level. This is the default for new accounts for which
+                                            the API Management feature is enabled.</li>
+                                    </ul></entry>
+                            </row>
+                            <row id="row_d4b97f25-5102-4962-96f0-051aa2cf4ea8">
+                                <entry namest="c1" nameend="c2"><uicontrol>Listening Port
+                                        Configuration</uicontrol></entry>
+                            </row>
+                            <row id="row_5dcec0e5-cf37-41c7-8d73-d5168e45e83b">
+                                <entry><uicontrol>Default</uicontrol></entry>
+                                <entry>The default port is used for accessing Swagger in a deployed
+                                    API. It is also used to construct PublishedApi objects returned
+                                    by AtomSphere Developer APIs. </entry>
+                            </row>
+                            <row id="row_9d0dbdf3-006e-4d49-8ca1-e10c766d22f1">
+                                <entry><uicontrol>Port</uicontrol></entry>
+                                <entry>The port number of the external port which routes to the
+                                    shared web server listener.</entry>
+                            </row>
+                            <row id="row_012a6cb7-11a5-4057-b955-ef1fc6a5d5b6">
+                                <entry><uicontrol>SSL</uicontrol></entry>
+                                <entry>If selected, the port is an SSL (HTTPS) port. The default for
+                                    SSL ports is 9093.</entry>
+                            </row>
+                            <row id="row_0e404d1f-2c99-4e79-b3b3-a67be0252a27">
+                                <entry><uicontrol>Authentication Type</uicontrol></entry>
+                                <entry>The ports' authentication type is the same as the accounts
+                                    authentication type. The authentication type can be changed for
+                                    the account or for individual ports in the account. The options
+                                    are <uicontrol>None</uicontrol>, <uicontrol>Basic</uicontrol>,
+                                        <uicontrol>Client Certificate</uicontrol>, <uicontrol>Client
+                                        Certificate Header</uicontrol>,
+                                        <uicontrol>Custom</uicontrol>, <uicontrol>External
+                                        Provider</uicontrol>, <uicontrol>Gateway</uicontrol>.<note id="note_fpf_3yg_4tb">Only one <uicontrol>Listening Port
+                                        </uicontrol> can be configured with
+                                            <uicontrol>Gateway</uicontrol> authentication.
+                                    </note></entry>
+                            </row>
+                            <row id="row_650c4d35-8bd9-48c5-a2a6-e7edce9680b5">
+                                <entry><uicontrol>External Port</uicontrol></entry>
+                                <entry>The Port number of the load balancer that routes requests to
+                                    the Shared Web Server port. It defaults to 443 if External SSL
+                                    is selected. Used to construct the <uicontrol>Base URL for API
+                                        Requests</uicontrol>. </entry>
+                            </row>
+                            <row id="row_56e95386-d6fa-4de9-9fe0-6ad0608984b6">
+                                <entry><uicontrol>External SSL</uicontrol></entry>
+                                <entry>If selected, the external port is an SSL (HTTPS) port. The
+                                    default <uicontrol>External Port </uicontrol> is 443 if this
+                                    field is selected. External SSL ports can be redirected to an
+                                    internal non-SSL port.</entry>
+                            </row>
+                            <row id="row_7860121b-4a88-472a-81c1-daadde117287">
+                                <entry><uicontrol>Base URL for API Requests</uicontrol></entry>
+                                <entry>This URL is constructed per the configured
+                                        <uicontrol>External Host</uicontrol> and optionally the
+                                        <uicontrol>External Port</uicontrol>. If an
+                                        <uicontrol>External Port</uicontrol> is not specified, the
+                                    default Host name is used.</entry>
+                            </row>
+                            <row id="row_3d937c42-19a1-4b70-af41-48103d4e6619">
+                                <entry><uicontrol>SSL Certificate</uicontrol></entry>
+                                <entry>
+                                    <p>If the <uicontrol>Authentication Type</uicontrol> is set to
+                                            <uicontrol>Client Certificate</uicontrol>, the SSL
+                                        Certificate field displays. Select the correct Certificate
+                                        component for the client.</p>
+                                </entry>
+                            </row>
+                            <row id="row_db3c4183-0644-4213-9959-dc3248e53954">
+                                <entry namest="c1" nameend="c2"><uicontrol>Advanced
+                                        Settings</uicontrol></entry>
+                            </row>
+                            <row id="row_a67ab41a-3aed-4f25-818a-62ef84f68b1e">
+                                <entry><uicontrol>Internal Host</uicontrol></entry>
+                                <entry>For multi-homed boxes, an IP address for binding to a
+                                    specific interface.</entry>
+                            </row>
+                            <row id="row_4aa4bd54-7ab8-4002-87b2-603f497c125f">
+                                <entry><uicontrol>Examine Forwarded Headers</uicontrol></entry>
+                                <entry><p>Selecting this option substitutes the load balancer’s host
+                                        name for the node’s host name in the request.</p>For more
+                                    information refer to <xref href="r-atm-Shared_Web_Server_panel_135fde50-19db-488d-bb5c-b9ef43456e75.xml" scope="peer">Shared Web Server panel</xref>.</entry>
+                            </row>
+                            <row id="row_38b648f2-ee32-499e-8b7e-d53b2710bb7c">
+                                <entry><uicontrol>External Host</uicontrol></entry>
+                                <entry>The external host name or IP for the listener. This field is
+                                    mandatory if <uicontrol>External SSL</uicontrol> is
+                                    selected.</entry>
+                            </row>
+                            <row id="row_ed2126b2-5a13-46d0-9b3d-2646a9450f0b">
+                                <entry><uicontrol>Maximum Number of Threads</uicontrol></entry>
+                                <entry>The maximum number of handler threads that the listen process
+                                    spawns. Other requests are queued. The default is 250.</entry>
+                            </row>
+                            <row id="row_936b7310-030d-49e7-bc84-b8ef2cb43d11">
+                                <entry><uicontrol>Protected Headers</uicontrol></entry>
+                                <entry>See <xref href="r-atm-Shared_Web_Server_panel_135fde50-19db-488d-bb5c-b9ef43456e75.xml#GUID-186770BF-0A55-4151-ABA0-C3AC19DA5121/GUID-88B41CBE-3BEB-404B-9E2E-FFB0DF90CD86" scope="peer">Protected Headers</xref>.</entry>
+                            </row>
+                        </tbody>
+                    </tgroup>
+                </table>
+            </p>
+        </section>
+    </conbody>
+</concept>

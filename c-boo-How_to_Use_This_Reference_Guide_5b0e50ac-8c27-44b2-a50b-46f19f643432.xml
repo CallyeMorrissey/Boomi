@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="utf-8"?><?Inspire CreateDate="2019-02-20T20:26:08" ModifiedDate="2019-04-17T15:07:24"?><!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd"><!--Arbortext, Inc., 1988-2015, v.4002--><?ish ishref="GUID-0004D20F-E21B-4DB5-9B12-01813A2C68BF" version="9" lang="en-us"?><concept id="GUID-0004D20F-E21B-4DB5-9B12-01813A2C68BF" xml:lang="en-us" domains="(topic concept)                            (topic hi-d)                             (topic ut-d)                             (topic indexing-d)                            (topic hazard-d)                            (topic abbrev-d)                            (topic pr-d)                             (topic sw-d)                            (topic ui-d)              ">
+<title id="GUID-FC40D06F-E81E-470C-B30A-EBCFE842E4F4">How to use this
+Reference Guide</title>
+<!--The following sections shared by root topics How to Use This Reference Guide for all products.-->
+<conbody>
+<section id="GUID-8E93B667-56ED-41E3-AA9D-F60CFDC029AB"><title id="GUID-873BFD05-DEC5-496F-B743-8ABB3756105F">How to search</title><p>The panel to the left contains the keyword search
+field and the browsable table of contents. When you enter a search,
+search results replace the table of contents. To return from the search
+results list to the table of contents, click the Table of Contents
+icon <image href="main-ic-house-blue-toc_e574d962-89fa-481d-a61c-70c18ebe526d.jpg" id="IMAGE_7B3BA40F893144D7B33CE3256C8BC607"><alt>Table
+of Contents icon.</alt></image>.</p><p>To enter a search,
+type a word or words in the search field, and then press Enter or
+click the magnifying glass icon. Optionally include one or more of
+the <xref href="c-boo-Advanced_Searching=GUID-09694C8D-E8B7-470D-8ADB-A877566FFCAF=5=en-us=_78bdd3e8-ef00-4e7a-befb-ca9c93582ab9.xml">advanced search</xref> operators AND, OR, NOT and NEAR. You can also
+perform advanced searches by adding an asterisk to part of a word
+or by surrounding a phrase in double quotation marks.</p><p>After you enter a search you see:</p><ul id="GUID-ABFF50F7-C95F-4DE3-9404-F4FBE0DB2DDB">
+<li id="LI_3C43887F71204BFE86D4EDAF56EAF761"><p>The number of results</p></li>
+<li id="LI_966AB1A3CF6C4DE9B45A8E6007B9772F"><p>The words you searched for</p></li>
+<li id="LI_CDED6E083FD543EBB9289AF5C66D3B67"><p>The topics that contain those words</p></li>
+<li id="LI_E646C1EEBB434B2CBC030A78978DE92A"><p>The results in context, with the words you searched for in bold</p></li>
+</ul><p>After you select one of the topics, it opens
+in the right pane. The words you searched for are highlighted in the
+right pane.</p></section>
+<section id="GUID-6CDB16EA-5F73-40FD-A030-342BC7CEC1CF"><title id="GUID-109D8797-6CE7-4646-966E-1966509699B6">Navigation controls
+in the right pane</title><p>The following navigation
+controls are available at the top of the right pane:</p><dl>
+<dlhead>
+<dthd>Name</dthd>
+<ddhd>Description</ddhd>
+</dlhead>
+<dlentry id="GUID-FE86C5E3-61A5-4EDD-9404-19904917BEFE">
+<dt><uicontrol><image href="main-bt-topic-previous=GUID-8FC874F5-4902-47AD-8D8E-E649D98AACD9=1=en-us=Low_f00db4d7-e79f-490e-bedf-4f7be0267a24.jpg" id="IMAGE_8B76161265E84703B3FCD5FD7688022D"><alt>Previous
+topic button.</alt></image> Previous topic</uicontrol></dt>
+<dd>Opens in the right pane the topic that immediately
+precedes the currently open topic in the table of contents.</dd>
+</dlentry>
+<dlentry id="GUID-53A410B5-CB2C-4373-8655-5505755E3E14">
+<dt><uicontrol><image href="main-bt-topic-next=GUID-487C4F70-FB12-419C-8AA5-8DD271D3FE21=1=en-us=Low_4a7c0bce-e47d-41b4-839b-6249bb9c6ee2.jpg" id="IMAGE_FEF7C99A8F174D598C4E219B6498FFA4"><alt>Next
+topic button.</alt></image> Next topic</uicontrol></dt>
+<dd>Opens in the right pane the topic that immediately
+follows the currently open topic in the table of contents.</dd>
+</dlentry>
+<dlentry id="GUID-2973A7B8-6423-4B36-9D92-4D56EEAAE787">
+<dt>Breadcrumbs</dt>
+<dd>Breadcrumbs are links enabling easy access to ancestor
+topics of the currently open topic. The breadcrumb trail begins with
+the “Welcome” topic (link text “Table of Contents”), and ends with
+the currently open topic.<fig id="GUID-1ACBABAD-50BE-499F-83CD-B3EA9B7C647E"><image href="main-mn-breadcrumbs_9f48cd42-e099-4974-a783-c278c866b0d2.jpg" id="IMAGE_C1664FA479EA498792D51F4F7DD34815"><alt>Sample
+breadcrumbs trail.</alt></image></fig></dd></dlentry>
+</dl></section>
+<section id="GUID-7C5D937A-9BFA-4CCD-BD5A-F9797C46AD23"><title id="GUID-7D2812DE-A684-44B6-A8AB-8166A97BDBB4">Toolbar</title><p>These tools are available at the top of the right pane:</p><dl>
+<dlhead>
+<dthd>Name</dthd>
+<ddhd>Description</ddhd>
+</dlhead>
+<dlentry id="GUID-3D42095A-EC4E-40BF-9920-417CEF13E097">
+<dt><uicontrol><image href="main-ic-pen-gray-toggle-highlighting_8e9492ea-03df-45f6-a8c1-f06a1569807c.jpg" id="IMAGE_7D2F3CA2AEC2479DAEA0A34B571BF114"><alt>Toggle
+highlighter button.</alt></image> Toggle highlighting</uicontrol></dt>
+<dd><p>Clear or select the highlighting of
+search results.</p></dd></dlentry>
+<dlentry id="GUID-0AC556D4-02F9-47D8-A068-EE0909C55D95">
+<dt><uicontrol><image href="main-ic-arrow-document-toggle-navigation=GUID-902975B7-C3CF-4F32-817F-C13DA0F85AE6=2=en-us=Low_751f3652-4436-4118-aac8-8e60976fd1f1.jpg" id="IMAGE_BDF1CFD751104663A566CCF3675DC02F"><alt>Toggle
+navigation button.</alt></image> Toggle navigation</uicontrol></dt>
+<dd><p>Hide or show the panel that contains
+the table of contents and search results.</p></dd></dlentry>
+<dlentry id="GUID-66500FD3-0AF2-4D45-9D54-43A838AD93F4">
+<dt><uicontrol><image href="main-ic-printer-print-one-topic_03f1049c-706f-4d7c-89ce-4b652e4df2c2.jpg" id="IMAGE_937F8C7023CB4368AE0F63D210BE25A7"><alt>Print
+current topic button.</alt></image> Print topic</uicontrol></dt>
+<dd><p>Print the current topic.</p></dd>
+</dlentry>
+<dlentry id="GUID-A174BC34-533D-4239-9118-0852548F2D1C">
+<dt><uicontrol><image href="main-ic-printer-print-topic-and-subtopics_d6653eb9-831f-40d2-9dbf-01ba581c74d2.jpg" id="IMAGE_11971554921748FD8ECC19EBB5E212B2"><alt>Print
+topic and subtopics button.</alt></image> Print topic and subtopics</uicontrol></dt>
+<dd><p>Print the current topic and all of
+its subtopics.</p></dd></dlentry>
+</dl></section>
+<section id="GUID-C0E80A37-996E-4BF0-8B15-D97206643FF6"><title id="GUID-875B7FC3-689A-49C3-9A0E-9A883D09DD58">Other ways to get help</title><fig id="GUID-AEA781CE-F3A6-4054-B190-5CCC6BBFAA9D"><image href="main-mn-help_90a65e28-2f5b-4711-adc0-a006be35d8d1.jpg" id="IMAGE_AF0A9BF0E366428EBE0C43D7D1A3AEB6"><alt>Platform
+Help menu.</alt></image></fig><p>In the application,
+click the Help menu in the upper right and select a resource:</p><ul id="GUID-1269077C-ECBF-418F-B665-A479BF45CDE9">
+<li id="LI_D9CE029E8A234D6883766EF59A46CA6B"><p>To open support cases and check the status of your existing
+cases, select <uicontrol>Support</uicontrol> to go to the <xref format="https" href="https://community.boomi.com/s/support" scope="external">Support
+Center</xref> in the <keyword conref="lib-Boomi_Keywords_0346af2b-13d7-491e-bec9-18c5d89225bf.xml#GUID-0207C7F1-40FD-4537-BE59-1D6DA46B9A1D/BOOMI_DELL"></keyword> Community. You will be logged in automatically via single sign-on.</p></li>
+<li id="LI_8A69C3D0E4E4439A93891F1E94BD2552"><p>To view knowledge articles, ask questions, collaborate
+with other users, read product and developer blogs, submit and vote
+for ideas for improving your experience, and learn about training
+opportunities, select <uicontrol>Community</uicontrol> to go to the home page of the <xref format="https" href="https://community.boomi.com/s/" scope="external"><keyword conref="lib-Boomi_Keywords_0346af2b-13d7-491e-bec9-18c5d89225bf.xml#GUID-0207C7F1-40FD-4537-BE59-1D6DA46B9A1D/BOOMI_DELL"></keyword> Community</xref>. You will be logged in automatically
+via single sign-on.</p></li>
+</ul></section>
+</conbody>
+</concept>

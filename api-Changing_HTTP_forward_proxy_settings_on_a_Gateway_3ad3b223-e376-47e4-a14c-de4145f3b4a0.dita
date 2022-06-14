@@ -1,0 +1,122 @@
+﻿<?xml version="1.0" encoding="utf-8"?><?Inspire CreateDate="2021-03-02T19:57:31" ModifiedDate="2022-04-08T13:51:35"?><!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+
+<task xml:lang="en-us" id="task_zrv_bhf_v4b">
+	<title id="GUID-86A960F9-F03F-49D5-8AE4-F35545836854">Changing HTTP forward proxy settings on an
+		API Gateway</title>
+	<shortdesc>Change HTTP forward proxy settings in the <keyword conref="lib-Boomi_Keywords_0346af2b-13d7-491e-bec9-18c5d89225bf.xml#GUID-0207C7F1-40FD-4537-BE59-1D6DA46B9A1D/BOOMI_INTEGRATION" /> Atom Management <uicontrol>Properties</uicontrol> panel. </shortdesc>
+	<prolog>
+		<resourceid id="GUID-3ad3b223-e376-47e4-a14c-de4145f3b4a0" />
+	</prolog>
+	<taskbody>
+		<prereq id="PREREQ_7CB4F97F5C3D4F69B671B81E29F14C2D"> <p conref="lib-Misc_Shared_e44f9528-551a-4cae-8596-a24d8e483f6d.xml#GUID-F80CF408-1623-49CA-AF7E-4B6C9BFE6426/GUID-645F6967-5D9C-4625-8693-9CFF01B2B6BC" /> </prereq>
+		<steps id="GUID-BF405D84-37EF-44E9-82B3-7F389A6BDEB4">
+			<step id="STEP_9B7DB55B6AA04041BE364A584426AEA6">
+				<cmd>Within <keyword conref="lib-Boomi_Keywords_0346af2b-13d7-491e-bec9-18c5d89225bf.xml#GUID-0207C7F1-40FD-4537-BE59-1D6DA46B9A1D/BOOMI_INTEGRATION" />, go to <menucascade>
+					<uicontrol>Manage</uicontrol>
+					<uicontrol>Atom Management</uicontrol>
+					</menucascade>.</cmd>
+			</step>
+			<step id="STEP_01130188BA0D4415B40C2D66B43F93D6">
+				<cmd>Select the Atom or Molecule from the list on the left.</cmd>
+			</step>
+			<step id="STEP_4316C2FCBE09452EBD0E064423637AD9">
+				<cmd>In Settings &amp; Configuration, click <uicontrol>Properties</uicontrol>.</cmd>
+				<stepresult>The Atom Properties or Molecule Properties panel opens.</stepresult>
+			</step>
+			<step id="STEP_ED365F12B6EE4D82A232169CC4BCE424">
+				<cmd>Click the <uicontrol>Advanced</uicontrol> tab.</cmd>
+			</step>
+			<step id="STEP_4950A92EFB384D37A1FF46B8B8371377">
+				<cmd>Select the <uicontrol>Proxy Host</uicontrol> (com.boomi.container.proxyHost) property, click <uicontrol>Add Property</uicontrol> and type the host name or IP address in the Property Value field.</cmd>
+			</step>
+			<step id="STEP_EC3E17B63A914759BF49935CC88E52BE">
+				<cmd>Select the <uicontrol>Proxy Port</uicontrol> (com.boomi.container.proxyPort) property, click <uicontrol>Add Property</uicontrol> and type the port number in the Property Value field.</cmd>
+			</step>
+			<step id="STEP_CFACD30D91FB46C3B8F1E954753F555E">
+				<cmd>If your forward proxy requires user authentication, select the <uicontrol>Proxy User ID</uicontrol> (com.boomi.container.proxyUser) property, click <uicontrol>Add Property</uicontrol> and type the user ID in the Property Value field.</cmd>
+			</step>
+			<step importance="optional" id="STEP_2066805FEC424E0395CC2598C7041579">
+				<cmd>If an encrypted proxy password exists on the Atom or Molecule, the property list shows the Encrypted Proxy Password property. You cannot edit the encrypted password. To change the password once it has been set and encrypted on the Atom, delete the Encrypted Proxy Password property and then set a new password as described in step 14. To delete the property, locate the <uicontrol>Encrypted Proxy Password</uicontrol> property and click the <image href="main-ic-x-white-in-red-circle-16_0d0c5dc5-1c5e-4117-8a58-92c5e050ec5b.jpg" id="IMAGE_425125D61E2B45F7B474F094B36D9502">
+					<alt>Delete</alt>
+					</image> <uicontrol>Delete</uicontrol> icon.</cmd>
+			</step>
+			<step importance="optional" id="STEP_8F150A18AB184B569AC893A7DC1764F9">
+				<cmd>Select the <uicontrol>Non Proxy Hosts</uicontrol> (com.boomi.container.nonProxyHosts) property, click <uicontrol>Add Property</uicontrol> and type the host name(s) in the Property Value field.</cmd>
+				<info> <p>The Non Proxy Hosts property specifies the hosts to be connected to directly, not through the proxy server. The value can be a list of hosts, each separated by a pipe (|). An asterisk (*) can be used for matching. For example, <codeph>*.mycompany.com|localhost</codeph> would indicate that any hosts suffixed by mycompany.com or a host of localhost should not go through the proxy.</p> </info>
+			</step>
+			<step id="STEP_7863B64684E54756A830017816E29888">
+				<cmd>Click <uicontrol>Save</uicontrol>.</cmd>
+				<stepresult> Because changes to these properties do not take effect until the API Gateway is restarted, you are prompted to restart. You have the option to restart now or restart later. <p>If you are setting the proxy password in the next step or the system property for user authentication of your forward proxy in step <xref href="#task_zrv_bhf_v4b/step_9653d03c-ad85-4cdf-9d74-de9eed983af5" format="dita" />, you can wait to restart your API Gateway until after you set the proxy password. The API Gateway must be restarted after the password is set in the properties file. </p></stepresult>
+			</step>
+			<step id="STEP_13CE33DB52DF4115A1D64269788AF222">
+				<cmd>To set the proxy password for the API Gateway:</cmd>
+				<substeps id="GUID-56B40329-A783-41D2-85CD-8D185BEF2BC9">
+					<substep id="SUBSTEP_5294C9D25867479DB2A065B80ED11794">
+						<cmd>Navigate to <filepath>&lt;installation_directory&gt;/conf</filepath> for your API Gateway.</cmd>
+					</substep>
+					<substep id="SUBSTEP_09C7489DCC444856A592B364E5B8CD19">
+						<cmd>Open the <filepath>container.properties</filepath> file in a text editor such as Notepad.</cmd>
+					</substep>
+					<substep id="SUBSTEP_6A4ADDD5BDAD4DF1AA92F70813F008AE">
+						<cmd>Set the <codeph>com.boomi.container.proxyPassword</codeph> value as the plain text value of your password.</cmd>
+					</substep>
+					<substep id="SUBSTEP_0945BD93FBBD466CBAB65EFF117F3C3A">
+						<cmd>Save the file.</cmd>
+					</substep>
+				</substeps>
+			</step>
+			<step id="step_9653d03c-ad85-4cdf-9d74-de9eed983af5">
+				<cmd>If your forward proxy requires authentication, set your system properties to enable the Basic authentication scheme. </cmd>
+				<substeps id="substeps_wtw_wn2_x4b">
+					<substep id="substep_59afe79c-5b67-4099-9b37-f3f2139de170">
+						<cmd>Within <keyword conref="lib-Boomi_Keywords_0346af2b-13d7-491e-bec9-18c5d89225bf.xml#GUID-0207C7F1-40FD-4537-BE59-1D6DA46B9A1D/BOOMI_INTEGRATION" />, go to <menucascade>
+							<uicontrol>Manage</uicontrol>
+							<uicontrol>Atom Management</uicontrol>
+							</menucascade>.</cmd>
+					</substep>
+					<substep id="substep_e6732323-47ae-4c31-8f77-54d046e5d9b9">
+						<cmd>Select the Atom or Molecule from the list on the left.</cmd>
+					</substep>
+					<substep id="substep_c01b1089-fb6e-4f63-9d0b-446af438b7c6">
+						<cmd>In Settings &amp; Configuration, click <uicontrol>Properties</uicontrol>.</cmd>
+						<stepresult>The Atom Properties or Molecule Properties panel opens.</stepresult>
+					</substep>
+					<substep id="substep_d505b79d-4fc2-4a26-9f70-f455b3b32b7b">
+						<cmd>Click the <uicontrol>Custom</uicontrol> tab.</cmd>
+					</substep>
+					<substep id="substep_3750a078-f5e3-4f52-9831-4ae69c5842f9">
+						<cmd>Under System Properties, click <uicontrol>Add a Property</uicontrol> and type the correct system property for your connection type if the forward proxy requires user authentication.</cmd>
+						<info> <table frame="all" id="table_dt5_f42_x4b">
+							<tgroup cols="2">
+								<colspec colnum="1" colname="col1" colwidth="1*" />
+								<colspec colnum="2" colname="col2" colwidth="1*" />
+								<thead>
+									<row id="row_3d8ed8c7-ddbf-41da-af9d-79d35a0950eb">
+										<entry colname="col1">Connection Type</entry>
+										<entry colname="col2">System Property</entry>
+									</row>
+								</thead>
+								<tbody>
+									<row id="row_220c2e2a-750f-4d2c-8e36-ff592c3f90e9">
+										<entry colname="col1">Secure (https) connections</entry>
+										<entry colname="col2">-Djdk.http.auth.tunneling.disabledSchemes=""</entry>
+									</row>
+									<row id="row_17f294f2-572e-492a-991e-96f537653239">
+										<entry colname="col1">Unsecure (http) connections</entry>
+										<entry colname="col2">-Djdk.http.auth.proxying.disabledSchemes=""</entry>
+									</row>
+								</tbody>
+							</tgroup>
+							</table> </info>
+					</substep>
+					<substep id="substep_4dfbbe35-5b6a-4274-8fcd-cd2ec1cc8c7e">
+						<cmd>Click <uicontrol>Save</uicontrol>.</cmd>
+					</substep>
+				</substeps>
+			</step>
+			<step id="step_61fe3dd7-4410-496d-ad0c-4761bcecdd3c">
+				<cmd>Restart your API Gateway.</cmd>
+			</step>
+		</steps>
+	</taskbody>
+</task>

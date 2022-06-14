@@ -1,0 +1,259 @@
+﻿<?xml version="1.0" encoding="utf-8"?><?Inspire CreateDate="2020-02-10T21:21:06" ModifiedDate="2022-05-05T14:00:54"?><!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN" "reference.dtd">
+
+<reference id="api-GraphQL_API_Management_APIs">
+	<title>GraphQL <keyword conref="lib-Boomi_Keywords_0346af2b-13d7-491e-bec9-18c5d89225bf.xml#GUID-0207C7F1-40FD-4537-BE59-1D6DA46B9A1D/BOOMI_APIMANAGEMENT" /> APIs</title>
+	<shortdesc>The <keyword conref="lib-Boomi_Keywords_0346af2b-13d7-491e-bec9-18c5d89225bf.xml#GUID-0207C7F1-40FD-4537-BE59-1D6DA46B9A1D/BOOMI_DELL" /> <keyword conref="lib-Boomi_Keywords_0346af2b-13d7-491e-bec9-18c5d89225bf.xml#GUID-0207C7F1-40FD-4537-BE59-1D6DA46B9A1D/BOOMI_APIMANAGEMENT" /> GraphQL APIs expose many GraphQL queries and mutations to retrieve and update data.</shortdesc>
+	<prolog>
+		<resourceid id="GUID-18f1a55a-b3d7-4b9e-ab0a-162fc4a67686" />
+	</prolog>
+	<refbody>
+		<section id="section_zw2_1g3_4qb"><p><note id="note_wlr_1g3_4qb">While using GraphQL APIs, put sensitive data in the parameters instead
+					of inline in the query. You can send GraphQL requests by POST with JSON content
+					or via GET with an HTTP query string. Use the POST method for any requests that
+					contain sensitive data.</note></p></section>
+		<section id="section_qky_zp4_wpb"> <title> Authentication</title><p> To authenticate, follow the below steps:<ol id="ol_wvw_hq4_wpb">
+			<li id="li_d36cc37c-7d93-45b1-aa62-b8f4f138a8bf">Use your <keyword conref="lib-Boomi_Keywords_0346af2b-13d7-491e-bec9-18c5d89225bf.xml#GUID-0207C7F1-40FD-4537-BE59-1D6DA46B9A1D/BOOMI_ATOMSPHERE" /> user name or API token and an account ID that is associated with an active <keyword conref="lib-Boomi_Keywords_0346af2b-13d7-491e-bec9-18c5d89225bf.xml#GUID-0207C7F1-40FD-4537-BE59-1D6DA46B9A1D/BOOMI_ATOMSPHERE" /> account to send a <codeph>GET</codeph> or <codeph>POST</codeph> request to <codeph>https://api.boomi.com/auth/jwt/generate/{accountId}</codeph>with Basic Authentication. This returns a JWT in the response. Include <codeph>X-Boomi-OTP=&lt;token&gt;</codeph> in the header. <p>You can use either username+password+MFA+account ID or just the API Token + account ID to get the JWT Token.<ul id="ul_b2p_p3x_fsb">
+				<li id="li_1c49e6d6-610b-488b-a459-ddeaf8cd011f"><p>Username and password are for basic authentication</p></li>
+				<li id="li_8130639c-f09b-4265-86b5-90a27c9d1bae">MFA format: <codeph>X-Boomi-OTP:&lt;value&gt;</codeph> in the header</li>
+				<li id="li_94be77fd-5adc-49f4-ab20-433f9ab07148">Account ID is in the endpoint</li>
+				<li id="li_cfc14775-8209-4b27-90ab-1b2a7398617a">API Token format: You can use basic authentication - username = BOOMI_TOKEN.&lt;username&gt;@&lt;email.com&gt; and password = API Token value</li>
+				</ul></p></li>
+			<li id="li_65ca34eb-8255-4602-b863-8c45e1d0623b">Use the JWT with Bearer Authentication (add a header to your http request with name 'Authorization' and value 'Bearer &lt;JWT&gt;') for all requests to <codeph>https://api.boomi.com/graphql</codeph>.</li>
+			</ol></p><p>The JWT token expires every 5 minutes. You must then obtain a new JWT token.</p> </section>
+		<section id="section_k44_l3m_2tb"> <title>Altair script</title> <p>Programmatic access to GraphQL APIs is available via any application, typically through a GraphQL client library in the language of choice. Altair is a user interface tool that can be used to accomplish this. The following script was created as an option to quickly access GraphQL APIs. </p> <p> <note id="note_tjs_5fb_ftb">Altair supports multiple tabs/windows within the application. Each window must have the pre-request script entered and enabled separately, although any configured environments are available across the application.</note> </p> <p> <ol id="ol_b4q_tnm_2tb">
+			<li id="li_553d9fc1-d98b-4106-a669-a38e1f6b48dd">Install the Altair Chrome extension <xref href="https://chrome.google.com/webstore/detail/altair-graphql-client/flnheeellpciglgpaodhkhmapeljopja?hl=en" format="html" scope="external">here</xref>. </li>
+			<li id="li_5e66fc06-4220-4296-b53f-06ed70b29d1d">After installing, in Altair, select <uicontrol>Environments</uicontrol>.</li>
+			<li id="li_b8e808d4-23d8-4a65-80aa-41690a54c8bd">In <uicontrol>Global environment</uicontrol>, paste the following and replace your information in the accountId, username, and password fields:<codeblock id="codeblock_cd1_24m_2tb">{
+  "host": "https://platform.boomi.com",
+  "accountId": "&lt;accountId&gt;",
+  "username": "&lt;username&gt;",
+  "password": "&lt;password&gt;"
+}
+</codeblock></li>
+			<li id="li_b406f709-5ade-4d75-b58c-aa0c0f59ddd6">Add an environment and select it as active.</li>
+			<li id="li_c94ff14c-a6a3-4aa9-ae89-295861e88559">Paste the code below in Altair's <uicontrol>Pre-request </uicontrol> script area and select <uicontrol>Enable pre-request script</uicontrol>.<codeblock id="codeblock_c2w_l4m_2tb">const atob = await altair.importModule('atob');
+
+const debug = altair.helpers.getEnvironment('debug');
+debug &amp;&amp; console.log('Debug mode is on');
+
+const currentTime = Date.now();
+debug &amp;&amp; console.log(`currentTime: ${currentTime}`);
+
+const authorizationExpiresAt = altair.helpers.getEnvironment('authorizationExpiresAt');
+debug &amp;&amp; console.log(`authorizationExpiresAt: ${authorizationExpiresAt}`);
+
+if(!!!authorizationExpiresAt || currentTime &gt;= authorizationExpiresAt) {
+  debug &amp;&amp; console.log('Attempting to fetch new authorization token...');
+
+  const host = altair.helpers.getEnvironment('host');
+  debug &amp;&amp; console.log(host);
+  if(!!!host) {
+    throw Error("'host' must be set in environment.");
+  }
+
+  const accountId = altair.helpers.getEnvironment('accountId');
+  debug &amp;&amp; console.log(`accountId: ${accountId}`);
+  if(!!!accountId) {
+    throw Error("'accountId' must be set in environment.");
+  }
+
+  const username = altair.helpers.getEnvironment('username');
+  debug &amp;&amp; console.log(`username: ${username}`);
+  if(!!!username) {
+    throw Error("'username' must be set in environment.");
+  }
+
+  const password = altair.helpers.getEnvironment('password');
+  debug &amp;&amp; console.log(`password: ${password}`);
+  if(!!!password) {
+    throw Error("'password' must be set in environment.");
+  }
+
+  const basicAuthorization = `Basic ${btoa(`${username}:${password}`)}`;
+  debug &amp;&amp; console.log(`basicAuthorization: ${basicAuthorization}`);
+
+  try  {
+    const res = await fetch(new Request(`${host}/auth/jwt/generate/${accountId}`), {
+      method: 'GET',
+      headers: new Headers({
+        Authorization: basicAuthorization,
+      }),
+    });
+    debug &amp;&amp; console.log(res);
+
+    switch(res.status) {
+      case 200:
+        const resText = await res.text();
+        debug &amp;&amp; console.log(`resText: ${resText}`);
+
+        const bearerAuthorization = `Bearer ${resText}`;
+        debug &amp;&amp; console.log(`bearerAuthorization: ${bearerAuthorization}`);
+
+        const newAuthorizationExpiresAt = JSON.parse(atob(bearerAuthorization.split('.')[1])).exp;
+        altair.helpers.setEnvironment('authorizationExpiresAt', newAuthorizationExpiresAt, true);
+        altair.helpers.setEnvironment('headers', {
+          Authorization: bearerAuthorization,
+        }, true);
+
+        break;
+      case 401:
+        throw Error(`Could not get Authorization token. Username or password is incorrect.`);
+      case 500:
+        throw Error(`Could not get Authorization token. Internal server error occurred.`);
+      default:
+        throw Error(`Could not get Authorization token. Received status code ${res.status}.`);
+    }
+  } catch (err) {
+    debug &amp;&amp; console.error(err);
+    throw Error(err);
+  }
+} else {
+  debug &amp;&amp; console.log('Doing nothing, authorization token has not expired.');
+}
+</codeblock></li>
+			</ol> </p> </section>
+		<section id="section_hfz_hch_fpb"> <title>Rate limiting</title><p>The GraphQL APIs include rate limiting to guard against large spikes of incoming requests and to better share access equally across all incoming requests. Rate limiting is applied to the number of your requests running on each platform instance. Your requests may all go to the same runtime instance or they might be distributed across instances.</p><p>If you send a large number of requests in succession, you might see a status code <codeph>429</codeph> as your error response to the request. This status code means that you sent too many requests. Allow your requests to clear out before you resubmit the requests.</p> </section>
+		<section id="section_pmf_l4f_vpb"> <title>Error handling</title><p>If an invalid GraphQL request is sent or the request cannot be processed, a standard GraphQL errors array is returned with details about what went wrong. The error object contains a message that indicates those details. The extensions object contains an errorCode property that can help programmatically respond to errors. That error code is either one of the enums defined in the GraphQL spec or one of these:</p><codeblock id="codeblock_at4_s4f_vpb">
+SYSTEM_ERROR
+TEMPORARY_ERROR
+DEFAULT_FOR_NON_NULL_ARGUMENT
+WRONG_TYPE
+UNKNOWN_TYPE
+SUB_SELECTION_REQUIRED
+SUB_SELECTION_NOT_ALLOWED
+INVALID_SYNTAX
+BAD_VALUE_FOR_DEFAULT_ARG
+FIELD_UNDEFINED
+INLINE_FRAGMENT_TYPE_CONDITION_INVALID
+FRAGMENT_TYPE_CONDITION_INVALID
+UNKNOWN_ARGUMENT
+UNDEFINED_FRAGMENT
+NON_INPUT_TYPE_ON_VARIABLE
+UNUSED_FRAGMENT
+MISSING_FIELD_ARGUMENT
+MISSING_DIRECTIVE_ARGUMENT
+VARIABLE_TYPE_MISMATCH
+UNKNOWN_DIRECTIVE
+MISPLACED_DIRECTIVE
+UNDEFINED_VARIABLE
+UNUSED_VARIABLE
+FRAGMENT_CYCLE
+FIELDS_CONFLICT
+INVALID_FRAGMENT_TYPE
+LONE_ANONYMOUS_OPERATION_VIOLATION
+NON_EXECUTABLE_DEFINITION
+DUPLICATE_OPERATION_NAME</codeblock> </section>
+		<section id="GUID-D99D397D-1EDA-4793-B0AD-081415A1C52D"> <title>GraphQL categories</title><p>The following table lists the GraphQL queries and mutations supported by each. See the specific object topics to get detailed information about the properties of the various objects, how to make API calls for each supported operation.</p><table frame="all" id="table_gs5_k5g_rkb">
+			<tgroup cols="3">
+				<colspec colnum="1" colname="col1" colwidth="1*" />
+				<colspec colnum="2" colname="col2" colwidth="1*" />
+				<colspec colnum="3" colname="col3" colwidth="1*" />
+				<thead>
+					<row id="row_1970d4c7-6dd4-44f9-9f90-15e52bc5271f">
+						<entry colname="col1">Category</entry>
+						<entry colname="col2">QUERY</entry>
+						<entry colname="col3">MUTATION</entry>
+					</row>
+				</thead>
+				<tbody>
+					<row id="row_4af74dff-76db-4e5f-8bdc-697205c3ae8b">
+						<entry colname="col1"> <xref href="api-authentication_resource_category_003edd41-a064-4ef9-9b1a-619c52af1ec3.dita" /> </entry>
+						<entry colname="col2"> <ph conref="lib-AtomSphere_API_9a0b3cc6-0758-45f9-b2cc-04932561d53c.xml#GUID-3B92F5CD-0A69-4191-BF29-297025332DDB/Supported" /> </entry>
+						<entry colname="col3"> <ph conref="lib-AtomSphere_API_9a0b3cc6-0758-45f9-b2cc-04932561d53c.xml#GUID-3B92F5CD-0A69-4191-BF29-297025332DDB/Supported" /> </entry>
+					</row>
+					<row id="row_e55eafed-36b5-4751-b525-38e6869416a2">
+						<entry colname="col1"> <xref href="api-Basic_Authentication_Gateway_category_d504dece-32b0-4f19-8ad5-ab114cc78201.xml#reference_9d57f905-b8b9-4b84-aee8-db44d6b880b4/title_eaf19915-911d-4f17-895c-e2f586798004">Broker Basic Authentication Migration category</xref></entry>
+						<entry colname="col2"> <ph conref="lib-AtomSphere_API_9a0b3cc6-0758-45f9-b2cc-04932561d53c.xml#GUID-3B92F5CD-0A69-4191-BF29-297025332DDB/NotSupported" /> </entry>
+						<entry colname="col3"> <ph conref="lib-AtomSphere_API_9a0b3cc6-0758-45f9-b2cc-04932561d53c.xml#GUID-3B92F5CD-0A69-4191-BF29-297025332DDB/Supported" /> </entry>
+					</row>
+					<row id="row_2f26fd81-61b9-431d-92aa-b7c2d514f532">
+						<entry colname="col1"><xref href="api-deployed_api_application_category_b9419b37-2a96-4cd9-8afa-d020d7b37b58.xml#reference_d3e2fd9e-4528-460c-85d8-f620dd7d8990/title_97ca16c6-78c0-453a-a649-1225e97f0aec">Deployed API Application category</xref></entry>
+						<entry colname="col2"><ph conref="lib-AtomSphere_API_9a0b3cc6-0758-45f9-b2cc-04932561d53c.xml#GUID-3B92F5CD-0A69-4191-BF29-297025332DDB/NotSupported" /></entry>
+						<entry colname="col3"><ph conref="lib-AtomSphere_API_9a0b3cc6-0758-45f9-b2cc-04932561d53c.xml#GUID-3B92F5CD-0A69-4191-BF29-297025332DDB/Supported" /></entry>
+					</row>
+					<row id="row_a42cdacb-efa1-4e31-9dbf-68808bf394e9">
+						<entry colname="col1"> <xref href="api-Deployed_API_category_99fc416c-50a1-4a0c-a2a0-193e70bb6fb5.dita" /> </entry>
+						<entry colname="col2"> <ph conref="lib-AtomSphere_API_9a0b3cc6-0758-45f9-b2cc-04932561d53c.xml#GUID-3B92F5CD-0A69-4191-BF29-297025332DDB/Supported" /> </entry>
+						<entry colname="col3"> <ph conref="lib-AtomSphere_API_9a0b3cc6-0758-45f9-b2cc-04932561d53c.xml#GUID-3B92F5CD-0A69-4191-BF29-297025332DDB/Supported" /> </entry>
+					</row>
+					<row id="row_6e8ccb8e-823c-4deb-ad9f-bcb57da6d683">
+						<entry colname="col1"> <xref href="api-Developer_Portal_Publishing_category_4043638a-257f-4a84-8eab-3caddeb3b7c9.dita" /> </entry>
+						<entry colname="col2"> <ph conref="lib-AtomSphere_API_9a0b3cc6-0758-45f9-b2cc-04932561d53c.xml#GUID-3B92F5CD-0A69-4191-BF29-297025332DDB/Supported" /> </entry>
+						<entry colname="col3"> <ph conref="lib-AtomSphere_API_9a0b3cc6-0758-45f9-b2cc-04932561d53c.xml#GUID-3B92F5CD-0A69-4191-BF29-297025332DDB/Supported" /> </entry>
+					</row>
+					<row id="row_7af32af5-1a72-4de1-8ffe-e15fa42df313">
+						<entry colname="col1"> <xref href="api-Environment_Migration_object_5e3d92fb-a205-41b9-95d4-6528893d30b5.dita" /> </entry>
+						<entry colname="col2"> <ph conref="lib-AtomSphere_API_9a0b3cc6-0758-45f9-b2cc-04932561d53c.xml#GUID-3B92F5CD-0A69-4191-BF29-297025332DDB/Supported" /> </entry>
+						<entry colname="col3"> <ph conref="lib-AtomSphere_API_9a0b3cc6-0758-45f9-b2cc-04932561d53c.xml#GUID-3B92F5CD-0A69-4191-BF29-297025332DDB/Supported" /> </entry>
+					</row>
+					<row id="row_89c64891-8eca-4d71-8316-b1222dd0be86">
+						<entry colname="col1"> <xref href="api-Get_Environment_object_e4e45b4d-c1ec-41be-a9d7-00d6a8a8c654.dita" /> </entry>
+						<entry colname="col2"> <ph conref="lib-AtomSphere_API_9a0b3cc6-0758-45f9-b2cc-04932561d53c.xml#GUID-3B92F5CD-0A69-4191-BF29-297025332DDB/Supported" /> </entry>
+						<entry colname="col3"> <ph conref="lib-AtomSphere_API_9a0b3cc6-0758-45f9-b2cc-04932561d53c.xml#GUID-3B92F5CD-0A69-4191-BF29-297025332DDB/NotSupported" /> </entry>
+					</row>
+					<row id="row_2c91e5e2-3769-484e-956b-ddfdc9c3a55b">
+						<entry colname="col1"> <xref href="api-Forward_Proxy_on_Gateway_category_c35dbfe1-3a88-41f3-a555-e47d27da75ed.dita" /> </entry>
+						<entry colname="col2"> <ph conref="lib-AtomSphere_API_9a0b3cc6-0758-45f9-b2cc-04932561d53c.xml#GUID-3B92F5CD-0A69-4191-BF29-297025332DDB/Supported" /> </entry>
+						<entry colname="col3"> <ph conref="lib-AtomSphere_API_9a0b3cc6-0758-45f9-b2cc-04932561d53c.xml#GUID-3B92F5CD-0A69-4191-BF29-297025332DDB/Supported" /> </entry>
+					</row>
+					<row id="row_d0608dbc-d64d-47e6-967a-d12cfb5fda62">
+						<entry colname="col1"> <xref href="api-Gateway_category_b41f3ab2-2ce5-45c6-805e-0293a0f73ce3.dita" /> </entry>
+						<entry colname="col2"> <ph conref="lib-AtomSphere_API_9a0b3cc6-0758-45f9-b2cc-04932561d53c.xml#GUID-3B92F5CD-0A69-4191-BF29-297025332DDB/Supported" /> </entry>
+						<entry colname="col3"> <ph conref="lib-AtomSphere_API_9a0b3cc6-0758-45f9-b2cc-04932561d53c.xml#GUID-3B92F5CD-0A69-4191-BF29-297025332DDB/Supported" /> </entry>
+					</row>
+					<row id="row_a5890f56-d696-46f0-afcc-a3f90db168eb">
+						<entry colname="col1"><xref href="api-metrics_0e0f3adb-2fcb-4af5-bbd1-aee58d2e713f.dita">Metrics</xref></entry>
+						<entry colname="col2"><ph conref="lib-AtomSphere_API_9a0b3cc6-0758-45f9-b2cc-04932561d53c.xml#GUID-3B92F5CD-0A69-4191-BF29-297025332DDB/Supported" /></entry>
+						<entry colname="col3"><ph conref="lib-AtomSphere_API_9a0b3cc6-0758-45f9-b2cc-04932561d53c.xml#GUID-3B92F5CD-0A69-4191-BF29-297025332DDB/NotSupported" /></entry>
+					</row>
+					<row id="row_7fec7f54-ab5c-41d4-918b-8b8b92a12f3e">
+						<entry colname="col1"> <xref href="api-Runtime_category_f3b6931f-e8e5-4c57-9461-ab21db85093c.dita" /> </entry>
+						<entry colname="col2"> <ph conref="lib-AtomSphere_API_9a0b3cc6-0758-45f9-b2cc-04932561d53c.xml#GUID-3B92F5CD-0A69-4191-BF29-297025332DDB/Supported" /> </entry>
+						<entry colname="col3"> <ph conref="lib-AtomSphere_API_9a0b3cc6-0758-45f9-b2cc-04932561d53c.xml#GUID-3B92F5CD-0A69-4191-BF29-297025332DDB/NotSupported" /> </entry>
+					</row>
+				</tbody>
+			</tgroup>
+			</table> </section>
+		<section id="section_xll_hxn_4tb">
+			<title>Using API Explorer for GraphQL APIs</title>
+			<p>API Explorer allows you to query metrics data using GraphQL API endpoints from the platform
+				instead of from third party tools such as Postman and Altair. <note
+					id="note_fy3_kc4_4tb">API Explorer is currently generally available as a Beta
+					feature. Enable in User Preferences (<menucascade>
+						<uicontrol>Settings</uicontrol>
+						<uicontrol>User Preferences</uicontrol>
+					</menucascade>).</note><note id="note_r14_xyn_4tb">At this time, API Explorer
+					only supports GraphQL APIs. SOAP and REST APIs are not currently
+					supported.</note></p>
+			<p>
+				<ol id="ol_ujp_b24_4tb">
+					<li>
+						<p>To launch API Explorer, select <menucascade>
+								<uicontrol>Resources</uicontrol>
+								<uicontrol>API Explorer</uicontrol>
+							</menucascade> from the <keyword
+								conref="lib-Boomi_Keywords_0346af2b-13d7-491e-bec9-18c5d89225bf.xml#GUID-0207C7F1-40FD-4537-BE59-1D6DA46B9A1D/PLATFORM"
+							/> menu bar.</p>
+					</li>
+					<li>
+						<p>Add a query to the left side of the graph.</p>
+					</li>
+					<li>
+						<p>To execute the query, select <uicontrol>Execute</uicontrol>.</p>
+						<p>The following options are provided:<ul id="ul_jbl_v24_4tb">
+								<li><uicontrol>Prettify</uicontrol> -  GraphQL formatter that
+									retains the original query.</li>
+								<li><uicontrol>Merge</uicontrol> -  Flattens a query with defined
+									fragments.</li>
+								<li><uicontrol>Copy</uicontrol> - Copies the query content.</li>
+								<li><uicontrol>History</uicontrol> - Opens the
+										<uicontrol>History</uicontrol> panel.</li>
+								<li><uicontrol>Documentation Explorer</uicontrol> - Searches the
+									schema to provide a root type for each operation.</li>
+							</ul></p>
+					</li>
+				</ol>
+			</p>
+		</section>
+	</refbody>
+</reference>

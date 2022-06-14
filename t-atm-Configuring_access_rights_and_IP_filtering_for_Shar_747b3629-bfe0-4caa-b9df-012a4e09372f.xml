@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8"?><?Inspire CreateDate="2019-02-20T20:24:43" ModifiedDate="2022-04-08T13:52:17"?><!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd"><task xml:lang="en-us" id="GUID-1C853094-3513-43CB-8EFF-03C3FE1B437D"><title id="GUID-2755AD51-BEF1-4837-87CD-197367700FA0">Configuring
+access rights and IP filtering for the Shared Web Server</title><!--FORMERLY To Change the Web Server Settings for an Atom, Molecule or Atom Cloud AND BEFORE THAT To Change the Web Server Settings for an Atom, Molecule or Cloud--><shortdesc>Configure access rights on the Shared Web
+Server panel in Atom Management.</shortdesc><prolog><resourceid id="GUID-1C853094-3513-43CB-8EFF-03C3FE1B437D" /></prolog><taskbody><prereq id="PREREQ_AD72BF921DD04D7C817DD33E327069D9"><p> You must have the Atom Management privilege to perform this task.
+If you have the Atom Management Read Access privilege, you cannot
+perform the task.</p></prereq><context id="GUID-4BF2C45A-AF10-44DB-BBCD-8E791EDDC436"><p>If the account that you are using owns the Atom, Molecule or Atom
+Cloud that you selected, you can change the web server settings for
+it. You can change the settings either for the account or for web
+service users of the account. You can add and delete account users.</p></context><steps id="GUID-58D22472-99E1-46F5-B919-102D22ACF646"><step id="STEP_5D69063B22D14881AB5E6B7FE0A8A9A0"><cmd>Go to <menucascade><uicontrol>Manage</uicontrol><uicontrol>Atom Management</uicontrol>
+</menucascade>.</cmd></step><step id="STEP_540A012686294A4FBC1E7891845608FB"><cmd>Select the Atom, Molecule, or Cloud from the list on the left.</cmd></step><step id="STEP_E2335A4977EE4A96A4CACC0C68ECE273"><cmd>Under Settings &amp; Configuration, click <uicontrol>Shared Web Server</uicontrol>.</cmd><stepresult><p>The Shared Web Server panel
+opens. The number of tabs that you see and the settings on the tabs
+vary, depending on whether the account that you are using owns the
+Atom, Molecule, or Cloud that you selected and the features enabled
+in the account.</p><fig id="GUID-A86DD4C3-A87C-45F2-AD44-CBAC293DFD94"><image href="manage-db-shared-web-server-settings_07d8629d-f3ec-4fb5-af59-8eaee712d43d.jpg" id="IMAGE_BC230785F564422CAB048BBB7903CA08"><alt>Shared
+Web Server configuration panel.</alt></image></fig></stepresult></step><step importance="optional" id="STEP_70486E5C0E7D4328A8EDDF33380182FD">
+                <cmd>In the <uicontrol>Listening Port Configuration</uicontrol> section, choose
+                        an <uicontrol>Authentication Type</uicontrol> type:
+                        <uicontrol>None</uicontrol>, <uicontrol>Basic</uicontrol>, <uicontrol>Client
+                        Certificate Header</uicontrol>, <uicontrol>Client Certificate</uicontrol>,
+                        <uicontrol>Custom</uicontrol>, <uicontrol>Gateway</uicontrol>, or
+                        <uicontrol>External Provider</uicontrol>.</cmd>
+                <info>
+                    <p>The Custom authentication type is available only for Atoms and Molecules. It
+                        can be used only by accounts for which the API Management feature is
+                        enabled.</p>
+                    <p>If you are setting up an account and one or more web service users, they must
+                        all use the same authentication type.</p>
+                    <p>For Atoms and Molecules, the authentication type selected here will be used
+                        by all ports added to this web services server. For Clouds, each port that
+                        is added can use the None, Basic, or Client Certificate authentication
+                        types. The Cloud owner’s account can then select any one of the
+                        authentication types used by its ports as the Cloud’s authentication
+                        type.</p>
+                </info>
+                <stepresult>
+                    <p>If you selected None, Basic, or Client Certificate, and <uicontrol>API
+                            Type</uicontrol> is set to Intermediate or Advanced, skip to step
+                        10.</p>
+                </stepresult>
+            </step><step id="STEP_2524A17B1A434678BA29C4FD47CC55E4"><cmd>If the <uicontrol>API Type</uicontrol> and <uicontrol>Authentication
+Type</uicontrol> are both set to Basic, do the following:</cmd><substeps id="GUID-1A677687-5B95-4EF8-BCDF-67A18DDB6347"><substep id="SUBSTEP_83F485196A3E445BBD47FEBDB5503AB6">
+<cmd>Click <uicontrol>Generate</uicontrol>.</cmd></substep><substep id="SUBSTEP_9E0AAE2A15D44BE785B7AF14F402598D"><cmd>If you want to show the token that was generated, select <uicontrol>Show Token</uicontrol>.</cmd></substep><substep id="SUBSTEP_8E332371C21F495B86DBABC265E1EB39"><cmd>Skip to the last step.</cmd></substep></substeps></step><step id="STEP_4916C6115B764C9A9425C31488572BEB"><cmd>If the <uicontrol>Authentication Type</uicontrol> is set to Custom,
+do the following:</cmd><substeps id="GUID-1CBBECD7-8D6A-43ED-904D-C65DD517A50D"><substep id="SUBSTEP_AA365B0CE2754296A1C335A5E8A395E9">
+<cmd>Type a <uicontrol>Login Module Class Name</uicontrol>.</cmd>
+</substep><substep importance="optional" id="SUBSTEP_15B9C9D43CCE4147BD320FDD41B3CA1A"><cmd>Select <uicontrol>Cache Authentication
+Credentials</uicontrol>.</cmd></substep><substep importance="optional" id="SUBSTEP_788C53E3132649F4B2DE0F3F8FB84077"><cmd>Change the <uicontrol>Authentication
+Caching Timeout</uicontrol>.</cmd></substep><substep id="SUBSTEP_B451D41893AE4F5A8FA01833E32557AE"><cmd>Click <uicontrol>Add Option</uicontrol>.</cmd></substep><substep id="SUBSTEP_E39768A24598484491A83C2422B819B8">
+<cmd>Type a <uicontrol>Key</uicontrol>.</cmd></substep><substep importance="optional" id="SUBSTEP_6282234613C4412790B3F6064DF05DCB"><cmd>If you must encrypt a key-value
+pair that contains a private credential, select <uicontrol>Encrypt</uicontrol>, click <uicontrol>Click to Set</uicontrol>, enter the
+value, and click <uicontrol>OK</uicontrol></cmd></substep><substep importance="optional" id="SUBSTEP_52A829491A524F29AB9DF998B0752DE4"><cmd>Type a <uicontrol>Value</uicontrol>.</cmd></substep><substep id="SUBSTEP_DD09A30547A845FEAF23FF83D06E1D85">
+<cmd>Repeat substeps d-g to add and define each option required by
+the login module.</cmd></substep></substeps></step><step id="STEP_06C78A8CA9F24A46BE88FC9A8160547B"><cmd>If <uicontrol>Authentication Type</uicontrol> is set to Client Certificate
+Header, specify a <uicontrol>Client Certificate Header Name</uicontrol>.</cmd></step><step id="STEP_AFB70518A2404653837530DD2C454268"><cmd>If <uicontrol>Authentication Type</uicontrol> is set to Client Certificate
+Header or Client Certificate, choose a public certificate for the <uicontrol>SSL Certificate</uicontrol>.</cmd></step><step importance="optional" id="STEP_29231AD00F79485891D9808AAAD88A20"><cmd>Make other changes as needed
+to the settings on the General tab.</cmd></step><step id="STEP_5543173D0F0E4BB28467549F4EAD5FB3"><cmd>If the <uicontrol>User Management</uicontrol> tab is present, select
+it. Otherwise, skip to the last step.</cmd></step><step id="STEP_26933A590AFD4C45AE174AA07BAD9236"><cmd>In the <uicontrol>Users</uicontrol> list, make sure the account is
+selected.</cmd></step><step id="STEP_DD31E6E5007643D6BF9B5427661D220B"><cmd>If <uicontrol>API Type</uicontrol> is set to Intermediate or Advanced
+and the <uicontrol>Authentication Type</uicontrol> is set to Basic,
+go to the <uicontrol>Token</uicontrol> section and do the following:</cmd><substeps id="GUID-8E07A23B-5C4C-4A63-8BCE-7883CDC6B9E9"><substep id="SUBSTEP_544BFCF03988439EBF1D91EAAB0C3E2C"><cmd>Click <uicontrol>Generate</uicontrol>.</cmd></substep><substep id="SUBSTEP_34F5892380C146D5B215BB69A12DC2EB">
+<cmd>If you want to show the token that was generated, select <uicontrol>Show Token</uicontrol>.</cmd></substep></substeps></step><step id="STEP_0FE7278F8DD646E590F0249014CEC1A1"><cmd>If <uicontrol>Authentication Type</uicontrol> is set to Custom, select
+an API user, go to the <uicontrol>External Username</uicontrol> section
+and enter the external identity provider’s user name for that person.</cmd></step><step id="STEP_20AE872B3E50479FBF97ED4D23788C39"><cmd>If you want to use IP filtering, go to the <uicontrol>IP Filter</uicontrol> section and do the following:</cmd><substeps id="GUID-37AF7E4D-F813-4C20-B6EE-C8444B32B1EB"><substep id="SUBSTEP_5F11438F699040AD98826989BA679CF4">
+<cmd>Select <uicontrol>Use IP Filtering</uicontrol>.</cmd>
+</substep><substep id="SUBSTEP_F512E5860A2E451AA3384238663EA51E">
+<cmd>Click <uicontrol>Add Filter</uicontrol>.</cmd></substep><substep id="SUBSTEP_0F25129876044C1981E748A7F02381B6"><cmd>Type an IP address is the box above the <uicontrol>Add Filter</uicontrol> button.</cmd></substep><substep id="SUBSTEP_2C724A80BBF84E0B86F79669504E9D84">
+<cmd>Repeat the two steps above as needed to add more IP addresses.
+To delete an IP address, click the <uicontrol>Delete</uicontrol> link
+to the right of it.</cmd></substep></substeps></step><step id="STEP_AB181230C6F54F30B0362D4D5D37916B"><cmd>If <uicontrol>API Type</uicontrol> is set to Intermediate and you
+want to allow access to only certain processes, go to the <uicontrol>Use Process Filtering</uicontrol> section and do the following:</cmd><substeps id="GUID-99DE93AF-249A-4239-BC33-25260B6D1B67"><substep id="SUBSTEP_5BAC7A633FDA43D7808560E666B62454"><cmd>Select <uicontrol>Allow access only for specified processes</uicontrol>.</cmd></substep><substep id="SUBSTEP_92928CCCC8474C3D8B564773BC1AFA0A"><cmd>Select the check boxes next to the processes to which the selected
+account (or API user) should have access.</cmd></substep></substeps></step><step id="step_e4afd78e-015f-436b-a018-375280b36ad8"><cmd><draft-comment author="Jon_Brams">BOOMI-38209 update</draft-comment>If
+                        <uicontrol>API Type</uicontrol> is set to Advanced and you want to allow
+                    access to processes linked only to certain API Service components, go to the
+                        <uicontrol>API Filtering</uicontrol> section and do the following:</cmd><substeps id="substeps_xlb_vsk_v3b"><substep id="substep_6c1e3412-b2cc-4d65-b967-007249cbd0ae">
+                        <cmd>Select <uicontrol>Allow access only for specified
+                            APIs</uicontrol>.</cmd>
+                    </substep><substep id="substep_025f9c3d-af4e-4a40-b5cf-9008ce00ec5a">
+                        <cmd>Select the check boxes next to the API Service components whose linked
+                            processes should be accessible to the selected account (or API
+                            user).</cmd>
+                    </substep></substeps></step><step id="STEP_CDA7AE36AE7743DE8E75E6F9F99F8D3F"><cmd>In the <uicontrol>Users</uicontrol> list, click the <image href="main-ic-plus-sign-white-in-green-circle-16_4dc8c5f3-e893-4aef-ade2-0b7afe9476c1.jpg" id="IMAGE_C0D7535AA95D4A69A095B86B641F65BF"><alt></alt></image> <uicontrol>Add User</uicontrol> icon.</cmd></step><step id="STEP_1552AFB083424EEFB1F60CD5D996B0CE"><cmd>In the <uicontrol>Username</uicontrol> section, type an API user
+name.</cmd></step><step id="STEP_F4055CC33815444694FC2B8334D4090A"><cmd>Click <uicontrol>Save</uicontrol> to apply the settings on all of the Shared Web Server panel
+tabs.</cmd><stepresult><p>You are prompted to restart the Atom, Molecule, or Atom Cloud. You have the option to restart now or restart later. </p></stepresult></step></steps></taskbody></task>

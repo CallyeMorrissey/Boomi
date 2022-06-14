@@ -1,0 +1,177 @@
+﻿<?xml version="1.0" encoding="utf-8"?><?Inspire CreateDate="2020-12-02T18:58:22" ModifiedDate="2022-03-11T15:59:01"?><!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "map.dtd">
+
+<map id="GUID-CF4842AB-790D-424C-8D26-5985AD0D9646" xml:lang="en-us">
+	<reltable id="RELTABLE_B26353981ED34B11A95BC4C52DED38DD">
+		<relrow>
+			<relcell>
+				<topicref format="dita" href="r-api-API_Management_APIs_4307dcc3-1662-4e2a-9a82-d03ca043f340.xml" scope="local" type="reference">
+					<topicmeta>
+						<navtitle>API Management APIs</navtitle>
+					</topicmeta>
+				</topicref>
+			</relcell>
+			<relcell />
+		</relrow>
+		<relrow>
+			<relcell>
+				<topicref format="dita" href="r-api-API_objects_and_object-based_operations_7eab8984-ccb3-4a0e-99eb-da9a95167b76.xml" scope="local" type="reference">
+					<topicmeta>
+						<navtitle>API objects and object-based operations</navtitle>
+					</topicmeta>
+				</topicref>
+			</relcell>
+			<relcell />
+		</relrow>
+		<relrow>
+			<relcell>
+				<topicref href="r-api-API_Key_object_b7223835-43b5-4641-9732-1a12d762c1c5.xml">
+					<topicmeta>
+						<navtitle>API Key object</navtitle>
+					</topicmeta>
+				</topicref>
+			</relcell>
+			<relcell />
+		</relrow>
+		<relrow>
+			<relcell>
+				<topicref format="dita" href="r-api-API_Key_Call_Count_object_9b95ec7a-b02c-48be-ae2a-a1c6e9abeba5.xml" scope="local" type="reference">
+					<topicmeta>
+						<navtitle>API Key Call Count object</navtitle>
+					</topicmeta>
+				</topicref>
+			</relcell>
+			<relcell />
+		</relrow>
+		<relrow>
+			<relcell>
+				<topicref format="dita" href="r-api-Application_object_d2a645ce-062b-474d-a5cb-eb6dd7dbda38.xml" scope="local" type="reference">
+					<topicmeta>
+						<navtitle>Application object</navtitle>
+					</topicmeta>
+				</topicref>
+			</relcell>
+			<relcell />
+		</relrow>
+		<relrow>
+			<relcell>
+				<topicref href="r-api-API_Contract_object_55c0f131-b35c-49f4-bd38-f673f51f1470.xml">
+					<topicmeta>
+						<navtitle>API Contract object</navtitle>
+					</topicmeta>
+				</topicref>
+			</relcell>
+			<relcell>
+				<topicref href="api-Plan_object_1ab3c71d-2d8f-4ae6-bab8-4237245a705b.dita" linking="targetonly" />
+			</relcell>
+		</relrow>
+		<relrow>
+			<relcell>
+				<topicref href="api-Plan_object_1ab3c71d-2d8f-4ae6-bab8-4237245a705b.dita">
+					<topicmeta>
+						<navtitle>Plan object</navtitle>
+					</topicmeta>
+				</topicref>
+			</relcell>
+			<relcell>
+				<topicref href="api-Plan_Usage_object_fab8800a-b31b-4d17-a244-8532414720ee.dita">
+					<topicmeta>
+						<navtitle>Plan Usage object</navtitle>
+					</topicmeta>
+				</topicref>
+			</relcell>
+		</relrow>
+		<relrow>
+			<relcell>
+				<topicref href="api-Plan_Usage_object_fab8800a-b31b-4d17-a244-8532414720ee.dita">
+					<topicmeta>
+						<navtitle>Plan Usage object</navtitle>
+					</topicmeta>
+				</topicref>
+			</relcell>
+			<relcell>
+				<topicref href="api-Add_Plans_to_Deployments_7534b244-5df5-4cf5-b535-46cb6b174871.dita">
+					<topicmeta>
+						<navtitle>Add Plans to Deployments</navtitle>
+					</topicmeta>
+				</topicref>
+				<topicref href="api-Remove_Plans_from_Deployments_cb31e38f-be7d-403c-926a-4f4d6c23c62c.dita">
+					<topicmeta>
+						<navtitle>Remove Plans from Deployments</navtitle>
+					</topicmeta>
+				</topicref>
+			</relcell>
+		</relrow>
+		<relrow>
+			<relcell>
+				<topicref href="r-api-PublishedAPI_object_a4a34dc2-e08f-40d8-b4a4-4948a15eb19d.xml">
+					<topicmeta>
+						<navtitle>PublishedAPI object</navtitle>
+					</topicmeta>
+				</topicref>
+			</relcell>
+			<relcell />
+		</relrow>
+		<relrow>
+			<relcell>
+				<topicref href="api-API_actions_c31cd55c-294d-4825-875d-fcc77bc7e35a.dita">
+					<topicmeta>
+						<navtitle>API actions</navtitle>
+					</topicmeta>
+				</topicref>
+			</relcell>
+			<relcell>
+				<topicref href="api-Add_Plans_to_Deployments_7534b244-5df5-4cf5-b535-46cb6b174871.dita">
+					<topicmeta>
+						<navtitle>Add Plans to Deployments</navtitle>
+					</topicmeta>
+				</topicref>
+				<topicref href="api-Remove_Plans_from_Deployments_cb31e38f-be7d-403c-926a-4f4d6c23c62c.dita">
+					<topicmeta>
+						<navtitle>Remove Plans from Deployments</navtitle>
+					</topicmeta>
+				</topicref>
+				<topicref href="api-Send_Changes_to_Authentication_Source_6065a23c-310d-423f-95f0-02ff8c3d47fa.dita">
+					<topicmeta>
+						<navtitle>Send Changes to Authentication Source</navtitle>
+					</topicmeta>
+				</topicref>
+			</relcell>
+		</relrow>
+		<relrow>
+			<relcell>
+				<topicref href="api-Add_Plans_to_Deployments_7534b244-5df5-4cf5-b535-46cb6b174871.dita">
+					<topicmeta>
+						<navtitle>Add Plans to Deployments</navtitle>
+					</topicmeta>
+				</topicref>
+			</relcell>
+			<relcell>
+				<topicref href="api-Remove_Plans_from_Deployments_cb31e38f-be7d-403c-926a-4f4d6c23c62c.dita">
+					<topicmeta>
+						<navtitle>Remove Plans from Deployments</navtitle>
+					</topicmeta>
+				</topicref>
+			</relcell>
+		</relrow>
+		<relrow>
+			<relcell>
+				<topicref href="api-Remove_Plans_from_Deployments_cb31e38f-be7d-403c-926a-4f4d6c23c62c.dita">
+					<topicmeta>
+						<navtitle>Remove Plans from Deployments</navtitle>
+					</topicmeta>
+				</topicref>
+			</relcell>
+			<relcell />
+		</relrow>
+		<relrow>
+			<relcell>
+				<topicref href="api-Send_Changes_to_Authentication_Source_6065a23c-310d-423f-95f0-02ff8c3d47fa.dita">
+					<topicmeta>
+						<navtitle>Send Changes to Authentication Source</navtitle>
+					</topicmeta>
+				</topicref>
+			</relcell>
+			<relcell />
+		</relrow>
+	</reltable>
+</map>

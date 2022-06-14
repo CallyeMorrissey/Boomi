@@ -1,0 +1,115 @@
+﻿<?xml version="1.0" encoding="utf-8"?><?Inspire CreateDate="2019-02-20T20:23:49" ModifiedDate="2022-03-11T15:58:57"?><!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "map.dtd">
+
+<map id="GUID-3DEDB54B-F5C3-416C-BA86-6E3DF4B2CCD1" xml:lang="en-us">
+	<topicref href="r-api-API_Management_APIs_4307dcc3-1662-4e2a-9a82-d03ca043f340.xml">
+		<topicmeta>
+			<navtitle>API Management APIs</navtitle>
+		</topicmeta>
+		<topicref href="r-atm-Query_paging.html" format="html" navtitle="Query paging" type="reference" toc="yes" scope="external" />
+		<topicref id="topicref_b8e94eeb-24f8-49df-82ae-8d6005a7d932" href="api-API_Management_specific_Atomsphere_audit_log_query_types_35092dfe-f630-4fbf-9d6e-78299d54abe3.dita" navtitle="api-API_Management_specific_Atomsphere_audit_log_query" type="reference" />
+		<topicref href="r-api-API_objects_and_object-based_operations_7eab8984-ccb3-4a0e-99eb-da9a95167b76.xml">
+			<topicmeta>
+				<navtitle>API objects and object-based operations</navtitle>
+			</topicmeta>
+			<topicref href="r-api-API_Key_Call_Count_object_9b95ec7a-b02c-48be-ae2a-a1c6e9abeba5.xml">
+				<topicmeta>
+					<navtitle>API Key Call Count object</navtitle>
+				</topicmeta>
+			</topicref>
+			<topicref href="r-api-API_Key_object_b7223835-43b5-4641-9732-1a12d762c1c5.xml">
+				<topicmeta>
+					<navtitle>API Key object</navtitle>
+				</topicmeta>
+			</topicref>
+			<topicref href="r-api-Application_object_d2a645ce-062b-474d-a5cb-eb6dd7dbda38.xml">
+				<topicmeta>
+					<navtitle>Application object</navtitle>
+				</topicmeta>
+			</topicref>
+			<topicref href="r-api-Authentication_Source_object_bf5fff93-f557-407b-8159-ab327dd4de59.xml">
+				<topicmeta>
+					<navtitle>Authentication Source object</navtitle>
+				</topicmeta>
+			</topicref>
+			<topicref href="r-api-Authentication_Source_Group_object_8b4e86d6-50a3-4115-95df-4d7aed8e17a5.xml">
+				<topicmeta>
+					<navtitle>Authentication Source Group object</navtitle>
+				</topicmeta>
+			</topicref>
+			<topicref href="r-api-Authentication_Source_Role_object_ccc600e5-4d57-4d9a-ae8c-8ff433c054ac.xml">
+				<topicmeta>
+					<navtitle>Authentication Source Role object</navtitle>
+				</topicmeta>
+			</topicref>
+			<topicref href="r-api-Authenticaiton_Source_User_object_618b400a-a9d9-4a8a-85a0-1e32a659cac8.xml">
+				<topicmeta>
+					<navtitle>Authentication Source User object</navtitle>
+				</topicmeta>
+			</topicref>
+			<topicref href="r-api-API_Contract_object_55c0f131-b35c-49f4-bd38-f673f51f1470.xml">
+				<topicmeta>
+					<navtitle>API Contract object</navtitle>
+				</topicmeta>
+			</topicref>
+			<topicref href="api-Plan_object_1ab3c71d-2d8f-4ae6-bab8-4237245a705b.dita">
+				<topicmeta>
+					<navtitle><draft-comment author="Jon_Brams">BOOMI-36809 insertion</draft-comment>Plan object</navtitle>
+				</topicmeta>
+			</topicref>
+			<topicref href="api-Plan_Usage_object_fab8800a-b31b-4d17-a244-8532414720ee.dita">
+				<topicmeta>
+					<navtitle><draft-comment author="Jon_Brams">BOOMI-36809 insertion</draft-comment>Plan Usage object</navtitle>
+				</topicmeta>
+			</topicref>
+			<topicref href="r-api-PublishedAPI_object_a4a34dc2-e08f-40d8-b4a4-4948a15eb19d.xml">
+				<topicmeta>
+					<navtitle>PublishedAPI object</navtitle>
+				</topicmeta>
+			</topicref>
+		</topicref>
+		<topicref href="api-GraphQL_API_Management_APIs_18f1a55a-b3d7-4b9e-ab0a-162fc4a67686.dita">
+			<topicref id="topicref_2700a0cd-069a-47e6-b4dc-090247bb8e19" href="api-authentication_resource_category_003edd41-a064-4ef9-9b1a-619c52af1ec3.dita" type="reference" />
+			<topicref>
+				<topicref href="api-Basic_Authentication_Gateway_category_d504dece-32b0-4f19-8ad5-ab114cc78201.xml" />
+			</topicref>
+			<topicref href="api-deployed_api_application_category_b9419b37-2a96-4cd9-8afa-d020d7b37b58.xml" />
+			<topicref href="api-Deployed_API_category_99fc416c-50a1-4a0c-a2a0-193e70bb6fb5.dita" />
+			<topicref href="api-Developer_Portal_Publishing_category_4043638a-257f-4a84-8eab-3caddeb3b7c9.dita" />
+			<topicref href="api-Environment_Migration_object_5e3d92fb-a205-41b9-95d4-6528893d30b5.dita" />
+			<topicref href="api-Get_Environment_object_e4e45b4d-c1ec-41be-a9d7-00d6a8a8c654.dita" />
+			<topicref id="topicref_e2768720-2d9f-43c4-b8ce-0f8db9a96461" href="api-Forward_Proxy_on_Gateway_category_c35dbfe1-3a88-41f3-a555-e47d27da75ed.dita" type="reference" />
+			<topicref href="api-Gateway_category_b41f3ab2-2ce5-45c6-805e-0293a0f73ce3.dita" />
+			<topicref href="api-metrics_0e0f3adb-2fcb-4af5-bbd1-aee58d2e713f.dita">
+				<topicmeta>
+					<navtitle>Metrics</navtitle>
+				</topicmeta>
+			</topicref>
+			<topicref href="api-Runtime_category_f3b6931f-e8e5-4c57-9461-ab21db85093c.dita" />
+		</topicref>
+		<topicref href="api-API_actions_c31cd55c-294d-4825-875d-fcc77bc7e35a.dita">
+			<topicmeta>
+				<navtitle><draft-comment author="Jon_Brams">BOOMI-36809 insertion</draft-comment>API actions</navtitle>
+			</topicmeta>
+			<topicref href="api-Add_Plans_to_Deployments_7534b244-5df5-4cf5-b535-46cb6b174871.dita">
+				<topicmeta>
+					<navtitle>Add Plans to Deployments</navtitle>
+				</topicmeta>
+			</topicref>
+			<topicref href="api-Remove_Plans_from_Deployments_cb31e38f-be7d-403c-926a-4f4d6c23c62c.dita">
+				<topicmeta>
+					<navtitle>Remove Plans from Deployments</navtitle>
+				</topicmeta>
+			</topicref>
+			<topicref href="api-Send_Changes_to_Authentication_Source_6065a23c-310d-423f-95f0-02ff8c3d47fa.dita">
+				<topicmeta>
+					<navtitle>Send Changes to Authentication Source</navtitle>
+				</topicmeta>
+			</topicref>
+		</topicref>
+	</topicref>
+	<topicref href="api-apim-APIs-reltable_a0fe4ee6-11bb-4152-abcb-1896bbaf0611.ditamap" print="no" toc="no" format="ditamap">
+		<topicmeta>
+			<navtitle>reltable-AtomSphere API</navtitle>
+		</topicmeta>
+	</topicref>
+</map>

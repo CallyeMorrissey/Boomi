@@ -1,0 +1,104 @@
+﻿<?xml version="1.0" encoding="utf-8"?><?Inspire CreateDate="2019-02-20T20:22:35" ModifiedDate="2022-03-29T17:19:07"?><!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+
+<topic xml:lang="en-us" id="GUID-3B92F5CD-0A69-4191-BF29-297025332DDB">
+	<title id="GUID-6EA7DC5C-7EC3-482A-B19D-C817E3190929">AtomSphere API</title>
+	<shortdesc>Shared content for AtomSphere API</shortdesc>
+	<body>
+		<section id="section_j3j_t2v_rlb"> <title>Paragraphs</title> <p id="API_QUERY_RESULT_SORTING"><draft-comment author="Jon_Brams">B2B-996 unrelated insertion</draft-comment>Query results are sorted by the dateProcessed field value, from least recent to most recent.</p> </section>
+		<section id="section_a4w_tfx_bpb"> <title>Table conrefs</title> <p>Supported:<ph id="Supported"><image href="img-atm-supported_api_29c27cfa-02f5-4a0f-a314-e9fb250f463c.svg" id="image_y1r_wpq_43b">
+			<alt />
+			</image> Supported</ph></p> <p>Not supported: <ph id="NotSupported"><image href="img-atm-not_supported_api_88d3bc76-0a84-4175-b675-18dda09affba.svg" id="image_z1r_wpq_43b">
+			<alt />
+			</image> Not supported</ph></p> </section>
+		<section id="GUID-AC6DAD39-2031-4C72-9CBD-2CE39437DCCF"> <title id="GUID-D5048999-4A81-4E1F-BD05-BF70549D4F26">Notes</title> <note id="GUID-6F9C94B7-4802-4448-AF88-8B21F459E809">For general information about bulk GET operations, see the topic linked below.</note> <note id="GUID-123218CC-105E-4258-9C74-379AF78F191C">To facilitate these operations on this object in an integration process, use the <keyword conref="lib-Boomi_Keywords_0346af2b-13d7-491e-bec9-18c5d89225bf.xml#GUID-0207C7F1-40FD-4537-BE59-1D6DA46B9A1D/BOOMI_ATOMSPHERE" /> Partner API connector instead of the <keyword conref="lib-Boomi_Keywords_0346af2b-13d7-491e-bec9-18c5d89225bf.xml#GUID-0207C7F1-40FD-4537-BE59-1D6DA46B9A1D/BOOMI_ATOMSPHERE" /> API connector.</note> <note id="GUID-DCC597D1-D3BC-4174-B55F-65F55BF77337">Extension types other than data map extensions for an Atom are collectively represented by the Atom Extensions object.</note> <note id="GUID-14720007-1C60-4752-B2E4-C2EA4C9D91FD">The Environment Map Extension object is used to configure extended maps only. All other types of extensions such as connections and process properties are managed using the Environment Extensions object.</note> <note id="GUID-2D9295E9-A4C5-43CB-9539-7705B74D19F8">The requesting account is not a member of its own All Accounts account group.</note> <note id="GUID-A5DBF315-0B63-4524-997F-EF5B9E36D0B6">The Swagger v2.0 support in this <keyword conref="lib-Boomi_Keywords_0346af2b-13d7-491e-bec9-18c5d89225bf.xml#GUID-0207C7F1-40FD-4537-BE59-1D6DA46B9A1D/BOOMI_ATOMSPHERE" /> release is to be considered a “Tech Preview” not intended for production use due to the unfinished state of Swagger v2.0 and the lack of existing tooling support.</note> <note id="GUID-6515AB95-5610-4A8D-8FDE-B5590F8EC23C">In an XML response body, the returned URL requires decoding — for example, replacement of each instance of “&amp;amp;” with “&amp;” — for use in the browser.</note> <note id="GUID-14463BCD-7980-4D6E-BA7C-5725019E6834">The Atom Map Extension and Environment Map Extension objects of the <keyword conref="lib-Boomi_Keywords_0346af2b-13d7-491e-bec9-18c5d89225bf.xml#GUID-0207C7F1-40FD-4537-BE59-1D6DA46B9A1D/BOOMI_ATOMSPHERE" /> API do not support this function. </note> <note id="GUID-1F82705B-1C41-42BF-AE4F-AF9B23FE9424">The value <codeph>[[HIDDEN]]</codeph> is associated with Hidden property values in process property extensions:<ul id="UL_097962BDC60442D592FC97E1BF593423">
+			<li id="LI_28BF6F7B26A8493BBB10E2A4B907C636"> <p>In an UPDATE request in which a non-hidden property value is to be updated, to preserve a Hidden value, specify it as <codeph>[[HIDDEN]]</codeph>. For example: <codeph>&lt;bns:ProcessPropertyValue encryptedValueSet="false" value="[[HIDDEN]]" key="e3b64496-a615-461e-bb38-3f77eaccd0e7" label="HiddenProperty"/&gt;</codeph>.</p> <p>Preserving a Hidden value in this way automatically deselects the <uicontrol>Use Default?</uicontrol> option for the property in the Extensions dialog.</p> </li>
+			<li id="LI_1C04BE7522BE43D9AFA65056F15DA176"> <p>In a GET or QUERY result, the returned value for a Hidden property is determined by whether the <uicontrol>Use Default?</uicontrol> option is selected for the property in the Extensions dialog:</p> <ul id="UL_1222A2A372B94170A4428943A57699A0">
+				<li id="LI_C5B4F8AB263F485F87915A7C8A738442"> <p>If <uicontrol>Use Default?</uicontrol> is not selected, the value <codeph>[[HIDDEN]]</codeph> is returned. For example: <codeph>&lt;bns:ProcessPropertyValue encryptedValueSet="false" value="[[HIDDEN]]" key="e3b64496-a615-461e-bb38-3f77eaccd0e7" label="HiddenProperty"/&gt;</codeph>.</p> </li>
+				<li id="LI_96E5D57DF29B46FC83A1B102B72C4B39"> <p>If <uicontrol>Use Default?</uicontrol> is selected, an empty value is returned. For example: <codeph>&lt;bns:ProcessPropertyValue encryptedValueSet="false" value="" key="e3b64496-a615-461e-bb38-3f77eaccd0e7" label="HiddenProperty"/&gt;</codeph>.</p> </li>
+				</ul> </li>
+			</ul></note><note type="important" id="note_zs3_4jr_ssb"><keyword conref="lib-Boomi_Keywords_0346af2b-13d7-491e-bec9-18c5d89225bf.xml#GUID-0207C7F1-40FD-4537-BE59-1D6DA46B9A1D/BOOMI_INTEGRATION" />-specific <keyword conref="lib-Boomi_Keywords_0346af2b-13d7-491e-bec9-18c5d89225bf.xml#GUID-0207C7F1-40FD-4537-BE59-1D6DA46B9A1D/BOOMI_ATOMSPHERE" /> API and Partner REST APIs are also available via the OpenAPI 3.0 specification. Because OpenAPI 3.0 is language agnostic, it enables users to easily discover available <keyword conref="lib-Boomi_Keywords_0346af2b-13d7-491e-bec9-18c5d89225bf.xml#GUID-0207C7F1-40FD-4537-BE59-1D6DA46B9A1D/BOOMI_INTEGRATION" /> API and Partner API objects and actions, test requests and responses, and understand the API's functionality. For more information, see the topic <xref href="int-OpenAPI_3_0_4344499b-7c43-49d4-bf13-7cd2b1263ca4.dita" scope="local">OpenAPI 3.0</xref>.</note> </section>
+		<section id="GUID-7F0181B4-3400-4259-965E-82FD28A204F5"> <title id="GUID-ED635529-6999-4632-BAB0-75489E3412BE">Cautions</title> <note type="caution" id="GUID-BF9DBD98-EB56-4884-B5AD-9752205DB9AD">The values of extensions omitted from the UPDATE request are removed. To prevent values from being removed, include in the request the full extensions template, as returned by a GET or QUERY operation, and populate all values including those you are not changing. </note> </section>
+		<section id="GUID-95647945-4381-49C4-80D4-BF46B79CC588"> <title id="GUID-D9CFD89A-3BC7-4ABE-AA9B-D65A6592D9A5">Tables</title> <table id="GUID-EC6903CE-6829-4FB3-AEF8-0411906F5716">
+			<tgroup cols="2">
+				<colspec colnum="1" colname="col1" />
+				<colspec colnum="2" colname="col2" />
+				<thead>
+					<row id="row_85ef907f-26ec-420f-bee5-523318d37cdc">
+						<entry colname="col1" valign="top"> <p>Request Headers</p> </entry>
+						<entry colname="col2" valign="top"> <p>Entity Headers</p> </entry>
+					</row>
+				</thead>
+				<tbody>
+					<row id="row_3826cba5-fc01-43f8-8e56-d4dbcdf0de77">
+						<entry colname="col1"> <p><codeph>Accept</codeph></p> </entry>
+						<entry colname="col2"> <p><codeph>Content-Encoding</codeph> — the compression method applied to the data</p> </entry>
+					</row>
+					<row id="row_e6d14cb1-7afd-4933-89ff-0cb1b6c9f15a">
+						<entry colname="col1"> <p><codeph>Accept-Charset</codeph></p> </entry>
+						<entry colname="col2"> <p><codeph>Content-Language</codeph></p> </entry>
+					</row>
+					<row id="row_fa635b5c-1005-46bc-85cb-502eeffa491f">
+						<entry colname="col1"> <p><codeph>Accept-Encoding</codeph></p> </entry>
+						<entry colname="col2"> <p><codeph>Content-MD5</codeph></p> </entry>
+					</row>
+					<row id="row_2fb8ffc8-53c9-4471-a385-e81166852617">
+						<entry colname="col1"> <p><codeph>Accept-Language</codeph></p> </entry>
+						<entry colname="col2"> <p><codeph>Content-Type</codeph> — the MIME type of any input data, if given</p> </entry>
+					</row>
+				</tbody>
+			</tgroup>
+			</table> <table id="GUID-C7CF72C9-C6CA-43DF-A310-3E84E3D3BA0D">
+			<tgroup cols="3">
+				<colspec colnum="1" colname="col1" />
+				<colspec colnum="2" colname="col2" />
+				<colspec colnum="3" colname="col3" />
+				<thead>
+					<row id="row_293b2a7b-c2f7-4649-849b-9f193d9ddbd9">
+						<entry colname="col1" valign="top">General Headers</entry>
+						<entry colname="col2" valign="top">Request Headers</entry>
+						<entry colname="col3" valign="top">Non-standard Headers</entry>
+					</row>
+				</thead>
+				<tbody>
+					<row id="row_dd267a52-9d6a-460f-89bc-be5bc870a842">
+						<entry colname="col1"><codeph>Connection</codeph></entry>
+						<entry colname="col2"><codeph>Host</codeph></entry>
+						<entry colname="col3"><codeph>Proxy-Connection</codeph></entry>
+					</row>
+					<row id="row_2b34f659-9051-4bc8-9b2e-3e8e1b41aa31">
+						<entry colname="col1"><codeph>Upgrade</codeph></entry>
+						<entry colname="col2"><codeph>Proxy-Authorization</codeph></entry>
+						<entry colname="col3"><codeph>x-Forwarded-For</codeph></entry>
+					</row>
+					<row id="row_3f52ec85-379c-4d33-ac8b-3d2d140750e1">
+						<entry colname="col1"><codeph>Via</codeph></entry>
+						<entry colname="col2" />
+						<entry colname="col3"><codeph>X-Forwarded-Proto</codeph></entry>
+					</row>
+				</tbody>
+			</tgroup>
+			</table> </section>
+		<section id="section_tbw_j4v_bnb"> <title>API usage limits</title> <dl id="API_USAGE_LIMITS">
+			<dlhead>
+				<dthd>Limit</dthd>
+				<ddhd>Description</ddhd>
+			</dlhead>
+			<dlentry>
+				<dt>Number of requests per day</dt>
+				<dd> The limit is account-specific. <p><draft-comment author="Jon_Brams">BOOMI-43626 unrelated update 1000 → 1,000, release profiling intentionally omitted</draft-comment>Your account’s usage request limit is calculated as 1,000 times your number of licensed connectors. Usage is calculated based on a rolling 24-hour period with usage calculated every hour. If usage of the API exceeds this limit, API users receive an HTTP 503 response indicating that the server is temporarily unable to fulfill the request.</p><p><draft-comment author="Jon_Brams">HUB-1052 unrelated update A.M./P.M. → am/pm, release profiling intentionally omitted, BOOMI-43626 update, release profiling intentionally omitted</draft-comment>For a simple example of how this works, assume that your account has a limit of 2,000 requests per day. If, starting at 12:00pm. on Monday, API users make 100 requests per hour, the account will reach it's limit of requests per rolling 24-hour period during the 7:00am hour on Tuesday (20 hours * 100 requests/hour = 2,000 requests). API users will not be able to make requests again until the previous 24-hour period has fewer than 2,000 requests. That threshold will be reached after 12:00pm on Tuesday, when the previous day’s requests fall out of the previous 24-hour period.</p></dd>
+			</dlentry>
+			<dlentry>
+				<dt> Rate of requests per second</dt>
+				<dd> The limit is five requests per second. <p>If API usage exceeds this limit, API users receive an HTTP 503 response indicating that the server is temporarily unable to fulfill the request. </p></dd>
+			</dlentry>
+			</dl> </section>
+		<section id="GUID-CC138705-6BD3-4AB4-8F8B-7135C8CEBA26"> <title id="GUID-36A675FE-35D8-4F44-AF05-86B3EA3E86D6">Supported function types</title> <p>The GET, UPDATE, and EXECUTE operations all support the <codeph>&lt;Function&gt;</codeph> element's type attribute. For UPDATE requests, you specify the function type in the request body. For GET and EXECUTE requests, the function type is returned in the response. </p> <p>Most function types are valid for GET, UPDATE, and EXECUTE operations. However, the following function types are <i>not</i> valid for these API operations. Extensible maps that contain these function type values cannot be retrieved or updated via the API. </p> <ul id="UL_938F1EC3F45942BAB1A9F239519234A3">
+			<li id="LI_C2EC5AE5665E4A0CA42BB34781D9D603"> <p>SQL Lookup </p> </li>
+			<li id="LI_BD12150EDFFC43F599EE5C62157D7699"> <p>Connector Call </p> </li>
+			<li id="li_ef64cf47-b2e4-4f3e-8c8b-5cd77392a795"><p>Document Cache Lookup</p></li>
+			<li id="LI_A21372AADAFD4EB589B66F17FD9678CB"> <p>Get Process Property</p> </li>
+			<li id="LI_CDC210D0F96E4A699BDB411B0A27669E"> <p>Set Process Property</p> </li>
+			<li id="LI_3D140C8155F544DE86BE09EAC14536D3"> <p>Set Trading Partner</p> </li>
+			</ul> </section>
+	</body>
+</topic>

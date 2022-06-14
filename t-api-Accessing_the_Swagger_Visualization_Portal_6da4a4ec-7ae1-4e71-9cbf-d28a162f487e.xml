@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?><?Inspire CreateDate="2019-02-20T20:27:31" ModifiedDate="2022-04-08T13:51:34"?><!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd"><task xml:lang="en-us" id="GUID-FDDED37B-9C52-471C-A446-8D5F4EDFDE7C"><title id="GUID-C73907CD-6EB0-4E6A-BC44-081A6FEF9768"> Accessing the <keyword conref="lib-Boomi_Keywords_0346af2b-13d7-491e-bec9-18c5d89225bf.xml#GUID-0207C7F1-40FD-4537-BE59-1D6DA46B9A1D/BOOMI_SWAGGERVISUALIZATION"></keyword></title><shortdesc>Access the <keyword conref="lib-Boomi_Keywords_0346af2b-13d7-491e-bec9-18c5d89225bf.xml#GUID-0207C7F1-40FD-4537-BE59-1D6DA46B9A1D/BOOMI_SWAGGERVISUALIZATION"></keyword> on the API Catalog page.</shortdesc><prolog><resourceid id="GUID-FDDED37B-9C52-471C-A446-8D5F4EDFDE7C" /></prolog><taskbody><prereq id="GUID-334BD008-F6AA-485C-8600-4A17C13E24A1"> <ol id="GUID-B4D9F7FC-C572-4429-89C2-2AB806022E6D"><li id="LI_77CAB6DD719F4E7895F27A29688B570E">Authorize
+the APIs and <xref href="http://help.boomi.com/atomsphere/GUID-67E9FC48-714B-4549-9D88-2A1669662066.html" format="html" scope="external">define a REST endpoint for the APIs</xref> that you
+want to view in the <keyword conref="lib-Boomi_Keywords_0346af2b-13d7-491e-bec9-18c5d89225bf.xml#GUID-0207C7F1-40FD-4537-BE59-1D6DA46B9A1D/BOOMI_SWAGGERVISUALIZATION"></keyword>. </li><li id="LI_456EEC378A6246DB94B00858274B7CEB">Deploy the
+API to an Environment that has an Atom with an API Type set to Advanced
+in the <xref href="http://help.boomi.com/atomsphere/GUID-186770BF-0A55-4151-ABA0-C3AC19DA5121.html" format="html" scope="external">Shared Web Server</xref> settings of Atom Management
+in  <keyword conref="lib-Boomi_Keywords_0346af2b-13d7-491e-bec9-18c5d89225bf.xml#GUID-0207C7F1-40FD-4537-BE59-1D6DA46B9A1D/BOOMI_INTEGRATION"></keyword>. </li></ol><note id="GUID-570CCBB4-B0B0-4AC4-BE88-CA717B5799A0">To avoid
+a "Failed to load specification" error, rename the default root node
+name of the imported JSON profiles in the Profile component. </note></prereq><steps id="GUID-A2C6770E-B187-424F-81E2-58CF62A307C4"><step id="STEP_2067C28E1E5D4D2890C87BE956E40D89">
+                <cmd> Go to the <menucascade>
+                        <uicontrol>Configure APIs and Applications</uicontrol>
+                        <uicontrol>Deployed APIs</uicontrol>
+                    </menucascade> page.</cmd>
+                <stepresult>
+                    <p>Your currently deployed API Service and API Proxy components display. </p>
+                </stepresult>
+            </step><step id="STEP_D553C7BC04CA42769A44DC7940060EED">
+                <cmd>Find the API Service component that you want to view the <keyword conref="lib-Boomi_Keywords_0346af2b-13d7-491e-bec9-18c5d89225bf.xml#GUID-0207C7F1-40FD-4537-BE59-1D6DA46B9A1D/BOOMI_SWAGGERVISUALIZATION" /> for and click <uicontrol>View</uicontrol> in the Details column.</cmd>
+                <info>
+                    <p>The API slide-out panel opens.</p>
+                </info>
+            </step><step id="STEP_9BED48EA399341EB8BA7AA62AD3AA4D8">
+                <cmd>Click on the REST tab and then click  <uicontrol>Access <keyword conref="lib-Boomi_Keywords_0346af2b-13d7-491e-bec9-18c5d89225bf.xml#GUID-0207C7F1-40FD-4537-BE59-1D6DA46B9A1D/BOOMI_SWAGGERVISUALIZATION" /></uicontrol>.</cmd>
+            </step><step id="STEP_839EA032A1E647C9B4A31122105E2E48"><cmd>Based on the
+Authentication Type set on your Atom in the <menucascade><uicontrol>Atom Management</uicontrol><uicontrol>Shared Web Server</uicontrol>
+</menucascade> panel of <keyword conref="lib-Boomi_Keywords_0346af2b-13d7-491e-bec9-18c5d89225bf.xml#GUID-0207C7F1-40FD-4537-BE59-1D6DA46B9A1D/BOOMI_INTEGRATION"></keyword>, the following situations occur:</cmd><choices id="CHOICES_509AE5B393E54F0EA533167F07E2070E"><choice id="CHOICE_7A5F79332DB94ED9B7C94A257A23DFDE">If no authentication
+(None) is set, the portal opens without requiring additional credentials.</choice><choice id="CHOICE_AD1210AB3ADA4834B92BAF51765236A3">If Basic authentication
+type is set and more than one user is specified on the <uicontrol>User Management</uicontrol> tab of the <uicontrol>Shared Web Server</uicontrol> panel, enter your User Name and Password. Click <uicontrol>Open</uicontrol>.</choice><choice id="CHOICE_7653C477B31A4F2CAEA87181AC794EA5">If External Provider
+type is set, select the desired credentials for API Contract, Application,
+and API Key. Click <uicontrol>Open</uicontrol> and enter your credentials
+set against your identity provider.<p>For the External
+Provider setting, a web proxy window opens stating that the Authorization
+Code was received. Optionally, close this window to return to the <keyword conref="lib-Boomi_Keywords_0346af2b-13d7-491e-bec9-18c5d89225bf.xml#GUID-0207C7F1-40FD-4537-BE59-1D6DA46B9A1D/BOOMI_SWAGGERVISUALIZATION"></keyword>.</p></choice>
+                    <choice>If multiple authentication methods are configured for an Atom, the
+                        default authentication method configured in <uicontrol>Shared Web
+                            Server</uicontrol> settings is used.</choice></choices></step></steps><result id="RESULT_33FB7CE096DF49CC963D65C80343A7B8"> The <keyword conref="lib-Boomi_Keywords_0346af2b-13d7-491e-bec9-18c5d89225bf.xml#GUID-0207C7F1-40FD-4537-BE59-1D6DA46B9A1D/BOOMI_SWAGGERVISUALIZATION"></keyword> opens a new tab in your internet browser.</result></taskbody></task>

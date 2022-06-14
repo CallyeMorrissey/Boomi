@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8"?><?Inspire CreateDate="2019-02-20T20:22:31" ModifiedDate="2022-04-08T13:52:13"?><!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd"><concept xml:lang="en-us" id="GUID-9F952B91-D1B4-47D2-B687-CAAED6443CA4"><title id="GUID-F58C456B-91AC-4C0C-BB23-3BF7C6930D4B">Configuration of web service listen
+		connections</title><shortdesc>For connectors that use the shared web server to manage incoming traffic, connection
+		settings are controlled at the Atom level on the <uicontrol>Shared Web Server</uicontrol>
+		panel within Atom Management. </shortdesc><prolog><resourceid id="GUID-9F952B91-D1B4-47D2-B687-CAAED6443CA4" /></prolog><conbody><p>In standard <keyword conref="lib-Boomi_Keywords_0346af2b-13d7-491e-bec9-18c5d89225bf.xml#GUID-0207C7F1-40FD-4537-BE59-1D6DA46B9A1D/BOOMI_INTEGRATION"></keyword> connectors, a connection component is paired with an operation component to build a
+			direct link to a desired application or data source. This is not the case for connectors
+			that use the shared web server to manage incoming traffic. For API publishing,
+			connection settings are controlled at the Atom level, so the same web server can be used
+			for all processes that are deployed to the Atom. </p><p>The Shared Web Server panel (<menucascade>
+				<uicontrol>Manage</uicontrol>
+				<uicontrol> Atom Management</uicontrol>
+				<uicontrol> Settings and Configuration</uicontrol>
+				<uicontrol> Shared Web Server</uicontrol>
+			</menucascade>) is used to specify URL requirements and to control network and security
+			settings at the account and account user level. The maximum number of configurable API
+			users, including the account itself, is specified by the container property
+				<codeph>com.boomi.container.sharedServer.http.maxSoaUsers</codeph>. The default
+			number of API users is 200, which is the maximum number allowed by the <keyword conref="lib-Boomi_Keywords_0346af2b-13d7-491e-bec9-18c5d89225bf.xml#GUID-0207C7F1-40FD-4537-BE59-1D6DA46B9A1D/BOOMI_DELL"></keyword>
+			<keyword conref="lib-Boomi_Keywords_0346af2b-13d7-491e-bec9-18c5d89225bf.xml#GUID-0207C7F1-40FD-4537-BE59-1D6DA46B9A1D/PLATFORM"></keyword>. You may want to set this to a smaller number for your Atom. For information about
+			configuring access to API processes at the individual user level, see the topic about
+			securing APIs. </p><p><draft-comment author="Jon_Brams">BOOMI-38209 update</draft-comment>The AS2 Shared Server and
+			Web Services Server connectors use the shared web server to manage incoming traffic.
+			Their connection components are not predefined. You must create a process to use the
+			shared web server settings along with the associated operation. The process(es)
+			containing the connectors must be deployed to launch web server listening and to route
+			the proper documents to a process. If you are using API Management, you must likewise
+			deploy the API Service component in which an API endpoint(s) are defined that link to
+			the process(es). See the connector topics linked below for information about configuring
+			the operations for each connector. See the related topic about Designing APIs for
+			information about generating and configuring API endpoints. </p><note id="GUID-51D68E38-260C-4FFC-9E35-C31B999D61C2">Review the Web Services Server
+			Operation Configuration topic to learn how to construct advanced API scenarios and
+			implement response paging. </note><section id="GUID-23A339D3-57A1-401B-9F20-9CC8BA8A5704">
+			<title id="GUID-069AD368-EF2D-40DD-8893-16520990A02E">Base URL</title>
+			<p>The base URL for an Atom’s deployed APIs is shown in the Atom’s Shared Web Server
+				panel. By default this URL is constructed based on the Atom’s host name or external
+				host name and the shared web server’s port/SSL port settings. </p>
+			<ul id="GUID-A44F857B-DC35-4933-B296-75784EFBD28B"><li id="li_fd582fdf-eccd-43d2-984f-de0c37f37227">
+					<draft-comment author="Jon_Brams">BOOMI-36910 converted to external link
+						(peer-scoped would not work in output)</draft-comment>
+					<p>For a <keyword conref="lib-Boomi_Keywords_0346af2b-13d7-491e-bec9-18c5d89225bf.xml#GUID-0207C7F1-40FD-4537-BE59-1D6DA46B9A1D/BOOMI_DELL"></keyword> Atom Cloud or Test Atom Cloud, use the domain name shown in <xref href="https://help.boomi.com/csh?context=GUID-56963A56-5B61-4323-8510-E32CF810880C&amp;pubname=atomsphere" format="html" scope="external">Hostnames and IP addresses for the
+								<keyword conref="lib-Boomi_Keywords_0346af2b-13d7-491e-bec9-18c5d89225bf.xml#GUID-0207C7F1-40FD-4537-BE59-1D6DA46B9A1D/BOOMI_DELL"></keyword> Atom Clouds</xref>. </p>
+				</li></ul>
+		</section><section id="GUID-FFBC9222-52E6-493A-9DFA-6CBD38642EB1">
+			<title id="GUID-6AE4EC14-2098-4FEE-AD4F-2DF5FF0B5893">Listen connections on local
+				Atoms</title>
+			<p>If you want to publish APIs that integrate with on-premise applications or data
+				sources behind your firewall, you need to deploy the integration process to a local
+				Atom that has access to those resources. </p>
+			<p>If you are using a local Atom within a secure network, you should configure your
+				firewall/router to route incoming messages to this Atom. The proper ports should be
+				opened for the Atom web server to receive messages. </p>
+			<p>The web server settings can be configured to forward requests to a standard HTTP or
+				HTTPS address. </p>
+			<table id="TABLE_6C94F05638064FC9B92388079AC5E132"><tgroup cols="3"><colspec colnum="1" colname="col1" colwidth="*" /><colspec colnum="2" colname="col2" colwidth="*" /><colspec colnum="3" colname="col3" colwidth="*" /><tbody><row><entry colname="col1"><uicontrol>Definition URL
+									(recommended):</uicontrol>
+							</entry><entry colname="col2"><codeph>http(s)://&lt;External/Internal
+									Host&gt;:&lt;Port&gt;/ws/soap?wsdl</codeph>
+							</entry><entry colname="col3">Used to output multi-file WSDLs. </entry></row><row><entry colname="col1"><uicontrol>Definition URL:</uicontrol>
+							</entry><entry colname="col2"><codeph>http(s)://&lt;External/Internal
+									Host&gt;:&lt;Port&gt;/ws/soap?wsdl=single</codeph>
+							</entry><entry colname="col3">Used to create a WSDL merged into one file, with
+								inline schemas and no includes. </entry></row></tbody></tgroup></table>
+		</section><section id="GUID-5D1F25B7-3AB3-4E45-BE7E-14EEC994EFE7">
+			<title id="GUID-1898F4AB-BB58-41F8-ABD1-3EF77A398BF9">Listen connections on the Boomi Atom Clouds</title>
+			<p>Each <keyword conref="lib-Boomi_Keywords_0346af2b-13d7-491e-bec9-18c5d89225bf.xml#GUID-0207C7F1-40FD-4537-BE59-1D6DA46B9A1D/BOOMI_DELL"></keyword> Atom Cloud’s Atom instance manages the authentication token settings for your
+				account ID and the Atom Cloud's domain name. For all Atom Clouds, the token
+				(password) is accessible from the Atom Management page. </p>
+			<p>The web server settings for an Atom Cloud's domain name are managed in the <keyword conref="lib-Boomi_Keywords_0346af2b-13d7-491e-bec9-18c5d89225bf.xml#GUID-0207C7F1-40FD-4537-BE59-1D6DA46B9A1D/BOOMI_DELL"></keyword> Atom Cloud on the Atom Management page. By default, the connection requires an
+				HTTPS address and BASIC authentication to connect. If you are accessing the WSDL via
+				a browser or SOAP client, you will be prompted for a user name and password. </p>
+			<dl><dlentry id="GUID-1DA2BB18-00C6-4E25-B268-639290934F83"><dt><uicontrol>Sample Definition URL</uicontrol>
+					</dt><dd>
+						<codeblock xml:space="preserve" outputclass="code-java">https://c01-usa-east-integrate.boomi.com/ws/soap?wsdl</codeblock>
+					</dd></dlentry></dl>
+		</section><section id="GUID-BE674A5D-4663-443D-879F-4F4141ECDCD6">
+			<title id="GUID-791D3F33-DFBC-403C-A443-151ED323EF73">Listen connections on the Boomi Test Atom Clouds</title>
+			<p>The above information regarding <keyword conref="lib-Boomi_Keywords_0346af2b-13d7-491e-bec9-18c5d89225bf.xml#GUID-0207C7F1-40FD-4537-BE59-1D6DA46B9A1D/BOOMI_DELL"></keyword> Atom Cloud connections otherwise applies to the Test Atom Clouds. The only aspect
+				of Test Atom Cloud connections that differs is the presence of the subdomain “test”
+				in the base URL. </p>
+		</section><section id="GUID-5AEA025C-B618-4A78-BA3B-FC6BB09DB47A">
+			<title id="GUID-D792DF04-8054-4D3E-A7E7-38C74B46D3F3">Protected input headers</title>
+			<p>Protected input headers can be configured for an Atom’s shared web server in the
+				Shared Web Server panel. When a header is protected, its value in a REST/SOAP/simple
+				HTTP request cannot be passed to the web service listener process execution as a
+				dynamic document property. </p>
+			<p>The following HTTP headers are designated as protected in the shared web server’s
+				default configuration: </p>
+			<table id="GUID-8F5B457C-C678-49A7-BB12-A54B3521C148" conref="lib-AtomSphere_API_9a0b3cc6-0758-45f9-b2cc-04932561d53c.xml#GUID-3B92F5CD-0A69-4191-BF29-297025332DDB/GUID-C7CF72C9-C6CA-43DF-A310-3E84E3D3BA0D"><tgroup cols="3"><colspec colnum="1" colname="col1" /><colspec colnum="2" colname="col2" /><colspec colnum="3" colname="col3" /><tbody><row><entry colname="col1"> </entry></row></tbody></tgroup></table>
+		</section></conbody></concept>

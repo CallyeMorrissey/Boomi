@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?><?Inspire CreateDate="2019-02-20T20:25:45" ModifiedDate="2019-03-13T18:56:45"?><!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd"><!--Arbortext, Inc., 1988-2015, v.4002--><?ish ishref="GUID-D9AB92D9-8FED-47C7-B05A-59BCAB779C12" version="5" lang="en-us"?><topic id="GUID-D9AB92D9-8FED-47C7-B05A-59BCAB779C12" xml:lang="en-us" domains="(topic hi-d)                             (topic ut-d)                             (topic indexing-d)                            (topic hazard-d)                            (topic abbrev-d)                            (topic pr-d)                             (topic sw-d)                            (topic ui-d)                      ">
+<title id="GUID-CD2D9D01-0CA4-4554-8FD0-5A2BE25BFE2A">Navigation</title>
+<shortdesc>This library contains text used to describe
+commonly used UI controls. For now it contains only navigation controls,
+but we could add other types later.</shortdesc>
+<body>
+<section id="GUID-59ED1291-A84A-49AD-8C8E-F4667BF9DDEB"><title id="GUID-4FF051A2-8804-4D99-8A20-95142AAC67B5">List navigation</title><p>If you want to reuse this information you’ll have
+to add a definition list &lt;dl&gt; to your topic and conref each &lt;dlentry&gt;
+that you need. The content in the next &lt;p&gt; is a nice introductory
+sentence that you can add manually. </p><p>For all types of lists the following navigation controls are enabled
+if there are too many list items for all to be displayed:</p><dl>
+<dlhead>
+<dthd>Name</dthd>
+<ddhd>Description</ddhd>
+</dlhead>
+<dlentry id="GUID-A18BDC31-7F2D-4167-B09E-A75835E1B8F6">
+<dt><image href="main-bt-list-first_4d860db1-a3bf-4ccb-b1ae-3718146313a6.jpg" id="IMAGE_A6E9DE29E4D9499A962FE49A81115946"><alt>Link to first page.</alt></image></dt>
+<dd>Shows the first items in the list.</dd></dlentry>
+<dlentry id="GUID-19D5032A-40D4-4970-A7E1-01285487B91B">
+<dt><image href="main-bt-list-previous_fecf5522-8e9f-4a4a-b5f8-a70b4d5be5c0.jpg" id="IMAGE_E5EBC6DC9F3D4C8B9B1923557D871873"><alt>Previous
+button.</alt></image></dt>
+<dd>Shows the previous items in the list.</dd></dlentry>
+<dlentry id="GUID-BAAC1D5F-A69D-41CA-AD68-2052897F7FB3">
+<dt><uicontrol>X-Y of Z</uicontrol></dt>
+<dd>Indicates the number and relative position of items
+currently visible — for example, “51-75 of 2086”.</dd></dlentry>
+<dlentry id="GUID-FD3EB463-40A5-4CF0-BEC4-D13D24F50222">
+<dt><image href="main-bt-list-next_fa70ff4f-be87-489f-8a03-c05acee8e2c0.jpg" id="IMAGE_2BA8DC3114FB417282C072FC2A295E26"><alt>Next
+button.</alt></image></dt>
+<dd>Shows the next items in the list.</dd></dlentry>
+<dlentry id="GUID-B664F5A0-CCFE-4441-837C-8BD62E0A040B">
+<dt><image href="main-bt-list-last_1750adde-aef7-4874-8e74-c9a0d692981b.jpg" id="IMAGE_E19C3089D3244AFD9A4C455AD2A0E808"><alt>Link to last page.</alt></image></dt>
+<dd>Shows the last items in the list.</dd></dlentry>
+</dl></section>
+<section id="SECTION_C1604EC6CC134DB0A89CABA9E61F9C9C"><title id="GUID-F9D8B8BB-A283-4039-9EB7-FBF5ABF33B14">Collapsible panels</title><p>If you want to reuse this information you’ll have
+to add a definition list &lt;dl&gt; to your topic and conref each &lt;dlentry&gt;
+that you need. The content in the next &lt;p&gt; is a nice introductory
+sentence that you can add manually.</p><p>The panel is
+collapsible.</p><dl>
+<dlentry id="GUID-DBAB06FD-CAA4-4B87-9E6B-A7C6F2BCA368">
+<dt><uicontrol>«</uicontrol></dt>
+<dd>Collapses the panel.</dd></dlentry>
+<dlentry id="GUID-5C8187C6-E45C-4F06-915F-D1C0FC6CA365">
+<dt><uicontrol>»</uicontrol></dt>
+<dd>Expands the panel.</dd></dlentry>
+</dl></section>
+</body>
+</topic>

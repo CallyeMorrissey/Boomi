@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?><?Inspire CreateDate="2019-02-20T20:34:54" ModifiedDate="2022-05-20T15:34:18"?><!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd"><task xml:lang="en-us" id="GUID-1643817D-777C-4868-9EE1-10C1B7DB6709"><title id="GUID-9AEB305C-DD51-4BE5-BF66-C18FBBA4A1EF">Deploying an
+API</title><shortdesc>Deploy an API on the <menucascade><uicontrol>APIs</uicontrol><uicontrol> Deployments</uicontrol></menucascade> page to configure and deploy an API.</shortdesc><prolog><resourceid id="GUID-1643817D-777C-4868-9EE1-10C1B7DB6709" /></prolog><taskbody><prereq id="GUID-F30E524D-6AD5-4147-BBCB-945E0B3780A8">Once you have created at least one API
+            Service/Proxy component in <keyword conref="lib-Boomi_Keywords_0346af2b-13d7-491e-bec9-18c5d89225bf.xml#GUID-0207C7F1-40FD-4537-BE59-1D6DA46B9A1D/DELL" />
+            <keyword conref="lib-Boomi_Keywords_0346af2b-13d7-491e-bec9-18c5d89225bf.xml#GUID-0207C7F1-40FD-4537-BE59-1D6DA46B9A1D/BOOMI_INTEGRATION" />, you can use <keyword conref="lib-Boomi_Keywords_0346af2b-13d7-491e-bec9-18c5d89225bf.xml#GUID-0207C7F1-40FD-4537-BE59-1D6DA46B9A1D/BOOMI_APIMANAGEMENT" /> to deploy the API to an environment and publish it.</prereq><steps id="GUID-8BBBC278-CF83-4BCE-A738-9EB63BE1CF1A"><step id="STEP_B45A9CBBB1B246D4876672F5F8DBCA5C"><cmd>In the row of the table that has the API that you want to deploy
+on the <wintitle>APIs</wintitle> page, click <uicontrol>Manage</uicontrol>.</cmd></step><step id="STEP_FD5B45984C82451DAE7A82A3EAD240E5"><cmd>To add an available environment for the API deployment configuration,
+click <uicontrol>Add Deployment Configuration</uicontrol> and select
+an environment from the list.</cmd><stepresult><p>The environment that you selected
+is shown in the table with a <uicontrol>Draft</uicontrol> status (<image href="api-bt-api_draft_version_eabf9c47-97fb-42e5-b22d-2ba314092728.jpg" id="IMAGE_84B7AC7F0D4C46C18A810CB6CB1C5D9C"><alt>Environment
+is in draft status.</alt></image>).</p></stepresult></step><step importance="optional" id="STEP_5189AEFA70144E6E8AE20FF8F277D17F"><cmd>Change the Authentication from Atom Controlled to an external provider, and
+                    specify an Authentication Source.</cmd></step><step importance="optional" id="STEP_3DEED626C42149058201306B33DE0166"><cmd>If the Authentication is not listed as Atom Controlled, add one or more
+                    Contracts to the API.</cmd></step><step id="STEP_0909467E4B064B59A50E3FE2184545F7"><cmd>On the <uicontrol>Actions</uicontrol> drop-down menu, click <uicontrol>Deploy</uicontrol>.</cmd><stepresult><p>A Deployment Confirmation
+box opens.</p></stepresult></step><step id="STEP_CAFE7E4AD00D4176AAD5027F17DB31F1"><cmd>Add any deployment notes and click <uicontrol>Deploy</uicontrol>.</cmd><stepresult><p>A message that the API has
+been successfully deployed appears. The status is changed to <uicontrol>Deployed</uicontrol> (<image href="api-bt-api_current_version_2e426587-a50d-4359-a1fa-1b2fc3697c7f.jpg" id="IMAGE_4C71C95A5A944FFFA982A265A02E8721"><alt>API
+is deployed.</alt></image>) to indicate that the latest version of
+the API is deployed.</p></stepresult></step><step importance="optional" id="STEP_0A5800C6B5BF473DB6D94EE2151739F9"><cmd>If the Status has an orange indicator in the top right corner (<image href="api-bt-api_outdated_version_a4993066-adc1-4aac-ab9a-11637de151b0.jpg" id="image_mqp_4r1_x3b">
+                        <alt>Newest version of API Service/Proxy component is not deployed.</alt>
+                    </image>), a newer version of the API Service/Proxy component was saved in
+                        <keyword conref="lib-Boomi_Keywords_0346af2b-13d7-491e-bec9-18c5d89225bf.xml#GUID-0207C7F1-40FD-4537-BE59-1D6DA46B9A1D/BOOMI_INTEGRATION" /> and has not been deployed. To deploy the most recent version:</cmd><substeps id="GUID-9DF43884-2ACD-4B13-A0C4-D5FF7E310AB6"><substep id="SUBSTEP_59F7CF5B3AFF4C1BAA8E4A54D80E5A92">
+                        <cmd>In the <uicontrol>Actions</uicontrol> drop-down menu, click
+                                <uicontrol>Deploy Most Recent</uicontrol>.</cmd>
+                        <stepresult>
+                            <p>A Deployment Confirmation box opens.</p>
+                        </stepresult>
+                    </substep><substep id="SUBSTEP_D539CC5C92394AA3BE78F2E0E9D63F1F">
+                        <cmd>Add any deployment notes and click <uicontrol>Deploy</uicontrol>.</cmd>
+                        <stepresult>
+                            <p>A message that the API has been successfully deployed appears. </p>
+                        </stepresult>
+                    </substep></substeps></step><step importance="optional" id="STEP_8725FBF4862E4DA7B8BD1154D49EC7B8"><cmd>If you accidentally deploy an API to the wrong environment, you can remove the
+                    configuration to delete the deployment. To remove a configuration: </cmd><substeps id="GUID-2B9D7CEE-6E33-4B94-B4A4-3A55D15ACA5F"><substep id="SUBSTEP_EB6C4F67CA284447B74D729C5C1F8C77">
+                        <cmd>On the <uicontrol>Status</uicontrol> drop-down menu, click
+                                <uicontrol>Remove Configuration</uicontrol>.</cmd>
+                    </substep><substep id="SUBSTEP_8F68841CB3AD42669D0404F009417DA4">
+                        <cmd>In the confirmation dialog, click <uicontrol>OK</uicontrol>.</cmd>
+                    </substep></substeps></step></steps></taskbody></task>

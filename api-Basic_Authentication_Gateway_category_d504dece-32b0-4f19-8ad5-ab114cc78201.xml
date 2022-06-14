@@ -1,0 +1,137 @@
+﻿<?xml version="1.0" encoding="utf-8"?><?Inspire CreateDate="2022-01-10T19:50:41" ModifiedDate="2022-05-20T16:21:46"?><!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN" "reference.dtd">
+
+<reference id="reference_9d57f905-b8b9-4b84-aee8-db44d6b880b4">
+	<title id="title_eaf19915-911d-4f17-895c-e2f586798004">Broker Basic Authentication Migration category</title>
+	<shortdesc>The Broker Basic Authentication Migration category of operations is used to convert Broker-based Basic Authentication to Basic Authentication on the Gateway. You can also convert Broker-based Basic Authentication to Basic Authentication on the Gateway from the <xref href="c-api-External_Authentication_32100fb2-46f2-4384-a183-720e5bf1caba.xml#GUID-B2969038-6828-426D-BC32-429974E3688E/GUID-DC52491B-5AA9-40D1-9F31-574B9F9ADAAF">Authentication page</xref>.</shortdesc>
+	<prolog>
+		<resourceid id="GUID-d504dece-32b0-4f19-8ad5-ab114cc78201" />
+	</prolog>
+	<refbody>
+		<section id="section_971c0544-1762-4a6c-888d-85f9765b1930"><title>Supported operations</title><p>The Broker Basic Authentication Migration category is supported in the following operations:</p><table id="table_w1r_wpq_43b">
+			<tgroup cols="3">
+				<colspec colnum="1" colname="col1" />
+				<colspec colnum="2" colname="col2" />
+				<colspec colnum="3" colname="col3" />
+				<thead>
+					<row id="row_7cbe8924-caec-4683-8403-a0550afd9490">
+						<entry colname="col1">Operation</entry>
+						<entry colname="col2">QUERY</entry>
+						<entry colname="col3">MUTATION</entry>
+					</row>
+				</thead>
+				<tbody>
+					<row id="row_0da5d4e1-51b6-43c0-a8d7-974bce9849b5">
+						<entry colname="col1">Auth Source Broker Basic Migrate</entry>
+						<entry colname="col2"> <ph conref="lib-AtomSphere_API_9a0b3cc6-0758-45f9-b2cc-04932561d53c.xml#GUID-3B92F5CD-0A69-4191-BF29-297025332DDB/NotSupported" /> </entry>
+						<entry colname="col3"> <ph conref="lib-AtomSphere_API_9a0b3cc6-0758-45f9-b2cc-04932561d53c.xml#GUID-3B92F5CD-0A69-4191-BF29-297025332DDB/Supported" /> </entry>
+					</row>
+				</tbody>
+			</tgroup>
+			</table></section>
+		<section id="section_fx5_g51_fsb"><title>Mutation syntax</title><p>Auth Source Broker Basic Migrate</p><codeblock id="codeblock_sqd_l51_fsb">authSourceBrokerBasicMigrate(id: ID!): AuthSourceBasic!</codeblock></section>
+		<section id="section_vjk_h51_fsb"><title>Input and return fields syntax</title><p>Mutation input syntax</p><codeblock id="codeblock_lvp_m51_fsb">authSourceBrokerBasicMigrate(id: ID!): AuthSourceBasic!</codeblock><p>Return fields syntax</p><codeblock id="codeblock_u1m_451_fsb">type AuthSourceBasic implements AuthenticationSource {
+    id: ID!
+    name: String!
+    description: String
+    roles: [AuthSourceRole]
+    users: [AuthSourceBasicUser]
+    groups: [AuthSourceBasicGroup]
+}
+
+type AuthSourceBasicUser {
+    id: ID!
+    name: String!
+    enabled: Boolean
+    groups: [ID!]
+}
+
+type AuthSourceBasicGroup {
+    id: ID!
+    name: String!
+    description: String
+    roles: [ID!]
+}</codeblock></section>
+		<section id="section_mdc_t51_fsb"><title>GraphQL implementation </title><p><b>Auth Source Broker Basic Migrate operation</b></p><p>For a GraphQL request, send a request to <filepath>https://platform.boomi.com/graphql</filepath> with the following <codeph>X-Account</codeph> header: <codeph><varname>accountId</varname></codeph></p><p>Request:</p><codeblock id="codeblock_eys_w51_fsb">mutation {
+    authSourceBrokerBasicMigrate(id: "&lt;xxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx&gt;")
+    {
+        id 
+        name 
+        description
+        roles {
+            id 
+            name 
+            description
+        }
+        users {
+            id 
+            name 
+            enabled
+            groups
+        }
+        groups {
+            id 
+            name 
+            description
+            roles
+        }
+    }
+}</codeblock><p>For a JSON response, send the request with the following HTTP header:</p><p> <codeph>Accept: application/json</codeph></p><p> JSON response:</p><codeblock id="codeblock_or2_y51_fsb">{
+    "data": {
+        "authSourceBrokerBasicMigrate": {
+            "id": "&lt;xxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx&gt;",
+            "name": "Broker Basic Test 1",
+            "description": "",
+            "roles": [
+                {
+                    "id": "&lt;xxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx&gt;",
+                    "name": "role1",
+                    "description": ""
+                }
+            ],
+            "users": [
+                {
+                    "id": "&lt;xxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx&gt;",
+                    "name": "user1",
+                    "enabled": true,
+                    "groups": [
+                        "&lt;xxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx&gt;"
+                    ]
+                }
+            ],
+            "groups": [
+                {
+                    "id": "&lt;xxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx&gt;",
+                    "name": "group1",
+                    "description": "Grp",
+                    "roles": [
+                        "&lt;xxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx&gt;"
+                    ]
+                }
+            ]
+        }
+    }
+}</codeblock></section>
+		<section id="section_iyd_1v1_fsb"><title>Audit log usage</title><codeblock id="codeblock_ht3_bv1_fsb">
+{
+  "QueryFilter" :
+    {
+      "expression" : 
+        {
+          "operator" : "and",
+          "nestedExpression" : [
+            {
+              "argument" : ["api-basic_auth_migration"],
+              "operator" : "EQUALS",
+              "property" : "type"
+            },          
+            {
+              "argument" : ["2021-09-01T00:00:00Z","2021-12-29T23:59:59Z"],
+              "operator":"BETWEEN",
+              "property":"date"
+            }
+          ]
+        }
+    }
+}</codeblock></section>
+	</refbody>
+</reference>
