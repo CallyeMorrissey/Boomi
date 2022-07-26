@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?><?Inspire CreateDate="2019-08-23T16:49:12" ModifiedDate="2022-02-11T19:48:55"?><!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+
+
+<concept id="api-Developer_Portal_consumer_information">
+	<title>Developer Portal interface</title>
+	<shortdesc>This information provides helpful guidance to users of your Developer Portal.</shortdesc>
+	<prolog>
+		<resourceid id="GUID-5ef1d168-cdbf-4f71-b504-f97c93931185" />
+	</prolog>
+	<conbody>
+		<p>The Developer Portal provides a way to engage a population of developers who may be internal or external to your organization, without requiring them to also be <keyword conref="lib-Boomi_Keywords_0346af2b-13d7-491e-bec9-18c5d89225bf.xml#GUID-0207C7F1-40FD-4537-BE59-1D6DA46B9A1D/PLATFORM" /> users.</p>
+		<p>Once you sign in to the Developer Portal, you can register applications, review available APIs, and request access to specific APIs in order to leverage them as part of your applications. </p>
+	</conbody>
+</concept>

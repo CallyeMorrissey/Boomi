@@ -1,0 +1,105 @@
+﻿<?xml version="1.0" encoding="utf-8"?><?Inspire CreateDate="2019-08-23T16:49:12" ModifiedDate="2022-02-11T19:48:55"?><!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+
+<task id="api-Configuring_your_Developer_Portal">
+	<title>Configuring your Developer Portal</title>
+	<shortdesc>After enabling an API Gateway, you can configure the Gateway Settings and Developer Portal Settings to create and configure your Developer Portal.</shortdesc>
+	<prolog>
+		<resourceid id="GUID-9e8dd158-a92c-439d-a89f-41b0cd3f05b3" />
+	</prolog>
+	<taskbody>
+		<prereq id="prereq_uky_svj_v3b"> <ol id="ol_mlf_bbf_w3b">
+			<li id="li_63c9a6da-d74e-42ad-b8ec-016141212e5e"><xref href="api-Gateway_setup_62ae35cb-7045-4c9b-84ed-fb920a9fa837.dita">Install an API Gateway</xref>.</li>
+			<li id="li_86a139a1-0e01-410d-9744-9d587b6259d9"><xref
+						href="api-Migrating_environments_to_or_from_API_gateways_f4e7a794-f90c-441d-8a74-d558e63d9865.dita"
+						type="task" scope="local">Migrate an environment to your API Gateway.</xref>
+					The environment needs to have at least one Atom with an Authentication Type set
+					to Gateway.</li>
+			<li id="li_30f246a9-8446-4140-9a52-4fa1d73a0987"><xref href="t-api-Adding_an_Authentication_Source_8502fa1e-a21d-4078-88f6-f03a6a7ddc0e.xml">Add an Authentication Source</xref>.</li>
+			</ol> </prereq>
+		<steps>
+			<step id="step_4f6c9116-e7fb-4230-bfc9-3251d3b30ff4">
+				<cmd>On the <menucascade>
+					<uicontrol>Configure Server</uicontrol>
+					<uicontrol>Gateways</uicontrol>
+					</menucascade> page, click on the name of the API Gateway that you want to use to set up your Developer Portal. </cmd>
+			</step>
+			<step id="step_466ed7df-a2cd-4ecd-a14a-e0e622026518">
+				<cmd>From the API Gateway information screen, navigate to the <uicontrol>Location Settings</uicontrol> panel.</cmd>
+			</step>
+			<step id="step_b4758c99-cf37-488c-9422-1d31cdc66d63">
+				<cmd>Specify your <uicontrol>Bind Address</uicontrol> and optionally your <uicontrol>Public URL</uicontrol> to access the API Gateway. </cmd>
+				<info>The default port for the <uicontrol>Bind Address</uicontrol> and <uicontrol>PublicURL</uicontrol> is <uicontrol>8077</uicontrol>. <dl>
+					<dlentry>
+						<dt>Bind Address</dt>
+						<dd>The URL that you use to access your API Gateway from inside your company's firewall.</dd>
+					</dlentry>
+					<dlentry>
+						<dt>Public URL</dt>
+						<dd>The URL that you use to access your API Gateway from outside your company's firewall. Leave this field blank to use the internal URL as the external URL.</dd>
+					</dlentry>
+					</dl></info>
+			</step>
+			<step id="step_2777be43-9ef0-49fb-ba01-a2a5d8848800">
+				<cmd>Click <uicontrol>Save</uicontrol>.</cmd>
+			</step>
+			<step id="step_5fef5b06-1a55-44d4-914b-e6e7b762ad5c">
+				<cmd>Navigate to the <uicontrol>Developer Portal Settings</uicontrol> panel.</cmd>
+			</step>
+			<step id="step_323fe53a-eda1-44d9-a7f6-134d1a157011">
+				<cmd>Specify your <uicontrol>Bind Address</uicontrol> for the Developer Portal.</cmd>
+				<info>The default port for the <uicontrol>Bind Address</uicontrol> is <uicontrol>18077</uicontrol>.<dl>
+					<dlentry>
+						<dt>Bind Address</dt>
+						<dd>The URL that you will provide to your Developer Portal users.</dd>
+					</dlentry>
+					</dl></info>
+			</step>
+			<step id="step_8d2b6548-e3c4-4d85-ac73-1d1767fa9c1c">
+				<cmd>Specify the appropriate <uicontrol>Authentication Source</uicontrol> for the Developer Portal.</cmd>
+				<info> <note type="important" id="note_0b56e55f-f814-404c-9294-f95c0af69da7">If the non-JWT Authentication Source you select is not attached to an Authentication Broker, the Authentication Source configuration will not be sent to the API Gateway. In this case, the API Gateway will function as if there is no authentication set.</note> </info>
+			</step>
+			<step id="step_53fce2f8-c779-497b-90e8-094255eb27b6">
+				<cmd>If you selected a JWT Authentication Source in step <xref
+						href="#api-Configuring_your_Developer_Portal/step_8d2b6548-e3c4-4d85-ac73-1d1767fa9c1c"
+						format="dita"/>, specify the <uicontrol>Identity Provider ID</uicontrol> and
+						<uicontrol>Secret</uicontrol>. <ph>You can optionally provide a
+							<uicontrol>User Name Identifier</uicontrol> to use the value of a JWT
+						claim. The claim name is case-sensitive and must exactly match the
+						configuration in JWT. This will be <uicontrol>Application Owner User
+							Name</uicontrol> for all your applications attached to the Developer
+						Portal. </ph></cmd>
+			</step>
+			<step importance="optional" id="step_338d7174-86fb-43a0-acec-959aef0ed575">
+				<cmd>Select one or more roles to restrict Developer Portal access to those users associated with those roles in the <uicontrol>Restrict Access by Role</uicontrol> field.</cmd>
+			</step>
+			<step id="step_474da44f-833a-4ef5-99d8-b1392618d61d">
+				<cmd>Click <uicontrol>Save</uicontrol>.</cmd>
+			</step>
+			<step id="step_7e48e361-2b86-478f-a271-3cc4c755331a">
+				<cmd>Navigate to the <uicontrol>Publish</uicontrol> page and select the Developer Portal from your list.</cmd>
+			</step>
+			<step id="step_de8f8ec5-4048-4795-885a-4c19c97c88b6">
+				<cmd>From the Title and Homepage category, enter an <uicontrol>Internal Name</uicontrol>, <uicontrol>Published Name</uicontrol>, and <uicontrol>Welcome Message</uicontrol> for your Developer Portal. </cmd>
+				<info>The published name and welcome message will appear on the main landing page of your Developer Portal.<note type="important" id="note_035b5e12-b8ba-4d0b-aff6-85bf0c0b6b34">Using the rich text editor for the welcome message limits the HTML tags to only those that we support. <p>If you use the Source mode, you can enter any HTML tag, but any tag that we do not support is removed when you switch back to the rich text editor. </p><p>If you use Source mode to enter HTML tags that we do not support and click <uicontrol>Save</uicontrol> in Source mode without switching back to the rich text editor, the change is rejected with an error message.</p></note></info>
+			</step>
+			<step id="step_cbb9ba79-efc1-438e-b726-965ba9c2f046">
+				<cmd>Click <uicontrol>Save</uicontrol>. </cmd>
+			</step>
+			<step id="colors">
+				<cmd>From the Theme category, specify the theme colors and site logo with alternative text for your Developer Portal.</cmd>
+				<info> <note type="caution" id="note_74da4c77-db1f-42b2-b77a-7f4296220fef">If you do not specify alternative text (or <codeph>alt</codeph> text), no text will be provided to users on assistive technology such as screen readers. You can continue without adding alternative text, but may incur risk of breaking your local accessibility laws or business guidelines. We recommend describing your site logo in the alternative text so that it meets the WCAG guidelines.</note> </info>
+			</step>
+			<step id="step_a73bb7cb-c30b-44d4-84ce-555377c03205">
+				<cmd>Click <uicontrol>Preview Before Saving</uicontrol>. </cmd>
+				<info> <note type="caution" id="note_a96c3f2e-7c01-4647-b9b7-6d7d83c20c1e">If you select colors that do not meet the WCAG color contrast ratios in step <xref href="#api-Configuring_your_Developer_Portal/colors" format="dita" />, you will receive a warning because these color combinations might make your site too difficult to read or use for some users. You can continue without correcting the contrast ratio errors, but may incur risk by breaking your local accessibility laws or business guidelines. We recommend adjusting the colors so that they meet the WCAG color contrast ratios.</note> </info>
+			</step>
+			<step id="step_bfe0b2ba-1dfd-4bad-8513-8fa0a978b02c">
+				<cmd>From the Theme Demonstration page, view the specified theme and click <uicontrol>Return to Theme</uicontrol> page to make any additional changes to your theme. If you do not need to make additional changes, click <uicontrol>Next Page</uicontrol> to view the different screens within the demonstration site.</cmd>
+			</step>
+			<step id="step_af2505fe-3370-4af4-933c-041e2a3537b1">
+				<cmd>Click <uicontrol>Publish</uicontrol> when you are satisfied with your theme selection.</cmd>
+			</step>
+		</steps>
+		<postreq id="postreq_qnb_swj_v3b">Send your Developer Portal URL to your Developer Portal users so that they can sign in and begin working with your APIs.</postreq>
+	</taskbody>
+</task>

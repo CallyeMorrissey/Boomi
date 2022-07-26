@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?><?Inspire CreateDate="2019-06-11T20:26:16" ModifiedDate="2022-02-11T19:48:54"?><!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd"><task id="task_2ca43035-19ef-4f43-8227-b9f70e400277"><title id="title_8c7cc740-2e0e-4557-8714-76a49d1262f2">Working with an API after being granted
+    access</title><shortdesc>After requesting access to an API, the API owner must validate your request and attach a
+    contract to it to set your access limits.</shortdesc><prolog><resourceid id="GUID-49fd3f32-e3fc-410a-aafe-78479d502c43" /></prolog><taskbody><context>There is no current in-application messaging system that will notify you when your request
+      is approved. Therefore, you should communicate with the owner of the Developer Portal to know
+      when the request is approved. Otherwise, monitor the Subscriptions page to see when an
+      approved subscription appears.</context><steps><step id="step_8f78a83b-bf3b-49f0-92a6-8be2e0a4e609"><cmd>From the Developer Portal, click <uicontrol>Subscriptions</uicontrol>.</cmd><stepresult>
+          <p>A list of your subscriptions  appears.</p>
+        </stepresult></step><step id="step_4194386d-07da-4a07-a5de-d57c191010fe"><cmd>Click on the name of your subscription.</cmd></step><step id="step_1605de4f-2587-4501-876a-d43771a28eba"><cmd>Then, click on the API Name to open the relevant subscription details page.</cmd></step><step id="step_4241936c-f2ad-4b94-b720-3feebcd98dc6"><cmd>On the Subscriptions page for the API, notice the API Key displayed with a copy button
+          next to the box.</cmd></step><step id="step_abba3cc4-db5a-4b6a-9ac2-2e0587ebe5af"><cmd>Copy the API Key to the clipboard by clicking <uicontrol>Copy</uicontrol>.</cmd></step><step id="step_21dc7235-8cb2-422c-ab95-54d5a39b2c6a"><cmd>Then, specify the API Key in the X-API-Key header field to access the API.</cmd></step></steps></taskbody></task>

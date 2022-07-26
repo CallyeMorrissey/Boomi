@@ -1,0 +1,183 @@
+﻿<?xml version="1.0" encoding="utf-8"?><?Inspire CreateDate="2020-06-05T17:41:00" ModifiedDate="2022-02-11T19:48:55"?><!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN" "reference.dtd">
+
+<reference id="api-Publish_screen">
+	<title>Publish screen</title>
+	<shortdesc>Access the <wintitle>Publish</wintitle> screen by clicking <uicontrol>Publish</uicontrol> in the navigation menu.</shortdesc>
+	<prolog>
+		<resourceid id="GUID-26762ca7-b103-4f2a-b416-c6ddcba8d2f8" />
+	</prolog>
+	<refbody>
+		<section id="section_wcx_wxs_1jb"> <p>This screen provides a list of all of the Developer Portals you have in your account. Each API Gateway has one associated Developer Portal. The table of Developer Portals includes the following information:</p> <dl>
+			<dlhead>
+				<dthd>Name</dthd>
+				<ddhd>Description</ddhd>
+			</dlhead>
+			<dlentry>
+				<dt>Portal Name</dt>
+				<dd>The internal name of the Developer Portal.</dd>
+			</dlentry>
+			<dlentry>
+				<dt>Gateway</dt>
+				<dd>The API Gateway that hosts the Developer Portal. There is a 1-1 correlation of the Developer Portal to API Gateway.</dd>
+			</dlentry>
+			<dlentry>
+				<dt>Environments</dt>
+				<dd>The environment attached to the API Gateway.</dd>
+			</dlentry>
+			</dl><p>Click on a Portal Name to open the Developer Portal's Portal Settings. The Settings pages allows you to customize the Title, Homepage, and Theme for your Developer Portal.</p> </section>
+		<section id="section_u2b_tqk_2nb"> <title>Title and Homepage</title><p>Use this page to set the internal and published names for the Developer Portal as well as a welcome message on the landing page.</p> <dl>
+			<dlhead>
+				<dthd>Name</dthd>
+				<ddhd>Description</ddhd>
+			</dlhead>
+			<dlentry>
+				<dt>Internal Name</dt>
+				<dd>The internal name for this Developer Portal. This name displays on your list of Developer Portals on the Publish screen.</dd>
+			</dlentry>
+			<dlentry>
+				<dt>Published Name</dt>
+				<dd>The title that your Developer Portal users see when they navigate to the Developer Portal.</dd>
+			</dlentry>
+			<dlentry>
+				<dt>Welcome Message</dt>
+				<dd>The message your Developer Portal users see on the landing page to the Developer Portal.<!--This comment is to be moved to actual content when the GraphQL APIs are published externally. Until then, it should not be moved to actual content.
+- - - - 
+If you modify the welcome message through the API using any HTML tag that we do not support, the API call will be rejected with an error message.--><note type="important" id="note_3290ba8a-a65a-43c4-adc8-7402cfc53112"> <p>Using the rich text editor for the welcome message limits the HTML tags to only those that we support.</p><p>If you use the Source mode, you can enter any HTML tag, but any tag that we do not support is removed when you switch back to the rich text editor. </p><p>If you use Source mode to enter HTML tags that we do not support and click <uicontrol>Save</uicontrol> in Source mode without switching back to the rich text editor, the change is rejected with with an error message.</p> </note><p>The supported HTML tags for the welcome message include: </p><dl>
+					<dlentry>
+						<dt><codeph>a href=""</codeph></dt>
+						<dd>Valid URL link, complete with <codeph>http://</codeph> or <codeph>https://</codeph>, email link, or phone number link. Optionally, include <codeph>title="". </codeph></dd>
+					</dlentry>
+					<dlentry>
+						<dt><codeph>blockquote</codeph></dt>
+						<dd>Block quote.</dd>
+					</dlentry>
+					<dlentry>
+						<dt><codeph>dl</codeph>, <codeph>dt</codeph>, <codeph>dd</codeph></dt>
+						<dd>Description list, description term, description definition. </dd>
+					</dlentry>
+					<dlentry>
+						<dt><codeph>em</codeph></dt>
+						<dd>Emphasis.</dd>
+					</dlentry>
+					<dlentry>
+						<dt><codeph>h1</codeph>, <codeph>h2</codeph>, <codeph>h3</codeph>, <codeph>h4</codeph>, <codeph>h5</codeph></dt>
+						<dd>Heading 1 through 5. The heading order is enforced. The Published Name is an <codeph>h1</codeph> heading so your welcome message can start at <codeph>h2</codeph>. Otherwise, you must step down the heading numbers in order. Jumping from an <codeph>h1</codeph> to an <codeph>h3</codeph> will cause an error. When moving back to a higher level, there is no order requirement.</dd>
+					</dlentry>
+					<dlentry>
+						<dt><codeph>hr</codeph></dt>
+						<dd>Horizontal rule.</dd>
+					</dlentry>
+					<dlentry>
+						<dt><codeph>i</codeph></dt>
+						<dd>Italic.</dd>
+					</dlentry>
+					<dlentry>
+						<dt><codeph>img src="" alt=""</codeph></dt>
+						<dd>Image from a valid URL source file. The URL must begin with <codeph>http://</codeph> or <codeph>https://</codeph>. The <codeph>alt=""</codeph> attribute is required. If you chose to leave it empty, a warning message is returned.</dd>
+					</dlentry>
+					<dlentry>
+						<dt><codeph>ol</codeph>, <codeph>ul</codeph>, <codeph>li</codeph></dt>
+						<dd>Ordered and unordered list.</dd>
+					</dlentry>
+					<dlentry>
+						<dt><codeph>p</codeph></dt>
+						<dd>Paragraph.</dd>
+					</dlentry>
+					<dlentry>
+						<dt><codeph>strong</codeph></dt>
+						<dd>Strong.</dd>
+					</dlentry>
+					<dlentry>
+						<dt><codeph>sub</codeph></dt>
+						<dd>Subscript.</dd>
+					</dlentry>
+					<dlentry>
+						<dt><codeph>sup</codeph></dt>
+						<dd>Superscript.</dd>
+					</dlentry>
+					<dlentry>
+						<dt><codeph>u</codeph></dt>
+						<dd>Underline.</dd>
+					</dlentry>
+					</dl><p>Within the <codeph>p</codeph> and <codeph>li</codeph> tags, the following styling properties are supported:</p><dl>
+					<dlentry>
+						<dt><codeph>text-align: left</codeph>, <codeph>text-align: center</codeph>, <codeph>text-align: right</codeph></dt>
+						<dd>Align the text to the left, center, or right.</dd>
+					</dlentry>
+					</dl><p>Within the <codeph>img</codeph> tag, the following styling properties are supported:</p><dl>
+					<dlentry>
+						<dt>Alignment properties</dt>
+						<dd>The following alignment properties are supported:<ul id="ul_gmj_3lb_zlb">
+							<li id="li_c7b23728-6c97-42be-ad5b-40d84cab3790"> <p><codeph>float: left</codeph> - Aligns the image on the left.</p> </li>
+							<li id="li_f7b2a276-1e70-4d45-b2c5-85a45ce634d5"> <p><codeph>float: center</codeph> - Aligns the image in the center.</p> </li>
+							<li id="li_387bce53-0c98-4800-9507-d1d803728691"> <p><codeph>float: right</codeph> - Aligns the image on the right.</p> </li>
+							</ul></dd>
+					</dlentry>
+					<dlentry>
+						<dt>Border properties</dt>
+						<dd>The following border properties are supported:<ul id="ul_bsk_nmb_zlb">
+							<li id="li_2d3902cc-f438-4915-8fa8-187d3725208c"> <p><codeph>border</codeph> - Sets the image border. You can also set each side of the border individually using <codeph>border-top</codeph>, <codeph>border-right</codeph>, <codeph>border-bottom</codeph>, and <codeph>border-left</codeph>.</p> </li>
+							<li id="li_458508bb-cc99-49d6-b84a-ad2b6fe989b4"> <p><codeph>border-width</codeph> - Sets the width of the image border. You can also set each side of the border width individually using <codeph>border-top-width</codeph>, <codeph>border-right-width</codeph>, <codeph>border-bottom-width</codeph>, and <codeph>border-left-width</codeph>.</p> </li>
+							<li id="li_272a8b50-cf2b-4f1d-bd67-5f754a828bce"> <p><codeph>border-style</codeph> - Sets the style of the image border. You can also set each side of the border style individually using <codeph>border-top-style</codeph>, <codeph>border-right-style</codeph>, <codeph>border-bottom-style</codeph>, and <codeph>border-left-style</codeph>.</p> </li>
+							<li id="li_dd681f60-9959-4fd5-88d1-0eb2931e2631"> <p><codeph>border-color</codeph> - Sets the color of the image border. You can also set each side of the border color individually using <codeph>border-top-color</codeph>, <codeph>border-right-color</codeph>, <codeph>border-bottom-color</codeph>, and <codeph>border-left-color</codeph>.</p> </li>
+							<li id="li_974b94c9-824b-4d7f-bdc3-048fff426415"> <p><codeph>border-radius</codeph> - Sets the radius of the image border. You can also set each side of the border radius individually using <codeph>border-top-left-radius</codeph>,<codeph>border-top-right-radius</codeph>, <codeph>border-bottom-right-radius</codeph>, and <codeph>border-bottom-left-radius</codeph>.</p> </li>
+							</ul></dd>
+					</dlentry>
+					<dlentry>
+						<dt>Dimension properties</dt>
+						<dd>The following dimension properties are supported:<ul id="ul_vh4_clb_zlb">
+							<li id="li_7a153f1b-3297-4a43-979d-4685583368be"> <p><codeph>height</codeph> - Sets the height of the image.</p> </li>
+							<li id="li_69490201-c21a-428b-907c-890bbc451582"> <p><codeph>width</codeph> - Sets the width of the image.</p> </li>
+							</ul></dd>
+					</dlentry>
+					<dlentry>
+						<dt>Margin properties</dt>
+						<dd>The following margin properties are supported:<ul id="ul_f3q_tlb_zlb">
+							<li id="li_1879a671-720e-4cdf-968f-4fd005faab95"> <p><codeph>margin</codeph> - Sets the image margin.</p> </li>
+							<li id="li_e45bf51e-401a-4073-8256-d44cbd5cd754"> <p><codeph>margin-top</codeph> - Sets the image margin on the top.</p> </li>
+							<li id="li_fcaf700f-c20a-4751-967a-3285f7d1eaf1"> <p><codeph>margin-bottom</codeph> - Sets the image margin on the left.</p> </li>
+							<li id="li_be5311f4-1a27-4106-88d0-ea00e091c9d7"> <p><codeph>margin-left</codeph> - Sets the image margin on the left.</p> </li>
+							<li id="li_dd8bbf63-129c-4ed4-a725-7577d1428622"> <p><codeph>margin-right</codeph> - Sets the image margin on the right.</p> </li>
+							</ul></dd>
+					</dlentry>
+					</dl></dd>
+			</dlentry>
+			</dl> </section>
+		<section id="section_hcl_5ks_xnb"> <title>Environments</title><p>Use this page to set the Published Name for the environments associated with the Developer Portal.</p><dl>
+			<dlhead>
+				<dthd>Name</dthd>
+				<ddhd>Description</ddhd>
+			</dlhead>
+			<dlentry>
+				<dt>Environment Name</dt>
+				<dd>The internal name of the environment, specified on the Environment panel within Atom Management in <keyword conref="lib-Boomi_Keywords_0346af2b-13d7-491e-bec9-18c5d89225bf.xml#GUID-0207C7F1-40FD-4537-BE59-1D6DA46B9A1D/BOOMI_INTEGRATION" />.</dd>
+			</dlentry>
+			<dlentry>
+				<dt>Published Name for Environment</dt>
+				<dd>The published name on your Developer Portal. This is the environment name that your Developer Portal users will see.</dd>
+			</dlentry>
+			</dl> <p>To provide an Environment filter on your Developer Portal, select <uicontrol>Provide an Environment filter on the API Catalog page in the Developer Portal</uicontrol>. </p> </section>
+		<section id="section_uwy_wqk_2nb"> <title>Theme</title><p>Use this page to set the colors and logo for the Developer Portal.</p><dl>
+			<dlhead>
+				<dthd>Name</dthd>
+				<ddhd>Description</ddhd>
+			</dlhead>
+			<dlentry>
+				<dt>Theme Colors</dt>
+				<dd>The color palette for the Developer Portal. <note type="caution" id="note_3e2b2e2a-3d82-4b44-93fe-e0f1117e88ba">If you select colors that do not meet the WCAG color contrast ratios, you will receive a warning because these color combinations might make your site too difficult to read or use for some users. You can continue without correcting the contrast ratio errors, but may incur risk by breaking your local accessibility laws or business guidelines. We recommend adjusting the colors so that they meet the WCAG color contrast ratios.</note> <p>The colors that you can set are:</p><ul id="ul_cdm_ytk_2nb">
+					<li id="li_578502ba-9077-4e89-ba56-823a8ec5c735"> <p>Site Background Color - The background color of the Developer Portal's API Catalog, Applications, and Subscription pages.</p> </li>
+					<li id="li_802880d3-642a-4701-b3e0-14dc942c5ad9"> <p>Content Background Color - The background color of the main Developer Portal.</p> </li>
+					<li id="li_110a0615-c14c-4476-a172-b93c39ceeefc"> <p>Border Color - The border color on tiles within the Developer Portal.</p> </li>
+					<li id="li_10d33e97-0fe9-491f-83e1-2e02cdf4099a"> <p>Primary Text Color - The primary text color.</p> </li>
+					<li id="li_f62a31b6-8dee-45b3-a01a-41c7617ea823"> <p>Link Text Color - The text color for links.</p> </li>
+					<li id="li_ddea2d77-2a65-4159-8974-489118d6d2a7"> <p>Selected Item Color - The focus color to identify the selected item.</p> </li>
+					<li id="li_62843640-4615-4f9e-a719-5a8b50948033"> <p>Heading Color - The text color for headings.</p> </li>
+					</ul></dd>
+			</dlentry>
+			<dlentry>
+				<dt>Site Logo</dt>
+				<dd>The logo and alternative text that your Developer Portal users see when they navigate to the Developer Portal. Your site logo is limited to 50 pixel in height and 200 pixels in width. The maximum file size is 1MB in the .jpg, .png, or .svg format. <note type="caution" id="note_d1de867c-2bbb-4ba5-92de-d14dda8efe24">If you do not specify alternative text (or <codeph>alt</codeph> text), no text will be provided to users on assistive technology such as screen readers. You can continue without adding alternative text, but may incur risk of breaking your local accessibility laws or business guidelines. We recommend describing your site logo in the alternative text so that it meets the WCAG guidelines.</note></dd>
+			</dlentry>
+			</dl> </section>
+	</refbody>
+</reference>

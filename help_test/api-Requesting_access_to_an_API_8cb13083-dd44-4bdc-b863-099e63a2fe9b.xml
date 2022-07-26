@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?><?Inspire CreateDate="2019-06-04T19:55:05" ModifiedDate="2022-02-11T19:48:54"?><!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd"><task id="task_ca5d4756-dd40-43d5-8237-a60802f2861d"><title id="title_e94b8908-e552-47f8-b6c6-ecbc11bd7b92">Requesting access to an API</title><shortdesc>To request access to an API, you must find the appropriate API and Subscribe to it so that you can use it in one or more of your applications. Requesting subscriptions of disabled applications is not allowed.</shortdesc><prolog><resourceid id="GUID-8cb13083-dd44-4bdc-b863-099e63a2fe9b" /></prolog><taskbody><prereq id="prereq_exq_41g_w3b"><xref href="api-Registering_an_Application_862c867b-2368-4747-b79b-40b7be0b865b.dita">Register an
+        Application</xref>.</prereq><steps><step id="step_8f78a83b-bf3b-49f0-92a6-8be2e0a4e609"><cmd>From the Developer Portal, click <uicontrol>API Catalog</uicontrol>.</cmd></step><step id="step_07cbab75-637e-428d-8d90-b7006f16f9e2"><cmd>From the available APIs, click on the API name that you want to view.</cmd><info>
+          <note type="tip" id="note_d542b889-3a90-4990-8271-41a79a71f014">Type your search string in the  <uicontrol>Search APIs by
+              name</uicontrol>  field to more quickly navigate to your intended API.</note>
+        </info><stepresult>The Overview and endpoint information for that API displays.</stepresult></step><step id="step_edf15369-902d-42e8-b8d6-4b8409c3f626"><cmd>Click <uicontrol>Subscribe</uicontrol> if the API is the one that you want to request
+          access to. </cmd><info>Otherwise, click <uicontrol>API Catalog</uicontrol> to return to the list of available
+          APIs.</info></step><step id="step_4ddb8a87-caec-4b66-bd49-8912038ec5b3"><cmd>After clicking Subscribe, select an enabled Application from the drop-down menu and
+          optionally provide a message to the API owner.</cmd><info>
+          <note type="important" id="note_6a849d4c-51d9-4353-91d8-6420cfc76ba1">Only enabled
+            applications appear in the drop-down menu. If an application is disabled, you must
+            enable it or ask the application owner to enable it before being able to select it in
+            the drop-down menu.</note>
+        </info></step><step id="step_852584a8-482f-4ea8-b4a1-46e61708fb3b"><cmd>Click <uicontrol>Subscribe</uicontrol>.</cmd><stepresult>
+                                                  <p>A “Subscription Request Received” message
+            appears. Click <uicontrol>Close</uicontrol>.</p>
+                                                </stepresult></step></steps><postreq id="postreq_twk_gbg_w3b">Click <uicontrol>API Catalog</uicontrol> to return to the
+      listing of all APIs or click <uicontrol>Subscriptions</uicontrol> to view the status of your
+      request.</postreq></taskbody></task>
