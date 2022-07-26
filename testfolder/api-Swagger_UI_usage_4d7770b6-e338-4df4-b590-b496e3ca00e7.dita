@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?><?Inspire CreateDate="2020-03-06T16:24:26" ModifiedDate="2022-02-11T19:48:55"?><!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+
+<concept xml:lang="en-us" id="swaggerui">
+	<title id="GUID-899730A5-6DF1-4EBB-9445-B4F2791BF2CF">Swagger UI usage</title>
+	<shortdesc>Once you have Subscribed to an API from the API Catalog, use the REST tab to browse the Swagger UI for the various REST endpoints for the API along with the associated parameters and responses for the API. </shortdesc>
+	<prolog>
+		<resourceid id="GUID-4d7770b6-e338-4df4-b590-b496e3ca00e7" />
+	</prolog>
+	<conbody>
+		<note id="GUID-4F42A1A0-D8E8-4041-B857-20D36CB55387">It is possible that each API REST endpoint is deployed to a different environment. If the process that contains the API in a Web Services Server listener is deployed to a different environment than the API component is deployed to, the Web Services Server listener information is unknown. However, the API owner can overwrite the endpoint definition and outputs for use in the Developer Portal's REST endpoints. When the API owner overwrites the endpoint definition, the overwrite is used, regardless of what environment the environment the overwrite is on.</note>
+		<section id="SECTION_9E6275290B904123B9E55F7F74821A2F"> <title id="GUID-A106DA16-B856-4FAB-8789-304246B36BF2">Schemes</title> <p>The Schemes drop-down displays the HTTP, HTTPS, or both depending on which SSL Ports are set on the Atom in the Shared Web Server panel of Atom Management.</p> </section>
+		<section id="SECTION_271B6D379E774E8B981A3020DBD900B3"> <title id="GUID-5B8FCD2F-E554-4348-9E43-09D5C07BB698">Authorize</title> <fig id="FIG_9FAD4CEAC81D400989CD9FE08A388EA3">
+			<image href="api-button-swagger-portal-authorize_f0cc6ec4-ab69-4b5a-83ac-7ff476807ffd.jpg" alt="Authorize button." id="IMAGE_4F911449C47047C9A6FD8C9CE434FF98">
+				<alt>Authorize button.</alt>
+			</image>
+			</fig> <p>When the Authorize button displays a closed lock, the API is properly configured and authorizations are pre-populated in the portal. Clicking the Authorize button opens a panel that describes the type of authorization currently associated with the API. </p> <p>Selecting <uicontrol>Logout</uicontrol> clears the Authentication Token and allows you to enter different credentials in order to explore and alter values. Logging out disables the <uicontrol>Try It Out</uicontrol> and <uicontrol>Execution</uicontrol> buttons until proper credentials are re-entered. </p> <p>Based on the Authentication Type set for the API in the Authentication column of the <menucascade>
+			<uicontrol>Configure APIs and Applications</uicontrol>
+			<uicontrol>Deployed APIs</uicontrol>
+			</menucascade> page <keyword>API Management</keyword></p>, the following credentials are required to log back in:<ul id="UL_4F77E23D6F884EC49AF7C4D5AAB0A29B">
+			<li id="LI_CA09D226556343248BB18CA669C316A0">Basic authentication requires a user name and password.</li>
+			<li id="LI_C95145A1F0CD4559B8141E718E5FB670">External Provider authentication requires OAuth 2.0 client_id and client_secret credentials. If the <uicontrol>client_id</uicontrol> is not auto-populated, enter the external authentication GUID (the alphanumeric string after <codeph>components=</codeph> in your URL) followed by <userinput>:OPENID</userinput> into the <uicontrol>client_id</uicontrol> field. Leave the <uicontrol>Client Secret</uicontrol> field blank, and click <uicontrol>Authorize</uicontrol>. Then, you are taken to the identity provider sign in screen if you are not already signed in.</li>
+			</ul><note id="GUID-2AC9038F-C06A-46D9-AD97-7B02E660823F">When no authentication is set, the Authorize feature does not show. </note></section>
+		<section id="SECTION_C80010751CD4456E9D22333F52DC5EBD"> <title id="GUID-B48CA224-9596-4113-B76D-1AB222884B1A">Default tags</title> <p>In the default section of the Swagger UI, the <uicontrol>Try It Out</uicontrol> and <uicontrol>Execute</uicontrol> buttons allow you to test, edit, and re-test your API in order to experiment with various call mechanisms of your API.</p> <p>The responses associated with an API are dependent on the resource path and HTTP method set in the REST endpoint. Currently, the Swagger UI supports Get, Post, Update, and Delete for REST.</p> <p>Three elements display as a result of executing an API in the Swagger UI. Clicking <uicontrol>Try It Out</uicontrol> for a POST response allows you to edit the example value to call various features. Clicking <uicontrol>Execute</uicontrol> produces a <xref href="https://curl.haxx.se/" format="https" scope="external">cURL</xref> command that you can insert into a command-line prompt to run the request. Additionally, the portal displays a detailed list of potential code response errors that you may encounter.</p> <p> <note id="GUID-4EDF341F-BE3B-4661-9CF8-FA500B22E360">Any information produced in the Swagger UI is not retained upon exiting the REST tab. The cURL request updates based upon new information entered.</note> </p> </section>
+		<section id="SECTION_82FFFD18D05148B2B02596A92693C989"> <title id="GUID-4852B391-30A3-467A-B67D-F1FBC5096500">Metadata Source</title> <p> The Metadata Source displays the original swagger resource request.</p> </section>
+	</conbody>
+</concept>
