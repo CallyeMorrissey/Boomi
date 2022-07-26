@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?><?Inspire CreateDate="2019-08-26T17:54:13" ModifiedDate="2022-02-11T19:48:55"?><!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN" "reference.dtd">
+
+<reference id="api-API_Catalog_page">
+	<title>API Catalog page</title>
+	<shortdesc>The API Catalog is the means by which developers can interact with APIs that have been published for their discovery.</shortdesc>
+	<prolog>
+		<resourceid id="GUID-fd7fbc0b-51fd-4603-b471-9d6fd1d90e45" />
+	</prolog>
+	<refbody>
+		<section id="section_xpv_nbg_w3b"> <p>When navigating to this page, portal users are presented with what APIs have been published for potential use. Each tile represents an individual API deployment. The descriptive information present on each tile is carried forward from the <uicontrol>Published Description</uicontrol> field defined by the associated API Component.</p> <note id="note_6d9bb0c6-8a22-4d9b-81ac-123a584320b8">Within the Developer Portal, there is no visible indication of whether an API was created within <keyword conref="lib-Boomi_Keywords_0346af2b-13d7-491e-bec9-18c5d89225bf.xml#GUID-0207C7F1-40FD-4537-BE59-1D6DA46B9A1D/BOOMI_DELL" /> as an API Service component or exposed through an API Proxy component.</note> </section>
+		<section id="section_hvn_m1l_1jb"> <title>API information</title><p dir="ltr">By clicking on an API tile, you are presented with detailed information about that individual API. Along with the published description of the API, you are presented with an overview tab and subsequent tabs for each way the API is published (REST, SOAP, or OData).</p><p>If you have any subscriptions for the API you selected, you see the information for each associated subscription in a separate panel.</p><p dir="ltr">The overview tab provides Version and Contact information defined by the associated API Component and the environment name. Additional information is presented for each tab depending on the type of API published:</p><dl>
+			<dlentry>
+				<dt>REST</dt>
+				<dd>The base URL information is provided along with an embedded Swagger UI interface to interact with the published definition file for the API.</dd>
+			</dlentry>
+			<dlentry>
+				<dt>SOAP (1.1 and 1.2)</dt>
+				<dd>Both the SOAP and WSDL URLs are provided along with a listing of available operations and associated descriptions.</dd>
+			</dlentry>
+			<dlentry>
+				<dt>OData</dt>
+				<dd>The OData URL is provided along with a listing of available entity names and descriptions.</dd>
+			</dlentry>
+			</dl><note type="tip" id="note_0dc13658-79f3-461a-82f4-07aea9057b27">The API Catalog can be used for testing of APIs. Through embedded Swagger UI functionality, users can provide their authentication credentials and API keys to interact with Swagger definitions for REST APIs published to the Developer Portal. <p>JWT is not supported in Swagger testing of APIs in the Developer Portal. You can use other commonly used tools to test your APIs using JWT authentication.</p></note> </section>
+	</refbody>
+</reference>

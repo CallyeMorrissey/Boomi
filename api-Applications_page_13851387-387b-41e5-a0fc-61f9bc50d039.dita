@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8"?><?Inspire CreateDate="2019-08-26T17:54:13" ModifiedDate="2022-02-11T19:48:55"?><!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN" "reference.dtd">
+
+<reference id="api-Applications_page">
+	<title>Applications page</title>
+	<shortdesc>The Application screen allows for the registration and management of Application names as a means of associating API subscriptions to their usage. </shortdesc>
+	<prolog>
+		<resourceid id="GUID-13851387-387b-41e5-a0fc-61f9bc50d039" />
+	</prolog>
+	<refbody>
+		<section id="section_czg_sbg_w3b"> <p>The Applications page allows you to register an application and view all of your enabled and disabled applications. The table of applications includes the following information:</p> <dl>
+			<dlentry>
+				<dt>Name</dt>
+				<dd>Description</dd>
+			</dlentry>
+			<dlentry>
+				<dt>Application Name</dt>
+				<dd>The name of your application. To edit the application, click the application name.<p>When disabling the application status, the associated API Keys are disabled, but the subscription statuses are not modified. However, if the application status is disabled, you are unable to modify the subscription status.</p></dd>
+			</dlentry>
+			<dlentry>
+				<dt>Status</dt>
+				<dd>Indicates whether the application is enabled or disabled. To change the status of an application, click the <uicontrol>Enabled</uicontrol> or <uicontrol>Disabled</uicontrol> text in the field. You cannot change the status of an application if the publisher disabled it.</dd>
+			</dlentry>
+			<dlentry>
+				<dt>Delete</dt>
+				<dd>Click <image href="img-delete_icon_29151734-bc83-42b9-b115-9e227e434698.jpg" id="image_byq_v5x_zjb">
+					<alt>Delete icon</alt>
+					</image> to delete the application, if the application has no subscriptions or pending subscriptions. You cannot delete an application that has an active subscription.</dd>
+			</dlentry>
+			</dl> </section>
+		<section id="section_fsh_hwx_zjb"> <title>Application details</title><p>Click on the application name to view details about the application and the owner. </p> <p otherprops="H3">General Settings</p><dl>
+			<dlentry>
+				<dt>Name</dt>
+				<dd>Description</dd>
+			</dlentry>
+			<dlentry>
+				<dt>Application Name</dt>
+				<dd>The name of the registered application.</dd>
+			</dlentry>
+			<dlentry>
+				<dt>Description</dt>
+				<dd>An optional description of the application.</dd>
+			</dlentry>
+			<dlentry>
+				<dt>Application Status</dt>
+				<dd>Indicates whether the application is enabled or disabled. Click <uicontrol>Enabled</uicontrol> or <uicontrol>Disabled</uicontrol> to change the status. You cannot change the status of an application if the publisher disabled it.<p>When disabling the application status, the associated API Keys are disabled, but the subscription statuses are not modified. However, if the application status is disabled, you are unable to modify the subscription status.</p></dd>
+			</dlentry>
+			</dl><p otherprops="H3">Application Owner</p><p>The application owner information sections allow you to specify yourself or someone else as the owner of the application so that the API publisher can contact the application owner as needed. For example, the API publisher may contact the application owner to let them know that a new version of the API is being released or that access to the API is being revoked for a few hours while updates occur.</p> <dl>
+			<dlentry>
+				<dt>Name</dt>
+				<dd>Description</dd>
+			</dlentry>
+			<dlentry>
+				<dt>Application Owner Name</dt>
+				<dd>The name of the application owner.</dd>
+			</dlentry>
+			<dlentry>
+				<dt>Application Owner Email</dt>
+				<dd>The email address of the application owner.</dd>
+			</dlentry>
+			<dlentry>
+				<dt>Contact Phone Number</dt>
+				<dd>The contact phone number for the application owner.</dd>
+			</dlentry>
+			<dlentry>
+				<dt>Company Name</dt>
+				<dd>The name of the company who owns the application.</dd>
+			</dlentry>
+			<dlentry>
+				<dt>Company Website</dt>
+				<dd>The website of the company who owns the application.</dd>
+			</dlentry>
+			</dl> </section>
+	</refbody>
+</reference>

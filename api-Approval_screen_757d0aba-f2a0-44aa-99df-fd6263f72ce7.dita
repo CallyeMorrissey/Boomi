@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?><?Inspire CreateDate="2019-08-23T16:49:12" ModifiedDate="2022-02-11T19:48:55"?><!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN" "reference.dtd">
+
+<reference id="api-Approval_screen">
+	<title>Approval screen</title>
+	<shortdesc>Access the <wintitle>Approval</wintitle> screen by clicking <uicontrol>Approve</uicontrol> in the navigation menu.</shortdesc>
+	<prolog>
+		<resourceid id="GUID-757d0aba-f2a0-44aa-99df-fd6263f72ce7" />
+	</prolog>
+	<refbody>
+		<section id="section_wcx_wxs_1jb"> <p>On this screen, API Publishers can view pending subscriptions and approve or reject requests for access to APIs published to the Developer Portal. Only APIs that use the standard approval process display on this screen.</p> </section>
+	</refbody>
+</reference>

@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8"?><?Inspire CreateDate="2019-08-23T16:49:12" ModifiedDate="2022-02-11T19:48:55"?><!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+
+<task id="api-Approving_API_access_for_Dev_Portal_users">
+	<title>Approving API subscription requests</title>
+	<shortdesc>When users request access to an API through the Developer Portal, you need to grant them access before they can use the API.</shortdesc>
+	<prolog>
+		<resourceid id="GUID-0024915f-020b-426c-888b-62ae26f5fca4" />
+	</prolog>
+	<taskbody>
+		<prereq><xref href="api-Adding_a_plan_to_an_API_cbb0a60f-eb42-42e2-9dd6-5c7ad946470c.dita">Add a plan</xref> on the <menucascade>
+			<uicontrol>Configure APIs and Applications</uicontrol>
+			<uicontrol>Deployed APIs</uicontrol>
+			</menucascade> page.</prereq>
+		<steps>
+			<step id="step_5121f7b9-d482-4874-b1bf-46f7aab89d47">
+				<cmd>In API Management, go to <uicontrol>Approve</uicontrol>.</cmd>
+			</step>
+			<step id="step_37a65bc7-6799-481e-8dd7-d836a0300943">
+				<cmd>Expand the Gateway to see the users who requested access to APIs on that Gateway.</cmd>
+			</step>
+			<step id="step_bcb37bb5-010f-475e-8df4-36ecf6a2c2fa">
+				<cmd>From the correct row in the table for the user and API, click <uicontrol>Pending Approval</uicontrol> in the <uicontrol>Status</uicontrol> column.</cmd>
+			</step>
+			<step id="step_19f43360-7e2d-4e0a-86ff-22b39da0018e">
+				<cmd>Click <uicontrol>Approve</uicontrol>.</cmd>
+			</step>
+			<step id="step_b2cd84e2-9f40-44e9-8942-41ad47358163">
+				<cmd>In the Approve dialog, select the appropriate Plan from the drop-down list.</cmd>
+			</step>
+			<step id="step_069e6d0b-6672-4534-80b6-d00b44ca268d">
+				<cmd>Specify a date on which the API access is granted. The current date is selected by default.</cmd>
+			</step>
+			<step importance="optional" id="step_da306bca-d4c7-4f65-b935-0cc9b78e950d">
+				<cmd>Specify a date to disable the subscription.</cmd>
+				<info> The option to <uicontrol>Do not automatically disable</uicontrol> the subscription is selected by default.</info>
+			</step>
+			<step importance="optional" id="step_bc52e687-4755-44d2-a595-2eb6759109fb">
+				<cmd>Type a message to the requester.</cmd>
+			</step>
+			<step id="step_f8a4ce0f-dcbc-46e6-87bc-59c667247b24">
+				<cmd>Click <uicontrol>Approve</uicontrol>.</cmd>
+			</step>
+			<step id="step_b0859284-4dab-4897-a345-285a56a73156">
+				<cmd>If there are additional requests, the next request automatically opens. You can optionally click <uicontrol>Next</uicontrol> to navigate through the entries that needs to be approved. Or, if there are no additional requests, click <uicontrol>Return to List</uicontrol> to return to the main Approvals page.</cmd>
+			</step>
+		</steps>
+		<postreq id="postreq_gfh_lzf_w3b">Notify your user that you approved their Subscription request. The user will see that the subscription is enabled.</postreq>
+	</taskbody>
+</task>

@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?><?Inspire CreateDate="2019-06-04T19:44:46" ModifiedDate="2022-02-11T19:48:54"?><!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+
+<task id="task_2ca43035-19ef-4f43-8227-b9f70e400277">
+	<title id="title_8c7cc740-2e0e-4557-8714-76a49d1262f2">Signing in to the Developer Portal</title>
+	<shortdesc>To request access to APIs through a Developer Portal, you must first sign in. The Developer Portal owner will provide you information on how to sign in.</shortdesc>
+	<prolog>
+		<resourceid id="GUID-51441abf-cd38-48f3-82fa-e79e77fe3540" />
+	</prolog>
+	<taskbody>
+		<steps>
+			<step id="step_8f78a83b-bf3b-49f0-92a6-8be2e0a4e609">
+				<cmd>Open the web URL provided by the Developer Portal owner.</cmd>
+			</step>
+			<step id="step_b734d100-5e68-45ba-9710-f76867e24743">
+				<cmd>Click <uicontrol>Sign In</uicontrol>.</cmd>
+				<info>The way that you sign in to the Developer Portal differs based on the authentication method that the API owner set up. If you have access to multiple Developer Portals, clicking <uicontrol>Sign In</uicontrol> may have different results.</info>
+			</step>
+			<step id="step_98ef7c30-a1f9-4f94-ad9c-0c2c0499bebb">
+				<cmd>Sign in based on the authentication method for the Developer Portal. </cmd>
+				<choicetable frame="all" relcolwidth="1* 1*" id="choicetable_u4s_pql_hkb">
+					<chhead>
+						<choptionhd>Authentication Method</choptionhd>
+						<chdeschd>Sign in information</chdeschd>
+					</chhead>
+					<chrow>
+						<choption>Basic Authentication</choption>
+						<chdesc>The Developer Portal owner will provide you with a user name and password. Enter the provided user name and password and click <uicontrol>Sign In</uicontrol>.</chdesc>
+					</chrow>
+					<chrow>
+						<choption>OpenID, SAML, or JWT</choption>
+						<chdesc>The API owner set up an authentication method that you will be required to use to sign in. It is possible that a single sign-on was set up with a system that you are already signed in to. In that case, you will automatically be signed in. </chdesc>
+					</chrow>
+				</choicetable>
+			</step>
+		</steps>
+	</taskbody>
+</task>

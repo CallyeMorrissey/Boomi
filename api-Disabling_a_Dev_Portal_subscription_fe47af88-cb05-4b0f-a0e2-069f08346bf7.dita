@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?><?Inspire CreateDate="2019-11-06T21:45:25" ModifiedDate="2022-02-11T19:48:55"?><!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd"><task id="api-Disabling_a_Dev_Portal_subscription"><title>Disabling a Developer Portal subscription</title><shortdesc>You can temporarily or permanently disable a Developer Portal subscription on the <menucascade>
+            <uicontrol>Configure APIs and Applications</uicontrol>
+            <uicontrol>Applications</uicontrol>
+        </menucascade> page.</shortdesc><prolog><resourceid id="GUID-fe47af88-cb05-4b0f-a0e2-069f08346bf7" /></prolog><taskbody><steps><step id="step_dba4a133-a299-45df-959b-b84b0c5151b9"><cmd>Go to <menucascade>
+                        <uicontrol>Configure APIs and Applications</uicontrol>
+                        <uicontrol>Applications</uicontrol>
+                    </menucascade>.</cmd></step><step id="step_f9131026-6fc0-41cd-8071-08de21f11104"><cmd>Navigate to the Application Name within the API Gateway panel, and click
+                            <uicontrol><varname>#</varname> Subscriptions</uicontrol> in the
+                    Subscriptions column.</cmd><stepresult>The Subscription details page opens with a list of the Subscriptions for
+                    the application.</stepresult></step><step id="step_f7c48a4c-a352-48f5-9a71-c165608d8a92"><cmd>For the API Name, Environment, and Plan that you want to disable, click
+                        <uicontrol>Enabled</uicontrol> in the Status column.</cmd><stepresult>The API Subscription Status menu opens.</stepresult></step><step id="step_3351dcc8-c7d3-4c79-bb7f-cf05c7ca8711"><cmd>Change the Status to <uicontrol>Disabled</uicontrol>.</cmd></step><step id="step_ad1603ce-6b2c-4e24-a5ca-5c0299de743c"><cmd>Click <uicontrol>Save</uicontrol>.</cmd></step><step id="step_ef781ec6-c793-4ce5-8a32-51daacf500b4"><cmd>Click <uicontrol>Back to Applications</uicontrol>.</cmd><info>From the <wintitle>Applications</wintitle> page, you can disable additional
+                    Developer Portal subscriptions.</info></step></steps></taskbody></task>

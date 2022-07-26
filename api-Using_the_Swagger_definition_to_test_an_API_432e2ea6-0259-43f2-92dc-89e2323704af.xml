@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?><?Inspire CreateDate="2019-06-04T20:12:47" ModifiedDate="2022-02-11T19:48:54"?><!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd"><task id="task_ccd3875e-8b92-48f1-988a-35640063f071"><title id="title_2c7ee13f-fee8-49b2-a020-51ad953e08f6">Leveraging your API subscription</title><shortdesc>After receiving your API Key, you can view the REST tab to view the Swagger
+                        definition to test the API on the API details page.</shortdesc><prolog><resourceid id="GUID-432e2ea6-0259-43f2-92dc-89e2323704af" /></prolog><taskbody><context id="context_ycd_zrf_bjb">Once a subscription request has been approved, you will want to
+      validate the associated APIs functionality and begin incorporating its use within your
+      applications. To ensure proper execution of the API and necessary policies are employed, the
+      API key would typically be included in the  header as part of the actual API call invocation. </context><steps><step id="step_8f78a83b-bf3b-49f0-92a6-8be2e0a4e609"><cmd>From the Developer Portal, click <uicontrol>API Catalog</uicontrol>.</cmd></step><step id="step_84859ebc-7707-467e-b12a-32dd6e2066a2"><cmd>View the available APIs or type your search filter in the <uicontrol>Search APIs by
+            name</uicontrol> field to more quickly navigate to your intended API.</cmd></step><step id="step_689c6306-2a33-4a0d-ab45-09cdcdffb8ff"><cmd>Click on the API card for the API for which you have both a valid API Key and API
+          authentication information in order to view the Overview and REST documentation for that
+          API.</cmd></step><step id="step_4dfa5c37-567f-4bb0-b434-6c2c25cf55fe"><cmd>Click <uicontrol>REST</uicontrol> to
+                                                  view the Swagger definition.</cmd></step></steps><postreq>
+                                    <p>For information on how to use the Swagger definition, view
+          <xref href="api-Swagger_UI_usage_4d7770b6-e338-4df4-b590-b496e3ca00e7.dita">Swagger UI usage</xref>. </p>
+                        </postreq></taskbody></task>
