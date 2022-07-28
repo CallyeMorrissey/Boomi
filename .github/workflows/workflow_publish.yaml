@@ -1,6 +1,6 @@
 name: Upload branch to Upload Server
 
-on: [commit]
+on: [push]
 
 jobs:
   deploy_job:
