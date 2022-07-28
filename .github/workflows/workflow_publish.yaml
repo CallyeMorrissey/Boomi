@@ -20,7 +20,20 @@ jobs:
         with:
           username: ${{ secrets.boomi }}
           server: ${{ secrets.upload.zoominsoftware.io }}
-          ssh_private_key: ${{ secrets.eae95559ef4f4284d8f3cdb5f545de3863292188340ff8ed4b98fff15b062cd0 }}
+          ssh_private_key: ${{ secrets.jW01kjuJ/yRNKeivbg5IdaCxue5YV0Anp61nyKC+K8BKcdriraRldDVVf9S5VA37
+FDS1pYUxjhM9cSeizGz6oNI+/7jdg/PZLau3dLRR+MnHRiLK5acIXi/yfNbQmvZE
+EcBUxSslJ1h8TVnO/0+jVHqum/5KN/YsVt71ElsXcgV6IO4dSGxJgcLKz+oWRW2l
+9Dl13SS0u9JTD+FKICCWJ8fpy3oIOqV3cvXkNZOS8ggTYgOnoP4JvXG42GEH+S8k
+hAs5sm5EPONtJ8pBAYV1C8iJc6Fl40gwqVk0OJq5z3tayzLB8kyTraOM5fbLFrv3
+xl38lMllevwoPnI46m+EWfw8lBk2MZbj8qTxnHBh9JKN9wvaqN1P4TfVADmVEtuA
+Vo8426ysc6fWJqFkcnodD/A38mHtrhciUEKzaD9zdnOsep56KKg5yogkU1U99pvd
+o3PoqYRoAaivcqP/eO2KuDsNxgTLLlXmz6KODIwITUaHr8UM6OQfbm+LoOD/LVuV
+7I87o3yN2yXW9unEY2OIS/hf0eHQmVJZJZh+cFSvfpcP/SnO5RVaDj1l6/0c/yZv
+d5ekasMgBvzYAhfC/ePnfpoC+/CCizwxcnxRw+cfa9xCLotEGWJbF1nmQuFw7kZZ
+BCRI+1g0Kn92VYYTGGFvodvhkKnf4HYsQHkeJ5RF7wdRg+XNz62F2ovCEZw+rOOq
+7ogKflvNGg2aIQUQvUK++bDCtCDeEaRo2fayv7t+3USyVHxRYczqfo4IdOCBlQ18
+oX9QuoHy4QmcA8GUch+g7XOJMP9zTJbhIKLL9uD2XevZB27eATEG/m+1nnZiNBLt
+jlyWvvM2xdcC8gSl2MYV2ua3rOSCKtVez5qRlsE2fGqnMx5u8Uv5kq9xjb154a71 }}
           local_path: ${{ github.event.repository.name }}_${{ steps.branch_name.outputs.branch }}.zip
           remote_path: 'boomi-be-staging.zoominsoftware.io/dita/incoming/${{ steps.branch_name.outputs.branch }}/incoming/'
           # remote_path: 'storm-be-dev.zoominsoftware.io/${{ steps.branch_name.outputs.branch }}/incoming/'
