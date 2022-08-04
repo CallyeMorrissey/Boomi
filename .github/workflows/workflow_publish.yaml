@@ -22,6 +22,6 @@ jobs:
           server: ${{ secrets.upload.zoominsoftware.io }}
           ssh_private_key: ${{ secrets.eae95559ef4f4284d8f3cdb5f545de3863292188340ff8ed4b98fff15b062cd0 }}
           local_path: ${{ github.event.repository.name }}_${{ steps.branch_name.outputs.branch }}.zip
-          remote_path: 'boomi-be-staging.zoominsoftware.io/vasont-dita/incoming/'
+          remote_path: 'boomi-be-staging.zoominsoftware.io/dita-vasont/incoming'
           # remote_path: 'storm-be-dev.zoominsoftware.io/${{ steps.branch_name.outputs.branch }}/incoming/'
           args: '-o ConnectTimeout=5'
