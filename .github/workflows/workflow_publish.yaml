@@ -18,8 +18,9 @@ jobs:
         with:
           username: 'boomi'
           server: 'upload.zoominsoftware.io'
-          ssh_private_key: > 
-                              'jW01kjuJ/yRNKeivbg5IdaCxue5YV0Anp61nyKC+K8BKcdriraRldDVVf9S5VA37
+          ssh_private_key: >
+                              '-----BEGIN RSA PRIVATE KEY----- 
+                               jW01kjuJ/yRNKeivbg5IdaCxue5YV0Anp61nyKC+K8BKcdriraRldDVVf9S5VA37
                                FDS1pYUxjhM9cSeizGz6oNI+/7jdg/PZLau3dLRR+MnHRiLK5acIXi/yfNbQmvZE
                                EcBUxSslJ1h8TVnO/0+jVHqum/5KN/YsVt71ElsXcgV6IO4dSGxJgcLKz+oWRW2l
                                9Dl13SS0u9JTD+FKICCWJ8fpy3oIOqV3cvXkNZOS8ggTYgOnoP4JvXG42GEH+S8k
@@ -32,7 +33,9 @@ jobs:
                                BCRI+1g0Kn92VYYTGGFvodvhkKnf4HYsQHkeJ5RF7wdRg+XNz62F2ovCEZw+rOOq
                                7ogKflvNGg2aIQUQvUK++bDCtCDeEaRo2fayv7t+3USyVHxRYczqfo4IdOCBlQ18
                                oX9QuoHy4QmcA8GUch+g7XOJMP9zTJbhIKLL9uD2XevZB27eATEG/m+1nnZiNBLt
-                               jlyWvvM2xdcC8gSl2MYV2ua3rOSCKtVez5qRlsE2fGqnMx5u8Uv5kq9xjb154a71'
+                               jlyWvvM2xdcC8gSl2MYV2ua3rOSCKtVez5qRlsE2fGqnMx5u8Uv5kq9xjb154a71
+                               -----END RSA PRIVATE KEY-----
+                               '
           local_path: ${{ github.event.repository.name }}_${{ steps.branch_name.outputs.branch }}.zip
           remote_path: 'boomi-be-staging.zoominsoftware.io/dita-vasont/incoming'
           # remote_path: 'storm-be-dev.zoominsoftware.io/${{ steps.branch_name.outputs.branch }}/incoming/'
