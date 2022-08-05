@@ -1,3 +1,5 @@
+name: Upload branch to Upload Server
+on: [push]
 jobs:
   deploy_job:
     runs-on: ubuntu-latest
