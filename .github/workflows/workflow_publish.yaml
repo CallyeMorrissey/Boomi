@@ -20,20 +20,7 @@ jobs:
           server: 'upload.zoominsoftware.io'
           ssh_private_key: >
                               '-----BEGIN RSA PRIVATE KEY----- 
-                               jW01kjuJ/yRNKeivbg5IdaCxue5YV0Anp61nyKC+K8BKcdriraRldDVVf9S5VA37
-                               FDS1pYUxjhM9cSeizGz6oNI+/7jdg/PZLau3dLRR+MnHRiLK5acIXi/yfNbQmvZE
-                               EcBUxSslJ1h8TVnO/0+jVHqum/5KN/YsVt71ElsXcgV6IO4dSGxJgcLKz+oWRW2l
-                               9Dl13SS0u9JTD+FKICCWJ8fpy3oIOqV3cvXkNZOS8ggTYgOnoP4JvXG42GEH+S8k
-                               hAs5sm5EPONtJ8pBAYV1C8iJc6Fl40gwqVk0OJq5z3tayzLB8kyTraOM5fbLFrv3
-                               xl38lMllevwoPnI46m+EWfw8lBk2MZbj8qTxnHBh9JKN9wvaqN1P4TfVADmVEtuA
-                               Vo8426ysc6fWJqFkcnodD/A38mHtrhciUEKzaD9zdnOsep56KKg5yogkU1U99pvd
-                               o3PoqYRoAaivcqP/eO2KuDsNxgTLLlXmz6KODIwITUaHr8UM6OQfbm+LoOD/LVuV
-                               7I87o3yN2yXW9unEY2OIS/hf0eHQmVJZJZh+cFSvfpcP/SnO5RVaDj1l6/0c/yZv
-                               d5ekasMgBvzYAhfC/ePnfpoC+/CCizwxcnxRw+cfa9xCLotEGWJbF1nmQuFw7kZZ
-                               BCRI+1g0Kn92VYYTGGFvodvhkKnf4HYsQHkeJ5RF7wdRg+XNz62F2ovCEZw+rOOq
-                               7ogKflvNGg2aIQUQvUK++bDCtCDeEaRo2fayv7t+3USyVHxRYczqfo4IdOCBlQ18
-                               oX9QuoHy4QmcA8GUch+g7XOJMP9zTJbhIKLL9uD2XevZB27eATEG/m+1nnZiNBLt
-                               jlyWvvM2xdcC8gSl2MYV2ua3rOSCKtVez5qRlsE2fGqnMx5u8Uv5kq9xjb154a71
+                              AAABADrEUOl90v+Ys/PfejgFvX1LBJfpiOCrf/M4RSAYSyDpwWdAibbuhLCix51En/w8yNzf1m8RYZutt18/LJcpGulCnzQqgcl9X/UOrRwMAJjKK8RjVd6zgxOOFOIQmsHk5E2lxMpQMvuNUdDLWORx+7lrVXTwy7tvv4vDXx6ekEpeZV3Ci9vlxbfSJVdehiSwTOlFO2v9Dv4fLhh4FLkePRACdUI5kxlALDaK7g3aX9Pyeh0s5FcKiKU3SzKw9qxlpQ6MBzs4VRQyHLIuaWlGu6ZhxAJk5DH6xykWeD0aC1TyYLcHxn6QdJEtKb7TxH0V0ErgaZyMa2gX45uSaOO1wEAAACBAOdRdQAnkAoPj7+FxRA2EggQcVCAjdzEzrO5eQ8mnUB4oZ6JGrgA2S8UTFSzrhOLvI+sT2NHOnAeKUTi+7KY4WZGhigUzvsZsyas8zOjhT9/12GKTCwUQfKy/7wJlUXRi0nSEAFlVP1l0GnsQebxGR9162xMZQs+7weEskHfC8xBAAAAgQDj3C+pIlnrzQ23iVmL/QL6d4ju/59uSiEhCZYUNkpE+XCII3Cwq6IxgQWpDf/OXm42ROAKHWlryblbK8wSoncoxvx3QDcCBAvXwrhbmwr/3PeHa4HcTNpcwTN1isXW+OZw/oRJ1Ie9iMG9Mx/HZkCecHxlcjETPmYHCkJH6ZHbHwAAAIEAhvsHPFyExUu/OBciRno513ougf0ImwOn6m0A5u4CoPJQcdDDaozTd+YilVe4DyXoNDnTVQFKvhuqdt1uUOcJINihuUmICej6X6LxENYjaD6U2qaoU63ru8vaaHYNLOoRQJ8vbd1WJoYnCnBgZOLRwP0dIkmgSOEosSOmS2KbAXM=
                                -----END RSA PRIVATE KEY-----
                                '
           local_path: ${{ github.event.repository.name }}_${{ steps.branch_name.outputs.branch }}.zip
